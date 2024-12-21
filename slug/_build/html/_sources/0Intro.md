@@ -6,7 +6,7 @@ The notes are produced with Jupyter Book, a package that uses Python and LaTeX t
 
 If you have any issues using these notes, spot any errors, or would otherwise like help making best use of them, please get in touch by [emailing Rosie](mailto:r.j.shewellbrockway@sheffield.ac.uk).
 
-## 0.1 Module overview
+## 0.1 Module overview 
 
 This semester, we will pick up where you left off in MAS107 last year, and look at some classical analysis topics. The main themes will be:
 
