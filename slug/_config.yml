@@ -1,14 +1,9 @@
-#######################################################################################
-# A default configuration that will be loaded for all jupyter books
-# See the documentation for help and more options: 
-# https://jupyterbook.org/customize/config.html
-
-#######################################################################################
 # Book settings
-title                       : Analysis Notes  # The title of the book. Will be placed in the left navbar.
-author                      : Rosie Shewell Brockway  # The author of the book
-copyright                   : "2024"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: MAS2004 Semester 2 Notes
+author: Rosie Shewell Brockway
+logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -20,18 +15,34 @@ latex:
   latex_documents:
     targetname: book.tex
 
-# Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css
+
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/RosieSB/Analysis Notes  # Online location of your book
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+  config:
+    proof_minimal_theme: true
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - dollarmath

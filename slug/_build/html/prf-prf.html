@@ -1,0 +1,1176 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proof Index &#8212; MAS2004 Semester 2 Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prf-prf';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0Intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="MAS2004 Semester 2 Notes - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="MAS2004 Semester 2 Notes - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0Intro.html">
+                    0. Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1Rev.html">1. Revision of MAS107</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2LoF.html">2. Limits of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3Cty.html">3. Continuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fprf-prf.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+   <h1>Proof Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-AOL2"><strong>AOL2</strong></a> | 
+   <a href="#cap-AOL3"><strong>AOL3</strong></a> | 
+   <a href="#cap-Cauchy"><strong>Cauchy</strong></a> | 
+   <a href="#cap-Roll"><strong>Roll</strong></a> | 
+   <a href="#cap-WMtest"><strong>WMtest</strong></a> | 
+   <a href="#cap-chain"><strong>chain</strong></a> | 
+   <a href="#cap-constfn"><strong>constfn</strong></a> | 
+   <a href="#cap-cont1"><strong>cont1</strong></a> | 
+   <a href="#cap-corollary-15"><strong>corollary-15</strong></a> | 
+   <a href="#cap-dcont"><strong>dcont</strong></a> | 
+   <a href="#cap-def:diff"><strong>def:diff</strong></a> | 
+   <a href="#cap-def:intba"><strong>def:intba</strong></a> | 
+   <a href="#cap-def:uconv"><strong>def:uconv</strong></a> | 
+   <a href="#cap-defcont"><strong>defcont</strong></a> | 
+   <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
+   <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
+   <a href="#cap-definition-11"><strong>definition-11</strong></a> | 
+   <a href="#cap-definition-12"><strong>definition-12</strong></a> | 
+   <a href="#cap-definition-13"><strong>definition-13</strong></a> | 
+   <a href="#cap-definition-19"><strong>definition-19</strong></a> | 
+   <a href="#cap-definition-20"><strong>definition-20</strong></a> | 
+   <a href="#cap-definition-24"><strong>definition-24</strong></a> | 
+   <a href="#cap-definition-4"><strong>definition-4</strong></a> | 
+   <a href="#cap-definition-5"><strong>definition-5</strong></a> | 
+   <a href="#cap-definition-9"><strong>definition-9</strong></a> | 
+   <a href="#cap-div+-infty"><strong>div+-infty</strong></a> | 
+   <a href="#cap-ed"><strong>ed</strong></a> | 
+   <a href="#cap-eg:const"><strong>eg:const</strong></a> | 
+   <a href="#cap-eg:dirichlet1"><strong>eg:dirichlet1</strong></a> | 
+   <a href="#cap-eg:dirichlet2"><strong>eg:dirichlet2</strong></a> | 
+   <a href="#cap-eg:step"><strong>eg:step</strong></a> | 
+   <a href="#cap-eg:uconv"><strong>eg:uconv</strong></a> | 
+   <a href="#cap-example-1"><strong>example-1</strong></a> | 
+   <a href="#cap-example-10"><strong>example-10</strong></a> | 
+   <a href="#cap-example-11"><strong>example-11</strong></a> | 
+   <a href="#cap-example-12"><strong>example-12</strong></a> | 
+   <a href="#cap-example-14"><strong>example-14</strong></a> | 
+   <a href="#cap-example-15"><strong>example-15</strong></a> | 
+   <a href="#cap-example-16"><strong>example-16</strong></a> | 
+   <a href="#cap-example-2"><strong>example-2</strong></a> | 
+   <a href="#cap-example-27"><strong>example-27</strong></a> | 
+   <a href="#cap-example-4"><strong>example-4</strong></a> | 
+   <a href="#cap-example-5"><strong>example-5</strong></a> | 
+   <a href="#cap-example-7"><strong>example-7</strong></a> | 
+   <a href="#cap-example-9"><strong>example-9</strong></a> | 
+   <a href="#cap-ext1"><strong>ext1</strong></a> | 
+   <a href="#cap-extex"><strong>extex</strong></a> | 
+   <a href="#cap-fof"><strong>fof</strong></a> | 
+   <a href="#cap-ftc"><strong>ftc</strong></a> | 
+   <a href="#cap-functionlimit"><strong>functionlimit</strong></a> | 
+   <a href="#cap-idfn"><strong>idfn</strong></a> | 
+   <a href="#cap-indicatorfn"><strong>indicatorfn</strong></a> | 
+   <a href="#cap-interval"><strong>interval</strong></a> | 
+   <a href="#cap-ivp"><strong>ivp</strong></a> | 
+   <a href="#cap-ivp2"><strong>ivp2</strong></a> | 
+   <a href="#cap-lem:ref"><strong>lem:ref</strong></a> | 
+   <a href="#cap-lemma-13"><strong>lemma-13</strong></a> | 
+   <a href="#cap-limitpt"><strong>limitpt</strong></a> | 
+   <a href="#cap-lrd"><strong>lrd</strong></a> | 
+   <a href="#cap-mvt"><strong>mvt</strong></a> | 
+   <a href="#cap-nthroot"><strong>nthroot</strong></a> | 
+   <a href="#cap-pol"><strong>pol</strong></a> | 
+   <a href="#cap-poly"><strong>poly</strong></a> | 
+   <a href="#cap-prop:intcond"><strong>prop:intcond</strong></a> | 
+   <a href="#cap-prop:inv"><strong>prop:inv</strong></a> | 
+   <a href="#cap-prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent."><strong>prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.</strong></a> | 
+   <a href="#cap-proposition-17"><strong>proposition-17</strong></a> | 
+   <a href="#cap-proposition-5"><strong>proposition-5</strong></a> | 
+   <a href="#cap-propsint"><strong>propsint</strong></a> | 
+   <a href="#cap-quant1"><strong>quant1</strong></a> | 
+   <a href="#cap-rational"><strong>rational</strong></a> | 
+   <a href="#cap-remark-15"><strong>remark-15</strong></a> | 
+   <a href="#cap-remark-3"><strong>remark-3</strong></a> | 
+   <a href="#cap-seqconv"><strong>seqconv</strong></a> | 
+   <a href="#cap-sgn"><strong>sgn</strong></a> | 
+   <a href="#cap-theorem-10"><strong>theorem-10</strong></a> | 
+   <a href="#cap-theorem-11"><strong>theorem-11</strong></a> | 
+   <a href="#cap-theorem-13"><strong>theorem-13</strong></a> | 
+   <a href="#cap-theorem-14"><strong>theorem-14</strong></a> | 
+   <a href="#cap-theorem-7"><strong>theorem-7</strong></a> | 
+   <a href="#cap-theorem-8"><strong>theorem-8</strong></a> | 
+   <a href="#cap-thm:IFT"><strong>thm:IFT</strong></a> | 
+   <a href="#cap-thm:evt"><strong>thm:evt</strong></a> | 
+   <a href="#cap-tri"><strong>tri</strong></a> | 
+   <a href="#cap-ucont"><strong>ucont</strong></a> | 
+   <a href="#cap-xne"><strong>xne</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-AOL2"><td></td><td>
+       <strong>AOL2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#AOL2"><code class="xref">AOL2</code></a> <em>(2LoF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-AOL3"><td></td><td>
+       <strong>AOL3</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#AOL3"><code class="xref">AOL3</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Cauchy"><td></td><td>
+       <strong>Cauchy</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="1Rev.html#Cauchy"><code class="xref">Cauchy</code></a> <em>(1Rev)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-Roll"><td></td><td>
+       <strong>Roll</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#Roll"><code class="xref">Roll</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-WMtest"><td></td><td>
+       <strong>WMtest</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#WMtest"><code class="xref">WMtest</code></a> <em>(5SSF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-chain"><td></td><td>
+       <strong>chain</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#chain"><code class="xref">chain</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-constfn"><td></td><td>
+       <strong>constfn</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#constfn"><code class="xref">constfn</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cont1"><td></td><td>
+       <strong>cont1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#cont1"><code class="xref">cont1</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-corollary-15"><td></td><td>
+       <strong>corollary-15</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#corollary-15"><code class="xref">corollary-15</code></a> <em>(6Int)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-dcont"><td></td><td>
+       <strong>dcont</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#dcont"><code class="xref">dcont</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def:diff"><td></td><td>
+       <strong>def:diff</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#def:diff"><code class="xref">def:diff</code></a> <em>(4Diff)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def:intba"><td></td><td>
+       <strong>def:intba</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#def:intba"><code class="xref">def:intba</code></a> <em>(6Int)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def:uconv"><td></td><td>
+       <strong>def:uconv</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#def:uconv"><code class="xref">def:uconv</code></a> <em>(5SSF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-defcont"><td></td><td>
+       <strong>defcont</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#defcont"><code class="xref">defcont</code></a> <em>(3Cty)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-0"><td></td><td>
+       <strong>definition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#definition-0"><code class="xref">definition-0</code></a> <em>(6Int)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-1"><td></td><td>
+       <strong>definition-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#definition-1"><code class="xref">definition-1</code></a> <em>(6Int)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-11"><td></td><td>
+       <strong>definition-11</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#definition-11"><code class="xref">definition-11</code></a> <em>(3Cty)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-12"><td></td><td>
+       <strong>definition-12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#definition-12"><code class="xref">definition-12</code></a> <em>(5SSF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-13"><td></td><td>
+       <strong>definition-13</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#definition-13"><code class="xref">definition-13</code></a> <em>(2LoF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-19"><td></td><td>
+       <strong>definition-19</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#definition-19"><code class="xref">definition-19</code></a> <em>(3Cty)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-20"><td></td><td>
+       <strong>definition-20</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#definition-20"><code class="xref">definition-20</code></a> <em>(3Cty)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-24"><td></td><td>
+       <strong>definition-24</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#definition-24"><code class="xref">definition-24</code></a> <em>(3Cty)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-4"><td></td><td>
+       <strong>definition-4</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#definition-4"><code class="xref">definition-4</code></a> <em>(6Int)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-5"><td></td><td>
+       <strong>definition-5</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#definition-5"><code class="xref">definition-5</code></a> <em>(4Diff)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-9"><td></td><td>
+       <strong>definition-9</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#definition-9"><code class="xref">definition-9</code></a> <em>(4Diff)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-div+-infty"><td></td><td>
+       <strong>div+-infty</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#div+-infty"><code class="xref">div+-infty</code></a> <em>(2LoF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ed"><td></td><td>
+       <strong>ed</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#ed"><code class="xref">ed</code></a> <em>(2LoF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eg:const"><td></td><td>
+       <strong>eg:const</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#eg:const"><code class="xref">eg:const</code></a> <em>(6Int)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eg:dirichlet1"><td></td><td>
+       <strong>eg:dirichlet1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#eg:dirichlet1"><code class="xref">eg:dirichlet1</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eg:dirichlet2"><td></td><td>
+       <strong>eg:dirichlet2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#eg:dirichlet2"><code class="xref">eg:dirichlet2</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eg:step"><td></td><td>
+       <strong>eg:step</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#eg:step"><code class="xref">eg:step</code></a> <em>(6Int)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eg:uconv"><td></td><td>
+       <strong>eg:uconv</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#eg:uconv"><code class="xref">eg:uconv</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-1"><td></td><td>
+       <strong>example-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#example-1"><code class="xref">example-1</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-10"><td></td><td>
+       <strong>example-10</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#example-10"><code class="xref">example-10</code></a> <em>(4Diff)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-11"><td></td><td>
+       <strong>example-11</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#example-11"><code class="xref">example-11</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-12"><td></td><td>
+       <strong>example-12</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#example-12"><code class="xref">example-12</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-14"><td></td><td>
+       <strong>example-14</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#example-14"><code class="xref">example-14</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-15"><td></td><td>
+       <strong>example-15</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#example-15"><code class="xref">example-15</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-16"><td></td><td>
+       <strong>example-16</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#example-16"><code class="xref">example-16</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-2"><td></td><td>
+       <strong>example-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#example-2"><code class="xref">example-2</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-27"><td></td><td>
+       <strong>example-27</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#example-27"><code class="xref">example-27</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-4"><td></td><td>
+       <strong>example-4</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#example-4"><code class="xref">example-4</code></a> <em>(4Diff)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-5"><td></td><td>
+       <strong>example-5</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#example-5"><code class="xref">example-5</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-7"><td></td><td>
+       <strong>example-7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#example-7"><code class="xref">example-7</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-9"><td></td><td>
+       <strong>example-9</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#example-9"><code class="xref">example-9</code></a> <em>(6Int)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ext1"><td></td><td>
+       <strong>ext1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#ext1"><code class="xref">ext1</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-extex"><td></td><td>
+       <strong>extex</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#extex"><code class="xref">extex</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-fof"><td></td><td>
+       <strong>fof</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#fof"><code class="xref">fof</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ftc"><td></td><td>
+       <strong>ftc</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#ftc"><code class="xref">ftc</code></a> <em>(6Int)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-functionlimit"><td></td><td>
+       <strong>functionlimit</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#functionlimit"><code class="xref">functionlimit</code></a> <em>(2LoF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-idfn"><td></td><td>
+       <strong>idfn</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#idfn"><code class="xref">idfn</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-indicatorfn"><td></td><td>
+       <strong>indicatorfn</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#indicatorfn"><code class="xref">indicatorfn</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-interval"><td></td><td>
+       <strong>interval</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#interval"><code class="xref">interval</code></a> <em>(3Cty)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ivp"><td></td><td>
+       <strong>ivp</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#ivp"><code class="xref">ivp</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ivp2"><td></td><td>
+       <strong>ivp2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#ivp2"><code class="xref">ivp2</code></a> <em>(3Cty)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem:ref"><td></td><td>
+       <strong>lem:ref</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#lem:ref"><code class="xref">lem:ref</code></a> <em>(6Int)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lemma-13"><td></td><td>
+       <strong>lemma-13</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#lemma-13"><code class="xref">lemma-13</code></a> <em>(6Int)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-limitpt"><td></td><td>
+       <strong>limitpt</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#limitpt"><code class="xref">limitpt</code></a> <em>(2LoF)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lrd"><td></td><td>
+       <strong>lrd</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#lrd"><code class="xref">lrd</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-mvt"><td></td><td>
+       <strong>mvt</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="4Diff.html#mvt"><code class="xref">mvt</code></a> <em>(4Diff)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-nthroot"><td></td><td>
+       <strong>nthroot</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#nthroot"><code class="xref">nthroot</code></a> <em>(3Cty)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-pol"><td></td><td>
+       <strong>pol</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#pol"><code class="xref">pol</code></a> <em>(3Cty)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-poly"><td></td><td>
+       <strong>poly</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#poly"><code class="xref">poly</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop:intcond"><td></td><td>
+       <strong>prop:intcond</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#prop:intcond"><code class="xref">prop:intcond</code></a> <em>(6Int)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop:inv"><td></td><td>
+       <strong>prop:inv</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#prop:inv"><code class="xref">prop:inv</code></a> <em>(3Cty)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent."><td></td><td>
+       <strong>prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent."><code class="xref">prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.</code></a> <em>(5SSF)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-17"><td></td><td>
+       <strong>proposition-17</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#proposition-17"><code class="xref">proposition-17</code></a> <em>(5SSF)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-proposition-5"><td></td><td>
+       <strong>proposition-5</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#proposition-5"><code class="xref">proposition-5</code></a> <em>(5SSF)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-propsint"><td></td><td>
+       <strong>propsint</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#propsint"><code class="xref">propsint</code></a> <em>(6Int)</em></td><td>
+       <em>proposition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-quant1"><td></td><td>
+       <strong>quant1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="1Rev.html#quant1"><code class="xref">quant1</code></a> <em>(1Rev)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rational"><td></td><td>
+       <strong>rational</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#rational"><code class="xref">rational</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-remark-15"><td></td><td>
+       <strong>remark-15</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#remark-15"><code class="xref">remark-15</code></a> <em>(3Cty)</em></td><td>
+       <em>remark</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-remark-3"><td></td><td>
+       <strong>remark-3</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#remark-3"><code class="xref">remark-3</code></a> <em>(6Int)</em></td><td>
+       <em>remark</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-seqconv"><td></td><td>
+       <strong>seqconv</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="1Rev.html#seqconv"><code class="xref">seqconv</code></a> <em>(1Rev)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-sgn"><td></td><td>
+       <strong>sgn</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#sgn"><code class="xref">sgn</code></a> <em>(2LoF)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-10"><td></td><td>
+       <strong>theorem-10</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#theorem-10"><code class="xref">theorem-10</code></a> <em>(5SSF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-11"><td></td><td>
+       <strong>theorem-11</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="2LoF.html#theorem-11"><code class="xref">theorem-11</code></a> <em>(2LoF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-13"><td></td><td>
+       <strong>theorem-13</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#theorem-13"><code class="xref">theorem-13</code></a> <em>(5SSF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-14"><td></td><td>
+       <strong>theorem-14</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#theorem-14"><code class="xref">theorem-14</code></a> <em>(5SSF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-7"><td></td><td>
+       <strong>theorem-7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#theorem-7"><code class="xref">theorem-7</code></a> <em>(6Int)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-8"><td></td><td>
+       <strong>theorem-8</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="6Int.html#theorem-8"><code class="xref">theorem-8</code></a> <em>(6Int)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:IFT"><td></td><td>
+       <strong>thm:IFT</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#thm:IFT"><code class="xref">thm:IFT</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:evt"><td></td><td>
+       <strong>thm:evt</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="3Cty.html#thm:evt"><code class="xref">thm:evt</code></a> <em>(3Cty)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-tri"><td></td><td>
+       <strong>tri</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="1Rev.html#tri"><code class="xref">tri</code></a> <em>(1Rev)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ucont"><td></td><td>
+       <strong>ucont</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#ucont"><code class="xref">ucont</code></a> <em>(5SSF)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-xne"><td></td><td>
+       <strong>xne</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="5SSF.html#xne"><code class="xref">xne</code></a> <em>(5SSF)</em></td><td>
+       <em>example</em></td></tr>
+   </table>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rosie Shewell Brockway
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -2,8 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: 0Intro.md
+options:
+  numbered: true
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+  - file: 1Rev
+  - file: 2LoF
+  - file: 3Cty
+  - file: 4Diff
+  - file: 5SSF
+  - file: 6Int

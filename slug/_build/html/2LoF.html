@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Limits of functions &#8212; MAS2004 Semester 2 Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2LoF';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Continuity" href="3Cty.html" />
+    <link rel="prev" title="1. Revision of MAS107" href="1Rev.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0Intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="MAS2004 Semester 2 Notes - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="MAS2004 Semester 2 Notes - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0Intro.html">
+                    0. Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1Rev.html">1. Revision of MAS107</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Limits of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3Cty.html">3. Continuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2LoF.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/2LoF.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Limits of functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limit-of-a-function">2.2. The limit of a function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="limits-of-functions">
+<span id="chap-functionlimits"></span><h1><span class="section-number">2. </span>Limits of functions<a class="headerlink" href="#limits-of-functions" title="Link to this heading">#</a></h1>
+<section id="functions-on-the-real-line">
+<h2><span class="section-number">2.1. </span>Functions on the real line<a class="headerlink" href="#functions-on-the-real-line" title="Link to this heading">#</a></h2>
+<p>In this section, we revise some aspects of functions and look at some examples. This is mostly revision of material from MAS106.</p>
+<p>We will be interested in functions <span class="math notranslate nohighlight">\(f:X\to Y\)</span>, where <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are some subsets of the real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (perhaps the whole of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>). Recall that <span class="math notranslate nohighlight">\(f\)</span> being a function from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(Y\)</span> means that for each element <span class="math notranslate nohighlight">\(x\in X\)</span>, there is specified exactly one element <span class="math notranslate nohighlight">\(f(x)\in Y\)</span>, the <em>value</em> of the function <span class="math notranslate nohighlight">\(f\)</span> on the element <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>The <em>domain</em> of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(X\)</span>, and we sometimes use the notation <span class="math notranslate nohighlight">\(\text{Dom}(f):=X\)</span>. The set <span class="math notranslate nohighlight">\(Y\)</span> is called the <em>codomain</em> of <span class="math notranslate nohighlight">\(f\)</span>. The <em>range</em> (or <em>image</em>) of the function <span class="math notranslate nohighlight">\(f\)</span> is the set</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Range}(f)=\{y \in Y : y = f(x)~\mbox{for some}~x \in X\};
+\]</div>
+<p>that is, it is the set of <em>values</em> attained by the function.</p>
+<p>It is important in this course that a function has a specified domain and codomain. In particular, giving a <em>formula</em>, like <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span>, for example, is not giving a function, although it may be part of the information that specifies a function. We could give a function by, for example, saying <span class="math notranslate nohighlight">\(f:\mathbb{R}\setminus\{0\}\to \mathbb{R}\)</span>, given by <span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span>. And this is a different function from <span class="math notranslate nohighlight">\(f:(0,1)\to \mathbb{R}\)</span>, also given by  <span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span>.</p>
+<p>Notice that we have used the <em>difference</em> of sets notation here: recall that if <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are arbitrary sets, then</p>
+<div class="math notranslate nohighlight">
+\[
+X \setminus Y = X \cap Y^{c} = \{x \in X : x \notin Y\}.
+\]</div>
+<p>If we have some formula in <span class="math notranslate nohighlight">\(x\)</span> that we would like to use for the value <span class="math notranslate nohighlight">\(f(x)\)</span> of a function, it is often useful to think about the largest domain <span class="math notranslate nohighlight">\(f\)</span> could have, that is, the set of all  <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which <span class="math notranslate nohighlight">\(f(x)\)</span> makes sense as a real number. This will not include any <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> for which we might be tempted to write “<span class="math notranslate nohighlight">\(f(x) = 0/0\)</span>” or “<span class="math notranslate nohighlight">\(f(x) = \pm \infty\)</span>”.</p>
+<div class="proof example admonition" id="poly">
+<p class="admonition-title"><span class="caption-number">Example 2.1 </span> (Polynomial functions)</p>
+<section class="example-content" id="proof-content">
+<p>A <em>polynomial</em> is a function <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span>  of the form</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_{0} + a_{1}x + \cdots + a_{n-1}x^{n-1} + a_{n}x^{n},
+\]</div>
+<p>where the <em>coefficients</em> <span class="math notranslate nohighlight">\(a_{0}, a_{1}, \ldots, a_{n}\)</span> are in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, and the <em>degree</em> <span class="math notranslate nohighlight">\(n\)</span> is a natural number. Here, <span class="math notranslate nohighlight">\(X\)</span> can be any subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+</section>
+</div><div class="proof example admonition" id="rational">
+<p class="admonition-title"><span class="caption-number">Example 2.2 </span> (Rational functions)</p>
+<section class="example-content" id="proof-content">
+<p>A <em>rational function</em> is a function <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span>  of the form <span class="math notranslate nohighlight">\(f(x) = \frac{p(x)}{q(x)}\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are polynomials.  The largest subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> we can take as its domain <span class="math notranslate nohighlight">\(X\)</span> is <span class="math notranslate nohighlight">\(\{x \in \mathbb{R} : q(x) \neq 0\}\)</span>.</p>
+<p>For example, if  <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{x^{2} + 5}{(x+1)(x-3)}\)</span>, the largest possible domain of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R} \setminus \{-1, 3\}\)</span>.</p>
+</section>
+</div><div class="proof example admonition" id="sgn">
+<p class="admonition-title"><span class="caption-number">Example 2.3 </span> (The sign function)</p>
+<section class="example-content" id="proof-content">
+<p>The <em>sign function</em> <span class="math notranslate nohighlight">\(\text{sgn}:\mathbb{R}\to \mathbb{R}\)</span> is defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{sgn}(x) = \left\{\begin{array}{c c} -1 &amp; ~\mbox{if}~x &lt; 0,\\
+	0 &amp; ~\mbox{if}~x = 0,\\
+	1&amp; ~\mbox{if}~x &gt; 0. \end{array} \right.
+\end{split}\]</div>
+<p>The range of this function is <span class="math notranslate nohighlight">\(\{-1, 0, 1\}\)</span>.</p>
+</section>
+</div><div class="proof example admonition" id="indicatorfn">
+<p class="admonition-title"><span class="caption-number">Example 2.4 </span> (Indicator functions)</p>
+<section class="example-content" id="proof-content">
+<p>The <em>indicator function</em> of the closed interval <span class="math notranslate nohighlight">\([a, b]\)</span> is the function <span class="math notranslate nohighlight">\({\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\bf 1}_{[a,b]}(x) = \left\{\begin{array}{c c} 1 &amp; ~\mbox{if}~x \in [a, b],\\ 0&amp; ~\mbox{if}~x \notin [a, b]. \end{array} \right.
+\end{split}\]</div>
+<p>Similarly, we can define an indicator function of  an open interval, or an arbitrary subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The indicator function of <span class="math notranslate nohighlight">\([0, \infty)\)</span> is called the <em>Heaviside function</em> by engineers.</p>
+</section>
+</div><p>Other important functions are the functions <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>, given by <span class="math notranslate nohighlight">\(f(x) = e^{kx}, f(x) = \sin(kx)\)</span> and <span class="math notranslate nohighlight">\(f(x) = \cos(kx)\)</span>, where <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>.  In analysis, they are best defined as convergent power series — see later.</p>
+<p><strong>Pointwise operations.</strong><br>
+Let <span class="math notranslate nohighlight">\(X,Y\subseteq\mathbb{R}\)</span>, and let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> be functions. Let <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. We define new functions, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> and <span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> pointwise, but we need to be careful with domains.</p>
+<ul class="simple">
+<li><p><em>Pointwise sum.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f+g:X\cap Y\to \mathbb{R}; \; (f+g)(x) := f(x) + g(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise scalar multiplication.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\alpha f:X\to \mathbb{R}; \; (\alpha f)(x):=\alpha f(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise multiplication.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise division.</em> Here, more care must be taken with domains:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
+\]</div>
+<p><em>Remarks.</em></p>
+<ol class="arabic simple">
+<li><p>In each case, the domain is taken to be the largest subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which the pointwise operation is defined.</p></li>
+<li><p>Recall from Semester 1 the set <span class="math notranslate nohighlight">\({\cal F}(\mathbb{R})\)</span> of all functions from <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The pointwise operations of addition and scalar multiplication turn <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> into a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but it is not finite-dimensional). Pointwise multiplication gives <span class="math notranslate nohighlight">\(\mathcal{F}(\mathbb{R})\)</span> the additional structure of an <em>algebra</em> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. These structural properties are important in higher analysis (e.g. functional analysis).</p></li>
+</ol>
+<p><strong>Composition of functions.</strong> <br>
+The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\)</span> of two functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> is defined only when the codomain of <span class="math notranslate nohighlight">\(f\)</span> is the same as the domain of <span class="math notranslate nohighlight">\(g\)</span>. Note that we are using the usual convention that <span class="math notranslate nohighlight">\(g\circ f\)</span> means “<span class="math notranslate nohighlight">\(f\)</span> first”.</p>
+<p>So, if <span class="math notranslate nohighlight">\(f:X\to Y\)</span> and <span class="math notranslate nohighlight">\(g:Y\to Z\)</span>, then we have the composition <span class="math notranslate nohighlight">\(g\circ f: X\to Z\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+(g \circ f)(x) = g(f(x)).
+\]</div>
+<p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by $ g(x)=3x$ then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
+</section>
+<section id="the-limit-of-a-function">
+<h2><span class="section-number">2.2. </span>The limit of a function<a class="headerlink" href="#the-limit-of-a-function" title="Link to this heading">#</a></h2>
+<p>We want to make rigorous the notion of <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span>, for a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, and a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(a\)</span> may not be an element of the domain <span class="math notranslate nohighlight">\(X\)</span>, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.</p>
+<p>First note that it only makes sense to consider the behaviour of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span> if there are points in the domain of <span class="math notranslate nohighlight">\(f\)</span> that get arbitrarily close to <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="proof definition admonition" id="limitpt">
+<p class="admonition-title"><span class="caption-number">Definition 2.1 </span> (Limit point)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>. A real number <span class="math notranslate nohighlight">\(a\)</span> is called a <em>limit point</em> of <span class="math notranslate nohighlight">\(X\)</span> if there is a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span> and satisfies <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
+<p>Equivalently, <span class="math notranslate nohighlight">\(a\)</span> is a limit point of <span class="math notranslate nohighlight">\(X\)</span> if any open interval containing <span class="math notranslate nohighlight">\(a\)</span> has non-empty intersection with <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</section>
+</div><div class="proof example admonition" id="example-5">
+<p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
+<section class="example-content" id="proof-content">
+<p>(i) Let <span class="math notranslate nohighlight">\(X=(0,2)\cup\{3\}\)</span>. Then <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\)</span> are limit points of <span class="math notranslate nohighlight">\(X\)</span>, but <span class="math notranslate nohighlight">\(3\)</span> is not.</p>
+<p>(ii) A real number <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> is a limit point of <span class="math notranslate nohighlight">\([0,1]\)</span> if and only if <span class="math notranslate nohighlight">\(a\in[0,1]\)</span>.</p>
+<p>(iii) More generally, given <span class="math notranslate nohighlight">\(a&lt;b\)</span>, then <span class="math notranslate nohighlight">\([a,b]\)</span> is the set of all limit points for any of the intervals <span class="math notranslate nohighlight">\((a,b)\)</span>, <span class="math notranslate nohighlight">\((a,b]\)</span>, <span class="math notranslate nohighlight">\([a,b)\)</span> and <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+</section>
+</div><div class="proof definition admonition" id="functionlimit">
+<p class="admonition-title"><span class="caption-number">Definition 2.2 </span> (Functional limit — <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> be a function, let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p>
+<p>We say that <span class="math notranslate nohighlight">\(f\)</span> <em>converges</em> to <span class="math notranslate nohighlight">\(l\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span>,  and write</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x \rightarrow a}f(x) =l,
+\]</div>
+<p>if, for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt;|x-a|&lt;\delta \; \text{ implies } \; $|f(x)-l|&lt;\varepsilon.
+\]</div>
+</section>
+</div><p><strong>Notes.</strong></p>
+<ol class="arabic simple">
+<li><p>We require that <span class="math notranslate nohighlight">\(a\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span> so that it to make sense to consider what happens to the values of the function as we approach <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p>The real number <span class="math notranslate nohighlight">\(a\)</span> may or may not be in the domain <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ol>
+<div class="proof example admonition" id="example-7">
+<p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:(0,1)\to\mathbb{R}\)</span> and suppose that</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = 5x+2.
+\]</div>
+<p>Common sense tells us that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}f(x)=7\)</span>. Let’s try to prove this rigorously using <a class="reference internal" href="#functionlimit">Definition 2.2</a>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. We seek <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(0&lt;|x-1|&lt;\delta\)</span> implies <span class="math notranslate nohighlight">\(|f(x)-7|&lt;\varepsilon\)</span>. On the other hand,</p>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-7| = |5x+2-7| = |5x-5| = 5|x-1|
+\]</div>
+<p>This tells us that if we choose <span class="math notranslate nohighlight">\(\delta:=\frac{\varepsilon}{5}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt;|x-1|&lt;\delta \Rightarrow |f(x)-7|&lt;5\delta=\varepsilon.
+\]</div>
+<p>This proves that  <a class="reference internal" href="#functionlimit">Definition 2.2</a> holds, and so <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}f(x)=7\)</span>.</p>
+</section>
+</div><p><a class="reference internal" href="#functionlimit">Definition 2.2</a> is usually referred to as the “<span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> definition” of the functional limit, and does well to capture the idea of a limit is that as <span class="math notranslate nohighlight">\(x\)</span> gets closer and closer to <span class="math notranslate nohighlight">\(a\)</span>, so <span class="math notranslate nohighlight">\(f(x)\)</span> should get closer and closer to <span class="math notranslate nohighlight">\(l\)</span>.</p>
+<p>There is a second, equivalent definition for the limit of a function, in terms of limits of sequences of points in its domain. This sequential definition of limits is sometimes more useful in proofs, since we can use theorems already proven for convergence of sequences (see for example <a class="reference internal" href="#AOL2">Theorem 2.2</a>, coming up).</p>
+<div class="proof theorem admonition" id="ed">
+<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span> (Sequential criterion for functional limits)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let  <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>. The following are equivalent:</p>
+<p>(i) <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>.</p>
+<p>(ii) (Sequential criterion) For every sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> with <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}x_n=a\)</span>, we have that <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n) = l\)</span>.</p>
+</section>
+</div><p><strong>Proof of <a class="reference internal" href="#ed">Theorem 2.1</a>.</strong> (i)\Rightarrow(ii): Suppose <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>, and suppose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. So there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that for all <span class="math notranslate nohighlight">\(x \in X\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt;|x - a| &lt; \delta \Rightarrow |f(x) - l| &lt; \varepsilon.
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\((x_{n})\)</span> be an arbitrary sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> with limit <span class="math notranslate nohighlight">\(a\)</span>. Then since <span class="math notranslate nohighlight">\(x_n\rightarrow a\)</span>, there exists <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span>, such that  <span class="math notranslate nohighlight">\(0&lt;|x_{n} - a| &lt; \delta\)</span> for all <span class="math notranslate nohighlight">\(n\geq N\)</span>. But then, for all <span class="math notranslate nohighlight">\(n \geq N\)</span>, we have <span class="math notranslate nohighlight">\(|f(x_{n}) - l| &lt; \varepsilon\)</span>, and so <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>, as was required. We have established that <span class="math notranslate nohighlight">\((i)\Rightarrow(ii)\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\Rightarrow(i)\)</span>: Now we must establish the converse, namely that if <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then the real sequence <span class="math notranslate nohighlight">\((f(x_n))\)</span> converges to <span class="math notranslate nohighlight">\(l\)</span>, as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. We seek a proof by contradiction. Suppose that that <span class="math notranslate nohighlight">\(f(x)\)</span> does not converge to <span class="math notranslate nohighlight">\(l\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span>. Then the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails: there exists an <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(x \in X\)</span> with <span class="math notranslate nohighlight">\(0 &lt; |x - a| &lt; \delta\)</span>, but <span class="math notranslate nohighlight">\(|f(x) - l| \geq \varepsilon\)</span>.</p>
+<p>Now for this <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, choose successively <span class="math notranslate nohighlight">\(\delta = 1, \frac{1}{2}, \frac{1}{3}, \ldots\)</span> and construct a sequence <span class="math notranslate nohighlight">\((x_{n})\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x_{1} \in X \text{ satisfies } 0&lt;|x_{1} - a| &lt; 1 \text{ and }|f(x_{1}) - l| \geq \varepsilon. \\
+x_{2} \in X\text{ satisfies } 0&lt;|x_{2} - a| &lt; \frac{1}{2}\text{ and }|f(x_{2}) - l| \geq \varepsilon.
+\vdots
+x_{n} \in X\text{ satisfies }0&lt;|x_{n} - a| &lt; \frac{1}{n}\text{ and }|f(x_{n}) - l| \geq \varepsilon.
+\end{split}\]</div>
+<p>Then <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> and by the sandwich rule, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty} x_{n} = a\)</span>. Also, by the above construction the sequence <span class="math notranslate nohighlight">\((f(x_{n}))\)</span> does not converge to <span class="math notranslate nohighlight">\(l\)</span>.</p>
+<p>So we have shown that if the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails, then so does the sequential criterion for functional limits. This completes the proof of <a class="reference internal" href="#ed">Theorem 2.1</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>In MAS107, you proved many theorems concerning convergence of real sequences. <a class="reference internal" href="#ed">Theorem 2.1</a> gives us a way to capitalise on this hard work and quickly arrive at results about limits of functions.</p>
+<div class="proof theorem admonition" id="AOL2">
+<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Algebra of limits)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(f:A \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :B \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) = m\)</span>, then
+<a class="reference internal" href="#functionlimit">Definition 2.2</a>
+(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m\)</span>,</p>
+<p>(ii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (fg)(x) = lm\)</span>,</p>
+<p>(iii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha l\)</span>, for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>,</p>
+<p>(iv) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{l}{m}\)</span>, if <span class="math notranslate nohighlight">\(m \neq 0\)</span>.</p>
+</section>
+</div><p><strong>Proof.</strong> By  <a class="reference internal" href="#ed">Theorem 2.1</a>, these all follow from the algebra of limits for sequences. For example, for (i), if <span class="math notranslate nohighlight">\((x_{n})\)</span> is an arbitrary sequence in <span class="math notranslate nohighlight">\(A\cap B\)</span> with <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\((x_n)\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*} 
+\lim_{n\rightarrow\infty} (f + g)(x_{n}) &amp;= \lim_{n\rightarrow\infty} (f(x_{n}) + g(x_{n})) \\
+&amp;= \lim_{n\rightarrow\infty} f(x_{n}) + \lim_{n\rightarrow\infty} g(x_{n})\\
+&amp;= l + m, 
+\end{align*}
+\end{split}\]</div>
+<p>as required.
+Here the first line uses the definition of a sum of functions and the second line uses algebra of limits (for real sequences). <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.</p>
+<div class="proof example admonition" id="example-10">
+<p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
+<section class="example-content" id="proof-content">
+<p>Consider <span class="math notranslate nohighlight">\(f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \frac{x - 5}{(x^{2} - 25)(x - 3)}.
+\]</div>
+<p>Investigate <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span> for each <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. (You will need to think about points in the domain and each of the three special points <span class="math notranslate nohighlight">\(-5, 3, 5\)</span> separately.)</p>
+<p><em>Solution.</em>
+It’s helpful (but not necessary as part of the formal solution) to draw the graph of the function.</p>
+<figure class="align-default" id="x-5-x2-25-x-3">
+<a class="reference internal image-reference" href="../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png"><img alt="../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png" src="../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{x - 5}{(x^{2} - 25)(x - 3)}\)</span>.</span><a class="headerlink" href="#x-5-x2-25-x-3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Let’s write <span class="math notranslate nohighlight">\(X=\mathbb{R}\setminus\{-5, 3, 5\}\)</span>, the domain of <span class="math notranslate nohighlight">\(f\)</span>. Note that every real number is a limit point of <span class="math notranslate nohighlight">\(X\)</span>. However, the most interesting limit points to consider are those that lie outside of <span class="math notranslate nohighlight">\(X\)</span>. This is because it is fairly easy to calculate limits at points in <span class="math notranslate nohighlight">\(X\)</span>. For example,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x \rightarrow 1}f(x) = -\frac{1}{12}=f(1).
+\]</div>
+<p>(Check this carefully, using the definition).</p>
+<p>More generally, in this example, if you take the limit at a point <span class="math notranslate nohighlight">\(a \in X\)</span>, you always find that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a} f(x) = f(a).
+\]</div>
+<p>This tells us that the function <span class="math notranslate nohighlight">\(f\)</span> is <em>continuous</em> at these points. We will discuss the concept of continuity in more detail in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
+<p>The more interesting problem is to find out what happens at points that are <em>not</em> in <span class="math notranslate nohighlight">\(X\)</span>. Observe that</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \frac{1}{(x+5)(x-3)}, \qquad \text{for all $x \in X$.}
+\]</div>
+<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 5\)</span>:</strong><br>
+Choose an arbitrary sequence <span class="math notranslate nohighlight">\((x_{n})\)</span> with <span class="math notranslate nohighlight">\(x_{n} \in X\)</span> satisfying <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}x_{n} = 5\)</span>. Note that such sequences certainly exist, for example</p>
+<div class="math notranslate nohighlight">
+\[
+(x_{n} = 5 + \frac{1}{n}), (x_n=5 + 7/n^{2}), (x_n=5 - 108/n^{4})...).
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f(x_{n}) = \displaystyle\frac{1}{(x_{n}+5)(x_{n}-3)}\)</span> and <span class="math notranslate nohighlight">\(\displaystyle\lim_{n \rightarrow \infty}f(x_{n}) = \displaystyle\frac{1}{10.2} = \displaystyle\frac{1}{20}\)</span>, by the algebra of limits. So we conclude that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x \rightarrow 5}f(x) = \frac{1}{20}.\]</div>
+<p>Thus the limit exists at the point <span class="math notranslate nohighlight">\(x = 5\)</span>, even though <span class="math notranslate nohighlight">\(5\)</span> is not in the domain of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = -5\)</span>:</strong><br>
+In this case, numerical experiments or considering the graph of the function may lead you to doubt that a limit exists. So consider the sequence <span class="math notranslate nohighlight">\((y_{n})\)</span>, where <span class="math notranslate nohighlight">\(y_{n} = -5 + \frac{1}{n}\)</span>, for each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. Then <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}y_{n} = -5\)</span>, and we find that</p>
+<div class="math notranslate nohighlight">
+\[
+f(y_{n}) = \frac{1}{\frac{1}{n}\left(\frac{1}{n} - 8\right)} = \frac{n}{\frac{1}{n} - 8},
+\]</div>
+<p>and so <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges to <span class="math notranslate nohighlight">\(-\infty\)</span>. So we’ve found a sequence <span class="math notranslate nohighlight">\((y_{n})\)</span> such that (i) and (ii) of the definition are satisfied, but <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges. Hence we conclude that <span class="math notranslate nohighlight">\(f\)</span> has no limit at <span class="math notranslate nohighlight">\(x = -5\)</span>.</p>
+<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 3\)</span>:</strong> <br>
+This is left as  an exercise. Again, <span class="math notranslate nohighlight">\(f\)</span> has no limit at <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
+<p>We note here that the function <span class="math notranslate nohighlight">\(f\)</span> is not continuous at the points <span class="math notranslate nohighlight">\(a = -5, 3\)</span> or <span class="math notranslate nohighlight">\(5\)</span>; indeed <span class="math notranslate nohighlight">\(f(a)\)</span> is not defined when <span class="math notranslate nohighlight">\(a\)</span> takes these values. We can <em>extend</em> <span class="math notranslate nohighlight">\(f\)</span> to be a continuous function at <span class="math notranslate nohighlight">\(a=5\)</span> by setting
+<span class="math notranslate nohighlight">\(f(5)=\frac{1}{20}\)</span>. On the other hand, at <span class="math notranslate nohighlight">\(a=-5\)</span> and at <span class="math notranslate nohighlight">\(a=3\)</span>, there is no value we could assign for <span class="math notranslate nohighlight">\(f(a)\)</span>
+that would extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous function there.  We will return to all these issues of continuity in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-11">
+<p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Sandwich rule for functions)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span>,  <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(h :Z\to \mathbb{R}\)</span> and suppose that there exists an interval <span class="math notranslate nohighlight">\((a, b) \subseteq X\cap Y\cap Z\)</span> such that for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sw1">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-sw1" title="Link to this equation">#</a></span>\[f(x) \leq g(x) \leq h(x).\]</div>
+<p>If for some <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> and <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span> we have</p>
+<div class="math notranslate nohighlight" id="equation-sw2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-sw2" title="Link to this equation">#</a></span>\[	\lim_{x \rightarrow c}f(x) = \lim_{x \rightarrow c}h(x) = l,\]</div>
+<p>then <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \rightarrow c}g(x)\)</span> exists and is equal to <span class="math notranslate nohighlight">\(l\)</span>.</p>
+</section>
+</div><p><strong>Proof.</strong> Let <span class="math notranslate nohighlight">\((x_{n})\)</span> be an arbitrary sequence that converges to <span class="math notranslate nohighlight">\(c\)</span>.
+Note that by taking <span class="math notranslate nohighlight">\(N \in \mathbb{N}\)</span> sufficiently large, we can ensure that <span class="math notranslate nohighlight">\(x_{n} \in (a, b)\)</span> for all <span class="math notranslate nohighlight">\(n\geq N\)</span>. Define sequences <span class="math notranslate nohighlight">\((a_n)\)</span>, <span class="math notranslate nohighlight">\((b_n)\)</span> and <span class="math notranslate nohighlight">\((c_n)\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+a_{n} = f(x_{n + N}), \hspace{1em} b_{n} = g(x_{n + N}), \hspace{1em} \text{and} c_{n} = h(x_{n + N}),
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. By <a class="reference internal" href="#equation-sw1">(2.1)</a>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+a_n \leq b_n \leq c_n, \hspace{2em}
+\]</div>
+<p>and by  <a class="reference internal" href="#equation-sw2">(2.2)</a>, <span class="math notranslate nohighlight">\(\displaystyle\lim_{n\rightarrow\infty}a_n = \lim_{n\rightarrow\infty}c_n = l\)</span>. Hence by the sandwich rule for sequences,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\rightarrow \infty}c_n = \lim_{n\rightarrow \infty} g(x_n)= l,
+\]</div>
+<p>and we have established that <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \rightarrow c}g(x)\)</span> exists and is equal to <span class="math notranslate nohighlight">\(l\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</section>
+<section id="divergence">
+<h2><span class="section-number">2.3. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<p>In the same setting as <a class="reference internal" href="#functionlimit">Definition 2.2</a>, we say that a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> <em>diverges</em> at <span class="math notranslate nohighlight">\(x=a\)</span> if <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x)\)</span> does not exist.</p>
+<p>There are some interesting types of behaviour involved here.</p>
+<div class="proof definition admonition" id="div+-infty">
+<p class="admonition-title"><span class="caption-number">Definition 2.3 </span> (Divergence to <span class="math notranslate nohighlight">\(\pm\infty\)</span>)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> be a function and <span class="math notranslate nohighlight">\(a\)</span> a limit point of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to infinity</em> at <span class="math notranslate nohighlight">\(x = a\)</span> and we write</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a} f(x) = \infty
+\]</div>
+<p>if for any <span class="math notranslate nohighlight">\(K&gt;0\)</span> there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt;|x-a|&lt;\delta \Rightarrow f(x)&gt;K. 
+\]</div>
+<p><strong>Equivalent, sequential conditions:</strong> <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = \infty\)</span> if for every sequence <span class="math notranslate nohighlight">\((x_{n})\)</span>, with <span class="math notranslate nohighlight">\(x_{n} \in X\)</span>, <span class="math notranslate nohighlight">\(x_n\neq a\)</span>, which satisfies <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty} x_{n} = a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty} f(x_{n}) = \infty\)</span>, i.e. the sequence of real numbers <span class="math notranslate nohighlight">\((f(x_{n}))\)</span> diverges to infinity.</p>
+</section>
+</div><p>The notion of <em>divergence to minus infinity</em> is defined similarly, and in that case we write <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = -\infty\)</span>. For an example of divergence to infinity, consider e.g. <span class="math notranslate nohighlight">\(\lim_{x \rightarrow 0}\frac{1}{x^2}\)</span>. The details are left to you.</p>
+<p>If convergence fails for a function <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> at a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>, it may be that a weaker notion of convergence still applies, in which the direction of approach is restricted to one side at a time.</p>
+<div class="proof definition admonition" id="definition-13">
+<p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Marginal limits)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>. We say that <span class="math notranslate nohighlight">\(f\)</span> has <em>left limit</em> <span class="math notranslate nohighlight">\(l\)</span> at a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>, and write</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a^-}f(x) = l
+\]</div>
+<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
+<p>We say <span class="math notranslate nohighlight">\(f\)</span> has a <em>right limit</em> <span class="math notranslate nohighlight">\(l\)</span> at <span class="math notranslate nohighlight">\(a\)</span>, and write,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a^+}f(x) = l
+\]</div>
+<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(\delta&lt;x-a&lt;0\)</span>.</p>
+</section>
+</div><p>Equivalently, in terms of sequences,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&lt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&gt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
+</ul>
+<p>The proof that these definitions are equivalent is very similar to that of Theorem <a class="reference internal" href="#ed"><span class="xref myst">2</span></a>, and is left to you to do as an exercise.</p>
+<div class="proof example admonition" id="example-14">
+<p class="admonition-title"><span class="caption-number">Example 2.8 </span></p>
+<section class="example-content" id="proof-content">
+<p>Heaviside’s indicator function, <span class="math notranslate nohighlight">\(\textbf{1}_{[0,\infty)}\)</span>, as defined in <a class="reference internal" href="#indicatorfn">Example 2.4</a>, has both left and right limits at the point <span class="math notranslate nohighlight">\(0\)</span>: one can check that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^-}=0\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^+}=1\)</span>. Since these limits disagree, there is no well-defined limit for this function at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+</section>
+</div><p>We also meet functions that diverge in different ways when approached from the left and from the right of a given point.</p>
+<div class="proof example admonition" id="example-15">
+<p class="admonition-title"><span class="caption-number">Example 2.9 </span></p>
+<section class="example-content" id="proof-content">
+<p>Consider <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus \{0\}\to \mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</p>
+<figure class="align-default" id="x">
+<a class="reference internal image-reference" href="../MAS2004-9Sem2Notes/figs/1,x.png"><img alt="../MAS2004-9Sem2Notes/figs/1,x.png" src="../MAS2004-9Sem2Notes/figs/1,x.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</span><a class="headerlink" href="#x" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It is easily verified that <span class="math notranslate nohighlight">\(\lim_{x \rightarrow 0^-}f(x) = - \infty\)</span>, and <span class="math notranslate nohighlight">\(\lim_{x \rightarrow 0^+}f(x) =  \infty\)</span>.</p>
+</section>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1Rev.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Revision of MAS107</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3Cty.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Continuity</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limit-of-a-function">2.2. The limit of a function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rosie Shewell Brockway
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
