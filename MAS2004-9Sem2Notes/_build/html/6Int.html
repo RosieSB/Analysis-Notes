@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -556,12 +556,15 @@ L(f,P) = U(f,P) = \sum_{k=1}^nC(x_k-x_{k-1}) = C(x_n-x_0)=C(b-a).
 \]</div>
 </section>
 </div><p>The following is a handy criterion for proving that more sophisticated functions are integrable.</p>
-<p><strong>Proof.</strong> A bounded function <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> is integrable if and only if the following criterion holds:</p>
+<div class="proof proposition admonition" id="intcond">
+<p class="admonition-title"><span class="caption-number">Proposition 6.2 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>A bounded function <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> is integrable if and only if the following criterion holds:</p>
 <blockquote>
-<div><p>For all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, there is a partition <span class="math notranslate nohighlight">\(P\)</span> such that <span class="math notranslate nohighlight">\(U(f,P) - L(f,P) &lt; \varepsilon\)</span>.
-<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<div><p>For all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, there is a partition <span class="math notranslate nohighlight">\(P\)</span> such that <span class="math notranslate nohighlight">\(U(f,P) - L(f,P) &lt; \varepsilon\)</span>.</p>
 </div></blockquote>
-<p><strong>Proof.</strong> (<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) Observe that for any partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a,b]\)</span>,</p>
+</section>
+</div><p><strong>Proof.</strong> (<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) Observe that for any partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a,b]\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 0\leq U(f)-L(f) \leq U(f,P)-L(f,P).
@@ -644,7 +647,7 @@ U(f,P)-L(f,P) = \frac{b-a}{n}\big(f(x_n)-f(x_0)\big) = \frac{b-a}{n}\big(f(b)-f(
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to \mathbb{R}\)</span> be continuous. Then <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable.</p>
 </section>
 </div><p>In case we are tempted to think that all functions are integrable, here is an example of a non-integrable function.</p>
-<div class="proof example admonition" id="example-9">
+<div class="proof example admonition" id="example-10">
 <p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Define <span class="math notranslate nohighlight">\(f:[0,1]\rightarrow \mathbb{R}\)</span> by</p>
@@ -672,7 +675,7 @@ U(f,P) = \sum_{k=1}^n(x_k-x_{k-1}) = x_n-x_0 = 1,
 <h2><span class="section-number">6.3. </span>Properties of the integral<a class="headerlink" href="#properties-of-the-integral" title="Link to this heading">#</a></h2>
 <p>We gather together some useful properties of the Riemann integral. Those that are not proven directly here will be proven in the problem booklet.</p>
 <div class="proof proposition admonition" id="propsint">
-<p class="admonition-title"><span class="caption-number">Proposition 6.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Proposition 6.3 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>Let the bounded functions <span class="math notranslate nohighlight">\(f,g:[a,b]\rightarrow \mathbb{R}\)</span> be Riemann integrable.</p>
 <p>(i)  Suppose <span class="math notranslate nohighlight">\(f(x)\leq g(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then</p>
@@ -773,7 +776,7 @@ L(f) = L(f|_{[a,c]})+L(f|_{[c,b]}).
 \]</div>
 <p>(iii) See Problems 67 and 68.</p>
 <p>(iv) Since <span class="math notranslate nohighlight">\(-|f(x)|\leq f(x) \leq |f(x)|\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> the result will follow from part (i) if we can show that <span class="math notranslate nohighlight">\(|f|\)</span> is integrable. This is for you to do as Problem 69.<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<p><a class="reference internal" href="#propsint">Proposition 6.2</a>(ii) is particularly useful as it allows us to integrate functions with a finite number of jump discontinuities, by splitting its domain into intervals on which it is continuous.</p>
+<p><a class="reference internal" href="#propsint">Proposition 6.3</a>(ii) is particularly useful as it allows us to integrate functions with a finite number of jump discontinuities, by splitting its domain into intervals on which it is continuous.</p>
 <div class="proof example admonition" id="eg:step">
 <p class="admonition-title"><span class="caption-number">Example 6.3 </span></p>
 <section class="example-content" id="proof-content">
@@ -801,7 +804,7 @@ s(x) = \left\{\begin{array}{cc} -1 &amp; \text{if } 0\leq x&lt;2 \\ 1 &amp; \tex
 \[
 \int_0^2s(x)dx=-2,\; \int_2^3s(x)dx=1, \; \text{ and } \; \int_3^4s(x)dx=2.
 \]</div>
-<p>Hence by <a class="reference internal" href="#propsint">Proposition 6.2</a>(ii),</p>
+<p>Hence by <a class="reference internal" href="#propsint">Proposition 6.3</a>(ii),</p>
 <div class="math notranslate nohighlight">
 \[
 \int_0^4s(x)dx = \int_0^2s(x)dx + \int_2^3s(x)dx + \int_3^4s(x)dx = -2 + 1 + 2 = 1.
@@ -823,7 +826,7 @@ s(x) = \left\{\begin{array}{cc} -1 &amp; \text{if } 0\leq x&lt;2 \\ 1 &amp; \tex
 \int_a^af(x)dx=0.
 \]</div>
 </section>
-</div><p><a class="reference internal" href="#def:intba">Definition 6.4</a> is a natural convention that mainly serves the purpose of simplifying the algebra of integrals. Importantly, it does not disturb the validity of any part of <a class="reference internal" href="#propsint">Proposition 6.2</a>.</p>
+</div><p><a class="reference internal" href="#def:intba">Definition 6.4</a> is a natural convention that mainly serves the purpose of simplifying the algebra of integrals. Importantly, it does not disturb the validity of any part of <a class="reference internal" href="#propsint">Proposition 6.3</a>.</p>
 </section>
 </section>
 <section id="the-fundamental-theorem-of-calculus">
@@ -871,7 +874,7 @@ F(x) = \int_a^x f(t)dt.
 <p>Then <span class="math notranslate nohighlight">\(F\)</span> is differentiable, and <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>.</p>
 </section>
 </div><p><strong>Proof.</strong> Note first that <span class="math notranslate nohighlight">\(F\)</span> is well defined: by <a class="reference internal" href="#thm:ctsint">Theorem 6.2</a>, <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
-<p>Let <span class="math notranslate nohighlight">\(h&gt;0\)</span> and let <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then, using <a class="reference internal" href="#propsint">Proposition 6.2</a>(ii),</p>
+<p>Let <span class="math notranslate nohighlight">\(h&gt;0\)</span> and let <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then, using <a class="reference internal" href="#propsint">Proposition 6.3</a>(ii),</p>
 <div class="math notranslate nohighlight">
 \[
 F(x+h)-F(x) = \int_a^{x+h} f(t) dt -\int_a^{x} f(t)  dt = \int_x^{x+h} f(t) dt.
@@ -909,7 +912,7 @@ hf(c_h) \leq F(x+h) - F(x) \leq h\cdot f(k_h),
 \]</div>
 <p>That is, <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span> and  <span class="math notranslate nohighlight">\(F'(x) =f(x)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 <p>The version of the theorem that we use in practice to calculate integrals follows as a corollary.</p>
-<div class="proof corollary admonition" id="corollary-15">
+<div class="proof corollary admonition" id="corollary-16">
 <p class="admonition-title"><span class="caption-number">Corollary 6.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow \mathbb{R}\)</span> be a continuous function. Suppose we have a differentiable function <span class="math notranslate nohighlight">\(F:[a,b]\rightarrow \mathbb{R}\)</span> such that <span class="math notranslate nohighlight">\(F'(x) =f(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then</p>

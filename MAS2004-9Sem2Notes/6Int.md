@@ -199,10 +199,12 @@ $$
 
 The following is a handy criterion for proving that more sophisticated functions are integrable.
 
-**Proof.** A bounded function $f:[a,b]\to\mathbb{R}$ is integrable if and only if the following criterion holds:
+````{prf:proposition}
+:label: intcond
+A bounded function $f:[a,b]\to\mathbb{R}$ is integrable if and only if the following criterion holds:
 
 > For all $\varepsilon>0$, there is a partition $P$ such that $U(f,P) - L(f,P) < \varepsilon$. 
-<span style="float:right;">$\square$</span>
+````
 
 
 **Proof.** ($\Leftarrow$) Observe that for any partition $P$ of $[a,b]$,
