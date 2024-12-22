@@ -22,8 +22,8 @@ This semester, we will pick up where you left off in MAS107 last year, and look 
 
 ### Exam (90\%)
 
-- MAS2009 Analysis: 1.5 hour written exam in January
-- MAS2004 Analysis and Algebra: 2.5 hour written exam in May/June, on both Semester 1 and Semester 2 material
+- MAS2009 Analysis: 1.5 hour written exam in May/June.
+- MAS2004 Analysis and Algebra: 2.5 hour written exam in May/June, on both Semester 1 and Semester 2 material.
 
 ### Homework (10\%)
 
