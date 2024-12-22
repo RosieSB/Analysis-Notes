@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -178,6 +178,9 @@
 <li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix.html">Appendix</a></li>
 </ul>
 
     </div>
@@ -488,13 +491,16 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 <p>If the vertices of this triangle are <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(R\)</span>, then the triangle inequality is just saying that it is a shorter distance to walk from <span class="math notranslate nohighlight">\(P\)</span> to <span class="math notranslate nohighlight">\(R\)</span> directly than it would be to walk there via the point <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/tri_ineq.png"><img alt="Triangle with vertices $P$, $Q$ and $R$, and edges $\overrightarrow{PQ}=\mathbf{a}$, $\overrightarrow{QR}=\mathbf{b}$ and $\overrightarrow{PR}=\mathbf{a}+\mathbf{b}$. It is always shorter to travel directly from $P$ to $R$ than it is to go via $Q$. In other words, $|\mathbf{a}+\mathbf{b}|\leq|\mathbf{a}|+|\mathbf{b}|$." class="bg-primary mb-1 align-center" src="_images/tri_ineq.png" style="width: 600px;" /></a>
 <p>The following corollary of the triangle inequality will also be frequently useful.</p>
-<p><strong>Corollary 0.2.6.</strong>
-For all <span class="math notranslate nohighlight">\(a,b\in\mathbb{R}\)</span>,</p>
+<div class="proof corollary admonition" id="cor:tri">
+<p class="admonition-title"><span class="caption-number">Corollary 1.1 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>For all <span class="math notranslate nohighlight">\(a,b\in\mathbb{R}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 \Big||a|-|b|\Big| \leq |a-b|.
 \]</div>
-<p><strong>Proof.</strong> Since the statement is symmetric in <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, we can assume without loss of generality that <span class="math notranslate nohighlight">\(|a|&gt;|b|\)</span>. By the triangle inequality,</p>
+</section>
+</div><p><strong>Proof.</strong> Since the statement is symmetric in <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, we can assume without loss of generality that <span class="math notranslate nohighlight">\(|a|&gt;|b|\)</span>. By the triangle inequality,</p>
 <div class="math notranslate nohighlight">
 \[
 |a| = |(a-b) +b| \leq |a-b| +|b|,

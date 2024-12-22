@@ -160,6 +160,7 @@ $$
 The results in this section should all be familiar from MAS106, but now we can make the proofs rigorous.
 
 ````{prf:theorem}
+:label: rules
 Let $f$ and $g$ be real-valued functions that are differentiable at $a \in \text{Dom}(f) \cap \text{Dom}(g)$. Then the following hold.
 
 (i) For each $\alpha,\beta \in \mathbb{R}$, the function $\alpha f + \beta g$ is differentiable at $a$ and
@@ -358,17 +359,22 @@ A visual representation of the mean value theorem.
 
 In analysis, for any statement connecting calculus to some geometric property of a curve, the mean value theorem is likely to feature in its proof. We investigate one example of this next.
 
-````{prf:cor} Monotonicity revisited
+
+
+````{prf:corollary} Monotonicity revisited
+:label: mond
 Suppose that  $f:[a,b]\to\mathbb{R}$ is continuous on $[a, b]$ and differentiable on $(a, b)$.
 
-[(i)]1. If $f'(x) \geq 0$ for all $x \in (a, b)$, then $f$ is monotonic increasing on $[a, b]$.
-2. If $f'(x) > 0$ for all $x \in (a, b)$, then $f$ is strictly monotonic increasing on $[a, b]$.
-3. If $f'(x) \leq 0$ for all $x \in (a, b)$, then $f$ is monotonic decreasing on $[a, b]$.
-4. If $f'(x) < 0$ for all $x \in (a, b)$, then $f$ is strictly monotonic decreasing on $[a, b]$.
+(i) If $f'(x) \geq 0$ for all $x \in (a, b)$, then $f$ is monotonic increasing on $[a, b]$.
+
+(ii) If $f'(x) > 0$ for all $x \in (a, b)$, then $f$ is strictly monotonic increasing on $[a, b]$.
+
+(iii) If $f'(x) \leq 0$ for all $x \in (a, b)$, then $f$ is monotonic decreasing on $[a, b]$.
+
+(iv) If $f'(x) < 0$ for all $x \in (a, b)$, then $f$ is strictly monotonic decreasing on $[a, b]$.
 ````
 
-**Proof.** We'll just do the first of these, as the others are so similar.
-Choose arbitrary $\alpha, \beta$ such that $a \leq \alpha < \beta \leq b$. By the mean value theorem ({prf:ref}`mvt`), there exists $c \in (\alpha, \beta)$ so that
+**Proof.** We'll just do the first of these, as the others are so similar. Choose arbitrary $\alpha, \beta$ such that $a \leq \alpha < \beta \leq b$. By the mean value theorem ({prf:ref}`mvt`), there exists $c \in (\alpha, \beta)$ so that
 
 $$
 \frac{f(\beta) - f(\alpha)}{\beta - \alpha} = f'(c) \geq 0.
@@ -376,12 +382,3 @@ $$
 
 Hence $f(\beta) \geq f(\alpha)$ and so $f$ is monotonic increasing, as required. 
 <div align="right">□</div>
-
-
-%\include{Redacted/inverses revisited.tex}
-
-%\include{Redacted/CMVT.tex}
-
-%\include{Redacted/L'Hop.tex}
-
-%\include{Redacted/Taylor.tex}

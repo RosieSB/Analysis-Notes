@@ -3,7 +3,7 @@
 
 In this chapter we will go over the rigorous definition of the integral, defined in terms of area beneath curves. You have seen the idea before in MAS106, but now we can make it precise using limits.
 
-## 1. Partitions and Riemann sums
+## Partitions and Riemann sums
 
 Let $[a,b]\subseteq\mathbb{R}$ be a closed bounded interval. A *partition* of $[a,b]$ refers to any finite subset $P={x_0,x_1,\ldots,x_n}$ of $[a,b]$ that contains the endpoints $a$ and $b$. It is convenient to assume that
 
@@ -117,7 +117,7 @@ $$
 Finally, suppose $Q$ is a refinement of $P$. Since $Q\setminus P$ is finite, we can apply the above argument recursively to prove that $L(f,Q)\geq L(f,P)$ and $U(f,Q)\leq U(f,P)$. <span style="float:right;">$\square$</span>
 
 
-## 2. The Riemann integral
+## The Riemann integral
 
 We are now ready to define the Riemann integral.
 
@@ -243,7 +243,7 @@ U(f,P\cup Q) - L(f,P\cup Q) &\leq U(f,Q) - L(f,P) \\
 As an application of this, we can prove that all monotone functions defined on a closed bounded interval are integrable.
 
 ````{prf:theorem}
-:label:thm:mono
+:label: thm:mono
 Let $f:[a,b]\to\mathbb{R}$ be a monotone function. Then $f$ is integrable.
 ````
 **Proof.**
@@ -308,7 +308,7 @@ Any integer larger than $\displaystyle\frac{(b-a)(f(b)-f(a))}{\varepsilon}$ will
 Another large class of integrable functions is the continuous functions on closed bounded intervals. Unfortunately there is not sufficient time in this module to cover its proof, though the general approach is not disimilar to {prf:ref}`thm:mono`. A non-examinable proof can be found in the appendix for interest.
 
 ````{prf:theorem}
-:label:thm:ctsint
+:label: thm:ctsint
 Let $f:[a,b]\to \mathbb{R}$ be continuous. Then $f$ is Riemann integrable.
 ````
 
@@ -342,11 +342,11 @@ $$
 while $L(f,P)=0$. Taking $\sup$'s and $\inf$'s over all partitions $P$ of $[0,1]$, it follows that $U(f)=1$ and $L(f)=0$. So $U(f)\neq L(f)$, and $f$ is not Riemann integrable.
 
 
-## 3. Properties of the integral
+## Properties of the integral
 
 We gather together some useful properties of the Riemann integral. Those that are not proven directly here will be proven in the problem booklet.
 
-````{prf:proposition} 
+````{prf:proposition}
 :label: propsint
 Let the bounded functions $f,g:[a,b]\rightarrow \mathbb{R}$ be Riemann integrable.
 
@@ -527,7 +527,7 @@ $$
 
 
 
-#### 3.0.1. Exchanging limits in an integral
+### Exchanging limits in an integral
 
 Technically, we have only defined $\int_a^bf(x)dx$ when $a<b$.
 
@@ -549,13 +549,14 @@ $$
 
 {prf:ref}`def:intba` is a natural convention that mainly serves the purpose of simplifying the algebra of integrals. Importantly, it does not disturb the validity of any part of {prf:ref}`propsint`.
 
-## 4. The fundamental theorem of calculus
+## The fundamental theorem of calculus
 
 So far, integration has exclusively referred to area calculation. In this section we link it with the reverse of differentiation. This is known as the *fundamental theorem of calculus*. You are already familiar with this statement, but now we are in a position to give a full proof.
 
 We first need a quick lemma.
 
 ````{prf:lemma}
+:label: bdint
 Let the bounded function $f:[a,b]\rightarrow \mathbb{R}$ be Riemann integrable. Let
 
 $$

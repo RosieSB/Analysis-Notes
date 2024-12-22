@@ -58,7 +58,7 @@ Links: [Library](https://find.shef.ac.uk/permalink/f/15enftp/44SFD_ALMA_DS512687
 
 This is a more traditional analysis textbook, as it is sometimes useful to see ideas presented in more than one way.
 
-Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS51360822510001441); [abebooks](-https://www.abebooks.co.uk/9781493950263/Understanding-Analysis-Stephen-Abbott-1493950266/plp); [goodreads](https://www.goodreads.com/book/show/26457662-understanding-analysis).
+Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS51360822510001441); [abebooks](https://www.abebooks.co.uk/9781493950263/Understanding-Analysis-Stephen-Abbott-1493950266/plp); [goodreads](https://www.goodreads.com/book/show/26457662-understanding-analysis).
 
 
 

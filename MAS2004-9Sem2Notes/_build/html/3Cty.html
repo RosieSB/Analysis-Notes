@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -178,6 +178,9 @@
 <li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix.html">Appendix</a></li>
 </ul>
 
     </div>
@@ -609,7 +612,7 @@ S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
 <p>In this section we will study functions on closed intervals, <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>, which are continuous at every point of <span class="math notranslate nohighlight">\([a,b]\)</span>. Many well–known functions have this property, including polynomials, sines, cosines and exponential functions. It turns out, as we will see, that there are some very important and powerful theorems that can be proved in this context.</p>
 <section id="the-intermediate-value-theorem">
 <h3><span class="section-number">3.3.1. </span>The intermediate value theorem<a class="headerlink" href="#the-intermediate-value-theorem" title="Link to this heading">#</a></h3>
-<div class="proof theorem admonition" id="ivp">
+<div class="proof theorem admonition" id="ivt">
 <p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (The intermediate value theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a, b]\to\mathbb{R}\)</span> be continuous  with <span class="math notranslate nohighlight">\(f(a) &gt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &lt; 0\)</span>, or <span class="math notranslate nohighlight">\(f(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &gt; 0\)</span>. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
@@ -662,13 +665,13 @@ b_{n+1} - a_{n+1} = \frac{1}{2}(b_{n} - a_{n}) = \frac{1}{2}.2^{-n}(b -a) = 2^{-
 f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspace{2em} f(c) = \lim_{n\rightarrow\infty} f(b_{n}) \leq 0.
 \]</div>
 <p>Hence <span class="math notranslate nohighlight">\(f(c) = 0\)</span>. As both <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b) \neq 0\)</span>, <span class="math notranslate nohighlight">\(c \notin \{a, b\}\)</span>, i.e. <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<div class="proof corollary admonition" id="ivp2">
+<div class="proof corollary admonition" id="ivt2">
 <p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) &lt; f(b)\)</span>. Then for each <span class="math notranslate nohighlight">\(\gamma \in (f(a), f(b))\)</span>, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = \gamma\)</span>.</p>
 </section>
 </div><p><strong>Proof.</strong> This is left for you to do as Problem 23. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<p>Note that <a class="reference internal" href="#ivp2">Corollary 3.1</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
+<p>Note that <a class="reference internal" href="#ivt2">Corollary 3.1</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
 <p>The next result gives a nice application of analysis to the theory of equations.</p>
 <div class="proof corollary admonition" id="pol">
 <p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
@@ -744,7 +747,7 @@ f([a, b]) = [m, M].
 </div><p><strong>Proof.</strong> By <a class="reference internal" href="#thm:evt">Theorem 3.5</a>, there exist <span class="math notranslate nohighlight">\(\gamma, \delta \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\gamma) = \inf_{x \in [a, b]}f(x)\)</span> and <span class="math notranslate nohighlight">\(f(\delta) = \sup_{x \in [a, b]}f(x)\)</span>. We take <span class="math notranslate nohighlight">\(m = f(\gamma)\)</span> and <span class="math notranslate nohighlight">\(M = f(\delta)\)</span>.
 Clearly, <span class="math notranslate nohighlight">\(m\leq M\)</span> and, since <span class="math notranslate nohighlight">\(f\)</span> is non-constant, <span class="math notranslate nohighlight">\(m&lt;M\)</span>.
 If <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>, then <span class="math notranslate nohighlight">\(f(x) \in [m, M]\)</span> and so <span class="math notranslate nohighlight">\(f([a, b]) \subseteq [m, M]\)</span>.</p>
-<p>For the other inclusion, by <a class="reference internal" href="#ivp2">Corollary 3.1</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>For the other inclusion, by <a class="reference internal" href="#ivt2">Corollary 3.1</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </section>
 <section id="inverses">
 <h3><span class="section-number">3.3.3. </span>Inverses<a class="headerlink" href="#inverses" title="Link to this heading">#</a></h3>

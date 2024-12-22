@@ -5,10 +5,14 @@ format: jb-book
 root: 0Intro.md
 options:
   numbered: true
-chapters:
-  - file: 1Rev
-  - file: 2LoF
-  - file: 3Cty
-  - file: 4Diff
-  - file: 5SSF
-  - file: 6Int
+parts:
+  - numbered: True  # Only applies to chapters in Part 1.
+    chapters:
+    - file: 1Rev
+    - file: 2LoF
+    - file: 3Cty
+    - file: 4Diff
+    - file: 5SSF
+    - file: 6Int
+  - chapters:
+    - file: Appendix

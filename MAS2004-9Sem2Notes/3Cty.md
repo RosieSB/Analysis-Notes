@@ -273,7 +273,7 @@ In this section we will study functions on closed intervals, $f:[a, b] \rightarr
 ### The intermediate value theorem
 
 ````{prf:theorem} The intermediate value theorem
-:label: ivp
+:label: ivt
 Let $f:[a, b]\to\mathbb{R}$ be continuous  with $f(a) > 0$ and $f(b) < 0$, or $f(a) < 0$ and $f(b) > 0$. Then there exists $c \in (a, b)$ such that $f(c) = 0$.
 ````
 
@@ -334,14 +334,14 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 
 
 ````{prf:corollary}
- :label: ivp2
+ :label: ivt2
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $\gamma \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````
 
 **Proof.** This is left for you to do as Problem 23. <span style="float:right;">$\square$</span>
 
 
-Note that {prf:ref}`ivp2` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
+Note that {prf:ref}`ivt2` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
 
 
 
@@ -444,7 +444,7 @@ $$
 Clearly, $m\leq M$ and, since $f$ is non-constant, $m<M$.
 If $x \in [a,b]$, then $f(x) \in [m, M]$ and so $f([a, b]) \subseteq [m, M]$.
 
-For the other inclusion, by {prf:ref}`ivp2`, given any $c \in (m, M)$ there exists $y \in (\gamma, \delta)$ (or in $(\delta, \gamma)$ depending on which number is smallest) so that $c = f(y)$, and it follows that $[m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])$. <span style="float:right;">$\square$</span>
+For the other inclusion, by {prf:ref}`ivt2`, given any $c \in (m, M)$ there exists $y \in (\gamma, \delta)$ (or in $(\delta, \gamma)$ depending on which number is smallest) so that $c = f(y)$, and it follows that $[m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])$. <span style="float:right;">$\square$</span>
 
 
 ### Inverses

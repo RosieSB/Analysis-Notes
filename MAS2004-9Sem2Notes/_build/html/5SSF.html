@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -178,6 +178,9 @@
 <li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Sequences and series of functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix.html">Appendix</a></li>
 </ul>
 
     </div>
@@ -370,13 +373,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. 1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. 1.0.1. Uniform convergence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. 1.0.2. General procedure for calculating uniform limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. Uniform convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. General procedure for calculating uniform limits</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. 2. Continuity and differentiability under uniform limits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-of-functions">5.3. 3. Series of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. Continuity and differentiability under uniform limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-of-functions">5.3. Series of functions</a></li>
 </ul>
             </nav>
         </div>
@@ -392,7 +395,7 @@
 <span id="chap-seq-seriesoffns"></span><h1><span class="section-number">5. </span>Sequences and series of functions<a class="headerlink" href="#sequences-and-series-of-functions" title="Link to this heading">#</a></h1>
 <p>In this chapter we will study sequences and series of functions. We start by considering two different notions of convergence for a sequence of functions. Later we will consider the interaction between continuity and these notions of convergence, as well as looking at differentiation. The results we obtain for sequences of functions will later be applied to series of functions, by considering sequences of partial sums.</p>
 <section id="pointwise-and-uniform-convergence">
-<h2><span class="section-number">5.1. </span>1. Pointwise and uniform convergence<a class="headerlink" href="#pointwise-and-uniform-convergence" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Pointwise and uniform convergence<a class="headerlink" href="#pointwise-and-uniform-convergence" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>, and consider a sequence of functions, <span class="math notranslate nohighlight">\((f_n)\)</span>, where <span class="math notranslate nohighlight">\(f_n:X\rightarrow \mathbb{R}\)</span> for each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 5.1 </span></p>
@@ -449,7 +452,7 @@ f_n(x) = x^n\rightarrow 0
 f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1. \\ \end{array} \right.
 \end{split}\]</div>
 <section id="uniform-convergence">
-<h3><span class="section-number">5.1.1. </span>1.0.1. Uniform convergence<a class="headerlink" href="#uniform-convergence" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.1.1. </span>Uniform convergence<a class="headerlink" href="#uniform-convergence" title="Link to this heading">#</a></h3>
 <p>It is natural to wonder what conditions are necessary for “nice’’ properties such as continuity to be preserved in the limit as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. <a class="reference internal" href="#xne">Example 5.3</a> shows that pointwise convergence alone is not enough: we had a sequence of continuous functions converging pointwise to a limit that was not continuous.</p>
 <p>Recall when we defined pointwise convergence of a sequence <span class="math notranslate nohighlight">\((f_n)\)</span> to a funciton <span class="math notranslate nohighlight">\(f\)</span>, we noted that <span class="math notranslate nohighlight">\((f_n(x))\)</span> may converge faster for some values of <span class="math notranslate nohighlight">\(x\)</span> than others. This is the issue that led to the development of uniform convergence: a notion of convergence that requires the sequence of functions to converge at the same rate at every point. We shall see that uniform convergence is a much stronger condition than pointwise convergence, and preserves such things as continuity and to an extent differentiation.</p>
 <div class="proof definition admonition" id="def:uconv">
@@ -476,10 +479,11 @@ f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &
 <p>If <span class="math notranslate nohighlight">\(f_n\rightarrow f\)</span> uniformly, then <span class="math notranslate nohighlight">\(f_n\rightarrow f\)</span> pointwise.</p>
 </section>
 </div><p>That is, uniform convergence implies pointwise convergence, and when both hold, the limit functions are the same. This will be useful later when proving sequences are uniformly convergent, as we can identify the intended limit function by first computing the pointwise limit.</p>
-<p>First, we prove an equivalent characterisation of uniform convergence, that is typically easier to use in practice than <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">uconv</span></code></p>
-<div class="proof proposition admonition" id="prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.">
+<p>First, we prove an equivalent characterisation of uniform convergence, that is typically easier to use in practice than <a class="reference internal" href="#def:uconv">Definition 5.2</a></p>
+<div class="proof proposition admonition" id="prop:uconv">
 <p class="admonition-title"><span class="caption-number">Proposition 5.2 </span></p>
 <section class="proposition-content" id="proof-content">
+<p>Consider a sequence of functions <span class="math notranslate nohighlight">\(f_n :[a,b]\rightarrow \mathbb{R}\)</span>. Let <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow \mathbb{R}\)</span>. Then the following statements are equivalent.</p>
 <p>(i) The sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>(ii) Let <span class="math notranslate nohighlight">\(M_n = \sup \{ |f_n (x) -f(x) : x\in [a,b] \}\)</span>. Then <span class="math notranslate nohighlight">\(M_n \rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.</p>
 </section>
@@ -497,7 +501,7 @@ But this means, for <span class="math notranslate nohighlight">\(n\geq N\)</span
 \sup_{x\in [a,b]} |f_n(x)-f(x)| &lt;\varepsilon
 \]</div>
 <p>and so <span class="math notranslate nohighlight">\(|f_n(x) -f(x)|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(n\geq N\)</span>, for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Thus <span class="math notranslate nohighlight">\((f_n)\)</span> converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, as required. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<p>The condition on the <span class="math notranslate nohighlight">\(M_n\)</span>s in <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">prop:uconv</span></code> is usually the easiest way to actually prove uniform convergence in an example.</p>
+<p>The condition on the <span class="math notranslate nohighlight">\(M_n\)</span>s in <a class="reference internal" href="#prop:uconv">Proposition 5.2</a> is usually the easiest way to actually prove uniform convergence in an example.</p>
 <div class="proof example admonition" id="eg:uconv">
 <p class="admonition-title"><span class="caption-number">Example 5.4 </span></p>
 <section class="example-content" id="proof-content">
@@ -530,29 +534,27 @@ f_n(x) = \frac{ \frac{1}{n}-2}{\frac{1}{n}-1 } \sin(x) \rightarrow 2\sin(x)
 \[
 M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 \]</div>
-<p>then <span class="math notranslate nohighlight">\(0\leq M_n \leq \frac{1}{n-1}\)</span>. And since $ \frac{1}{n-1}\rightarrow 0$ as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, we have <span class="math notranslate nohighlight">\(M_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>. So <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, by <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">prop:uconv</span></code>.</p>
+<p>then <span class="math notranslate nohighlight">\(0\leq M_n \leq \frac{1}{n-1}\)</span>. And since $ \frac{1}{n-1}\rightarrow 0$ as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, we have <span class="math notranslate nohighlight">\(M_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>. So <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, by <a class="reference internal" href="#prop:uconv">Proposition 5.2</a>.</p>
 </section>
 <section id="general-procedure-for-calculating-uniform-limits">
-<h3><span class="section-number">5.1.2. </span>1.0.2. General procedure for calculating uniform limits<a class="headerlink" href="#general-procedure-for-calculating-uniform-limits" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.1.2. </span>General procedure for calculating uniform limits<a class="headerlink" href="#general-procedure-for-calculating-uniform-limits" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#eg:uconv">Example 5.4</a> demonstrates an approach that is typically the best way to prove or check for uniform convergence.</p>
-<p>To prove a sequence of functions <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly:
-\begin{quote}</p>
+<p>To prove a sequence of functions <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly:</p>
 <ol class="arabic simple">
 <li><p>Calculate its pointwise limit, <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
-<li><p>Prove that <span class="math notranslate nohighlight">\(f_n\)</span> also converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, using Proposition <a class="reference internal" href="#prop:uconv"><span class="xref myst">prop:uconv</span></a> or <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">uconv</span></code>.</p></li>
+<li><p>Prove that <span class="math notranslate nohighlight">\(f_n\)</span> also converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, using <a class="reference internal" href="#prop:uconv">Proposition 5.2</a> or <a class="reference internal" href="#def:uconv">Definition 5.2</a>.</p></li>
 </ol>
-<p>\end{quote}</p>
 </section>
 </section>
 <section id="continuity-and-differentiability-under-uniform-limits">
-<h2><span class="section-number">5.2. </span>2. Continuity and differentiability under uniform limits<a class="headerlink" href="#continuity-and-differentiability-under-uniform-limits" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>Continuity and differentiability under uniform limits<a class="headerlink" href="#continuity-and-differentiability-under-uniform-limits" title="Link to this heading">#</a></h2>
 <p>We are now ready to prove that continuity is preserved by uniform limits.</p>
 <div class="proof theorem admonition" id="ucont">
 <p class="admonition-title"><span class="caption-number">Theorem 5.1 </span> (Uniform limit theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n :X\rightarrow \mathbb{R}\)</span> be continuous for each <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>. Suppose the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(f:X\rightarrow \mathbb{R}\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p>
 </section>
-</div><p>The proof is sometimes called the <span class="math notranslate nohighlight">\(\varepsilon /3\)</span> proof because of the main trick.</p>
+</div><p>The proof is sometimes called the “<span class="math notranslate nohighlight">\(\varepsilon /3\)</span> proof” because of the main trick.</p>
 <p><strong>Proof.</strong> Let <span class="math notranslate nohighlight">\(x_0\in X\)</span>. We want to prove that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion for continuity.</p>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span>. Then since <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, there is <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-eps-3">
@@ -581,16 +583,15 @@ We saw in Example \ref{xne} that the sequence <span class="math notranslate nohi
 f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1.\\ \end{array} \right.
 \end{split}\]</div>
 <p>If <span class="math notranslate nohighlight">\((f_n)\)</span> did converge uniformly the limit would have to be this function <span class="math notranslate nohighlight">\(f\)</span>. But <span class="math notranslate nohighlight">\(f\)</span> is clearly not continuous at <span class="math notranslate nohighlight">\(x=1\)</span>. So <span class="math notranslate nohighlight">\((f_n)\)</span> does not converge uniformly.</p>
-<p>The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest — see Section <a class="reference internal" href="#sec:intdiffunif"><span class="xref myst">sec:intdiffunif</span></a>.</p>
-<div class="proof theorem admonition" id="theorem-10">
-<p class="admonition-title"><span class="caption-number">Theorem 5.2 </span></p>
+<p>The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest — see <a class="reference internal" href="Appendix.html#sec-intdiffunif"><span class="std std-ref">Section A.2</span></a>.</p>
+<div class="proof theorem admonition" id="udiff">
+<p class="admonition-title"><span class="caption-number">Theorem 5.2 </span> (Differentiable limit theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p>[Differentiable limit theorem] Consider differentiable functions <span class="math notranslate nohighlight">\(f_n:[a,b]\rightarrow \mathbb{R}\)</span>. Suppose that</p>
-<p>[(i)]1. <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise to a function <span class="math notranslate nohighlight">\(f\)</span>,
-2. Each derivative <span class="math notranslate nohighlight">\(f_n'\)</span> is continuous, and
-3. The sequence of derivatives <span class="math notranslate nohighlight">\((f'_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(g\)</span>.</p>
-<p>Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable, and <span class="math notranslate nohighlight">\(f'=g\)</span>.
-\noproof</p>
+<p>Consider differentiable functions <span class="math notranslate nohighlight">\(f_n:[a,b]\rightarrow \mathbb{R}\)</span>. Suppose that</p>
+<p>(i) <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise to a function <span class="math notranslate nohighlight">\(f\)</span>,
+(ii) Each derivative <span class="math notranslate nohighlight">\(f_n'\)</span> is continuous, and
+(iii) The sequence of derivatives <span class="math notranslate nohighlight">\((f'_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable, and <span class="math notranslate nohighlight">\(f'=g\)</span>.</p>
 </section>
 </div><p>Thus we can, <em>under suitable conditions</em>, swap limits and differentiation.</p>
 <p>The following example shows that convergence conditions on the sequence of derivatives are necessary.</p>
@@ -614,7 +615,7 @@ f_n'(x) =n\cos (n^2 x)
 <p>and the sequence <span class="math notranslate nohighlight">\((f_n')\)</span> does not converge pointwise (let alone uniformly).</p>
 </section>
 <section id="series-of-functions">
-<h2><span class="section-number">5.3. </span>3. Series of functions<a class="headerlink" href="#series-of-functions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.3. </span>Series of functions<a class="headerlink" href="#series-of-functions" title="Link to this heading">#</a></h2>
 <p>We can treat convergence of series of functions via sequences of partial sums. This mirrors the approach taken for series of real numbers, as seen in MAS107.</p>
 <div class="proof definition admonition" id="definition-12">
 <p class="admonition-title"><span class="caption-number">Definition 5.3 </span></p>
@@ -627,8 +628,8 @@ s_n(x)=f_1(x)+f_2 (x) + \cdots +f_n (x).
 <p>We say the infinite series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> <em>converges pointwise</em> if <span class="math notranslate nohighlight">\((s_n)\)</span> converges pointwise. In other words, <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> converges pointwise if, for each <span class="math notranslate nohighlight">\(x\in X\)</span>, the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n(x)\)</span> converges.</p>
 <p>We say that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> is <em>uniformly summable</em>}, or that the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> <em>converges uniformly</em> on <span class="math notranslate nohighlight">\(X\)</span> if the sequence <span class="math notranslate nohighlight">\((s_n)\)</span> of partial sums converges uniformly.</p>
 </section>
-</div><p><a class="reference internal" href="#ucont">Theorem 5.1</a> and Theorem~<a class="reference internal" href="#udiff"><span class="xref myst">2</span></a> immediately give us the following two results.</p>
-<div class="proof theorem admonition" id="theorem-13">
+</div><p><a class="reference internal" href="#ucont">Theorem 5.1</a> and <a class="reference internal" href="#udiff">Theorem 5.2</a> immediately give us the following two results.</p>
+<div class="proof theorem admonition" id="thm:unifconvcts">
 <p class="admonition-title"><span class="caption-number">Theorem 5.3 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\((f_n)\)</span> be a uniformly summable sequence of continuous functions <span class="math notranslate nohighlight">\(f_n :X\rightarrow \mathbb{R}\)</span>. Then the function</p>
@@ -638,7 +639,7 @@ f:X\rightarrow \mathbb{R}; \; f(x) = \sum_{n=1}^\infty f_n (x)
 \]</div>
 <p>is continuous.</p>
 </section>
-</div><div class="proof theorem admonition" id="theorem-14">
+</div><div class="proof theorem admonition" id="dterm">
 <p class="admonition-title"><span class="caption-number">Theorem 5.4 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\((f_n)\)</span> be a sequence of differentiable functions, <span class="math notranslate nohighlight">\(f_n :[a,b]\rightarrow \mathbb{R}\)</span>, such that the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> converges pointwise to a function <span class="math notranslate nohighlight">\(f\)</span>, each <span class="math notranslate nohighlight">\(f_n'\)</span> is continuous and the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n'\)</span> is uniformly convergent.</p>
@@ -675,7 +676,7 @@ s:X\to\mathbb{R}; \; s(x)=\sum_{n=1}^\infty f_n (x).
 \]</div>
 <p>Since this holds for all <span class="math notranslate nohighlight">\(x\in X\)</span>, it follows that <span class="math notranslate nohighlight">\(s_n\rightarrow s\)</span>  uniformly. So <span class="math notranslate nohighlight">\((f_n)\)</span> is uniformly summable. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 <p>The Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test is very useful for defining functions via their power series. In particular, we are now in a position to begin a rigorous treatment of the exponential function.</p>
-<div class="proof example admonition" id="example-16">
+<div class="proof example admonition" id="eg:exp">
 <p class="admonition-title"><span class="caption-number">Example 5.7 </span> (Exponential function)</p>
 <section class="example-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(R&gt;0\)</span>, and for <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>, define</p>
@@ -684,7 +685,7 @@ s:X\to\mathbb{R}; \; s(x)=\sum_{n=1}^\infty f_n (x).
 f_n:[-R,R]\to\mathbb{R}; \hspace{1em} f_n(x) = \frac{x^n}{n!}.
 \]</div>
 <p>Then for <span class="math notranslate nohighlight">\(x\in[-R,R]\)</span>, <span class="math notranslate nohighlight">\(|f_n(x)|\leq\frac{R^n}{n!}\)</span>. Let <span class="math notranslate nohighlight">\(M_n=\frac{R^n}{n!}\)</span>. Since <span class="math notranslate nohighlight">\(M_n&gt;0\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>, we can apply the ratio test to see if <span class="math notranslate nohighlight">\(M_n\)</span> is a summable sequence of real numbers.</p>
-<p>The ratio test^[For more information on this result, see Theorem 4.8 of your MAS107 notes.] asks us to consider the behaviour of <span class="math notranslate nohighlight">\(\frac{M_{n+1}}{M_n}\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. If this limit exists, there are three possible scenarios:</p>
+<p>The ratio test<a class="footnote-reference brackets" href="#for" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> asks us to consider the behaviour of <span class="math notranslate nohighlight">\(\frac{M_{n+1}}{M_n}\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. If this limit exists, there are three possible scenarios:</p>
 <ol class="arabic simple">
 <li><p>If <span class="math notranslate nohighlight">\(\displaystyle\lim_{n\rightarrow\infty}\frac{M_{n+1}}{M_n}&lt;1\)</span>, then <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty M_n\)</span> converges.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(\displaystyle\lim_{n\rightarrow\infty}\frac{M_{n+1}}{M_n}&gt;1\)</span>, then <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty M_n=+\infty\)</span>.</p></li>
@@ -701,13 +702,13 @@ f_n:[-R,R]\to\mathbb{R}; \hspace{1em} f_n(x) = \frac{x^n}{n!}.
 \[
 \exp(x) = \sum_{n=0}^\infty \frac{x^n}{n!},
 \]</div>
-<p>and this series converges uniformly on bounded intervals. Each term is continuous, and so by <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">unifconvcts</span></code> so is <span class="math notranslate nohighlight">\(\exp\)</span>. Each term is also differentiable, so by Theorem <a class="reference internal" href="#dterm"><span class="xref myst">3</span></a>, <span class="math notranslate nohighlight">\(\exp\)</span> is differentiable and can be differentiated term by term. Thus</p>
+<p>and this series converges uniformly on bounded intervals. Each term is continuous, and so by <a class="reference internal" href="#thm:unifconvcts">Theorem 5.3</a> so is <span class="math notranslate nohighlight">\(\exp\)</span>. Each term is also differentiable, so by <a class="reference internal" href="#dterm">Theorem 5.4</a>, <span class="math notranslate nohighlight">\(\exp\)</span> is differentiable and can be differentiated term by term. Thus</p>
 <div class="math notranslate nohighlight">
 \[
 \exp'(x) = \sum_{n=1}^\infty\frac{t^{n-1}}{(n-1)!} = \exp(x).
 \]</div>
 <p>But then <span class="math notranslate nohighlight">\(\exp\)</span> is infinitely differentiable, and we have established one of the key properties of the exponential function!</p>
-<p>Further rigorous development of the exponential function, including a proof that <span class="math notranslate nohighlight">\(\exp(x)=e^x\)</span>, can be found in appendix Section <a class="reference internal" href="#sec:exp"><span class="xref myst">sec:exp</span></a>, for interest^[Non-examinable].</p>
+<p>Further rigorous development of the exponential function, including a proof that <span class="math notranslate nohighlight">\(\exp(x)=e^x\)</span>, can be found in appendix <a class="reference internal" href="Appendix.html#sec-exp"><span class="std std-ref">Section A.3</span></a>, for interest<a class="footnote-reference brackets" href="#ne" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 </section>
 </div><p>The Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test can also be used to construct examples with pathological properties.</p>
 <div class="proof proposition admonition" id="proposition-17">
@@ -732,13 +733,13 @@ f_n(x) = \frac{\left|10^nx - \text{round}(10^nx)\right|}{10^n}.
 <ul class="simple">
 <li><p>Let <span class="math notranslate nohighlight">\(f=\sum_{n=1}^\infty f_n\)</span>.</p></li>
 <li><p>Use  the Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test to show that the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> converges uniformly.</p></li>
-<li><p>Apply the Uniform Limit Theorem (<a class="reference internal" href="#ucont">Theorem 5.1</a> to show that <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p></li>
+<li><p>Apply the Uniform Limit Theorem (<a class="reference internal" href="#ucont">Theorem 5.1</a>) to show that <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p></li>
 <li><p>Check directly that <span class="math notranslate nohighlight">\(f\)</span> is not differentiable anywhere, by showing that the required limit does not exist.
 (To give full details of this is quite long. But the idea is straightforward: <span class="math notranslate nohighlight">\(f_1\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{20}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(f_2\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{200}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span> and so on - thus <span class="math notranslate nohighlight">\(f\)</span> has “corners’’ everywhere and is differentiable nowhere.) <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p></li>
 </ul>
 <p>The graph of <span class="math notranslate nohighlight">\(y=f(x)\)</span> is extremely jagged, as might be expected from a nowehere differentiable continuous function.</p>
 <figure class="align-default" id="ndcts">
-<a class="reference internal image-reference" href="_images/NDcts.png"><img alt="_images/NDcts.png" src="_images/NDcts.png" style="height: 150px;" /></a>
+<a class="reference internal image-reference" href="_images/NDcts.png"><img alt="_images/NDcts.png" src="_images/NDcts.png" style="height: 200px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f\)</span>.</span><a class="headerlink" href="#ndcts" title="Link to this image">#</a></p>
 </figcaption>
@@ -751,6 +752,14 @@ f_n(x) = \frac{\left|10^nx - \text{round}(10^nx)\right|}{10^n}.
 <aside class="footnote brackets" id="see" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>See MAS107 Semester 2 Theorem 4.6.</p>
+</aside>
+<aside class="footnote brackets" id="for" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>For more information on this result, see Theorem 4.8 of your MAS107 notes.</p>
+</aside>
+<aside class="footnote brackets" id="ne" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Non-examinable.</p>
 </aside>
 </aside>
 </section>
@@ -821,13 +830,13 @@ f_n(x) = \frac{\left|10^nx - \text{round}(10^nx)\right|}{10^n}.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. 1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. 1.0.1. Uniform convergence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. 1.0.2. General procedure for calculating uniform limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. Uniform convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. General procedure for calculating uniform limits</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. 2. Continuity and differentiability under uniform limits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-of-functions">5.3. 3. Series of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. Continuity and differentiability under uniform limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-of-functions">5.3. Series of functions</a></li>
 </ul>
   </nav></div>
 

@@ -1,0 +1,827 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Appendix &#8212; MAS2004/9 Semester 2 Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Appendix';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="6. Riemann integration" href="6Int.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0Intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="MAS2004/9 Semester 2 Notes - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="MAS2004/9 Semester 2 Notes - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0Intro.html">
+                    0. Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1Rev.html">1. Revision of MAS107</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2LoF.html">2. Limits of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3Cty.html">3. Continuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4Diff.html">4. Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Appendix</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAppendix.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Appendix.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Appendix</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-1-continuous-functions-are-integrable">A.1 Continuous functions are integrable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-2-integration-and-differentiation-under-uniform">A.2 Integration and differentiation under uniform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-3-e-and-the-exponential-function">A.3 <span class="math notranslate nohighlight">\(e\)</span> and the exponential function</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="appendix">
+<span id="chap-app"></span><h1>Appendix<a class="headerlink" href="#appendix" title="Link to this heading">#</a></h1>
+<p>Throughout these notes, there have been times where a proof or more technical discussion has been omitted due to time limitations. Some of these proofs are included here, for interest. Note that this chapter is non-examinable, with the exception of the statement of <a class="reference internal" href="#udiff">Theorem A.3</a>, which has already been stated earlier in the notes (<a class="reference internal" href="5SSF.html#udiff">Theorem 5.2</a>).</p>
+<section id="a-1-continuous-functions-are-integrable">
+<h2>A.1 Continuous functions are integrable<a class="headerlink" href="#a-1-continuous-functions-are-integrable" title="Link to this heading">#</a></h2>
+<div class="admonition-theorem-a-1 admonition">
+<p class="admonition-title">Theorem A.1</p>
+<p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to \mathbb{R}\)</span> be continuous. Then <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable.</p>
+</div>
+<p><strong>Proof.</strong>
+Since <span class="math notranslate nohighlight">\(f\)</span> is continuous, it is bounded, by <a class="reference internal" href="3Cty.html#thm:evt">Theorem 3.5</a>, and so we may consider its upper and lower integrals.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. We aim to show that <span class="math notranslate nohighlight">\(U(f)-L(f)&lt;\varepsilon\)</span>. The result will then follow by <a class="reference internal" href="6Int.html#prop:intcond">Proposition 6.1</a>.</p>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is continuous, for each <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> there exists <span class="math notranslate nohighlight">\(\delta_x&gt;0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-f(y)|&lt;\frac{\varepsilon}{b-a} \hspace{2em} \text{ whenever }|x-y|&lt;\delta_x.
+\]</div>
+<p>Here, we use the subscript <span class="math notranslate nohighlight">\(x\)</span> to emphasise that <span class="math notranslate nohighlight">\(\delta\)</span> may depend on <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><em>Claim.</em>
+<span class="math notranslate nohighlight">\(\delta\)</span> can be chosen independently of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><em>Proof of claim.</em>
+If not, then for each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> we can choose <span class="math notranslate nohighlight">\(x_n,y_n\in[a,b]\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-xn-yn">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-xn-yn" title="Link to this equation">#</a></span>\[|x_n-y_n|&lt;\frac{1}{n}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-fxn-fyn">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-fxn-fyn" title="Link to this equation">#</a></span>\[|f(x_n)-f(y_n)|\geq\frac{\varepsilon}{b-a}.\]</div>
+<p>Now <span class="math notranslate nohighlight">\((x_n)\)</span> is a bounded sequence, and so must have a convergent subsequence. Suppose that <span class="math notranslate nohighlight">\((x_{n_j})\)</span> is a subsequence converging to <span class="math notranslate nohighlight">\(l\)</span>. Then by equation <a class="reference internal" href="#equation-eq-xn-yn">(1)</a>, we must also have <span class="math notranslate nohighlight">\(y_{n_j}\rightarrow l\)</span>. By continuity, <span class="math notranslate nohighlight">\(f(x_{n_j})-f(y_{n_j})\rightarrow 0\)</span>, which contradicts <a class="reference internal" href="#equation-eq-fxn-fyn">(2)</a>.</p>
+<p>We have shown that there is a single number <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for any <span class="math notranslate nohighlight">\(x,y\in[a,b]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-f(y)|&lt;\frac{\varepsilon}{b-a} \hspace{2em} \text{ whenever }|x-y|&lt;\delta.
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(a=x_0&lt;x_1&lt;x_2&lt;\ldots&lt;x_n=b\)</span> be chosen so that <span class="math notranslate nohighlight">\(x_k-x_{k-1}&lt;\delta\)</span> for <span class="math notranslate nohighlight">\(k=1,2,\ldots,n\)</span> (this is always possible if we take <span class="math notranslate nohighlight">\(n\)</span> large enough), and let <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\ldots,x_n\}\)</span>. By continuity, <span class="math notranslate nohighlight">\(f\)</span> attains its maximum and minimum on each interval <span class="math notranslate nohighlight">\([x_{k-1},x_k]\)</span>. Let <span class="math notranslate nohighlight">\(c_k,d_k\in[x_{k-1},x_k]\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+f(c_k) = \inf\{f(x):x_{k-1}\leq x\leq x_k\},
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+f(d_k) = \sup\{f(x):x_{k-1}\leq x\leq x_k\}.
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(f(c_k)&lt;f(d_k)\)</span>, and also, since <span class="math notranslate nohighlight">\(0&lt;x_k-x_{k-1}&lt;\delta\)</span>, we have <span class="math notranslate nohighlight">\(f(c_k)-f(d_k)&lt;\frac{\varepsilon}{b-a}\)</span>. The lower and upper sums associated with <span class="math notranslate nohighlight">\(P\)</span> are therefore</p>
+<div class="math notranslate nohighlight">
+\[
+L(f,P) = \sum_{k=1}^nf(c_k)(x_k-x_{k-1}) \hspace{.5em} \text{ and } \hspace{.5em} U(f,P) =  \sum_{k=1}^nf(d_k)(x_k-x_{k-1}).
+\]</div>
+<p>Hence</p>
+<div class="math notranslate nohighlight">
+\[
+L(f) \geq \sum_{k=1}^nf(c_k)(x_k-x_{k-1})  \hspace{.5em} \text{ and } \hspace{.5em} U(f) \leq  \sum_{k=1}^nf(d_k)(x_k-x_{k-1}).
+\]</div>
+<p>Also, since <span class="math notranslate nohighlight">\(0&lt;x_k-x_{k-1}&lt;\delta\)</span>, we have <span class="math notranslate nohighlight">\(\ds f(c_k)-f(d_k)&lt;\frac{\varepsilon}{b-a}\)</span>. Thus
+\begin{align*}
+U(f) - L(f) &amp;\leq \sum_{k=1}^nf(d_k)(x_k-x_{k-1}) - \sum_{k=1}^nf(c_k)(x_k-x_{k-1})\
+&amp;= \sum_{k=1}^n(f(c_k)-f(d_k))(x_k-x_{k-1}) \
+&amp;\leq \sum_{k=1}^n\frac{\varepsilon}{b-a}(x_k-x_{k-1}) = \varepsilon.
+\end{align*}
+Since <span class="math notranslate nohighlight">\(\varepsilon\)</span> was arbitrary, it follows that <span class="math notranslate nohighlight">\(U(f)=L(f)\)</span>, and so <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable.</p>
+</section>
+<section id="a-2-integration-and-differentiation-under-uniform">
+<span id="sec-intdiffunif"></span><h2>A.2 Integration and differentiation under uniform<a class="headerlink" href="#a-2-integration-and-differentiation-under-uniform" title="Link to this heading">#</a></h2>
+<p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we saw that continuity is preserved under uniform limits. We also saw that, provided certain conditions are met, differentiability is preserved by uniform limits. In this section, we will prove this result, by first proving a similar result about integration.</p>
+<p>The following result is called the {\em uniform limit theorem for integrals}.</p>
+<div class="admonition-theorem-a-2-uniform-limit-theorem-for-integrals admonition">
+<p class="admonition-title">Theorem A.2 (Uniform limit theorem for integrals)</p>
+<p>Let <span class="math notranslate nohighlight">\(f_n :[a,b]\rightarrow \mathbb{R}\)</span> be a cont:inuous function, for <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. Suppose the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(f\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\rightarrow \infty} \int_a^b f_n(x)dx = \int_a^b f(x)dx.
+\]</div>
+</div>
+<p><strong>Proof.</strong>
+By <a class="reference internal" href="5SSF.html#ucont">Theorem 5.1</a>, the function <span class="math notranslate nohighlight">\(f\)</span> is continuous, and therefore integrable. Let <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span>.
+Since <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>,
+we have <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+|f_n (x) -f(x)| &lt; \frac{\varepsilon}{2(b-a)}
+\]</div>
+<p>whenever <span class="math notranslate nohighlight">\(n\geq N\)</span>, for all <span class="math notranslate nohighlight">\(t\in [a,b]\)</span>.</p>
+<p>Hence by <a class="reference internal" href="6Int.html#propsint">Proposition 6.2</a> and <a class="reference internal" href="6Int.html#bdint">Lemma 6.2</a>, for <span class="math notranslate nohighlight">\(n\geq N\)</span> we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}  
+\left| \int_a^b f_n (x)dx - \int_a^b f(x)dx \right| 
+&amp;=\left|  \int_a^b \big(f_n(x) -f(x)\big)dx \right|\\
+&amp;\leq \int_a^b |f_n(x) -f(x)|dx \leq \frac{(b-a)\varepsilon}{2(b-a)} =\frac{\varepsilon}{2} &lt; \varepsilon. \\
+\end{align*} \]</div>
+<p>The result now follows.</p>
+<p>Thus we can, \emph{under suitable conditions}, swap limits and integral signs. This is frequently useful.</p>
+<p>The result actually still holds if each <span class="math notranslate nohighlight">\(f_n\)</span> is Riemann integrable rather than continuous, but the proof is much more involved, and the above is enough for our purposes.</p>
+<p>The following example shows that we do need {\emph{uniform}} convergence to be able to swap limits and
+integrals.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f_n:[0,1]\to\mathbb{R}\)</span>, for <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> be defined by</p>
+<div class="math notranslate nohighlight">
+\[
+f_n(x)=nx(1-x^2)^n.
+\]</div>
+<p>(i) Show that <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise to the zero function.</p>
+<p>(ii) Calculate <span class="math notranslate nohighlight">\(\lim_{n\to\infty}\int_0^1 f_n(x)dx.\)</span></p>
+<p>(iii) Does <span class="math notranslate nohighlight">\((f_n)\)</span> converge uniformly?</p>
+</section>
+</div><p><strong>Solution.</strong>
+(i) Clearly, if <span class="math notranslate nohighlight">\(x=0\)</span> or <span class="math notranslate nohighlight">\(x=1\)</span>, then <span class="math notranslate nohighlight">\(f_n(x)=0\)</span> for all <span class="math notranslate nohighlight">\(n\)</span> and so <span class="math notranslate nohighlight">\(f_n\rightarrow 0\)</span> pointwise.
+So now suppose <span class="math notranslate nohighlight">\(x\in (0,1)\)</span>. Then <span class="math notranslate nohighlight">\(0&lt;1-x^2&lt;1\)</span>. So we can find a positive number <span class="math notranslate nohighlight">\(h\)</span> such that
+<span class="math notranslate nohighlight">\(1-x^2=1/(1+h)\)</span>. Using the binomial expansion for <span class="math notranslate nohighlight">\((1+h)^n\)</span>, we see that <span class="math notranslate nohighlight">\((1+h)^n&gt;\frac{n(n-1)}{2}h^2\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt;nx(1-x^2)^n=\frac{nx}{(1+h)^n}&lt;\frac{2nx}{n(n-1)h^2}=\frac{2x}{(n-1)h^2}.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{2x}{(n-1)h^2}\to 0\)</span> as <span class="math notranslate nohighlight">\(n\to\infty\)</span>, by the sandwich rule, <span class="math notranslate nohighlight">\(f_n(x)\to 0\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>. Thus <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise to the zero function.</p>
+<p>(ii) Substitute <span class="math notranslate nohighlight">\(u=x^2\)</span>, to get</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\int_0^1 f_n(x)dx&amp;=\int_0^1 nx(1-x^2)^n\,dx= \int_0^1 nx(1-u)^n \frac{1}{2x}du \\
+&amp;=\frac{n}{2}\int_0^1 (1-u)^ndu=\frac{n}{2}\left[-\frac{(1-u)^{n+1}}{n+1}\right]_0^1=\frac{n}{2(n+1)}.
+\end{align*} \]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to\infty}\int_0^1 f_n(x)dx=\lim_{n\to\infty}\frac{n}{2(n+1)}=\lim_{n\to\infty}\frac{1}{2+\frac{2}{n}}=\frac{1}{2}.
+\]</div>
+<p>(iii) From the previous parts we see that</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to\infty}\int_0^1 f_n(x)dx=\frac{1}{2}\neq 0=\int_0^1 \lim_{n\to\infty} f_n(x)dx.
+\]</div>
+<p>Thus <span class="math notranslate nohighlight">\((f_n)\)</span> cannot converge uniformly (otherwise this example would contradict the uniform limit theorem).</p>
+<p>Our first immediate application is to differentiation. Indeed, it is natural to ask at this point about swapping limits and differentiation.</p>
+<div class="admonition-theorem-a-3-uniform-limit-theorem-for-differentiation admonition" id="udiff">
+<p class="admonition-title">Theorem A.3 (Uniform limit theorem for differentiation)</p>
+<p>Consider differentiable functions <span class="math notranslate nohighlight">\(f_n:[a,b]\rightarrow \mathbb{R}\)</span>. Suppose <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise to a function <span class="math notranslate nohighlight">\(f\)</span>, each <span class="math notranslate nohighlight">\(f_n'\)</span> is continuous and the sequence of derivatives <span class="math notranslate nohighlight">\((f'_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(g\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable, and <span class="math notranslate nohighlight">\(f'=g\)</span>.</p>
+</div>
+<p><strong>Proof.</strong>
+By the fundamental theorem of calculus, for each <span class="math notranslate nohighlight">\(x\in [a,b]\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+f_n (x) = f_n (a) + \int_a^x f'_n (t)\ dt
+\]</div>
+<p>for each <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>.
+So</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to\infty} f_n (x) = \lim_{n\to\infty} f_n (a) +\lim_{n\to\infty} \int_a^x f'_n (t)\ dt.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\((f_n)\)</span> has pointwise limit <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span>, and <span class="math notranslate nohighlight">\((f'_n)\)</span> has uniform limit <span class="math notranslate nohighlight">\(g\)</span> on <span class="math notranslate nohighlight">\([a,x]\)</span>, using the uniform limit theorem for integrals, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = f(a) + \int_a^x g(t)\ dt
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>.
+Applying the fundamental theorem of calculus, <span class="math notranslate nohighlight">\(f\)</span> is differentiable and</p>
+<div class="math notranslate nohighlight">
+\[
+f'(x) =g(x)
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, as required.</p>
+<p>Thus we can, {\emph{under suitable conditions}}, swap limits and differentiation.</p>
+</section>
+<section id="a-3-e-and-the-exponential-function">
+<span id="sec-exp"></span><h2>A.3 <span class="math notranslate nohighlight">\(e\)</span> and the exponential function<a class="headerlink" href="#a-3-e-and-the-exponential-function" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span> (Exponential function)</p>
+<section class="definition-content" id="proof-content">
+<p>We define the {\em exponential function}, <span class="math notranslate nohighlight">\(\exp:\mathbb{R}\to\mathbb{R}\)</span>, by</p>
+<div class="math notranslate nohighlight">
+\[
+\exp (x) = \sum_{n=0}^\infty \frac{x^n}{n!}.
+\]</div>
+</section>
+</div><p>In <a class="reference internal" href="5SSF.html#eg:exp">Example 5.7</a>, we proved that this series converges uniformly on bounded intervals, and that <span class="math notranslate nohighlight">\(\exp\)</span> is continuous, infinitely differentiable and satisfies <span class="math notranslate nohighlight">\(\exp'(x)=\exp(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
+<p>In MAS107, you saw\footnote{See Example 3.12 in the MAS107 lecture notes.} that the limit</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\rightarrow \infty} \left( 1 + \frac{1}{n} \right)^n
+\]</div>
+<p>exists and the limit was taken as a definition of the number <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<p>We would like to prove that <span class="math notranslate nohighlight">\(\exp(x)=e^x\)</span> for all <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. This needs to be done in stages.</p>
+<div class="proof proposition admonition" id="esum">
+<p class="admonition-title"><span class="caption-number">Proposition 1 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a,b\in \mathbb{R}\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\exp (a+b) = \exp (a) \exp (b).
+\]</div>
+</section>
+</div><p><strong>Proof.</strong>
+Let <span class="math notranslate nohighlight">\(c\in \mathbb{R}\)</span>. Define <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \exp (c+x) \exp (-x).
+\]</div>
+<p>Then by the product rule</p>
+<div class="math notranslate nohighlight">
+\[
+f'(x) = - \exp (c+x) \exp (-x) + \exp (c+x) \exp (-x) =0.
+\]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \exp (c+x) \exp (-x) = A,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is constant. By the series definition, <span class="math notranslate nohighlight">\(\exp (0)=1\)</span>, so letting <span class="math notranslate nohighlight">\(x=0\)</span>, we get <span class="math notranslate nohighlight">\(A = \exp (c)\)</span>. So</p>
+<div class="math notranslate nohighlight">
+\[
+\exp (c+x) \exp (-x) = \exp (c).
+\]</div>
+<p>Now let <span class="math notranslate nohighlight">\(c=a+b\)</span>, <span class="math notranslate nohighlight">\(x=-b\)</span>, giving</p>
+<div class="math notranslate nohighlight">
+\[
+\exp (a+b) = \exp (a) \exp (b),
+\]</div>
+<p>as required.</p>
+<p>Now we relate the exponential function to the limit expression for <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<div class="proof proposition admonition" id="proposition-3">
+<p class="admonition-title"><span class="caption-number">Proposition 2 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(x\in \mathbb{R}\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\rightarrow \infty} \left( 1 + \frac{x}{n} \right)^n = \exp (x).
+\]</div>
+</section>
+</div><p><strong>Proof.</strong>
+We will give the proof for <span class="math notranslate nohighlight">\(x\geq 0\)</span>. The case where <span class="math notranslate nohighlight">\(x&lt;0\)</span>  can be treated similarly.
+We write</p>
+<div class="math notranslate nohighlight">
+\[
+t_n(x)= \left( 1 + \frac{x}{n} \right)^n, \qquad s_n(x)=\sum_{k=0}^n \frac{x^k}{k!}.
+\]</div>
+<p>One can show that for each <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\((t_n(x))\)</span> is a monotonic increasing and bounded sequence, so it is convergent.</p>
+<p>We want to show that <span class="math notranslate nohighlight">\(\lim_{n\to\infty} t_n(x)=\lim_{n\to\infty} s_n(x)\)</span>.</p>
+<p>Using the binomial theorem,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+	t_n(x)
+	&amp;= \sum_{k=0}^n \left( \frac{n!}{k!(n-k)!} \right) \frac{x^k}{n^k}\\
+	&amp;=  \sum_{k=0}^n\frac{n(n-1)(n-2)\cdots (n-(k-1))}{n^k}\frac{x^k}{k!}\\
+	&amp;= \sum_{k=0}^n\left( 1- \frac{1}{n} \right) \left( 1- \frac{2}{n} \right) \cdots \left( 1- \frac{k-1}{n} \right)\frac{x^k}{k!}.
+\end{align*}\]</div>
+<p>Thus we see that <span class="math notranslate nohighlight">\(t_n(x)\leq s_n(x)\)</span> for all <span class="math notranslate nohighlight">\(n,x\)</span> and so</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to\infty} t_n(x)\leq \lim_{n\to\infty} s_n(x).
+\]</div>
+<p>On the other hand, we also have, for <span class="math notranslate nohighlight">\(n\geq m\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+t_n(x)\geq \sum_{k=0}^m \left( \frac{n!}{n^k(n-k)!} \right) \frac{x^k}{k!}.
+\]</div>
+<p>So, using the algebra of limits,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\lim_{n\to\infty} t_n(x)\geq  \lim_{n\to\infty} \sum_{k=0}^m&amp; \left( \frac{n!}{n^k(n-k)!} \right) \frac{x^k}{k!}\\
+&amp;= \sum_{k=0}^m\lim_{n\to\infty} \left( \frac{n!}{n^k(n-k)!} \right)  \frac{x^k}{k!}\\
+&amp;=\sum_{k=0}^m\lim_{n\to\infty} \left( 1- \frac{1}{n} \right) \left( 1- \frac{2}{n} \right) \cdots \left( 1- 		\frac{k-1}{n} \right)\frac{x^k}{k!}\\
+&amp;=\sum_{k=0}^m  \frac{x^k}{k!}=s_m(x).
+\end{align*}\]</div>
+<p>Now taking the limit as <span class="math notranslate nohighlight">\(m\to\infty\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to\infty} t_n(x)\geq \lim_{m\to\infty} s_m(x).
+\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(\lim_{n\to\infty} t_n(x)=\lim_{n\to\infty} s_n(x)\)</span>, as required.</p>
+<p>In particular,</p>
+<div class="math notranslate nohighlight">
+\[
+\exp (1) = e = \lim_{n\rightarrow \infty} \left( 1+ \frac{1}{n} \right)^n.
+\]</div>
+<div class="proof proposition admonition" id="proposition-4">
+<p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>The number <span class="math notranslate nohighlight">\(e\)</span> is irrational and <span class="math notranslate nohighlight">\(2&lt; e\leq 3\)</span>.</p>
+</section>
+</div><p><strong>Proof.</strong>
+We first show that <span class="math notranslate nohighlight">\(2&lt; e\leq 3\)</span>. %(This was already seen in semester 1 in Example 2.3.6, but let’s check from the series point of view.)
+We have</p>
+<div class="math notranslate nohighlight">
+\[
+e = 1+ \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots
+\]</div>
+<p>Certainly</p>
+<div class="math notranslate nohighlight">
+\[
+e&gt; 1 + \frac{1}{1!} =2 .
+\]</div>
+<p>Now <span class="math notranslate nohighlight">\(n! &gt;2^{n-1}\)</span> for <span class="math notranslate nohighlight">\(n\geq 3\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+e=1+ \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots \leq 1+1+ \frac{1}{2} + \frac{1}{4} +  \frac{1}{8} + \cdots =1+2=3 ,
+\]</div>
+<p>by the formula for the sum of a geometric series.</p>
+<p>Now we prove <span class="math notranslate nohighlight">\(e\)</span> is irrational. We work by contradiction, so suppose that <span class="math notranslate nohighlight">\(e\)</span> is rational. Since <span class="math notranslate nohighlight">\(e\)</span> is positive, we then have <span class="math notranslate nohighlight">\(e= \frac{a}{b}\)</span> where <span class="math notranslate nohighlight">\(a,b\in \mathbb{N}\)</span>.
+So <span class="math notranslate nohighlight">\(be=a\)</span>, and so <span class="math notranslate nohighlight">\(b!e \in \mathbb{N}\)</span>.</p>
+<p>\noindent But</p>
+<div class="math notranslate nohighlight">
+\[
+b!e = b!+ \frac{b!}{1!} + \frac{b!}{2!} + \cdots + \frac{b!}{b!} + \frac{b!}{(b+1)!} + \frac{b!}{(b+2)!}+ \cdots
+\]</div>
+<p>Notice that the terms up to <span class="math notranslate nohighlight">\(b!/b!\)</span> are all integers. Let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+R&amp;= \frac{b!}{(b+1)!} + \frac{b!}{(b+2)!} + \cdots  \\
+&amp;= \frac{1}{b+1} + \frac{1}{(b+1)(b+2)} + \frac{1}{(b+1)(b+2)(b+3)} + \cdots 
+\end{align*}\]</div>
+<p>Notice that</p>
+<div class="math notranslate nohighlight">
+\[
+R&lt; \frac{1}{b+1} + \frac{1}{(b+1)^2} + \frac{1}{(b+1)^3} + \cdots
+\]</div>
+<p>By the formula for the sum of a geometric series,</p>
+<div class="math notranslate nohighlight">
+\[
+0&lt; R &lt; \frac{1}{b+1} \times \frac{1}{1-\frac{1}{b+1}} = \frac{1}{b}.
+\]</div>
+<p>In particular, <span class="math notranslate nohighlight">\(R\)</span> is not a natural number. Therefore <span class="math notranslate nohighlight">\(b!e\)</span> is not a natural number.
+But this is a contradiction. So <span class="math notranslate nohighlight">\(e\)</span> is irrational.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6Int.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Riemann integration</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-1-continuous-functions-are-integrable">A.1 Continuous functions are integrable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-2-integration-and-differentiation-under-uniform">A.2 Integration and differentiation under uniform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-3-e-and-the-exponential-function">A.3 <span class="math notranslate nohighlight">\(e\)</span> and the exponential function</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rosie Shewell Brockway
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

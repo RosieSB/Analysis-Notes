@@ -3,7 +3,7 @@
 
 In this chapter we will study sequences and series of functions. We start by considering two different notions of convergence for a sequence of functions. Later we will consider the interaction between continuity and these notions of convergence, as well as looking at differentiation. The results we obtain for sequences of functions will later be applied to series of functions, by considering sequences of partial sums.
 
-## 1. Pointwise and uniform convergence
+## Pointwise and uniform convergence
 
 Let $X\subseteq\mathbb{R}$, and consider a sequence of functions, $(f_n)$, where $f_n:X\rightarrow \mathbb{R}$ for each $n\in\mathbb{N}$.
 
@@ -13,7 +13,6 @@ We say the sequence $(f_n)$ *converges pointwise* to a function $f:X\rightarrow 
 $$
 \lim_{n\rightarrow \infty} f_n(x) = f(x) .
 $$
-
 ````
 
 In other words, the sequence $(f_n)$ converges pointwise to $f$ if for each $x\in X$ and $\varepsilon >0$, there exists $N\in \mathbb{N}$ such that $|f_n(x) -f(x)|<\varepsilon$ whenever $n\geq N$.
@@ -72,7 +71,7 @@ $$
 
 
 
-#### 1.0.1. Uniform convergence
+### Uniform convergence
 
 It is natural to wonder what conditions are necessary for "nice'' properties such as continuity to be preserved in the limit as $n\rightarrow\infty$. {prf:ref}`xne` shows that pointwise convergence alone is not enough: we had a sequence of continuous functions converging pointwise to a limit that was not continuous.
 
@@ -109,10 +108,11 @@ If $f_n\rightarrow f$ uniformly, then $f_n\rightarrow f$ pointwise.
 
 That is, uniform convergence implies pointwise convergence, and when both hold, the limit functions are the same. This will be useful later when proving sequences are uniformly convergent, as we can identify the intended limit function by first computing the pointwise limit.
 
-First, we prove an equivalent characterisation of uniform convergence, that is typically easier to use in practice than {prf:ref}`uconv`
+First, we prove an equivalent characterisation of uniform convergence, that is typically easier to use in practice than {prf:ref}`def:uconv`
 
 ````{prf:proposition}
-:label: prop:uconv Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.
+:label: prop:uconv 
+Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.
 
 (i) The sequence $(f_n)$ converges uniformly to $f$.
 
@@ -182,19 +182,17 @@ $$
 then $0\leq M_n \leq \frac{1}{n-1}$. And since \$ \frac{1}{n-1}\rightarrow 0\$ as $n\rightarrow \infty$, we have $M_n\rightarrow 0$ as $n\to \infty$. So $(f_n)$ converges uniformly to $f$, by {prf:ref}`prop:uconv`.	
 
 
-#### 1.0.2. General procedure for calculating uniform limits
+### General procedure for calculating uniform limits
 
 {prf:ref}`eg:uconv` demonstrates an approach that is typically the best way to prove or check for uniform convergence.
 
 To prove a sequence of functions $(f_n)$ converges uniformly:
-\begin{quote}
 
 1. Calculate its pointwise limit, $f$.
-2. Prove that $f_n$ also converges to $f$ uniformly, using Proposition [prop:uconv](#prop:uconv) or {prf:ref}`uconv`.
 
-\end{quote}
+2. Prove that $f_n$ also converges to $f$ uniformly, using {prf:ref}`prop:uconv` or {prf:ref}`def:uconv`.
 
-## 2. Continuity and differentiability under uniform limits
+## Continuity and differentiability under uniform limits
 
 We are now ready to prove that continuity is preserved by uniform limits.
 
@@ -203,7 +201,7 @@ We are now ready to prove that continuity is preserved by uniform limits.
 Let $f_n :X\rightarrow \mathbb{R}$ be continuous for each $n\in \mathbb{N}$. Suppose the sequence $(f_n)$ converges uniformly to a function $f:X\rightarrow \mathbb{R}$. Then $f$ is continuous.
 ````
 
-The proof is sometimes called the $\varepsilon /3$ proof because of the main trick.
+The proof is sometimes called the "$\varepsilon /3$ proof" because of the main trick.
 
 **Proof.** Let $x_0\in X$. We want to prove that $f$ is continuous at $x_0$. We'll use the $(\varepsilon-\delta)$ criterion for continuity.
 
@@ -251,17 +249,17 @@ $$
 If $(f_n)$ did converge uniformly the limit would have to be this function $f$. But $f$ is clearly not continuous at $x=1$. So $(f_n)$ does not converge uniformly. 
 
 
-The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest --- see Section [sec:intdiffunif](#sec:intdiffunif).
+The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest --- see [Section A.2](#sec:intdiffunif).
 
-````{prf:theorem} 
-[Differentiable limit theorem] Consider differentiable functions $f_n:[a,b]\rightarrow \mathbb{R}$. Suppose that
+````{prf:theorem} Differentiable limit theorem
+:label: udiff
+Consider differentiable functions $f_n:[a,b]\rightarrow \mathbb{R}$. Suppose that
 
-[(i)]1. $(f_n)$ converges pointwise to a function $f$,
-2. Each derivative $f_n'$ is continuous, and
-3. The sequence of derivatives $(f'_n)$ converges uniformly to a function $g$.
+(i) $(f_n)$ converges pointwise to a function $f$,
+(ii) Each derivative $f_n'$ is continuous, and
+(iii) The sequence of derivatives $(f'_n)$ converges uniformly to a function $g$.
 
 Then $f$ is differentiable, and $f'=g$.
-\noproof
 ````
 
 Thus we can, *under suitable conditions*, swap limits and differentiation.
@@ -289,10 +287,7 @@ $$
 
 and the sequence $(f_n')$ does not converge pointwise (let alone uniformly).
 
-
-%\include{Redacted/UnifCont.tex}
-
-## 3. Series of functions
+## Series of functions
 
 We can treat convergence of series of functions via sequences of partial sums. This mirrors the approach taken for series of real numbers, as seen in MAS107.
 
@@ -310,10 +305,10 @@ We say that the sequence $(f_n)$ is *uniformly summable*}, or that the series $\
 
 %One also makes the same definition for functions defined on $\mathbb{R}$.
 
-{prf:ref}`ucont` and Theorem~[2](#udiff) immediately give us the following two results.
+{prf:ref}`ucont` and {prf:ref}`udiff` immediately give us the following two results.
 
 ````{prf:theorem}
-:label:thm:unifconvcts
+:label: thm:unifconvcts
 Let $(f_n)$ be a uniformly summable sequence of continuous functions $f_n :X\rightarrow \mathbb{R}$. Then the function 
 
 $$
@@ -323,7 +318,8 @@ $$
 is continuous.
 ````
 
-````{prf:theorem} 
+````{prf:theorem}
+:label: dterm
  Let $(f_n)$ be a sequence of differentiable functions, $f_n :[a,b]\rightarrow \mathbb{R}$, such that the series $\sum_{n=1}^\infty f_n$ converges pointwise to a function $f$, each $f_n'$ is continuous and the series $\sum_{n=1}^\infty f_n'$ is uniformly convergent.
 
 Then $f$ is differentiable and
@@ -376,6 +372,7 @@ Since this holds for all $x\in X$, it follows that $s_n\rightarrow s$  uniformly
 The Weierstrass $M$-test is very useful for defining functions via their power series. In particular, we are now in a position to begin a rigorous treatment of the exponential function.
 
 ````{prf:example} Exponential function
+:label: eg:exp
 Let $R>0$, and for $n\in\mathbb{N}$, define
 
 $$
@@ -384,7 +381,8 @@ $$
 
 Then for $x\in[-R,R]$, $|f_n(x)|\leq\frac{R^n}{n!}$. Let $M_n=\frac{R^n}{n!}$. Since $M_n>0$ for all $n$, we can apply the ratio test to see if $M_n$ is a summable sequence of real numbers.
 
-The ratio test^[For more information on this result, see Theorem 4.8 of your MAS107 notes.] asks us to consider the behaviour of $\frac{M_{n+1}}{M_n}$ as $n\rightarrow\infty$. If this limit exists, there are three possible scenarios:
+The ratio test[^For] asks us to consider the behaviour of $\frac{M_{n+1}}{M_n}$ as $n\rightarrow\infty$. If this limit exists, there are three possible scenarios:
+[^For]: For more information on this result, see Theorem 4.8 of your MAS107 notes.
 
 1. If $\displaystyle\lim_{n\rightarrow\infty}\frac{M_{n+1}}{M_n}<1$, then $\sum_{n=0}^\infty M_n$ converges.
 2. If $\displaystyle\lim_{n\rightarrow\infty}\frac{M_{n+1}}{M_n}>1$, then $\sum_{n=0}^\infty M_n=+\infty$.
@@ -404,7 +402,7 @@ $$
 \exp(x) = \sum_{n=0}^\infty \frac{x^n}{n!},
 $$
 
-and this series converges uniformly on bounded intervals. Each term is continuous, and so by {prf:ref}`unifconvcts` so is $\exp$. Each term is also differentiable, so by Theorem [3](#dterm), $\exp$ is differentiable and can be differentiated term by term. Thus
+and this series converges uniformly on bounded intervals. Each term is continuous, and so by {prf:ref}`thm:unifconvcts` so is $\exp$. Each term is also differentiable, so by {prf:ref}`dterm`, $\exp$ is differentiable and can be differentiated term by term. Thus
 
 $$
 \exp'(x) = \sum_{n=1}^\infty\frac{t^{n-1}}{(n-1)!} = \exp(x).
@@ -412,8 +410,10 @@ $$
 
 But then $\exp$ is infinitely differentiable, and we have established one of the key properties of the exponential function!
 
-Further rigorous development of the exponential function, including a proof that $\exp(x)=e^x$, can be found in appendix Section [sec:exp](#sec:exp), for interest^[Non-examinable].
+Further rigorous development of the exponential function, including a proof that $\exp(x)=e^x$, can be found in appendix [Section A.3](#sec:exp), for interest[^Ne].
+[^Ne]: Non-examinable.
 ````
+
 
 The Weierstrass $M$-test can also be used to construct examples with pathological properties.
 
@@ -439,7 +439,7 @@ $$
 
 - Let $f=\sum_{n=1}^\infty f_n$.
 - Use  the Weierstrass $M$-test to show that the series $\sum_{n=1}^\infty f_n$ converges uniformly.
-- Apply the Uniform Limit Theorem ({prf:ref}`ucont` to show that $f$ is continuous.
+- Apply the Uniform Limit Theorem ({prf:ref}`ucont`) to show that $f$ is continuous.
 - Check directly that $f$ is not differentiable anywhere, by showing that the required limit does not exist.
 (To give full details of this is quite long. But the idea is straightforward: $f_1$ has "corners'' at $\frac{n}{20}$ for $n\in\mathbb{Z}$, $f_2$ has "corners'' at $\frac{n}{200}$ for $n\in\mathbb{Z}$ and so on - thus $f$ has "corners'' everywhere and is differentiable nowhere.) <span style="float:right;">$\square$</span>
 
@@ -447,7 +447,7 @@ The graph of $y=f(x)$ is extremely jagged, as might be expected from a nowehere 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/NDcts.png
 ---
-height: 150px
+height: 200px
 name: NDcts
 ---
 Graph of $f$.

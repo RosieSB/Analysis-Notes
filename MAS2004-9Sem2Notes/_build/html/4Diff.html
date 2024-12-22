@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -178,6 +178,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Differentiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5SSF.html">5. Sequences and series of functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6Int.html">6. Riemann integration</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix.html">Appendix</a></li>
 </ul>
 
     </div>
@@ -523,7 +526,7 @@ f'(a) = f_{-}'(a) = f_{+}'(a).
 <section id="rules-for-differentiation">
 <h2><span class="section-number">4.3. </span>Rules for differentiation<a class="headerlink" href="#rules-for-differentiation" title="Link to this heading">#</a></h2>
 <p>The results in this section should all be familiar from MAS106, but now we can make the proofs rigorous.</p>
-<div class="proof theorem admonition" id="theorem-7">
+<div class="proof theorem admonition" id="rules">
 <p class="admonition-title"><span class="caption-number">Theorem 4.3 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be real-valued functions that are differentiable at <span class="math notranslate nohighlight">\(a \in \text{Dom}(f) \cap \text{Dom}(g)\)</span>. Then the following hold.</p>
@@ -687,8 +690,16 @@ hence <span class="math notranslate nohighlight">\(f'(c) = \alpha\)</span>, as r
 </figcaption>
 </figure>
 <p>In analysis, for any statement connecting calculus to some geometric property of a curve, the mean value theorem is likely to feature in its proof. We investigate one example of this next.</p>
-<p><strong>Proof.</strong> We’ll just do the first of these, as the others are so similar.
-Choose arbitrary <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> such that <span class="math notranslate nohighlight">\(a \leq \alpha &lt; \beta \leq b\)</span>. By the mean value theorem (<a class="reference internal" href="#mvt">Theorem 4.7</a>), there exists <span class="math notranslate nohighlight">\(c \in (\alpha, \beta)\)</span> so that</p>
+<div class="proof corollary admonition" id="mond">
+<p class="admonition-title"><span class="caption-number">Corollary 4.1 </span> (Monotonicity revisited)</p>
+<section class="corollary-content" id="proof-content">
+<p>Suppose that  <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and differentiable on <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
+<p>(i) If <span class="math notranslate nohighlight">\(f'(x) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is monotonic increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>(ii) If <span class="math notranslate nohighlight">\(f'(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is strictly monotonic increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>(iii) If <span class="math notranslate nohighlight">\(f'(x) \leq 0\)</span> for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is monotonic decreasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>(iv) If <span class="math notranslate nohighlight">\(f'(x) &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is strictly monotonic decreasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</section>
+</div><p><strong>Proof.</strong> We’ll just do the first of these, as the others are so similar. Choose arbitrary <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> such that <span class="math notranslate nohighlight">\(a \leq \alpha &lt; \beta \leq b\)</span>. By the mean value theorem (<a class="reference internal" href="#mvt">Theorem 4.7</a>), there exists <span class="math notranslate nohighlight">\(c \in (\alpha, \beta)\)</span> so that</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{f(\beta) - f(\alpha)}{\beta - \alpha} = f'(c) \geq 0.
