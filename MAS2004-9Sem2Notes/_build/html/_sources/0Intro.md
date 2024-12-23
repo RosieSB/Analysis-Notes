@@ -35,29 +35,27 @@ Each piece of work will also receive constructive feedback that you can use to i
 
 This semester, there will be 4 pieces of written homework, and one midterm multiple choice quiz.
 
-**Homework release schedule for Semester 1** <br>
+**Homework release schedule for Semester 2** <br>
 | Task | Release date | Due date |
 | :---: | :---: | :---: |
-| Homework 1 | 11am Wednesday Week 2 | 5pm Tuesday Week 4 |
-| Homework 2 | 11am Wednesday Week 4 | 5pm Tuesday Week 6 |
-| Homework 3 | 11am Wednesday Week 6 | 5pm Tuesday Week 8 |
-| Midterm online test | 11am Wednesday Week 7 | 5pm Tuesday Week 9 |
-| Homework 4 | 11am Wednesday Week 9 | 5pm Tuesday Week 11 |
+| Homework 1: | 11am Wednesday Week 1 | 2pm Wednesday Week 3 |
+| Homework 2 | 11am Wednesday Week 3 | 2pm Wednesday Week 5 |
+| Homework 3 | 11am Wednesday Week 5 | 2pm Wednesday Week 7 |
+| Homework 4 (Midterm online test) | 11am Wednesday Week 6 | 2pm Wednesday Week 8 |
+| Homework 5 | 11am Wednesday Week 8 | 2pm Wednesday Week 10 |
 
-Written homework submission is via \href{https://students.sheffield.ac.uk/digital-learning/assessments/crowdmark}{Crowdmark}. A link for this will be provided with the release of each homework on Blackboard.
+Written homework submission is via [Crowdmark](https://students.sheffield.ac.uk/digital-learning/assessments/crowdmark). A link for this will be provided with the release of each homework on Blackboard.
 
 ## 0.3. Recommended books
 
-- **How to Think About Analysis, by Lara Alcock.**
-
+- **How to Think About Analysis, by Lara Alcock.** <br>
 This is a very readable and engaging book that aims to make learning analysis accessible for students are still meeting it for the first time. Rather than giving a formal treatment of the subject matter, which these notes will do, Lara's book is intended as a companion to a module such as this one, and prioritises the development of ideas and intuition over formalism.
-
+<br>
 Links: [Library](https://find.shef.ac.uk/permalink/f/15enftp/44SFD_ALMA_DS51268789000001441); [abebooks](https://www.abebooks.co.uk/9780198723530/Think-Analysis-Alcock-Lara-0198723539/plp); [goodreads](https://www.goodreads.com/book/show/24683010-how-to-think-about-analysis).
 
-- **Understanding Analysis, by Stephen Abbott.**
-
+- **Understanding Analysis, by Stephen Abbott.**<br>
 This is a more traditional analysis textbook, as it is sometimes useful to see ideas presented in more than one way.
-
+<br>
 Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS51360822510001441); [abebooks](https://www.abebooks.co.uk/9781493950263/Understanding-Analysis-Stephen-Abbott-1493950266/plp); [goodreads](https://www.goodreads.com/book/show/26457662-understanding-analysis).
 
 
@@ -66,9 +64,9 @@ Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS513608
 
 | Symbol | Meaning |
 | :---: | :---: |
-| $\mathbb{N} := \{1,2,3,4,\ldots\}$ | the natural numbers |
+| $\mathbb{N} := \{1,2,\ldots\}$ | the natural numbers |
 | $\mathbb{N}_0 := \mathbb{N}\cup\{0\}$ | the non-negative integers |
-| $\mathbb{Z} := \{\pm 1,\pm 2,\pm 3,\pm 4,...\}$ | the integers |
+| $\mathbb{Z} := \{0,\pm 1,\pm 2,...\}$ | the integers |
 | $\mathbb{Q} := \left\{\frac{p}{q}:p\in\mathbb{Z},q\in\mathbb{N}\right\}$ | the rationals |
 | $\mathbb{R}$ | the reals |
 | $\subseteq$ | subset of |
