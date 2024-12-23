@@ -164,7 +164,7 @@ Let's prove discontinuity at $0$ rigorously. If ${\bf 1}_{[0,1]}$ were continuou
 Consider the sequence $(x_n) given by $x_n=-\frac{1}{n}$, for each $n\in\mathbb{N}$. Then $x_n<0$ for all $n$, and so ${\bf 1}_{[0,1]}(x_n) = 0$ for all $n\in\mathbb{N}. In particular,
 
 $$
-\lim_{n\rightarrow\infty}\ind_[0,1] {\bf 1}(x_n) = \lim_{n\rightarrow\infty}\ind_[0,1] 0 = 0.
+\lim_{n\rightarrow\infty}{\bf 1}_{[0,1]}(x_n) = \lim_{n\rightarrow\infty}{\bf 1}_{[0,1]} 0 = 0.
 $$
 
 On the other hand, $x_n\rightarrow 0$ as $n\rightarrow\infty$, and ${\bf 1}_{[0,1]}(0) = 1$. Therefore we have found a sequence $(x_n)$ with limit $0$, for which $$\lim_{n\rightarrow \infty} {\bf 1}_{[0,1]}(x_n) \neq  {\bf 1}_{[0,1]}(0)$. So ${\bf 1}_{[0,1]}$ has a discontinuity at $0$.

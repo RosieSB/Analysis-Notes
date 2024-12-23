@@ -240,7 +240,7 @@ Let $f_n : [0,1]\to\mathbb{R}$ be given by $f_n(x) =x^n$. Show that the sequence
 ````
 
 **Solution.**
-We saw in Example \ref{xne} that the sequence $(f_n)$ has pointwise limit $f$, where
+We saw in {prf:ref}`xne` that the sequence $(f_n)$ has pointwise limit $f$, where
 
 $$
 f(x) = \left\{ \begin{array}{ll} 0 & x<1, \\ 1 & x=1.\\ \end{array} \right.
