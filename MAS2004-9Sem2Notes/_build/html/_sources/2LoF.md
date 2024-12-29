@@ -180,7 +180,7 @@ $$
 This tells us that if we choose $\delta:=\frac{\varepsilon}{5}$, then 
 
 $$
-0<|x-1|<\delta \Rightarrow |f(x)-7|<5\delta=\varepsilon.
+0<|x-1|<\delta \Rightarrow |f(x)-7|<5\delta=5\cdot\frac{\varepsilon}{5}=\varepsilon.
 $$
 
 This proves that  {prf:ref}`functionlimit` holds, and so $\lim_{x\rightarrow 1}f(x)=7$.
@@ -213,7 +213,7 @@ Now for this $\varepsilon>0$, choose successively $\delta = 1, \frac{1}{2}, \fra
 
 $$
 x_{1} \in X \text{ satisfies } 0<|x_{1} - a| < 1 \text{ and }|f(x_{1}) - l| \geq \varepsilon. \\
-x_{2} \in X\text{ satisfies } 0<|x_{2} - a| < \frac{1}{2}\text{ and }|f(x_{2}) - l| \geq \varepsilon.
+x_{2} \in X\text{ satisfies } 0<|x_{2} - a| < \frac{1}{2}\text{ and }|f(x_{2}) - l| \geq \varepsilon.\\
 \vdots
 x_{n} \in X\text{ satisfies }0<|x_{n} - a| < \frac{1}{n}\text{ and }|f(x_{n}) - l| \geq \varepsilon.
 $$
@@ -228,7 +228,7 @@ In MAS107, you proved many theorems concerning convergence of real sequences. {p
 ````{prf:theorem} Algebra of limits
 :label: AOL2
 Suppose that $f:A \rightarrow \mathbb{R}$, $g :B \rightarrow \mathbb{R}$, and $a \in \mathbb{R}$ is such that $\lim_{x\rightarrow a} f(x) = l$ and $\lim_{x\rightarrow a} g(x) = m$, then
-{prf:ref}`functionlimit`
+
 (i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m$,
 
 (ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = lm$,
@@ -422,11 +422,11 @@ Equivalently, in terms of sequences,
 
 - $\lim_{x\rightarrow a^+}f(x) = l$ if for any sequence $(x_n)$ in $X$ for which $x_n>a$ for all $n\in\mathbb{N}$ and $\lim_{n\rightarrow\infty}=a$, we have $\lim_{n\rightarrow\infty}f(x_n)=l$, for some $l\in\mathbb{R}$.
 
-The proof that these definitions are equivalent is very similar to that of Theorem [2](#ed), and is left to you to do as an exercise.
+The proof that these definitions are equivalent is very similar to that of {prf:ref}`ed`, and is left to you to do as an exercise.
 
 ````{prf:example}
 :label:indicatorlims
-Heaviside's indicator function, $\textbf{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check that $\lim_{x\rightarrow 0^-}=0$ and $\lim_{x\rightarrow 0^+}=1$. Since these limits disagree, there is no well-defined limit for this function at $x=0$. 
+Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check that $\lim_{x\rightarrow 0^-}=0$ and $\lim_{x\rightarrow 0^+}=1$. Since these limits disagree, there is no well-defined limit for this function at $x=0$. 
 ````
 
 We also meet functions that diverge in different ways when approached from the left and from the right of a given point.

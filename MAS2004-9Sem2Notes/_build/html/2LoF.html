@@ -543,7 +543,7 @@ f(x) = 5x+2.
 <p>This tells us that if we choose <span class="math notranslate nohighlight">\(\delta:=\frac{\varepsilon}{5}\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[
-0&lt;|x-1|&lt;\delta \Rightarrow |f(x)-7|&lt;5\delta=\varepsilon.
+0&lt;|x-1|&lt;\delta \Rightarrow |f(x)-7|&lt;5\delta=5\cdot\frac{\varepsilon}{5}=\varepsilon.
 \]</div>
 <p>This proves that  <a class="reference internal" href="#functionlimit">Definition 2.2</a> holds, and so <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}f(x)=7\)</span>.</p>
 </section>
@@ -567,7 +567,7 @@ f(x) = 5x+2.
 <div class="math notranslate nohighlight">
 \[\begin{split}
 x_{1} \in X \text{ satisfies } 0&lt;|x_{1} - a| &lt; 1 \text{ and }|f(x_{1}) - l| \geq \varepsilon. \\
-x_{2} \in X\text{ satisfies } 0&lt;|x_{2} - a| &lt; \frac{1}{2}\text{ and }|f(x_{2}) - l| \geq \varepsilon.
+x_{2} \in X\text{ satisfies } 0&lt;|x_{2} - a| &lt; \frac{1}{2}\text{ and }|f(x_{2}) - l| \geq \varepsilon.\\
 \vdots
 x_{n} \in X\text{ satisfies }0&lt;|x_{n} - a| &lt; \frac{1}{n}\text{ and }|f(x_{n}) - l| \geq \varepsilon.
 \end{split}\]</div>
@@ -577,9 +577,8 @@ x_{n} \in X\text{ satisfies }0&lt;|x_{n} - a| &lt; \frac{1}{n}\text{ and }|f(x_{
 <div class="proof theorem admonition" id="AOL2">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Algebra of limits)</p>
 <section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(f:A \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :B \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) = m\)</span>, then
-<a class="reference internal" href="#functionlimit">Definition 2.2</a>
-(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m\)</span>,</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f:A \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :B \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) = m\)</span>, then</p>
+<p>(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m\)</span>,</p>
 <p>(ii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (fg)(x) = lm\)</span>,</p>
 <p>(iii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha l\)</span>, for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>,</p>
 <p>(iv) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{l}{m}\)</span>, if <span class="math notranslate nohighlight">\(m \neq 0\)</span>.</p>
@@ -726,11 +725,11 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&lt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&gt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
 </ul>
-<p>The proof that these definitions are equivalent is very similar to that of Theorem <a class="reference internal" href="#ed"><span class="xref myst">2</span></a>, and is left to you to do as an exercise.</p>
+<p>The proof that these definitions are equivalent is very similar to that of <a class="reference internal" href="#ed">Theorem 2.1</a>, and is left to you to do as an exercise.</p>
 <div class="proof example admonition" id="example-14">
 <p class="admonition-title"><span class="caption-number">Example 2.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Heaviside’s indicator function, <span class="math notranslate nohighlight">\(\textbf{1}_{[0,\infty)}\)</span>, as defined in <a class="reference internal" href="#indicatorfn">Example 2.4</a>, has both left and right limits at the point <span class="math notranslate nohighlight">\(0\)</span>: one can check that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^-}=0\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^+}=1\)</span>. Since these limits disagree, there is no well-defined limit for this function at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>Heaviside’s indicator function, <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,\infty)}\)</span>, as defined in <a class="reference internal" href="#indicatorfn">Example 2.4</a>, has both left and right limits at the point <span class="math notranslate nohighlight">\(0\)</span>: one can check that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^-}=0\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^+}=1\)</span>. Since these limits disagree, there is no well-defined limit for this function at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </section>
 </div><p>We also meet functions that diverge in different ways when approached from the left and from the right of a given point.</p>
 <div class="proof example admonition" id="example-15">
