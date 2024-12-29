@@ -38,7 +38,7 @@ $$
 $$
 ````
 
-A sequence being convergent means its terms are getting "closer and closer" to its limit $l$. Being Cauchy says that the terms are getting "closer and closer" to one another. In fact, being convergent is strictly stronger than being Cauchy: if $A\subseteq\mathbb{R}$ and $(x_n)$ is a sequence in $A$, then
+A sequence being convergent means its terms are getting "closer and closer" to its limit $l$. Being Cauchy says that the terms are getting "closer and closer" to one another. In fact, being convergent is strictly stronger than being Cauchy: if $A\subseteq\mathbb{R}$ and $(x_n)$ is a sequence in $A$, then 
 
 $$
 (x_n) \text{ converges to a limit $l\in A$ } \hspace{1em} \mathbb{R}ightarrow \hspace{1em} (x_n) \text{ is a Cauchy sequence}.
