@@ -61,7 +61,7 @@ Each homework is "out of 1", in the sense that any reasonable attempt will recei
 
 More importantly than the mark, each piece of work will receive constructive feedback that you can use to improve your understanding and your written mathematics. 
 
-**Homework release schedule for Semester 2** <br>
+**Homework release schedule for Semester 2:** <br>
 | Task | Release date | Due date |
 | :---: | :---: | :---: |
 | Homework 1 | 11am Wednesday Week 1 | 2pm Wednesday Week 3 |
