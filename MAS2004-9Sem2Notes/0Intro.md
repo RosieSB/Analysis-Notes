@@ -59,12 +59,12 @@ Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS513608
 
 Each homework is "out of 1", in the sense that any reasonable attempt will receive 1 mark. So handing in a blank piece of paper might receive 0 marks, but anything that shows genuine effort will receive full credit.
 
-More importantly than the mark, each piece of work will also receive constructive feedback that you can use to improve your understanding and your written mathematics. 
+More importantly than the mark, each piece of work will receive constructive feedback that you can use to improve your understanding and your written mathematics. 
 
 **Homework release schedule for Semester 2** <br>
 | Task | Release date | Due date |
 | :---: | :---: | :---: |
-| Homework 1: | 11am Wednesday Week 1 | 2pm Wednesday Week 3 |
+| Homework 1 | 11am Wednesday Week 1 | 2pm Wednesday Week 3 |
 | Homework 2 | 11am Wednesday Week 3 | 2pm Wednesday Week 5 |
 | Homework 3 | 11am Wednesday Week 5 | 2pm Wednesday Week 7 |
 | Homework 4 (Midterm online test) | 11am Wednesday Week 6 | 2pm Wednesday Week 8 |
