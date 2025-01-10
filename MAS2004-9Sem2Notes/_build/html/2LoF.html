@@ -161,7 +161,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="0Intro.html">
-                    Introduction
+                    0. Introduction
                 </a>
             </li>
         </ul>
@@ -369,7 +369,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limit-of-a-function">2.2. The limit of a function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.2. Functional limits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
 </ul>
             </nav>
@@ -484,8 +484,8 @@ The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\
 \]</div>
 <p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by $ g(x)=3x$ then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
 </section>
-<section id="the-limit-of-a-function">
-<h2><span class="section-number">2.2. </span>The limit of a function<a class="headerlink" href="#the-limit-of-a-function" title="Link to this heading">#</a></h2>
+<section id="functional-limits">
+<h2><span class="section-number">2.2. </span>Functional limits<a class="headerlink" href="#functional-limits" title="Link to this heading">#</a></h2>
 <p>We want to make rigorous the notion of <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span>, for a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, and a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(a\)</span> may not be an element of the domain <span class="math notranslate nohighlight">\(X\)</span>, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.</p>
 <p>First note that it only makes sense to consider the behaviour of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span> if there are points in the domain of <span class="math notranslate nohighlight">\(f\)</span> that get arbitrarily close to <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <div class="proof definition admonition" id="limitpt">
@@ -551,13 +551,13 @@ f(x) = 5x+2.
 <p>(i) <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>.</p>
 <p>(ii) (Sequential criterion) For every sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> with <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}x_n=a\)</span>, we have that <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n) = l\)</span>.</p>
 </section>
-</div><p><strong>Proof of <a class="reference internal" href="#ed">Theorem 2.1</a>.</strong> (i)\Rightarrow(ii): Suppose <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>, and suppose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. So there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that for all <span class="math notranslate nohighlight">\(x \in X\)</span>,</p>
+</div><p><strong>Proof of <a class="reference internal" href="#ed">Theorem 2.1</a>.</strong> (i)<span class="math notranslate nohighlight">\(\Rightarrow\)</span>(ii): Suppose <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>, and suppose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. So there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that for all <span class="math notranslate nohighlight">\(x \in X\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 0&lt;|x - a| &lt; \delta \Rightarrow |f(x) - l| &lt; \varepsilon.
 \]</div>
 <p>Let <span class="math notranslate nohighlight">\((x_{n})\)</span> be an arbitrary sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> with limit <span class="math notranslate nohighlight">\(a\)</span>. Then since <span class="math notranslate nohighlight">\(x_n\rightarrow a\)</span>, there exists <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span>, such that  <span class="math notranslate nohighlight">\(0&lt;|x_{n} - a| &lt; \delta\)</span> for all <span class="math notranslate nohighlight">\(n\geq N\)</span>. But then, for all <span class="math notranslate nohighlight">\(n \geq N\)</span>, we have <span class="math notranslate nohighlight">\(|f(x_{n}) - l| &lt; \varepsilon\)</span>, and so <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span>, as was required. We have established that <span class="math notranslate nohighlight">\((i)\Rightarrow(ii)\)</span>.</p>
-<p><span class="math notranslate nohighlight">\((ii)\Rightarrow(i)\)</span>: Now we must establish the converse, namely that if <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then the real sequence <span class="math notranslate nohighlight">\((f(x_n))\)</span> converges to <span class="math notranslate nohighlight">\(l\)</span>, as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. We seek a proof by contradiction. Suppose that that <span class="math notranslate nohighlight">\(f(x)\)</span> does not converge to <span class="math notranslate nohighlight">\(l\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span>. Then the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails: there exists an <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(x \in X\)</span> with <span class="math notranslate nohighlight">\(0 &lt; |x - a| &lt; \delta\)</span>, but <span class="math notranslate nohighlight">\(|f(x) - l| \geq \varepsilon\)</span>.</p>
+<p>(ii)<span class="math notranslate nohighlight">\(\Rightarrow\)</span>(i): Now we must establish the converse, namely that if <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(X\setminus\{a\}\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then the real sequence <span class="math notranslate nohighlight">\((f(x_n))\)</span> converges to <span class="math notranslate nohighlight">\(l\)</span>, as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. We seek a proof by contradiction. Suppose that that <span class="math notranslate nohighlight">\(f(x)\)</span> does not converge to <span class="math notranslate nohighlight">\(l\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span>. Then the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails: there exists an <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(x \in X\)</span> with <span class="math notranslate nohighlight">\(0 &lt; |x - a| &lt; \delta\)</span>, but <span class="math notranslate nohighlight">\(|f(x) - l| \geq \varepsilon\)</span>.</p>
 <p>Now for this <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, choose successively <span class="math notranslate nohighlight">\(\delta = 1, \frac{1}{2}, \frac{1}{3}, \ldots\)</span> and construct a sequence <span class="math notranslate nohighlight">\((x_{n})\)</span> as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -808,7 +808,7 @@ a_n \leq b_n \leq c_n, \hspace{2em}
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limit-of-a-function">2.2. The limit of a function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.2. Functional limits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
 </ul>
   </nav></div>

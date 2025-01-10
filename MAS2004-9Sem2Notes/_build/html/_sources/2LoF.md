@@ -117,7 +117,7 @@ $$
 Of course, the order of composition matters: we typically do not have $f \circ g = g \circ f$, even at points where both are defined. For example, if $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x)=x+2$ and $g:\mathbb{R}\to\mathbb{R}$ is given by \$ g(x)=3x\$ then $g\circ f:\mathbb{R}\to\mathbb{R}$ given by $(g\circ f)(x)=3x+6$, whereas  $f\circ g:\mathbb{R}\to\mathbb{R}$ given by $(f\circ g)(x)=3x+2$.
 
 
-## The limit of a function
+## Functional limits
 
 We want to make rigorous the notion of $\lim_{x \rightarrow a}f(x)$, for a function $f:X \rightarrow \mathbb{R}$, and a point $a\in\mathbb{R}$. Note that $a$ may not be an element of the domain $X$, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.
 
@@ -199,7 +199,7 @@ There is a second, equivalent definition for the limit of a function, in terms o
 (ii) (Sequential criterion) For every sequence $(x_n)$ in $X\setminus\{a\}$ with $\lim_{n\rightarrow\infty}x_n=a$, we have that $\lim_{n\rightarrow\infty}f(x_n) = l$.
 ````
 
-**Proof of {prf:ref}`ed`.** (i)\Rightarrow(ii): Suppose $\lim_{x\rightarrow a} f(x) = l$, and suppose $\varepsilon > 0$. So there exists $\delta > 0$ such that for all $x \in X$,
+**Proof of {prf:ref}`ed`.** (i)$\Rightarrow$(ii): Suppose $\lim_{x\rightarrow a} f(x) = l$, and suppose $\varepsilon > 0$. So there exists $\delta > 0$ such that for all $x \in X$,
 
 $$
 0<|x - a| < \delta \Rightarrow |f(x) - l| < \varepsilon.
@@ -207,7 +207,7 @@ $$
 
 Let $(x_{n})$ be an arbitrary sequence in $X\setminus\{a\}$ with limit $a$. Then since $x_n\rightarrow a$, there exists $N\in\mathbb{N}$, such that  $0<|x_{n} - a| < \delta$ for all $n\geq N$. But then, for all $n \geq N$, we have $|f(x_{n}) - l| < \varepsilon$, and so $\lim_{x\rightarrow a} f(x) = l$, as was required. We have established that $(i)\Rightarrow(ii)$.
 
-$(ii)\Rightarrow(i)$: Now we must establish the converse, namely that if $(x_n)$ is a sequence in $X\setminus\{a\}$ that converges to $a$, then the real sequence $(f(x_n))$ converges to $l$, as $n\rightarrow\infty$. We seek a proof by contradiction. Suppose that that $f(x)$ does not converge to $l$ as $x\rightarrow a$. Then the $(\varepsilon-\delta)$ criterion fails: there exists an $\varepsilon>0$ such that for all $\delta > 0$, there exists $x \in X$ with $0 < |x - a| < \delta$, but $|f(x) - l| \geq \varepsilon$.
+(ii)$\Rightarrow$(i): Now we must establish the converse, namely that if $(x_n)$ is a sequence in $X\setminus\{a\}$ that converges to $a$, then the real sequence $(f(x_n))$ converges to $l$, as $n\rightarrow\infty$. We seek a proof by contradiction. Suppose that that $f(x)$ does not converge to $l$ as $x\rightarrow a$. Then the $(\varepsilon-\delta)$ criterion fails: there exists an $\varepsilon>0$ such that for all $\delta > 0$, there exists $x \in X$ with $0 < |x - a| < \delta$, but $|f(x) - l| \geq \varepsilon$.
 
 Now for this $\varepsilon>0$, choose successively $\delta = 1, \frac{1}{2}, \frac{1}{3}, \ldots$ and construct a sequence $(x_{n})$ as follows:
 
