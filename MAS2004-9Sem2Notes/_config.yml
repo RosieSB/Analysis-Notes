@@ -3,7 +3,8 @@
 
 title: Analysis lecture notes
 author: Rosie Shewell Brockway
- logo: logo1.png
+logo: LOGO.png
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -13,7 +14,7 @@ execute:
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: analysis_notes.tex
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js

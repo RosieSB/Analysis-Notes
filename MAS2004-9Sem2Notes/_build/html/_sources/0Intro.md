@@ -26,12 +26,13 @@ But don't despair! Everyone finds this when they are beginning analysis training
 
 ## 0.2. Benefits of learning analysis
 
-So why bother? There are several reasons. One is that the content of this semester covers an extremely important period of mathematical history, spanning from the discovery of calculus by Newton and/or Leibniz in the 17th century, up to the transformative work of Cauchy, Riemann and Weierstrass in the 19th century. So you will be learning definitions and styles of proof that are completely fundamental to the way modern mathematicians work and think today.
+So why bother? There are several reasons. Like many difficult things, analysis can be extremely rewarding. While of course I hope that you will enjoy the semester and find the mathematics interesting, there are also many benefits to be found even if you don't see yourself pursuing pure mathematics beyond core modules such as this one. 
 
-A more practical reason is that not all functions are "nice". The heuristic methods for finding limits and derivatives that you have met so far work very well for most functions you would care to write down. But unfortunately, these types of functions are not the ones that come up in many applications. So even if you want to study applied maths or stats in the future, you will find the methods of analysis ($\varepsilon$'s, $\delta$'s and so on) still underpin a lot of what applied mathematicians and statisticians have to care about.
+The content of this semester covers an extremely important period of mathematical history, spanning from the discovery of calculus by Newton and/or Leibniz in the 17th century, up to the transformative work of Cauchy, Riemann and Weierstrass in the 19th century. So you will be learning definitions and styles of proof that are completely fundamental to the way modern mathematicians work and think today.
 
-A more general perk of analysis education is transferable skills. Analysis is the practice of thinking very hard and very carefully about things, and as a result, you are likely to find that other areas of maths (especially pure maths) become easier once you begin to master it. 
+Not all functions are "nice". The heuristic methods for finding limits and derivatives that you have met so far work very well for most functions you would care to write down. But unfortunately, these types of functions are not the ones that come up in many applications. So even if you want to study applied maths or stats in the future, you will find the methods of analysis ($\varepsilon$'s, $\delta$'s and so on) still underpin a lot of what applied mathematicians and statisticians have to care about.
 
+A more general perk of analysis education is the transferable skills you will gain. Analysis is the practice of thinking very hard and carefully about subtle concepts, and as a result, you are likely to find that other areas of maths (especially pure maths) become easier once you begin to master it. 
 
 ## 0.3. Recommended books
 

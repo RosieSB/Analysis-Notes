@@ -20,7 +20,7 @@ pip install -r Analysis-Notes/requirements.txt
 
 6. Build the jupyter book
 
-jupyter-book build Analysis-Problems/MAS2004-9Sem2Notes/
+jupyter-book build Analysis-Notes/MAS2004-9Sem2Notes/
 
 7. Sync with github using VS code - action should run and create hosted github page at
 
