@@ -5,13 +5,13 @@ In this chapter we will go over the rigorous definition of the integral, defined
 
 ## Partitions and Riemann sums
 
-Let $[a,b]\subseteq\mathbb{R}$ be a closed bounded interval. A *partition* of $[a,b]$ refers to any finite subset $P={x_0,x_1,\ldots,x_n}$ of $[a,b]$ that contains the endpoints $a$ and $b$. It is convenient to assume that
+Let $[a,b]\subseteq\mathbb{R}$ be a closed bounded interval. A *partition of $[a,b]$* refers to any finite subset $P=\{x_0,x_1,\ldots,x_n\}$ of $[a,b]$ that contains the endpoints $a$ and $b$. For such a partition, it is convenient to assume that
 
 $$
 a=x_0<x_1<x_2<\ldots<x_n=b.
 $$
 
-Let $f:[a,b]\to\mathbb{R}$ be a **bounded** function. For each partition $P$, we associate two ways of approximating the area under the graph of $f$ by rectangles. One of these ways will always be an overestimate, the other an underestimate.
+Let $f:[a,b]\to\mathbb{R}$ be a **bounded** function. For each partition $P$ of $[a,b]$, we associate two ways of approximating the area under the graph of $f$ by rectangles. One of these ways will always be an overestimate, the other an underestimate.
 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/Rlower.png
@@ -30,7 +30,8 @@ name: Rupper
 Riemann upper sum
 ```
 
-````{prf:definition} Riemann sums
+````{prf:definition} Upper and lower sums
+:label: ulsums
 Let $f:[a,b]\to\mathbb{R}$ be a bounded function, and let $P=\{x_0,x_q,\ldots,x_n\}$ be a partition.
 
 For $k=1,\ldots,n$ let
@@ -54,7 +55,24 @@ $$
 is the (*Riemann) upper sum* of $f$ with respect to $P$.
 ````
 
-For both the upper and lower sum, the widths of the rectangles are the same: they are determined by the partition $P$. It is the heights of the rectangles that provide the distinction: for the lower sum, the heights $m_k$ are determined by taking the infimum of $f$ over each interval $[x_{k-1},x_k]$ (see {numref}`Rlower`). For the upper sum, heights $M_k$ are the suprema over each of these intervals (c.f. {numref}`Rupper`).
+For both the upper and lower sum, the widths of the rectangles are the same: they are determined by the partition $P$. It is the heights of the rectangles that provide the distinction: for the lower sum, the heights $m_k$ are determined by taking the *infimum* of $f$ over each interval $[x_{k-1},x_k]$ (see {numref}`Rlower`). For the upper sum, heights $M_k$ are obtained by taking the *supremum* of $f$ over each of these intervals (c.f. {numref}`Rupper`).
+
+````{prf:example}
+Let $f:[-1,5]\to\mathbb{R}$; $f(x)=3x^2+1$. Let's calculate the lower and upper sums of $f$ for the partition $P=\{-1,0,2,5\}$.
+
+In the notation of {prf:ref}`ulsums`, we have $m_1=\inf\{3x^2+1 : x\in[-1,0]\}=1$, $m_2=\inf\{3x^2+1 : x\in[0,2]\}=1$, and $m_3=\inf\{3x^2+1:x\in[2,5]\}=13$, so
+
+$$
+L(f,P) := \sum_{k=1}^nm_k(x_k-x_{k-1}) = 1(1) + 1(2) + 13(3) = 42.
+$$
+
+On the other hand, $M_1=\sup\{3x^2+1 : x\in[-1,0]\}=4$, $M_2=\sup\{3x^2+1 : x\in[0,2]\}=13$, $M_3=\sup\{3x^2+1:x\in[2,5]\}=76$. Hence
+
+
+$$
+U(f,P) := \sum_{k=1}^nM_k(x_k-x_{k-1}) = 4(1) + 13(2) + 76(3) = 258.
+$$
+````
 
 The lower sums $L(f,P)$ are always an under-approximation for the (signed) area between $f$ and the $x$ axis, while the upper sums $U(f,P)$ always over-approximate this area.
 
@@ -62,7 +80,7 @@ In particular, $L(f,P)<U(f,Q)$ for any two partitions $P$ and $Q$ of $[a,b]$, wi
 
 We introduce the notion of refinement of partitions, which will be useful for proving properties of the Riemann integral.
 
-````{prf:definition} 
+````{prf:definition} Refinement of a partition
 Let $P$ and $Q$ be partitions of $[a,b]$. We say that $Q$ is a *refinement* of $P$ if $P\subseteq Q$.
 ````
 
