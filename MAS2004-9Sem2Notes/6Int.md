@@ -57,22 +57,38 @@ is the (*Riemann) upper sum* of $f$ with respect to $P$.
 
 For both the upper and lower sum, the widths of the rectangles are the same: they are determined by the partition $P$. It is the heights of the rectangles that provide the distinction: for the lower sum, the heights $m_k$ are determined by taking the *infimum* of $f$ over each interval $[x_{k-1},x_k]$ (see {numref}`Rlower`). For the upper sum, heights $M_k$ are obtained by taking the *supremum* of $f$ over each of these intervals (c.f. {numref}`Rupper`).
 
-````{prf:example}
-Let $f:[-1,5]\to\mathbb{R}$; $f(x)=3x^2+1$. Let's calculate the lower and upper sums of $f$ for the partition $P=\{-1,0,2,5\}$.
+`````{prf:example}
+:label: ulsums-eg
+Let $f:[-1,5]\to\mathbb{R}$; $f(x)=3x^2+1$ and $P=\{-1,1,2,5\}$. Calculate $L(f,P)$, $U(f,P)$ and $U(f,P)-L(f,P)$.
 
-In the notation of {prf:ref}`ulsums`, we have $m_1=\inf\{3x^2+1 : x\in[-1,0]\}=1$, $m_2=\inf\{3x^2+1 : x\in[0,2]\}=1$, and $m_3=\inf\{3x^2+1:x\in[2,5]\}=13$, so
+````{dropdown} Solution (click)
 
-$$
-L(f,P) := \sum_{k=1}^nm_k(x_k-x_{k-1}) = 1(1) + 1(2) + 13(3) = 42.
-$$
+In the notation of {prf:ref}`ulsums`, we have $m_1=\inf\{3x^2+1 : x\in[-1,1]\}=1$, $m_2=\inf\{3x^2+1 : x\in[1,2]\}=4$, and $m_3=\inf\{3x^2+1:x\in[2,5]\}=13$.
 
-On the other hand, $M_1=\sup\{3x^2+1 : x\in[-1,0]\}=4$, $M_2=\sup\{3x^2+1 : x\in[0,2]\}=13$, $M_3=\sup\{3x^2+1:x\in[2,5]\}=76$. Hence
-
+Therefore,
 
 $$
-U(f,P) := \sum_{k=1}^nM_k(x_k-x_{k-1}) = 4(1) + 13(2) + 76(3) = 258.
+L(f,P) := \sum_{k=1}^nm_k(x_k-x_{k-1}) = 1(2) + 1(1) + 13(3) = 42.
 $$
+
+On the other hand, $M_1=\sup\{3x^2+1 : x\in[-1,1]\}=4$, $M_2=\sup\{3x^2+1 : x\in[1,2]\}=13$, $M_3=\sup\{3x^2+1:x\in[2,5]\}=76$. Hence
+
+
+$$
+U(f,P) := \sum_{k=1}^nM_k(x_k-x_{k-1}) = 4(2) + 13(1) + 76(3) = 249.
+$$
+
+Hence $U(f,P)-L(f,P)=207$.
+
+```{figure} ../MAS2004-9Sem2Notes/figs/ulsums-eg.png
+---
+height: 300px
+name: ulsums-eg
+---
+Riemann upper and lower sums for {prf:ref}`ulsums-eg`.
+```
 ````
+`````
 
 The lower sums $L(f,P)$ are always an under-approximation for the (signed) area between $f$ and the $x$ axis, while the upper sums $U(f,P)$ always over-approximate this area.
 
@@ -91,13 +107,11 @@ Let $f:[a,b]\to\mathbb{R}$ and let $P$ and $Q$ be partitions of $[a,b]$. If $Q$ 
 $$
 L(f,Q) \geq L(f,P) \text{ and } U(f,Q)\leq U(f,P).
 $$
-````
 
-````{prf:remark}
-{prf:ref}`lem:ref` says that refining a partion has the effect of shrinking the difference between the upper and lower sums: if $Q$ is a refinement of $P$, then
+In particular,
 
 $$
-U(f,Q)-L(f,Q)\leq U(f,P)-U(f,Q).
+U(f,Q)-L(f,Q)\leq U(f,P)-L(f,P).
 $$
 
 ````
@@ -134,6 +148,8 @@ $$
 
 Finally, suppose $Q$ is a refinement of $P$. Since $Q\setminus P$ is finite, we can apply the above argument recursively to prove that $L(f,Q)\geq L(f,P)$ and $U(f,Q)\leq U(f,P)$. <span style="float:right;">$\square$</span>
 
+
+**Remark.** {prf:ref}`lem:ref` is saying that **refining** a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!
 
 ## The Riemann integral
 
