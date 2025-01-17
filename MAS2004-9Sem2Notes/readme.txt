@@ -1,3 +1,38 @@
+1. Open ~/MAS2004,9/Jupyter/Analysis-Notes in VS code and sync with github 
+
+2. Open terminal & navigate to correct directory
+
+cd ~/MAS2004,9/Jupyter/
+
+3. First time only: Create virtual environment
+
+python3 -m venv .venv
+
+4. Activate virtual environment
+
+source .venv/bin/activate
+
+5. First time only: run
+
+pip install -r Analysis-Notes/requirements.txt
+
+5. Make changes to local files (in "MAS2004-9Sem2Notes" directory) using VS code
+
+6. Build the jupyter book
+
+jupyter-book build Analysis-Problems/MAS2004-9Sem2Notes/
+
+7. Sync with github using VS code - action should run and create hosted github page at
+
+https://rosiesb.github.io/Analysis-Notes
+
+
+
+
+
+
+
+
 Debugging notes
 
 18.12.24 
