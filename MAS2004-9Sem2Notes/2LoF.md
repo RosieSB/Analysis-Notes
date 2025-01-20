@@ -261,7 +261,7 @@ $$
 
 Investigate $\lim_{x \rightarrow a}f(x)$ for each $a\in\mathbb{R}$. (You will need to think about points in the domain and each of the three special points $-5, 3, 5$ separately.)
 
-````{dropdown} Solution. (click)
+````{dropdown} Solution (click)
 It's helpful (but not necessary as part of the formal solution) to draw the graph of the function.
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png

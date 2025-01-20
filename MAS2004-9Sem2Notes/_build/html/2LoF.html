@@ -605,55 +605,58 @@ Here the first line uses the definition of a sum of functions and the second lin
 f(x) = \frac{x - 5}{(x^{2} - 25)(x - 3)}.
 \]</div>
 <p>Investigate <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span> for each <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. (You will need to think about points in the domain and each of the three special points <span class="math notranslate nohighlight">\(-5, 3, 5\)</span> separately.)</p>
-<p><em>Solution.</em>
-It’s helpful (but not necessary as part of the formal solution) to draw the graph of the function.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution (click)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">It’s helpful (but not necessary as part of the formal solution) to draw the graph of the function.</p>
 <figure class="align-default" id="x-5-x2-25-x-3">
 <a class="reference internal image-reference" href="_images/(x-5),((x2-25)(x-3)).png"><img alt="_images/%28x-5%29%2C%28%28x2-25%29%28x-3%29%29.png" src="_images/%28x-5%29%2C%28%28x2-25%29%28x-3%29%29.png" style="height: 300px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{x - 5}{(x^{2} - 25)(x - 3)}\)</span>.</span><a class="headerlink" href="#x-5-x2-25-x-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Let’s write <span class="math notranslate nohighlight">\(X=\mathbb{R}\setminus\{-5, 3, 5\}\)</span>, the domain of <span class="math notranslate nohighlight">\(f\)</span>. Note that every real number is a limit point of <span class="math notranslate nohighlight">\(X\)</span>. However, the most interesting limit points to consider are those that lie outside of <span class="math notranslate nohighlight">\(X\)</span>. This is because it is fairly easy to calculate limits at points in <span class="math notranslate nohighlight">\(X\)</span>. For example,</p>
+<p class="sd-card-text">Let’s write <span class="math notranslate nohighlight">\(X=\mathbb{R}\setminus\{-5, 3, 5\}\)</span>, the domain of <span class="math notranslate nohighlight">\(f\)</span>. Note that every real number is a limit point of <span class="math notranslate nohighlight">\(X\)</span>. However, the most interesting limit points to consider are those that lie outside of <span class="math notranslate nohighlight">\(X\)</span>. This is because it is fairly easy to calculate limits at points in <span class="math notranslate nohighlight">\(X\)</span>. For example,</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x \rightarrow 1}f(x) = -\frac{1}{12}=f(1).
 \]</div>
-<p>(Check this carefully, using the definition).</p>
-<p>More generally, in this example, if you take the limit at a point <span class="math notranslate nohighlight">\(a \in X\)</span>, you always find that</p>
+<p class="sd-card-text">(Check this carefully, using the definition).</p>
+<p class="sd-card-text">More generally, in this example, if you take the limit at a point <span class="math notranslate nohighlight">\(a \in X\)</span>, you always find that</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x\rightarrow a} f(x) = f(a).
 \]</div>
-<p>This tells us that the function <span class="math notranslate nohighlight">\(f\)</span> is <em>continuous</em> at these points. We will discuss the concept of continuity in more detail in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
-<p>The more interesting problem is to find out what happens at points that are <em>not</em> in <span class="math notranslate nohighlight">\(X\)</span>. Observe that</p>
+<p class="sd-card-text">This tells us that the function <span class="math notranslate nohighlight">\(f\)</span> is <em>continuous</em> at these points. We will discuss the concept of continuity in more detail in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
+<p class="sd-card-text">The more interesting problem is to find out what happens at points that are <em>not</em> in <span class="math notranslate nohighlight">\(X\)</span>. Observe that</p>
 <div class="math notranslate nohighlight">
 \[
 f(x) = \frac{1}{(x+5)(x-3)}, \qquad \text{for all $x \in X$.}
 \]</div>
-<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 5\)</span>:</strong><br>
+<p class="sd-card-text"><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 5\)</span>:</strong><br>
 Choose an arbitrary sequence <span class="math notranslate nohighlight">\((x_{n})\)</span> with <span class="math notranslate nohighlight">\(x_{n} \in X\)</span> satisfying <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}x_{n} = 5\)</span>. Note that such sequences certainly exist, for example</p>
 <div class="math notranslate nohighlight">
 \[
 (x_{n} = 5 + \frac{1}{n}), (x_n=5 + 7/n^{2}), (x_n=5 - 108/n^{4})...).
 \]</div>
-<p>Then <span class="math notranslate nohighlight">\(f(x_{n}) = \displaystyle\frac{1}{(x_{n}+5)(x_{n}-3)}\)</span> and <span class="math notranslate nohighlight">\(\displaystyle\lim_{n \rightarrow \infty}f(x_{n}) = \displaystyle\frac{1}{10.2} = \displaystyle\frac{1}{20}\)</span>, by the algebra of limits. So we conclude that</p>
+<p class="sd-card-text">Then <span class="math notranslate nohighlight">\(f(x_{n}) = \displaystyle\frac{1}{(x_{n}+5)(x_{n}-3)}\)</span> and <span class="math notranslate nohighlight">\(\displaystyle\lim_{n \rightarrow \infty}f(x_{n}) = \displaystyle\frac{1}{10.2} = \displaystyle\frac{1}{20}\)</span>, by the algebra of limits. So we conclude that</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x \rightarrow 5}f(x) = \frac{1}{20}.\]</div>
-<p>Thus the limit exists at the point <span class="math notranslate nohighlight">\(x = 5\)</span>, even though <span class="math notranslate nohighlight">\(5\)</span> is not in the domain of <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = -5\)</span>:</strong><br>
+<p class="sd-card-text">Thus the limit exists at the point <span class="math notranslate nohighlight">\(x = 5\)</span>, even though <span class="math notranslate nohighlight">\(5\)</span> is not in the domain of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p class="sd-card-text"><strong>To investigate the point <span class="math notranslate nohighlight">\(x = -5\)</span>:</strong><br>
 In this case, numerical experiments or considering the graph of the function may lead you to doubt that a limit exists. So consider the sequence <span class="math notranslate nohighlight">\((y_{n})\)</span>, where <span class="math notranslate nohighlight">\(y_{n} = -5 + \frac{1}{n}\)</span>, for each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. Then <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}y_{n} = -5\)</span>, and we find that</p>
 <div class="math notranslate nohighlight">
 \[
 f(y_{n}) = \frac{1}{\frac{1}{n}\left(\frac{1}{n} - 8\right)} = \frac{n}{\frac{1}{n} - 8},
 \]</div>
-<p>and so <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges to <span class="math notranslate nohighlight">\(-\infty\)</span>. So we’ve found a sequence <span class="math notranslate nohighlight">\((y_{n})\)</span> such that (i) and (ii) of the definition are satisfied, but <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges. Hence we conclude that <span class="math notranslate nohighlight">\(f\)</span> has no limit at <span class="math notranslate nohighlight">\(x = -5\)</span>.</p>
-<p><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 3\)</span>:</strong> <br>
+<p class="sd-card-text">and so <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges to <span class="math notranslate nohighlight">\(-\infty\)</span>. So we’ve found a sequence <span class="math notranslate nohighlight">\((y_{n})\)</span> such that (i) and (ii) of the definition are satisfied, but <span class="math notranslate nohighlight">\((f(y_{n}))\)</span> diverges. Hence we conclude that <span class="math notranslate nohighlight">\(f\)</span> has no limit at <span class="math notranslate nohighlight">\(x = -5\)</span>.</p>
+<p class="sd-card-text"><strong>To investigate the point <span class="math notranslate nohighlight">\(x = 3\)</span>:</strong> <br>
 This is left as  an exercise. Again, <span class="math notranslate nohighlight">\(f\)</span> has no limit at <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
-<p>We note here that the function <span class="math notranslate nohighlight">\(f\)</span> is not continuous at the points <span class="math notranslate nohighlight">\(a = -5, 3\)</span> or <span class="math notranslate nohighlight">\(5\)</span>; indeed <span class="math notranslate nohighlight">\(f(a)\)</span> is not defined when <span class="math notranslate nohighlight">\(a\)</span> takes these values. We can <em>extend</em> <span class="math notranslate nohighlight">\(f\)</span> to be a continuous function at <span class="math notranslate nohighlight">\(a=5\)</span> by setting
+<p class="sd-card-text">We note here that the function <span class="math notranslate nohighlight">\(f\)</span> is not continuous at the points <span class="math notranslate nohighlight">\(a = -5, 3\)</span> or <span class="math notranslate nohighlight">\(5\)</span>; indeed <span class="math notranslate nohighlight">\(f(a)\)</span> is not defined when <span class="math notranslate nohighlight">\(a\)</span> takes these values. We can <em>extend</em> <span class="math notranslate nohighlight">\(f\)</span> to be a continuous function at <span class="math notranslate nohighlight">\(a=5\)</span> by setting
 <span class="math notranslate nohighlight">\(f(5)=\frac{1}{20}\)</span>. On the other hand, at <span class="math notranslate nohighlight">\(a=-5\)</span> and at <span class="math notranslate nohighlight">\(a=3\)</span>, there is no value we could assign for <span class="math notranslate nohighlight">\(f(a)\)</span>
 that would extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous function there.  We will return to all these issues of continuity in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
-</section>
+</div>
+</details></section>
 </div><div class="proof theorem admonition" id="theorem-11">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Sandwich rule for functions)</p>
 <section class="theorem-content" id="proof-content">

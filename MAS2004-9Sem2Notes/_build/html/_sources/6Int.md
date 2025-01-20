@@ -61,7 +61,7 @@ For both the upper and lower sum, the widths of the rectangles are the same: the
 :label: ulsums-eg
 Let $f:[-1,5]\to\mathbb{R}$; $f(x)=3x^2+1$ and $P=\{-1,1,2,5\}$. Calculate $L(f,P)$, $U(f,P)$ and $U(f,P)-L(f,P)$.
 
-````{dropdown} Solution (click)
+````{dropdown} Solution (click for drop down)
 
 In the notation of {prf:ref}`ulsums`, we have $m_1=\inf\{3x^2+1 : x\in[-1,1]\}=1$, $m_2=\inf\{3x^2+1 : x\in[1,2]\}=4$, and $m_3=\inf\{3x^2+1:x\in[2,5]\}=13$.
 
@@ -149,7 +149,9 @@ $$
 Finally, suppose $Q$ is a refinement of $P$. Since $Q\setminus P$ is finite, we can apply the above argument recursively to prove that $L(f,Q)\geq L(f,P)$ and $U(f,Q)\leq U(f,P)$. <span style="float:right;">$\square$</span>
 
 
-**Remark.** {prf:ref}`lem:ref` is saying that **refining** a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!
+````{prf:remark}
+{prf:ref}`lem:ref` is saying that **refining** a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!
+````
 
 ## The Riemann integral
 
@@ -158,15 +160,15 @@ We are now ready to define the Riemann integral.
 Let $f:[a,b]\to\mathbb{R}$ be a bounded function, and consider the set of all lower sums
 
 $$
-\{L(f,P):\text{ partitions } P \text{ of } [a,b]\}.
+S_L:=\{L(f,P):\text{ partitions } P \text{ of } [a,b]\}.
 $$
 
-This set is certainly non-empty, and it is bounded above by the area we have been trying to calculate. This means we can take its supremum.
+This is a set of real numbers. It is certainly non-empty: we can take $P=\{a,b\}$, then $m_1=\min\{f(a),f(b)\}$, and $L(f,P)=m_1(b-a)\in S_L$. $S_L$ is also bounded above by the area we have been trying to calculate. This means we can take its supremum.
 
-Similarly, the set of all upper sums
+By an analogous argument, the set of all upper sums
 
 $$
-\{U(f,P):\text{ partitions } P \text{ of } [a,b]\}.
+S_U:=\{U(f,P):\text{ partitions } P \text{ of } [a,b]\}.
 $$
 
 is non-empty and bounded below. So we can take its infimum.
@@ -175,13 +177,13 @@ is non-empty and bounded below. So we can take its infimum.
 The *lower integral* of $f$ is
 
 $$
-L(f) = \sup\{L(f,P):\text{ partitions } P \text{ of } [a,b]\}.
+L(f) = \sup S_L = \sup\{L(f,P):\text{ partitions } P \text{ of } [a,b]\}.
 $$
 
 The *upper integral* of $f$ is defined to be
 
 $$
-U(f) = \inf\{U(f,P):\text{ partitions } P \text{ of } [a,b]\}.
+U(f) = \inf S_U = \inf\{U(f,P):\text{ partitions } P \text{ of } [a,b]\}.
 $$
 
 ````
@@ -194,8 +196,8 @@ $$
 
 since $L(f,P)<U(f,Q)$ for any two partitions $P$ and $Q$ of $[a,b]$.
 
-````{prf:proposition}
-:label: prop:intcond 
+````{prf:definition}
+:label: Rint
 We say that a bounded function $f:[a,b]\to\mathbb{R}$ is *Riemann integrable* if $L(f)=U(f)$. In this case, we write
 
 $$
@@ -233,15 +235,14 @@ $$
 
 The following is a handy criterion for proving that more sophisticated functions are integrable.
 
-````{prf:proposition}
+`````{prf:proposition} Integrability criterion
 :label: intcond
 A bounded function $f:[a,b]\to\mathbb{R}$ is integrable if and only if the following criterion holds:
 
-> For all $\varepsilon>0$, there is a partition $P$ such that $U(f,P) - L(f,P) < \varepsilon$. 
-````
+> For all $\varepsilon>0$, there is a partition $P_\varepsilon$ such that $U(f,P) - L(f,P) < \varepsilon$. 
 
-
-**Proof.** ($\Leftarrow$) Observe that for any partition $P$ of $[a,b]$,
+````{prf:proof}
+($\Leftarrow$) Observe that for any partition $P$ of $[a,b]$,
 
 $$
 0\leq U(f)-L(f) \leq U(f,P)-L(f,P).
@@ -274,15 +275,99 @@ U(f,P\cup Q) - L(f,P\cup Q) &\leq U(f,Q) - L(f,P) \\
 &\leq U(f) + \frac{\epsilon}{2} - (L(f) - \frac{\epsilon}{2}) = \epsilon.
 \end{align*}
  <span style="float:right;">$\square$</span>
+````
+`````
 
+`````{prf:example}
+:label: disc-int
+Consider $f(x)=\left\{\begin{array}{cl} 1 & \text{ if } x < 1 \\ 2 &\text{ if } x \geq 1. \end{array}\right.$ on the interval $[0,2]$.
 
-As an application of this, we can prove that all monotone functions defined on a closed bounded interval are integrable.
+Prove $f$ is integrable, and calculate $\int_0^2f(x)dx$.
 
-````{prf:theorem}
+````{dropdown} Solution (click for drop down)
+Let's first draw the graph of $f$ and employ some intuition.
+```{figure} ../MAS2004-9Sem2Notes/figs/disc-int1.png
+---
+height: 300px
+name: disc-int1
+---
+Graph of $f$.
+```
+
+The graph suggests we should find that $\int_0^2f(x)dx=L(f)=U(f)=3$. 
+
+We can prove this intuition is correct using {prf:ref}`intcond`. Let $\varepsilon>0$. We seek a partition $P_\varepsilon$ of $[0,2]$ such that
+
+$$
+U(f,P_\varepsilon)-L(f,P_\varepsilon)<\varepsilon
+$$
+
+Let's try and find a partition of the form $P_\varepsilon=\{0,1-\delta,1+\delta,2\}$, where $\delta$ is to be found and depends on $\varepsilon$.
+
+```{figure} ../MAS2004-9Sem2Notes/figs/disc-int2.png
+---
+height: 300px
+name: disc-int2
+---
+Partition of the form $P_\varepsilon=\{0,1-\delta,1+\delta,2\}$.
+```
+We could take a guess of what we need to make $\delta$, but it will be much easier to do so after calculating $U(f,P_\varepsilon)-L(f,P_\varepsilon)$.
+
+We have $m_1=\inf\{f(x):x\in[0,1-\delta]\}=1$, $m_2=\inf\{f(x):x\in[1-\delta,1+\delta]\}=1$ and $m_3=\inf\{f(x):x\in[1+\delta,2]\}=2$.
+
+Hence, using {prf:ref}`ulsums`,
+
+$$
+L(f,P_\varepsilon)= 1\cdot(1-\delta)+1\cdot(2\delta) + 2(2-(1+\delta)) = 1+\delta+2-2\delta = 3-\delta.
+$$
+
+By a similar calculation, $M_1=\sup\{f(x):x\in[0,1-\delta]\}=1$, $m_2=\sup\{f(x):x\in[1-\delta,1+\delta]\}=2$ and $m_3=\sup\{f(x):x\in[1+\delta,2]\}=2$.
+
+$$
+U(f,P_\varepsilon)=1\cdot(1-\delta)+2\cdot(2\delta)+2\cdot(2-(1+\delta)) = 1-\delta+4\delta+2-2\delta = 3+\delta.
+$$
+
+So,
+$$
+U(f,P_\varepsilon)-L(f,P_\varepsilon) = 3+\delta - (3-\delta) = 2\delta.
+$$
+
+Therefore, if we take $\delta:=\frac{\epsilon}{2}$, (and so $P_\varepsilon = \left\{0,1-\frac{\varepsilon}{2},1+\frac{\varepsilon}{2},2\right\}$), {prf:ref}`intcond` is satisfied, and thus $f$ is integrable. 
+
+Moreover, by properties of sup, for all $\varepsilon>0$,
+
+$$
+U(f)\leq U(f,P_\varepsilon) = 3+\frac{\varepsilon}{2}.
+$$
+
+So $U(f)\leq 3$. And by properties of inf, for all $\varepsilon>0$,
+
+$$
+L(f)\geq L(f,P_\varepsilon)=1-\frac{\varepsilon}{2},
+$$
+
+So $L(f)\geq 3$. But also, since $f$ is integrable, $L(f)=U(f)\leq 3$. The only option is
+
+$$
+\int_0^2f(x)dx = U(f) = L(f) = 3.
+$$
+
+Phew!
+
+````
+`````
+
+````{prf:remark}
+In {prf:ref}`disc-int`, we successfully integrated a discontinuous function. An 18th century mathematician could never! 
+````
+
+As another application of {prf:ref}`intcond`, we can prove that all monotone functions defined on a closed bounded interval are integrable.
+
+`````{prf:theorem}
 :label: thm:mono
 Let $f:[a,b]\to\mathbb{R}$ be a monotone function. Then $f$ is integrable.
-````
-**Proof.**
+
+````{prf:proof}
 Assume for simplicity that $f$ is monotone increasing. The proof for monotone decreasing functions is very similar.
 
 Let $P=\{x_0,x_1,\ldots,x_n\}$ be a partition of $[a,b]$, where $a=x_0<x_1<\ldots<x_n=b$ as before. Then since $f$ is increasing, for all $1\leq k\leq n$
@@ -309,7 +394,7 @@ U(f,P) - L(f,P) &= \sum_{k=1}^nf(x_k)(x_{k-1}-x_k) - \sum_{k=1}^nf(x_{k-1})(x_{k
 ```
 
 
-This is true for any partition $P$. Let $\varepsilon>0$. We aim to choose a partition $P$ in such a way that $U(f,P) - L(f,P)<\varepsilon$; the result will then follow by {prf:ref}`prop:intcond`.
+This is true for any partition $P$. Let $\varepsilon>0$. We aim to choose a partition $P$ in such a way that $U(f,P) - L(f,P)<\varepsilon$; the result will then follow by {prf:ref}`intcond`.
 
 Let $P$ be the partition with points
 
@@ -333,13 +418,15 @@ $$
 
 (since $x_0=a$ and $x_n=b$).
 
-Proving the condition from {prf:ref}`prop:intcond` is now simply a matter of choosing $n$ sufficiently large so that
+Proving the condition from {prf:ref}`intcond` is now simply a matter of choosing $n$ sufficiently large so that
 
 $$
 \frac{b-a}{n}\big(f(b)-f(a)\big) < \varepsilon.
 $$
 
 Any integer larger than $\displaystyle\frac{(b-a)(f(b)-f(a))}{\varepsilon}$ will suffice. <span style="float:right;">$\square$</span>
+````
+`````
 
 Another large class of integrable functions is the continuous functions on closed bounded intervals. Unfortunately there is not sufficient time in this module to cover its proof, though the general approach is not disimilar to {prf:ref}`thm:mono`. A non-examinable proof can be found in the appendix for interest.
 
@@ -382,7 +469,7 @@ while $L(f,P)=0$. Taking $\sup$'s and $\inf$'s over all partitions $P$ of $[0,1]
 
 We gather together some useful properties of the Riemann integral. Those that are not proven directly here will be proven in the problem booklet.
 
-````{prf:proposition}
+`````{prf:proposition}
 :label: propsint
 Let the bounded functions $f,g:[a,b]\rightarrow \mathbb{R}$ be Riemann integrable.
 
@@ -411,10 +498,9 @@ $$
 $$
 \left| \int_a^b f(x)dx \right| \leq \int_a^b |f(x)|dx.
 $$
-````
 
-
-**Proof.** (i) Since $f$ is integrable, we have $\int_a^b f(x)dx = U(f) = \inf\{U(f,P):P\text{ a partition of }[a,b]\}$. Therefore
+````{prf:proof}
+(i) Since $f$ is integrable, we have $\int_a^b f(x)dx = U(f) = \inf\{U(f,P):P\text{ a partition of }[a,b]\}$. Therefore
 
 $$
 \int_a^b f(x)dx \leq U(f,P)
@@ -520,10 +606,12 @@ $$
 (iii) See Problems 67 and 68.
 
 (iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as Problem 69.<span style="float:right;">$\square$</span>
+````
+`````
 
 {prf:ref}`propsint`(ii) is particularly useful as it allows us to integrate functions with a finite number of jump discontinuities, by splitting its domain into intervals on which it is continuous.
 
-````{prf:example} 
+`````{prf:example} 
 :label: eg:step
 Consider the step function
 
@@ -532,8 +620,8 @@ s:[0,4] \rightarrow \mathbb{R}; \; s(x) = \mathbf{1}_{[2,3]}(x)-\mathbf{1}_{[0,2
 $$
 
 Show that $s$ is integrable and calculate $\int_0^4s(x)dx$.
-````
-**Solution.**
+
+````{dropdown} Solution (click for drop down)
 Using the definition of an indicator function, we have
 
 $$
@@ -560,10 +648,11 @@ Hence by {prf:ref}`propsint`(ii),
 $$
 \int_0^4s(x)dx = \int_0^2s(x)dx + \int_2^3s(x)dx + \int_3^4s(x)dx = -2 + 1 + 2 = 1.
 $$
+````
+`````
 
 
-
-### Exchanging limits in an integral
+**Exchanging limits in an integral**<br>
 
 Technically, we have only defined $\int_a^bf(x)dx$ when $a<b$.
 
@@ -591,7 +680,7 @@ So far, integration has exclusively referred to area calculation. In this sectio
 
 We first need a quick lemma.
 
-````{prf:lemma}
+`````{prf:lemma}
 :label: bdint
 Let the bounded function $f:[a,b]\rightarrow \mathbb{R}$ be Riemann integrable. Let
 
@@ -604,9 +693,9 @@ Then
 $$
 m(b-a) \leq \int_a^b f(x)dx \leq M(b-a).
 $$
-````
 
-**Proof.** Consider the partition $P=\{a,b\}$ of $[a,b]$. The associated Riemann sums are
+````{prf:proof}
+Consider the partition $P=\{a,b\}$ of $[a,b]$. The associated Riemann sums are
 
 $$
 L(f,P) = m(b-a) \hspace{1em} \text{ and } \hspace{1em}  U(f,P) = M(b-a).
@@ -624,9 +713,10 @@ $$
 \int_a^b f(x)dx = U(f) \leq M(b-a).
 $$ 
 <span style="float:right;">$\square$</span>
+````
+`````
 
-
-````{prf:theorem} Fundamental theorem of calculus
+`````{prf:theorem} Fundamental theorem of calculus
 :label: ftc
 Let $f:[a,b]\rightarrow \mathbb{R}$ be continuous. Define $F:[a,b]\rightarrow \mathbb{R}$ by
 
@@ -635,9 +725,9 @@ F(x) = \int_a^x f(t)dt.
 $$
 
 Then $F$ is differentiable, and $F'(x) = f(x)$ for all $x\in [a,b]$.
-````
 
-**Proof.** Note first that $F$ is well defined: by {prf:ref}`thm:ctsint`, $f$ is integrable.
+````{prf:proof}
+Note first that $F$ is well defined: by {prf:ref}`thm:ctsint`, $f$ is integrable.
 
 Let $h>0$ and let $x\in [a,b]$. Then, using {prf:ref}`propsint`(ii),
 
@@ -692,19 +782,20 @@ $$
 $$
 
 That is, $F$ is differentiable at $x$ and  $F'(x) =f(x)$. <span style="float:right;">$\square$</span>
-
+````
+`````
 
 The version of the theorem that we use in practice to calculate integrals follows as a corollary.
 
-````{prf:corollary} 
-Let $f:[a,b]\rightarrow \mathbb{R}$ be a continuous function. Suppose we have a differentiable function $F:[a,b]\rightarrow \mathbb{R}$ such that $F'(x) =f(x)$ for all $x\in [a,b]$. Then
+`````{prf:corollary} 
+Let $f:[a,b]\rightarrow \mathbb{R}$ be a continuous function. Suppose we have a differentiable function $F:[a,b]\to \mathbb{R}$ such that $F'(x) =f(x)$ for all $x\in [a,b]$. Then
 
 $$
 \int_a^b f(t)dt = F(b) - F(a).
 $$
-````
 
-**Proof.** Let $G:[a,b]\to \mathbb{R}$ be given by
+````{prf:proof}
+Let $G:[a,b]\to \mathbb{R}$ be given by
 
 $$
 G(x) = \int_a^x f(t)dt.
@@ -723,6 +814,7 @@ So we have a constant $C$ such that $G(x)=F(x)+C$ for all $x\in [a,b]$. Now
 &= (F(b)+C) - (F(a)+C) = F(b) -F(a). 
 \end{align*}
  <span style="float:right;">$\square$</span>
-
+````
+`````
 
 Note that all of the techniques we already know about finding integrals, such as substitution and integration by parts, can be proved for continuous functions with an ``antiderivative", {prf:ref}`rules`.

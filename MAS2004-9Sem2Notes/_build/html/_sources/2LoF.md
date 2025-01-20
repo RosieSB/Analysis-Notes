@@ -252,7 +252,7 @@ Here the first line uses the definition of a sum of functions and the second lin
 
 The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
 
-````{prf:example}
+`````{prf:example}
 Consider $f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}$, given by
 
 $$
@@ -261,10 +261,8 @@ $$
 
 Investigate $\lim_{x \rightarrow a}f(x)$ for each $a\in\mathbb{R}$. (You will need to think about points in the domain and each of the three special points $-5, 3, 5$ separately.)
 
-*Solution.*
+````{dropdown} Solution (click)
 It's helpful (but not necessary as part of the formal solution) to draw the graph of the function.
-
-
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png
 ---
@@ -326,7 +324,7 @@ This is left as  an exercise. Again, $f$ has no limit at $x = 3$.
 We note here that the function $f$ is not continuous at the points $a = -5, 3$ or $5$; indeed $f(a)$ is not defined when $a$ takes these values. We can *extend* $f$ to be a continuous function at $a=5$ by setting
 $f(5)=\frac{1}{20}$. On the other hand, at $a=-5$ and at $a=3$, there is no value we could assign for $f(a)$
 that would extend $f$ to a continuous function there.  We will return to all these issues of continuity in [Chapter 3](chap:cty).
-````
+`````
 
 
 ````{prf:theorem} Sandwich rule for functions
