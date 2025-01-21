@@ -603,9 +603,9 @@ $$
 \int_a^b f(x)dx = U(f) = U(f|_{[a,c]}) + U(f|_{[c,b]}) = \int_a^cf(x)dx+\int_c^bf(x)dx.
 $$
 
-(iii) See [Problems 68](https://rosiesb.github.io/Analysis-Problems/Problems.html#id68) and [69](https://rosiesb.github.io/Analysis-Problems/Problems.html#id69).
+(iii) See [Problems 69](https://rosiesb.github.io/Analysis-Problems/Problems.html#id69) and [70](https://rosiesb.github.io/Analysis-Problems/Problems.html#id70).
 
-(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as [Problem 70](https://rosiesb.github.io/Analysis-Problems/Problems.html#id70).<span style="float:right;">$\square$</span>
+(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as [Problem 71](https://rosiesb.github.io/Analysis-Problems/Problems.html#id71).<span style="float:right;">$\square$</span>
 ````
 `````
 
@@ -754,7 +754,7 @@ $$
 
 for some $c_h,k_h\in[x,x+h]$. Therefore, by {prf:ref}`bdint`,
 
-$$
+$$F
 hf(c_h) \leq F(x+h) - F(x) \leq h\cdot f(k_h),
 $$
 
