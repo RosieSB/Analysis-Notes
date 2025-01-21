@@ -136,16 +136,15 @@ If the vertices of this triangle are $P$, $Q$ and $R$, then the triangle inequal
 
 The following corollary of the triangle inequality will also be frequently useful.
 
-````{prf:corollary}
+`````{prf:corollary}
 :label: cor:tri
 For all $a,b\in\mathbb{R}$,
 
 $$
 \Big||a|-|b|\Big| \leq |a-b|.
 $$
-````
 
-**Proof.** Since the statement is symmetric in $a$ and $b$, we can assume without loss of generality that $|a|>|b|$. By the triangle inequality,
+````{prf:proof} Since the statement is symmetric in $a$ and $b$, we can assume without loss of generality that $|a|>|b|$. By the triangle inequality,
 
 $$
 |a| = |(a-b) +b| \leq |a-b| +|b|,
@@ -163,4 +162,6 @@ $$
 \Big||a|-|b|\Big| \leq |a|-b|,
 $$
 
-and so we are done.
+and so we are done. <span style="float:right;">$\square$</span>
+````
+`````

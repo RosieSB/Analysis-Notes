@@ -413,8 +413,7 @@
 <p class="admonition-title"><span class="caption-number">Example 5.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Define <span class="math notranslate nohighlight">\(f_n:[0,2\pi ] \rightarrow \mathbb{R}\)</span> by <span class="math notranslate nohighlight">\(f_n(x) = \cos (x/n)\)</span>. Show that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise and determine the limit function.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 Observe that <span class="math notranslate nohighlight">\(\frac{x}{n}\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, and <span class="math notranslate nohighlight">\(\cos\)</span> is a continuous function, so for each <span class="math notranslate nohighlight">\(x\in [0,2\pi ]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -422,25 +421,25 @@ Observe that <span class="math notranslate nohighlight">\(\frac{x}{n}\rightarrow
 \]</div>
 <p>as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>. Thus the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> has pointwise limit the constant function <span class="math notranslate nohighlight">\(f:[0,2\pi ] \rightarrow \mathbb{R}\)</span>,
 with <span class="math notranslate nohighlight">\(f(x)=1\)</span> for all  <span class="math notranslate nohighlight">\(x\in [0,2\pi]\)</span>.</p>
-<div class="proof example admonition" id="example-2">
+</section>
+</div><div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 5.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Define <span class="math notranslate nohighlight">\(f_n:[0,2]\rightarrow \mathbb{R}\)</span> by <span class="math notranslate nohighlight">\(f_n(x) =x^n\)</span>. Show that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> does not converge
 pointwise.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 Note that if <span class="math notranslate nohighlight">\(x&gt;1\)</span>, then <span class="math notranslate nohighlight">\(x^n\rightarrow \infty\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, so if <span class="math notranslate nohighlight">\(x&gt;1\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{n\rightarrow \infty} f_n (x)
 \]</div>
 <p>does not exist, and <span class="math notranslate nohighlight">\((f_n)\)</span> has no pointwise limit.</p>
-<div class="proof example admonition" id="xne">
+</section>
+</div><div class="proof example admonition" id="xne">
 <p class="admonition-title"><span class="caption-number">Example 5.3 </span></p>
 <section class="example-content" id="proof-content">
 <p>Define <span class="math notranslate nohighlight">\(f_n :[0,1]\rightarrow \mathbb{R}\)</span> by <span class="math notranslate nohighlight">\(f_n(x)=x^n\)</span>. Show that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise and determine the limit function.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 Now that the domain has been restricted to <span class="math notranslate nohighlight">\([0,1]\)</span>, we do not need to worry about <span class="math notranslate nohighlight">\(x^n\)</span> becoming unbounded as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. We treat the cases <span class="math notranslate nohighlight">\(x&lt;1\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span> separately. For <span class="math notranslate nohighlight">\(x&lt;1\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -452,7 +451,8 @@ f_n(x) = x^n\rightarrow 0
 \[\begin{split}
 f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1. \\ \end{array} \right.
 \end{split}\]</div>
-<section id="uniform-convergence">
+</section>
+</div><section id="uniform-convergence">
 <h3><span class="section-number">5.1.1. </span>Uniform convergence<a class="headerlink" href="#uniform-convergence" title="Link to this heading">#</a></h3>
 <p>It is natural to wonder what conditions are necessary for “nice’’ properties such as continuity to be preserved in the limit as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. <a class="reference internal" href="#xne">Example 5.3</a> shows that pointwise convergence alone is not enough: we had a sequence of continuous functions converging pointwise to a limit that was not continuous.</p>
 <p>Recall when we defined pointwise convergence of a sequence <span class="math notranslate nohighlight">\((f_n)\)</span> to a funciton <span class="math notranslate nohighlight">\(f\)</span>, we noted that <span class="math notranslate nohighlight">\((f_n(x))\)</span> may converge faster for some values of <span class="math notranslate nohighlight">\(x\)</span> than others. This is the issue that led to the development of uniform convergence: a notion of convergence that requires the sequence of functions to converge at the same rate at every point. We shall see that uniform convergence is a much stronger condition than pointwise convergence, and preserves such things as continuity and to an extent differentiation.</p>
@@ -487,8 +487,8 @@ f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &
 <p>Consider a sequence of functions <span class="math notranslate nohighlight">\(f_n :[a,b]\rightarrow \mathbb{R}\)</span>. Let <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow \mathbb{R}\)</span>. Then the following statements are equivalent.</p>
 <p>(i) The sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>(ii) Let <span class="math notranslate nohighlight">\(M_n = \sup \{ |f_n (x) -f(x) : x\in [a,b] \}\)</span>. Then <span class="math notranslate nohighlight">\(M_n \rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.</p>
-</section>
-</div><p><strong>Proof.</strong> Let <span class="math notranslate nohighlight">\((f_n)\)</span> converge uniformly to <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\((f_n)\)</span> converge uniformly to <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span>. Then we have <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\(|f_n(x)-f(x)|&lt;\frac{\varepsilon}{2}\)</span> whenever <span class="math notranslate nohighlight">\(n\geq N\)</span>, for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Let <span class="math notranslate nohighlight">\(n\geq N\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
@@ -502,7 +502,9 @@ But this means, for <span class="math notranslate nohighlight">\(n\geq N\)</span
 \sup_{x\in [a,b]} |f_n(x)-f(x)| &lt;\varepsilon
 \]</div>
 <p>and so <span class="math notranslate nohighlight">\(|f_n(x) -f(x)|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(n\geq N\)</span>, for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Thus <span class="math notranslate nohighlight">\((f_n)\)</span> converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, as required. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<p>The condition on the <span class="math notranslate nohighlight">\(M_n\)</span>s in <a class="reference internal" href="#prop:uconv">Proposition 5.2</a> is usually the easiest way to actually prove uniform convergence in an example.</p>
+</div>
+</section>
+</div><p>The condition on the <span class="math notranslate nohighlight">\(M_n\)</span>s in <a class="reference internal" href="#prop:uconv">Proposition 5.2</a> is usually the easiest way to actually prove uniform convergence in an example.</p>
 <div class="proof example admonition" id="eg:uconv">
 <p class="admonition-title"><span class="caption-number">Example 5.4 </span></p>
 <section class="example-content" id="proof-content">
@@ -512,8 +514,7 @@ But this means, for <span class="math notranslate nohighlight">\(n\geq N\)</span
 f_n(x) = \frac{1-2n}{1-n} \sin(x).
 \]</div>
 <p>First show that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges pointwise and determine the limit function <span class="math notranslate nohighlight">\(f\)</span>. Then show that in fact the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 Observe that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -537,6 +538,7 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 \]</div>
 <p>then <span class="math notranslate nohighlight">\(0\leq M_n \leq \frac{1}{n-1}\)</span>. And since $ \frac{1}{n-1}\rightarrow 0$ as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, we have <span class="math notranslate nohighlight">\(M_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\to \infty\)</span>. So <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, by <a class="reference internal" href="#prop:uconv">Proposition 5.2</a>.</p>
 </section>
+</div></section>
 <section id="general-procedure-for-calculating-uniform-limits">
 <h3><span class="section-number">5.1.2. </span>General procedure for calculating uniform limits<a class="headerlink" href="#general-procedure-for-calculating-uniform-limits" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#eg:uconv">Example 5.4</a> demonstrates an approach that is typically the best way to prove or check for uniform convergence.</p>
@@ -554,9 +556,8 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 <p class="admonition-title"><span class="caption-number">Theorem 5.1 </span> (Uniform limit theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n :X\rightarrow \mathbb{R}\)</span> be continuous for each <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span>. Suppose the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(f:X\rightarrow \mathbb{R}\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p>
-</section>
-</div><p>The proof is sometimes called the “<span class="math notranslate nohighlight">\(\varepsilon /3\)</span> proof” because of the main trick.</p>
-<p><strong>Proof.</strong> Let <span class="math notranslate nohighlight">\(x_0\in X\)</span>. We want to prove that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion for continuity.</p>
+<div class="proof admonition" id="proof">
+<p>Proof.  Let <span class="math notranslate nohighlight">\(x_0\in X\)</span>. We want to prove that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion for continuity.</p>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span>. Then since <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, there is <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-eps-3">
 <span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-eps-3" title="Link to this equation">#</a></span>\[|f_n(x)-f(x)|&lt;\frac{\varepsilon}{3},\]</div>
@@ -572,19 +573,23 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 &amp;&lt; \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon.
 \end{align*}\]</div>
 <p>Thus <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. Since <span class="math notranslate nohighlight">\(x_0\)</span> was arbitrary, we conclude that <span class="math notranslate nohighlight">\(f\)</span> is a continuous funciton. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
+</section>
+</div><p><strong>Remark.</strong>
+The proof of <a class="reference internal" href="#ucont">Theorem 5.1</a> is sometimes called the “<span class="math notranslate nohighlight">\(\varepsilon/3\)</span> proof” because of the main trick.</p>
 <div class="proof example admonition" id="example-9">
 <p class="admonition-title"><span class="caption-number">Example 5.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n : [0,1]\to\mathbb{R}\)</span> be given by <span class="math notranslate nohighlight">\(f_n(x) =x^n\)</span>. Show that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> does not converge uniformly.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 We saw in <a class="reference internal" href="#xne">Example 5.3</a> that the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> has pointwise limit <span class="math notranslate nohighlight">\(f\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1.\\ \end{array} \right.
 \end{split}\]</div>
 <p>If <span class="math notranslate nohighlight">\((f_n)\)</span> did converge uniformly the limit would have to be this function <span class="math notranslate nohighlight">\(f\)</span>. But <span class="math notranslate nohighlight">\(f\)</span> is clearly not continuous at <span class="math notranslate nohighlight">\(x=1\)</span>. So <span class="math notranslate nohighlight">\((f_n)\)</span> does not converge uniformly.</p>
-<p>The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest — see <a class="reference internal" href="Appendix.html#sec-intdiffunif"><span class="std std-ref">Section A.2</span></a>.</p>
+</section>
+</div><p>The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest — see <a class="reference internal" href="Appendix.html#sec-intdiffunif"><span class="std std-ref">Section A.2</span></a>.</p>
 <div class="proof theorem admonition" id="udiff">
 <p class="admonition-title"><span class="caption-number">Theorem 5.2 </span> (Differentiable limit theorem)</p>
 <section class="theorem-content" id="proof-content">
@@ -593,6 +598,9 @@ f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1.\\ \end{array} \
 (ii) Each derivative <span class="math notranslate nohighlight">\(f_n'\)</span> is continuous, and
 (iii) The sequence of derivatives <span class="math notranslate nohighlight">\((f'_n)\)</span> converges uniformly to a function <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <p>Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable, and <span class="math notranslate nohighlight">\(f'=g\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. See <a class="reference internal" href="Appendix.html#sec-intdiffunif"><span class="std std-ref">Section A.2</span></a> in the Appendix.</p>
+</div>
 </section>
 </div><p>Thus we can, <em>under suitable conditions</em>, swap limits and differentiation.</p>
 <p>The following example shows that convergence conditions on the sequence of derivatives are necessary.</p>
@@ -605,8 +613,7 @@ f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1.\\ \end{array} \
 f_n (x) = \frac{1}{n} \sin (n^2 x) . 
 \]</div>
 <p>Show that <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to the zero function, but <span class="math notranslate nohighlight">\((f_n')\)</span> does not converge pointwise.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 Observe that <span class="math notranslate nohighlight">\(|f_n(x)|\leq \frac{1}{n}\)</span> for all <span class="math notranslate nohighlight">\(x\in [0,2\pi ]\)</span>, and <span class="math notranslate nohighlight">\(\frac{1}{n}\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>. Thus the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(0\)</span>, the zero function.</p>
 <p>But</p>
 <div class="math notranslate nohighlight">
@@ -615,6 +622,7 @@ f_n'(x) =n\cos (n^2 x)
 \]</div>
 <p>and the sequence <span class="math notranslate nohighlight">\((f_n')\)</span> does not converge pointwise (let alone uniformly).</p>
 </section>
+</div></section>
 <section id="series-of-functions">
 <h2><span class="section-number">5.3. </span>Series of functions<a class="headerlink" href="#series-of-functions" title="Link to this heading">#</a></h2>
 <p>We can treat convergence of series of functions via sequences of partial sums. This mirrors the approach taken for series of real numbers, as seen in MAS107.</p>
@@ -657,8 +665,8 @@ f'(x) = \sum_{n=1}^\infty f_n'(x)
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n :X\rightarrow \mathbb{R}\)</span> be a sequence of functions. Suppose we have a summable sequence of real numbers <span class="math notranslate nohighlight">\((M_n)\)</span> such that <span class="math notranslate nohighlight">\(|f_n (x)| \leq M_n\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>, and all <span class="math notranslate nohighlight">\(x\in X\)</span>.</p>
 <p>Then the sequence <span class="math notranslate nohighlight">\((f_n)\)</span> is uniformly summable, and <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n (x)\)</span> converges absolutely for each <span class="math notranslate nohighlight">\(x\in X\)</span>.</p>
-</section>
-</div><p><strong>Proof.</strong> For each <span class="math notranslate nohighlight">\(x\in X\)</span>, absolute convergence of the series</p>
+<div class="proof admonition" id="proof">
+<p>Proof. For each <span class="math notranslate nohighlight">\(x\in X\)</span>, absolute convergence of the series</p>
 <div class="math notranslate nohighlight">
 \[
 \sum_{n=1}^\infty f_n (x)
@@ -676,7 +684,9 @@ s:X\to\mathbb{R}; \; s(x)=\sum_{n=1}^\infty f_n (x).
 |s(x) - s_n(x) | = \left| \sum_{k=n+1}^\infty f_n (x) \right| \leq \sum_{k=n+1}^\infty |f_k (x)| \leq \sum_{k=n+1}^\infty M_k &lt;\varepsilon.
 \]</div>
 <p>Since this holds for all <span class="math notranslate nohighlight">\(x\in X\)</span>, it follows that <span class="math notranslate nohighlight">\(s_n\rightarrow s\)</span>  uniformly. So <span class="math notranslate nohighlight">\((f_n)\)</span> is uniformly summable. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<p>The Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test is very useful for defining functions via their power series. In particular, we are now in a position to begin a rigorous treatment of the exponential function.</p>
+</div>
+</section>
+</div><p>The Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test is very useful for defining functions via their power series. In particular, we are now in a position to begin a rigorous treatment of the exponential function.</p>
 <div class="proof example admonition" id="eg:exp">
 <p class="admonition-title"><span class="caption-number">Example 5.7 </span> (Exponential function)</p>
 <section class="example-content" id="proof-content">
@@ -716,9 +726,8 @@ f_n:[-R,R]\to\mathbb{R}; \hspace{1em} f_n(x) = \frac{x^n}{n!}.
 <p class="admonition-title"><span class="caption-number">Proposition 5.3 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>There is a function <span class="math notranslate nohighlight">\(f:\mathbb{R} \rightarrow \mathbb{R}\)</span> which is continuous everywhere, but differentiable nowhere.</p>
-</section>
-</div><p>We just give a quick sketch of the proof.</p>
-<p><strong>Sketch proof.</strong></p>
+<div class="proof admonition" id="proof">
+<p>Proof. (Sketch)</p>
 <ul class="simple">
 <li><p>Define a function <span class="math notranslate nohighlight">\(f_n :\mathbb{R} \rightarrow \mathbb{R}\)</span> by</p></li>
 </ul>
@@ -736,9 +745,11 @@ f_n(x) = \frac{\left|10^nx - \text{round}(10^nx)\right|}{10^n}.
 <li><p>Use  the Weierstrass <span class="math notranslate nohighlight">\(M\)</span>-test to show that the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty f_n\)</span> converges uniformly.</p></li>
 <li><p>Apply the Uniform Limit Theorem (<a class="reference internal" href="#ucont">Theorem 5.1</a>) to show that <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p></li>
 <li><p>Check directly that <span class="math notranslate nohighlight">\(f\)</span> is not differentiable anywhere, by showing that the required limit does not exist.
-(To give full details of this is quite long. But the idea is straightforward: <span class="math notranslate nohighlight">\(f_1\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{20}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(f_2\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{200}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span> and so on - thus <span class="math notranslate nohighlight">\(f\)</span> has “corners’’ everywhere and is differentiable nowhere.) <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p></li>
+(To give full details of this is quite long. But the idea is straightforward: <span class="math notranslate nohighlight">\(f_1\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{20}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(f_2\)</span> has “corners’’ at <span class="math notranslate nohighlight">\(\frac{n}{200}\)</span> for <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span> and so on - thus <span class="math notranslate nohighlight">\(f\)</span> has “corners’’ everywhere and is differentiable nowhere.) <span style="float:right;">”<span class="math notranslate nohighlight">\(\square\)</span>”</span></p></li>
 </ul>
-<p>The graph of <span class="math notranslate nohighlight">\(y=f(x)\)</span> is extremely jagged, as might be expected from a nowehere differentiable continuous function.</p>
+</div>
+</section>
+</div><p>The graph of <span class="math notranslate nohighlight">\(y=f(x)\)</span> is extremely jagged, as might be expected from a nowehere differentiable continuous function.</p>
 <figure class="align-default" id="ndcts">
 <a class="reference internal image-reference" href="_images/NDcts.png"><img alt="_images/NDcts.png" src="_images/NDcts.png" style="height: 200px;" /></a>
 <figcaption>

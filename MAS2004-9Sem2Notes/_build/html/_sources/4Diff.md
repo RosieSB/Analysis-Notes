@@ -31,14 +31,22 @@ As before we will study real-valued functions defined on some subset $A$ of the 
 ````{prf:definition}
 :label: def:diff
  Let $f:A\to\mathbb{R}$ be a function. We say that $f$ is *differentiable* at $a \in A$ if
-$ \lim_{x \rightarrow a}\displaystyle\frac{f(x) - f(a)}{x - a}$ exists. In this case we write
 
 $$
-f'(a) = \lim_{x \rightarrow a}\displaystyle\frac{f(x) - f(a)}{x - a} = \lim_{h \rightarrow 0}\displaystyle\frac{f(a +h) - f(a)}{h},
+\frac{f(x) - f(a)}{x - a}
 $$
 
-and we call $f'(a) \in \mathbb{R}$, the *derivative of $f$ at $a$*.}
-We say that $f$ is *differentiable* on $S \subseteq A$ if it is differentiable at every point $a \in S$. Then the mapping $a \mapsto f'(a)$ defines a real-valued function which is called the der*ivative} of $f$, and denoted by $f'$. This has domain
+has a well-defined limit as $x\rightarrow a$. In this case we write
+
+$$
+f'(a) = \lim_{x \rightarrow a}\frac{f(x) - f(a)}{x - a} = \lim_{h \rightarrow 0}\frac{f(a +h) - f(a)}{h},
+$$
+
+and we call $f'(a) \in \mathbb{R}$, the *derivative of $f$ at $a$*.
+
+We say that $f$ is *differentiable* on $S \subseteq A$ if it is differentiable at every point $a \in S$. 
+
+The mapping $a \mapsto f'(a)$ defines a real-valued function which is called the der*ivative} of $f$, and denoted by $f'$. This has domain
 
 $$
 \text{Dom}\left(f'\right) = \{x \in A : f\ \text{is differentiable at $x$}\}.
@@ -54,7 +62,6 @@ $$
 in the sense of {prf:ref}`functionlimit`. Or, equivalently, the limit at $0$ of the function $h\mapsto \displaystyle\frac{f(a +h) - f(a)}{h}$.
 
 In applied mathematics, we may often write $y = f(x)$, and express the function $f'$ as $\frac{dy}{dx}$. Then $f'(a) = \left.\frac{dy}{dx}\right|_{x=a}$. In analysis, this notation is not so helpful; it is usually easier to work with $f'$.
-
 
 We can of course, iterate the notion of differentiability in the usual way. Suppose that $a \in \text{Dom}\left(f'\right)$ and that $f'$ is differentiable at $a$, then we define the second derivative $f^{\prime \prime}(a)$ of $f$ at $a$ by
 
@@ -78,7 +85,6 @@ If $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x) = c$, where $c$ in $\mathbb{R}$
 Let $f:\mathbb{R}\to\mathbb{R}$ be given by $f(x) = x^{n}$, where $n\in\mathbb{N}$ is fixed.
 Use the Binomial Theorem to show directly from the definition that $f$ is differentiable at all $x\in\mathbb{R}$,
 with  $f'(x) = nx^{n-1}$.
-````
 
 **Solution.**
 Let $a, h \in \mathbb{R}$. Using the binomial theorem, we have
@@ -97,15 +103,16 @@ $$
 $$
 
 so $f'(x) = nx^{n-1}$ for all $x \in \mathbb{R}$, and $\text{Dom}\left(f'\right) = \mathbb{R}$.
+````
 
 Next we turn our attention to the relationship between differentiability and continuity.
 
-````{prf:theorem}
+`````{prf:theorem}
 :label: dcont
 If $f:A\to\mathbb{R}$ is differentiable at $a \in A$ then $f$ is continuous at $a$.
-````
 
-**Proof.** Using the definition of continuity ({prf:ref}`defcont`), we need to show that $\lim_{x\rightarrow a} f(x) = f(a)$. For $x \neq a$, write
+````{prf:proof}
+Using the definition of continuity ({prf:ref}`defcont`), we need to show that $\lim_{x\rightarrow a} f(x) = f(a)$. For $x \neq a$, write
 
 $$
 f(x) - f(a) = \frac{f(x) - f(a)}{x - a}\cdot(x - a).
@@ -117,17 +124,18 @@ $$
 \lim_{x\rightarrow a} \frac{f(x) - f(a)}{x - a}\cdot(x - a) =  f'(a)\cdot 0=0.
 $$
 
-So $\displaystyle\lim_{x\rightarrow a}(f(x) - f(a))$ exists and equals zero, and the result follows, by algebra of limits again. 
-<div align="right">□</div>
-
+So $\displaystyle\lim_{x\rightarrow a}(f(x) - f(a))$ exists and equals zero, and the result follows, by algebra of limits again. <span style="float:right;">$\square$</span>
+````
+`````
 
 On the other hand, it is not true that every function that is continuous at $a$  is differentiable at $a$.
 
-````{prf:example} 
-Consider the function $f:\mathbb{R}\to\mathbb{R}$ given by $f(x) = |x|$. It is continuous at every point in $\mathbb{R}$. It is also easy to see that it is differentiable at every $x \neq 0$. Show that it is not differentiable at zero, by showing that the relevant left and right limits are different there. 
-````
+`````{prf:example} 
+Consider the function $f:\mathbb{R}\to\mathbb{R}$ given by $f(x) = |x|$. It is continuous at every point in $\mathbb{R}$. It is also easy to see that it is differentiable at every $x \neq 0$. 
 
-**Solution.**
+Show that $f$ is not differentiable at zero, by showing that the relevant left and right limits are different there. 
+
+````{dropdown} Solution (click to expand)
 We have
 
 \begin{align*}
@@ -138,11 +146,25 @@ We have
 \end{align*}
 
 Thus the left and right limits are different and so $\lim_{h \to 0}\displaystyle\frac{f(0 + h) - f(0)}{h} $ does not exist.
+````
+`````
 
 Generalising the last example, we have the following definition.
 
 ````{prf:definition}
-We say that the function $f:A\to\mathbb{R}$ has a *left derivative* at $a \in A$ if $f_{-}'(a) = \lim_{h \rightarrow 0^-}\displaystyle\frac{f(a +h) - f(a)}{h}$ exists, and that it has a *right derivative* at $a \in A$ if $f_{+}'(a) = \lim_{h \rightarrow 0^+}\displaystyle\frac{f(a +h) - f(a)}{h}$ exists.
+We say that the function $f:A\to\mathbb{R}$ has a *left derivative* at $a \in A$ if the limit 
+
+$$
+f_{-}'(a) := \lim_{h \rightarrow 0^-}\frac{f(a +h) - f(a)}{h}
+$$ 
+
+exists, and that it has a *right derivative* at $a \in A$ if the limit 
+
+$$
+f_{+}'(a) := \lim_{h \rightarrow 0^+}\frac{f(a +h) - f(a)}{h}
+$$
+
+exists.
 ````
 
 ````{prf:theorem}
@@ -157,9 +179,9 @@ $$
 
 ## Rules for differentiation
 
-The results in this section should all be familiar from MAS106, but now we can make the proofs rigorous.
+The results in this section should all be familiar from MAS106. Howver, now we can make the proofs rigorous.
 
-````{prf:theorem}
+`````{prf:theorem}
 :label: rules
 Let $f$ and $g$ be real-valued functions that are differentiable at $a \in \text{Dom}(f) \cap \text{Dom}(g)$. Then the following hold.
 
@@ -181,9 +203,7 @@ $$
 $$
 \left(\frac{f}{g}\right)'(a) = \frac{g(a)f'(a) - f(a)g'(a)}{g(a)^{2}}.
 $$
-````
-
-**Proof.**
+````{prf:proof}
 (i) We have
 
 $$
@@ -202,7 +222,7 @@ and, taking limits as $h$ goes to $0$, the result follows from the algebra of li
 \end{align*}
 
 The result follows by taking limits as $h \rightarrow 0$ and using {prf:ref}`def:diff` and the algebra of limits, together with the fact that at $a$, $g$ is differentiable, hence continuous by {prf:ref}`dcont`, and so $\lim_{h \rightarrow 0}g(a + h) = g(a)$.
-3. First observe that by Problem 18, there exists $\delta > 0$ such that $g(x) \neq 0$ for all $x \in (a - \delta, a + \delta)$. Consider $h \in \mathbb{R}$ such that $|h| < \delta$. Then
+3. First observe that by [Problem 19](https://rosiesb.github.io/Analysis-Problems/Problems.html#id19), there exists $\delta > 0$ such that $g(x) \neq 0$ for all $x \in (a - \delta, a + \delta)$. Consider $h \in \mathbb{R}$ such that $|h| < \delta$. Then
 
 
 \begin{align*}
@@ -212,10 +232,11 @@ The result follows by taking limits as $h \rightarrow 0$ and using {prf:ref}`def
 \end{align*}
 
 and the result follows by algebra of limits, taking the limit as $h$ goes to $0$, using the fact that (as above), $\lim_{h \rightarrow 0}g(a + h) = g(a)$. 
-<div align="right">□</div>
+<span style="float:right;">$\square$</span>
+````
+`````
 
-
-````{prf:theorem} Chain rule
+`````{prf:theorem} Chain rule
 :label: chain
 Let $f, g$ be real-valued functions such that the range of $g$ is contained in the domain of $f$. Suppose that $g$ is differentiable at $a$ and that $f$ is differentiable at $g(a)$. Then $f \circ g$ is differentiable at $a$ and
 
@@ -223,9 +244,8 @@ $$
 (f \circ g)'(a) = f'(g(a))g'(a).
 $$
 
-````
-
-**Proof.** For $x\in \text{Dom}(g)$,  we consider
+````{prf:proof} 
+For $x\in \text{Dom}(g)$,  we consider
 
 $$
 \frac{(f \circ g)(x) - (f \circ g)(a)}{x-a} = \frac{ f(g(x)) - f(g(a))}{x-a}.
@@ -270,9 +290,9 @@ is equal to $Q(g(a))=f'(g(a))$. Using the algebra of limits, we then have
 &=\lim_{x\to a} Q(g(x))\lim_{x\to a}\frac{g(x) - g(a)}{x-a}\\
 &=f'(g(a))g'(a),
 \end{align*}
-as required. 
-<div align="right">□</div>
-
+as required. <span style="float:right;">$\square$</span>
+````
+`````
 
 ## Turning points and Rolle's theorem
 
@@ -294,18 +314,17 @@ f(x) = \begin{cases} x+2& ~\mbox{if}~x \in [-3, -1),\\  x^{2} & ~\mbox{if}~x \in
 $$
 
 Identify any turning points and the global maximum and minimum.
-````
 
 **Solution.**
 Note that the function is continuous (by checking what happens at $x=-1$), so as above there is a global maximum and minimum. The global maximum is $4$, attained at $x = 2$. The global minimum is  $-1$, attained at $x = -3$. Neither of these is a turning point (because they are the endpoints of the interval: we cannot find a $\delta$ such that all points within distance $\delta$ are contained in the domain). There is a local minimum at $x = 0$ and a local maximum at $x=-1$. 
-
-
-````{prf:theorem}
-:label: ext1
-If  $f:A\to\mathbb{R}$ is differentiable at $a \in A$ and $a$ is a turning point for $f$, then $f'(a) = 0$.
 ````
 
-**Proof.** We suppose that $f$ has a local minimum at $a$.  So there exists $\delta > 0$ so that $(a-\delta, a+\delta)\subseteq\text{Dom}(f)$ and $f(x) \geq f(a)$ for all $x \in (a-\delta, a+\delta)$. Hence
+`````{prf:theorem}
+:label: ext1
+If  $f:A\to\mathbb{R}$ is differentiable at $a \in A$ and $a$ is a turning point for $f$, then $f'(a) = 0$.
+
+````{prf:proof} 
+We suppose that $f$ has a local minimum at $a$.  So there exists $\delta > 0$ so that $(a-\delta, a+\delta)\subseteq\text{Dom}(f)$ and $f(x) \geq f(a)$ for all $x \in (a-\delta, a+\delta)$. Hence
 \begin{align*}
 &\displaystyle\frac{f(x) - f(a)}{x - a} \leq 0 \qquad \text{for all $x$ such that $a - \delta < x < a$,}\\
 &\displaystyle\frac{f(x) - f(a)}{x - a} \geq 0 \qquad \text{for all $x$ such that $a < x < a + \delta$}.
@@ -313,26 +332,26 @@ If  $f:A\to\mathbb{R}$ is differentiable at $a \in A$ and $a$ is a turning point
 
 Taking one-sided limits as $x \rightarrow a$, we deduce that $f_{-}'(a) \leq 0$ and $f_{+}'(a) \geq 0$. But $f$ is differentiable at $a$, and so $f_{-}'(a)  = f_{+}'(a) = f'(a)$. We conclude that $f'(a) = 0$, as required.
 
-The argument in the case of a local maximum is very similar. 
-<div align="right">□</div>
-
+The argument in the case of a local maximum is very similar. <span style="float:right;">$\square$</span>
+````
+`````
 
 A point where a differentiable function has derivative zero is sometimes called a *stationary* point. So {prf:ref}`ext1` says that turning points are stationary points. The converse to {prf:ref}`ext1` is false: not all stationary points are turning points.  Consider for example the familiar case of $f(x) = x^{3}$. Then $f'(0) = 0$ but $0$ is neither a local maximum nor a local minimum; it is what is called an *inflection point*}. We will not pursue the story of classifying stationary points further here. You have seen this before in MAS106, and it is revisited in one of the exercises. Instead we will use  {prf:ref}`ext1` to explore some new territory.
 
-````{prf:theorem} Rolle's theorem
+`````{prf:theorem} Rolle's theorem
 :label:  Roll
 Let $f:[a,b]\to\mathbb{R}$ be a function that is continuous on $[a,b]$ and differentiable on $(a,b)$ with $f(a)=f(b)$. Then there exists $c\in(a,b)$ such that $f'(c) = 0$.
+
+````{prf:proof}
+If $f$ is constant, the result is obvious, so assume that $f$ takes at least two distinct values. By {prf:ref}`thm:evt`, $f$ is bounded on $[a, b]$ and attains both its supremum and infimum. It cannot attain both of these at the end-points, as then they would be equal and $f$ would be constant. So there must be a $c\in (a,b)$ where either the supremum or infimum is attained. But then $c$ is a turning point, and so $f'(c) = 0$ by {prf:ref}`ext1`. <span style="float:right;">$\square$</span>
 ````
-
-**Proof.** If $f$ is constant, the result is obvious, so assume that $f$ takes at least two distinct values. By {prf:ref}`thm:evt`, $f$ is bounded on $[a, b]$ and attains both its supremum and infimum. It cannot attain both of these at the end-points, as then they would be equal and $f$ would be constant. So there must be a $c\in (a,b)$ where either the supremum or infimum is attained. But then $c$ is a turning point, and so $f'(c) = 0$ by {prf:ref}`ext1`. 
-<div align="right">□</div>
-
+`````
 
 ## The mean value theorem
 
 The next result is a generalisation of Rolle's theorem and a very important result, with lots of interesting consequences.
 
-````{prf:theorem} Mean value theorem
+`````{prf:theorem} Mean value theorem
 :label: mvt
 If  $f:[a,b]\to\mathbb{R}$ is continuous on $[a, b]$ and differentiable on $(a,b)$, then there exists $c \in (a, b)$ such that
 
@@ -340,18 +359,16 @@ $$
 f'(c) = \frac{f(b) - f(a)}{b - a}.
 $$
 
+````{prf:proof} 
+Let  $\alpha = \frac{f(b) - f(a)}{b - a}$. Define $g:[a,b]\to\mathbb{R}$ by  $g(x) = f(x) - \alpha(x - a)$. Then $g$ is continuous on $[a, b]$, and differentiable on $(a, b)$, because $f$ is. You can check easily that $g(a) = g(b) = f(a)$, and so we may apply Rolle's theorem ({prf:ref}`Roll`) to deduce that there exists $c \in (a, b)$ such that $g^{\prime }(c) = 0$. But $g'(c)=f'(c)-\alpha$ and hence $f'(c) = \alpha$, as required. <span style="float:right;">$\square$</span>
 ````
-
-**Proof.** Let  $\alpha = \frac{f(b) - f(a)}{b - a}$. Define $g:[a,b]\to\mathbb{R}$ by  $g(x) = f(x) - \alpha(x - a)$. Then $g$ is continuous on $[a, b]$, and differentiable on $(a, b)$, because $f$ is. You can check easily that $g(a) = g(b) = f(a)$, and so we may apply Rolle's theorem ({prf:ref}`Roll`) to deduce that there exists $c \in (a, b)$ such that $g^{\prime }(c) = 0$. But $g'(c)=f'(c)-\alpha$ and
-hence $f'(c) = \alpha$, as required. 
-<div align="right">□</div>
-
+`````
 
 The mean value theorem gives a rigorous foundation to the "geometrically obvious'' assertion that a differentiable function $f$ on an interval $[a, b]$ must at some point attain a slope equal to the slope of the line through the endpoints $(a, f(a))$ and $(b, f(b))$ --- see {numref}`MVT`.
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/MVT.png
 ---
-height: 500px
+height: 400px
 name: MVT
 ---
 A visual representation of the mean value theorem.
@@ -361,7 +378,7 @@ In analysis, for any statement connecting calculus to some geometric property of
 
 
 
-````{prf:corollary} Monotonicity revisited
+`````{prf:corollary} Monotonicity revisited
 :label: mond
 Suppose that  $f:[a,b]\to\mathbb{R}$ is continuous on $[a, b]$ and differentiable on $(a, b)$.
 
@@ -372,13 +389,15 @@ Suppose that  $f:[a,b]\to\mathbb{R}$ is continuous on $[a, b]$ and differentiabl
 (iii) If $f'(x) \leq 0$ for all $x \in (a, b)$, then $f$ is monotonic decreasing on $[a, b]$.
 
 (iv) If $f'(x) < 0$ for all $x \in (a, b)$, then $f$ is strictly monotonic decreasing on $[a, b]$.
-````
 
-**Proof.** We'll just do the first of these, as the others are so similar. Choose arbitrary $\alpha, \beta$ such that $a \leq \alpha < \beta \leq b$. By the mean value theorem ({prf:ref}`mvt`), there exists $c \in (\alpha, \beta)$ so that
+
+````{prf:proof} 
+We'll just do the first of these, as the others are so similar. Choose arbitrary $\alpha, \beta$ such that $a \leq \alpha < \beta \leq b$. By the mean value theorem ({prf:ref}`mvt`), there exists $c \in (\alpha, \beta)$ so that
 
 $$
 \frac{f(\beta) - f(\alpha)}{\beta - \alpha} = f'(c) \geq 0.
 $$
 
-Hence $f(\beta) \geq f(\alpha)$ and so $f$ is monotonic increasing, as required. 
-<div align="right">□</div>
+Hence $f(\beta) \geq f(\alpha)$ and so $f$ is monotonic increasing, as required. <span style="float:right;">$\square$</span>
+````
+`````

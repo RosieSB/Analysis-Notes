@@ -21,7 +21,6 @@ Note that in this definition, the $N$ can depend not just on the value of $\vare
 
 ````{prf:example} 
 Define $f_n:[0,2\pi ] \rightarrow \mathbb{R}$ by $f_n(x) = \cos (x/n)$. Show that the sequence $(f_n)$ converges pointwise and determine the limit function.
-````
 
 **Solution.**
 Observe that $\frac{x}{n}\rightarrow 0$ as $n\rightarrow \infty$, and $\cos$ is a continuous function, so for each $x\in [0,2\pi ]$, we have
@@ -32,12 +31,11 @@ $$
 
 as $n\rightarrow \infty$. Thus the sequence $(f_n)$ has pointwise limit the constant function $f:[0,2\pi ] \rightarrow \mathbb{R}$,
 with $f(x)=1$ for all  $x\in [0,2\pi]$.
-
+````
 
 ````{prf:example} 
 Define $f_n:[0,2]\rightarrow \mathbb{R}$ by $f_n(x) =x^n$. Show that the sequence $(f_n)$ does not converge
 pointwise.
-````
 
 **Solution.**
  Note that if $x>1$, then $x^n\rightarrow \infty$ as $n\rightarrow \infty$, so if $x>1$ then
@@ -47,12 +45,12 @@ $$
 $$
 
 does not exist, and $(f_n)$ has no pointwise limit.
-
+````
 
 ````{prf:example}  
 :label: xne
 Define $f_n :[0,1]\rightarrow \mathbb{R}$ by $f_n(x)=x^n$. Show that the sequence $(f_n)$ converges pointwise and determine the limit function.
-````
+
 
 **Solution.**
 Now that the domain has been restricted to $[0,1]$, we do not need to worry about $x^n$ becoming unbounded as $n\rightarrow\infty$. We treat the cases $x<1$ and $x=1$ separately. For $x<1$,
@@ -68,7 +66,7 @@ On the other hand, $f_n(1) = 1^n =1$ for all $n$, so $f_n(1)\rightarrow 1$ as $n
 $$
 f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 & x<1, \\ 1 & x=1. \\ \end{array} \right.
 $$
-
+````
 
 
 ### Uniform convergence
@@ -110,16 +108,15 @@ That is, uniform convergence implies pointwise convergence, and when both hold, 
 
 First, we prove an equivalent characterisation of uniform convergence, that is typically easier to use in practice than {prf:ref}`def:uconv`
 
-````{prf:proposition}
+`````{prf:proposition}
 :label: prop:uconv 
 Consider a sequence of functions $f_n :[a,b]\rightarrow \mathbb{R}$. Let $f:[a,b]\rightarrow \mathbb{R}$. Then the following statements are equivalent.
 
 (i) The sequence $(f_n)$ converges uniformly to $f$.
 
 (ii) Let $M_n = \sup \{ |f_n (x) -f(x) : x\in [a,b] \}$. Then $M_n \rightarrow 0$ as $n\rightarrow \infty$.
- ````
 
-**Proof.** Let $(f_n)$ converge uniformly to $f$.
+````{prf:proof} Let $(f_n)$ converge uniformly to $f$.
 
 Let $\varepsilon >0$. Then we have $N\in \mathbb{N}$ such that $|f_n(x)-f(x)|<\frac{\varepsilon}{2}$ whenever $n\geq N$, for all $x\in [a,b]$. Let $n\geq N$. Then
 
@@ -137,7 +134,8 @@ $$
 $$
 
 and so $|f_n(x) -f(x)|<\varepsilon$ whenever $n\geq N$, for all $x\in [a,b]$. Thus $(f_n)$ converges to $f$ uniformly, as required. <span style="float:right;">$\square$</span>
-
+````
+`````
 
 The condition on the $M_n$s in {prf:ref}`prop:uconv` is usually the easiest way to actually prove uniform convergence in an example.
 
@@ -150,7 +148,6 @@ f_n(x) = \frac{1-2n}{1-n} \sin(x).
 $$
 
 First show that the sequence $(f_n)$ converges pointwise and determine the limit function $f$. Then show that in fact the sequence $(f_n)$ converges uniformly to $f$.
-````
 
 **Solution.**
 Observe that
@@ -180,7 +177,7 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 $$
 
 then $0\leq M_n \leq \frac{1}{n-1}$. And since \$ \frac{1}{n-1}\rightarrow 0\$ as $n\rightarrow \infty$, we have $M_n\rightarrow 0$ as $n\to \infty$. So $(f_n)$ converges uniformly to $f$, by {prf:ref}`prop:uconv`.	
-
+````
 
 ### General procedure for calculating uniform limits
 
@@ -196,14 +193,12 @@ To prove a sequence of functions $(f_n)$ converges uniformly:
 
 We are now ready to prove that continuity is preserved by uniform limits.
 
-````{prf:theorem} Uniform limit theorem
+`````{prf:theorem} Uniform limit theorem
 :label: ucont
 Let $f_n :X\rightarrow \mathbb{R}$ be continuous for each $n\in \mathbb{N}$. Suppose the sequence $(f_n)$ converges uniformly to a function $f:X\rightarrow \mathbb{R}$. Then $f$ is continuous.
-````
 
-The proof is sometimes called the "$\varepsilon /3$ proof" because of the main trick.
-
-**Proof.** Let $x_0\in X$. We want to prove that $f$ is continuous at $x_0$. We'll use the $(\varepsilon-\delta)$ criterion for continuity.
+````{prf:proof}
+ Let $x_0\in X$. We want to prove that $f$ is continuous at $x_0$. We'll use the $(\varepsilon-\delta)$ criterion for continuity.
 
 Let $\varepsilon >0$. Then since $(f_n)$ converges uniformly to $f$, there is $N\in \mathbb{N}$ such that
 
@@ -231,13 +226,15 @@ Let $x\in X$ be such that $|x-x_0|<\delta$. Then using the triangle inequality t
 \end{align*}
 
 Thus $f$ is continuous at $x_0$. Since $x_0$ was arbitrary, we conclude that $f$ is a continuous funciton. <span style="float:right;">$\square$</span>
+````
+`````
 
+**Remark.** 
+The proof of {prf:ref}`ucont` is sometimes called the "$\varepsilon/3$ proof" because of the main trick.
 
-%The result also holds, with essentially the same proof, for functions $f_n:\mathbb{R}\to\mathbb{R}$.
 
 ````{prf:example} 
 Let $f_n : [0,1]\to\mathbb{R}$ be given by $f_n(x) =x^n$. Show that the sequence $(f_n)$ does not converge uniformly.
-````
 
 **Solution.**
 We saw in {prf:ref}`xne` that the sequence $(f_n)$ has pointwise limit $f$, where
@@ -247,11 +244,11 @@ f(x) = \left\{ \begin{array}{ll} 0 & x<1, \\ 1 & x=1.\\ \end{array} \right.
 $$
 
 If $(f_n)$ did converge uniformly the limit would have to be this function $f$. But $f$ is clearly not continuous at $x=1$. So $(f_n)$ does not converge uniformly. 
-
+````
 
 The power of uniform limits extends beyond just continuity. We state a version of the uniform limit theorem for differentiability. Its proof is non-examinable but included in the appendix for interest --- see [Section A.2](#sec:intdiffunif).
 
-````{prf:theorem} Differentiable limit theorem
+`````{prf:theorem} Differentiable limit theorem
 :label: udiff
 Consider differentiable functions $f_n:[a,b]\rightarrow \mathbb{R}$. Suppose that
 
@@ -260,7 +257,11 @@ Consider differentiable functions $f_n:[a,b]\rightarrow \mathbb{R}$. Suppose tha
 (iii) The sequence of derivatives $(f'_n)$ converges uniformly to a function $g$.
 
 Then $f$ is differentiable, and $f'=g$.
+
+````{prf:proof}
+See [Section A.2](#sec:intdiffunif) in the Appendix.
 ````
+`````
 
 Thus we can, *under suitable conditions*, swap limits and differentiation.
 
@@ -274,7 +275,6 @@ f_n (x) = \frac{1}{n} \sin (n^2 x) .
 $$
 
 Show that $(f_n)$ converges uniformly to the zero function, but $(f_n')$ does not converge pointwise.
-````
 
 **Solution.**
 Observe that $|f_n(x)|\leq \frac{1}{n}$ for all $x\in [0,2\pi ]$, and $\frac{1}{n}\rightarrow 0$ as $n\rightarrow \infty$. Thus the sequence $(f_n)$ converges uniformly to $0$, the zero function.
@@ -286,6 +286,7 @@ f_n'(x) =n\cos (n^2 x)
 $$
 
 and the sequence $(f_n')$ does not converge pointwise (let alone uniformly).
+````
 
 ## Series of functions
 
@@ -302,8 +303,6 @@ We say the infinite series $\sum_{n=1}^\infty f_n$ *converges pointwise* if $(s_
 
 We say that the sequence $(f_n)$ is *uniformly summable*}, or that the series $\sum_{n=1}^\infty f_n$ *converges uniformly* on $X$ if the sequence $(s_n)$ of partial sums converges uniformly.
 ````
-
-%One also makes the same definition for functions defined on $\mathbb{R}$.
 
 {prf:ref}`ucont` and {prf:ref}`udiff` immediately give us the following two results.
 
@@ -333,14 +332,14 @@ for all $t\in [a,b]$.
 
 In order for the above to be useful, we need a criterion for uniform convergence of a series. The following result, called the *Weierstrass $M$-test* provides a handy criterion.
 
-````{prf:theorem} Weierstrass $M$-test
+`````{prf:theorem} Weierstrass $M$-test
 :label: WMtest
 Let $f_n :X\rightarrow \mathbb{R}$ be a sequence of functions. Suppose we have a summable sequence of real numbers $(M_n)$ such that $|f_n (x)| \leq M_n$ for all $n$, and all $x\in X$.
 
 Then the sequence $(f_n)$ is uniformly summable, and $\sum_{n=1}^\infty f_n (x)$ converges absolutely for each $x\in X$.
-````
 
-**Proof.** For each $x\in X$, absolute convergence of the series
+````{prf:proof}
+For each $x\in X$, absolute convergence of the series
 
 $$
 \sum_{n=1}^\infty f_n (x)
@@ -365,9 +364,8 @@ $$
 $$
 
 Since this holds for all $x\in X$, it follows that $s_n\rightarrow s$  uniformly. So $(f_n)$ is uniformly summable. <span style="float:right;">$\square$</span>
-
-
-%Note that  the Weierstrass $M$-test also works for functions  $f_n:\mathbb{R} \rightarrow \mathbb{R}$.
+````
+`````
 
 The Weierstrass $M$-test is very useful for defining functions via their power series. In particular, we are now in a position to begin a rigorous treatment of the exponential function.
 
@@ -417,13 +415,11 @@ Further rigorous development of the exponential function, including a proof that
 
 The Weierstrass $M$-test can also be used to construct examples with pathological properties.
 
-````{prf:proposition}
+`````{prf:proposition}
  There is a function $f:\mathbb{R} \rightarrow \mathbb{R}$ which is continuous everywhere, but differentiable nowhere.
-````
 
-We just give a quick sketch of the proof.
-
-**Sketch proof.**
+````{prf:proof} 
+(Sketch)
 
 - Define a function $f_n :\mathbb{R} \rightarrow \mathbb{R}$ by
 
@@ -441,7 +437,9 @@ $$
 - Use  the Weierstrass $M$-test to show that the series $\sum_{n=1}^\infty f_n$ converges uniformly.
 - Apply the Uniform Limit Theorem ({prf:ref}`ucont`) to show that $f$ is continuous.
 - Check directly that $f$ is not differentiable anywhere, by showing that the required limit does not exist.
-(To give full details of this is quite long. But the idea is straightforward: $f_1$ has "corners'' at $\frac{n}{20}$ for $n\in\mathbb{Z}$, $f_2$ has "corners'' at $\frac{n}{200}$ for $n\in\mathbb{Z}$ and so on - thus $f$ has "corners'' everywhere and is differentiable nowhere.) <span style="float:right;">$\square$</span>
+(To give full details of this is quite long. But the idea is straightforward: $f_1$ has "corners'' at $\frac{n}{20}$ for $n\in\mathbb{Z}$, $f_2$ has "corners'' at $\frac{n}{200}$ for $n\in\mathbb{Z}$ and so on - thus $f$ has "corners'' everywhere and is differentiable nowhere.) <span style="float:right;">"$\square$"</span>
+````
+`````
 
 The graph of $y=f(x)$ is extremely jagged, as might be expected from a nowehere differentiable continuous function.
 

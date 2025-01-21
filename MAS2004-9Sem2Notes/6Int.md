@@ -603,9 +603,9 @@ $$
 \int_a^b f(x)dx = U(f) = U(f|_{[a,c]}) + U(f|_{[c,b]}) = \int_a^cf(x)dx+\int_c^bf(x)dx.
 $$
 
-(iii) See Problems 67 and 68.
+(iii) See [Problems 68](https://rosiesb.github.io/Analysis-Problems/Problems.html#id68) and [69](https://rosiesb.github.io/Analysis-Problems/Problems.html#id69).
 
-(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as Problem 69.<span style="float:right;">$\square$</span>
+(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as [Problem 70](https://rosiesb.github.io/Analysis-Problems/Problems.html#id70).<span style="float:right;">$\square$</span>
 ````
 `````
 
@@ -740,7 +740,7 @@ In other words, $F(x+h)-F(x)$ is the area under the curve between $x$ and $x+h$.
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/FTC.png
 ---
-height: 500px
+height: 200px
 name: FTC
 ---
 Visualisation of $F(x+h)-F(x)$.

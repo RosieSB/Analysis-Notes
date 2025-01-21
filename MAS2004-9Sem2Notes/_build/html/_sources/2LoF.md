@@ -190,16 +190,15 @@ This proves that  {prf:ref}`functionlimit` holds, and so $\lim_{x\rightarrow 1}f
 
 There is a second, equivalent definition for the limit of a function, in terms of limits of sequences of points in its domain. This sequential definition of limits is sometimes more useful in proofs, since we can use theorems already proven for convergence of sequences (see for example {prf:ref}`AOL2`, coming up).
 
-````{prf:theorem} Sequential criterion for functional limits
+`````{prf:theorem} Sequential criterion for functional limits
 :label: ed
  Let  $f:X \rightarrow \mathbb{R}$, let $a\in\mathbb{R}$ be a limit point of $X$, and let $l\in\mathbb{R}$. The following are equivalent:
 
 (i) $\lim_{x\rightarrow a} f(x) = l$.
 
 (ii) (Sequential criterion) For every sequence $(x_n)$ in $X\setminus\{a\}$ with $\lim_{n\rightarrow\infty}x_n=a$, we have that $\lim_{n\rightarrow\infty}f(x_n) = l$.
-````
 
-**Proof of {prf:ref}`ed`.** (i)$\Rightarrow$(ii): Suppose $\lim_{x\rightarrow a} f(x) = l$, and suppose $\varepsilon > 0$. So there exists $\delta > 0$ such that for all $x \in X$,
+````{prf:proof} (i)$\Rightarrow$(ii): Suppose $\lim_{x\rightarrow a} f(x) = l$, and suppose $\varepsilon > 0$. So there exists $\delta > 0$ such that for all $x \in X$,
 
 $$
 0<|x - a| < \delta \Rightarrow |f(x) - l| < \varepsilon.
@@ -221,11 +220,13 @@ $$
 Then $(x_n)$ is a sequence in $X\setminus\{a\}$ and by the sandwich rule, we have $\lim_{n\rightarrow\infty} x_{n} = a$. Also, by the above construction the sequence $(f(x_{n}))$ does not converge to $l$.
 
 So we have shown that if the $(\varepsilon-\delta)$ criterion fails, then so does the sequential criterion for functional limits. This completes the proof of {prf:ref}`ed`. <span style="float:right;">$\square$</span>
+````
+`````
 
 In MAS107, you proved many theorems concerning convergence of real sequences. {prf:ref}`ed` gives us a way to capitalise on this hard work and quickly arrive at results about limits of functions.
 
 
-````{prf:theorem} Algebra of limits
+`````{prf:theorem} Algebra of limits
 :label: AOL2
 Suppose that $f:A \rightarrow \mathbb{R}$, $g :B \rightarrow \mathbb{R}$, and $a \in \mathbb{R}$ is such that $\lim_{x\rightarrow a} f(x) = l$ and $\lim_{x\rightarrow a} g(x) = m$, then
 
@@ -236,9 +237,9 @@ Suppose that $f:A \rightarrow \mathbb{R}$, $g :B \rightarrow \mathbb{R}$, and $a
 (iii) $\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha l$, for all $\alpha \in \mathbb{R}$,
 
 (iv) $\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{l}{m}$, if $m \neq 0$.
-````
 
-**Proof.** By  {prf:ref}`ed`, these all follow from the algebra of limits for sequences. For example, for (i), if $(x_{n})$ is an arbitrary sequence in $A\cap B$ with $x_n\neq a$ for all $n\in\mathbb{N}$ such that $(x_n)$ that converges to $a$, then
+````{prf:proof} 
+By  {prf:ref}`ed`, these all follow from the algebra of limits for sequences. For example, for (i), if $(x_{n})$ is an arbitrary sequence in $A\cap B$ with $x_n\neq a$ for all $n\in\mathbb{N}$ such that $(x_n)$ that converges to $a$, then
 
 $$
 \begin{align*} 
@@ -249,6 +250,8 @@ $$
 $$
 as required.
 Here the first line uses the definition of a sum of functions and the second line uses algebra of limits (for real sequences). <span style="float:right;">$\square$</span>
+````
+`````
 
 The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
 
@@ -261,7 +264,7 @@ $$
 
 Investigate $\lim_{x \rightarrow a}f(x)$ for each $a\in\mathbb{R}$. (You will need to think about points in the domain and each of the three special points $-5, 3, 5$ separately.)
 
-````{dropdown} Solution (click)
+````{dropdown} Solution (click to drop down)
 It's helpful (but not necessary as part of the formal solution) to draw the graph of the function.
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png
@@ -327,7 +330,7 @@ that would extend $f$ to a continuous function there.  We will return to all the
 `````
 
 
-````{prf:theorem} Sandwich rule for functions
+`````{prf:theorem} Sandwich rule for functions
 Suppose that $f:X\to\mathbb{R}$,  $g:Y\to\mathbb{R}$ and $h :Z\to \mathbb{R}$ and suppose that there exists an interval $(a, b) \subseteq X\cap Y\cap Z$ such that for all $x \in (a, b)$
 
 ```{math}
@@ -343,9 +346,9 @@ If for some $c \in (a, b)$ and $l\in\mathbb{R}$ we have
 ```
 
 then $\displaystyle\lim_{x \rightarrow c}g(x)$ exists and is equal to $l$.
-````
 
-**Proof.** Let $(x_{n})$ be an arbitrary sequence that converges to $c$. 
+````{prf:proof}
+Let $(x_{n})$ be an arbitrary sequence that converges to $c$. 
 Note that by taking $N \in \mathbb{N}$ sufficiently large, we can ensure that $x_{n} \in (a, b)$ for all $n\geq N$. Define sequences $(a_n)$, $(b_n)$ and $(c_n)$ by
 
 $$
@@ -365,7 +368,8 @@ $$
 $$
 
 and we have established that $\displaystyle\lim_{x \rightarrow c}g(x)$ exists and is equal to $l$. <span style="float:right;">$\square$</span>
-
+````
+`````
 
 ## Divergence
 
@@ -389,14 +393,29 @@ $$
 0<|x-a|<\delta \Rightarrow f(x)>K. 
 $$
 
-**Equivalent, sequential conditions:** $\lim_{x\rightarrow a} f(x) = \infty$ if for every sequence $(x_{n})$, with $x_{n} \in X$, $x_n\neq a$, which satisfies $\lim_{n\rightarrow\infty} x_{n} = a$, we have $\lim_{n\rightarrow\infty} f(x_{n}) = \infty$, i.e. the sequence of real numbers $(f(x_{n}))$ diverges to infinity. 
+We say $f$ *diverges to minus infinity* at $x = a$ and we write 
+
+$$
+\lim_{x\rightarrow a} f(x) = -\infty
+$$
+
+if for any $K>0$ there is $\delta>0$ such that for all $x\in X$,
+
+$$
+0<|x-a|<\delta \Rightarrow f(x)<-K. 
+$$
 ````
 
-The notion of *divergence to minus infinity* is defined similarly, and in that case we write $\lim_{x\rightarrow a} f(x) = -\infty$. For an example of divergence to infinity, consider e.g. $\lim_{x \rightarrow 0}\frac{1}{x^2}$. The details are left to you.
+**Equivalent, sequential conditions:** 
+
+- $\lim_{x\rightarrow a} f(x) = \infty$ if for every sequence $(x_{n})$, with $x_{n} \in X$, $x_n\neq a$, which satisfies $\lim_{n\rightarrow\infty} x_{n} = a$, we have $\lim_{n\rightarrow\infty} f(x_{n}) = \infty$, i.e. the sequence of real numbers $(f(x_{n}))$ diverges to infinity. 
+
+- The notion of *divergence to minus infinity* is expressed similarly in terms of sequences. The details are left to you.
 
 If convergence fails for a function $f:X\to\mathbb{R}$ at a point $a\in\mathbb{R}$, it may be that a weaker notion of convergence still applies, in which the direction of approach is restricted to one side at a time.
 
 ````{prf:definition} Marginal limits
+:label: marg
 Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say that $f$ has *left limit* $l$ at a point $a\in\mathbb{R}$, and write
 
 $$
@@ -411,7 +430,7 @@ $$
 \lim_{x\rightarrow a^+}f(x) = l
 $$
 
-if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $\delta<x-a<0$.
+if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $-\delta<x-a<0$.
 ````
 
 Equivalently, in terms of sequences,
@@ -422,22 +441,63 @@ Equivalently, in terms of sequences,
 
 The proof that these definitions are equivalent is very similar to that of {prf:ref}`ed`, and is left to you to do as an exercise.
 
-````{prf:example}
+`````{prf:example}
 :label:indicatorlims
-Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check that $\lim_{x\rightarrow 0^-}=0$ and $\lim_{x\rightarrow 0^+}=1$. Since these limits disagree, there is no well-defined limit for this function at $x=0$. 
+Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check using {prf:ref}`marg` that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ and $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$. 
+
+Try this for yourself, then click the drop-downs to see how you did.
+
+````{dropdown} Proof that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ (click)
+Let $\varepsilon>0$. We seek $\delta>0$ such that $|\mathbb{1}_{[0,\infty)}(x)-1|<\varepsilon$ whenever $0<x<\delta$. But in fact, $|\mathbb{1}_{[0,\infty)}(x)-1|=0<\varepsilon$ for all $x>0$. So any choice of $\delta$ will work, and there is nothing more to show.  
 ````
+````{dropdown} Proof that $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$ (click)
+Let $\varepsilon>0$. We now seek $\delta>0$ such that $|\mathbb{1}_{[0,\infty)}(x)|<\varepsilon$ whenever $-\delta<x<0$. But again, there is nothing to show, since $|\mathbb{1}_{[0,\infty)}(x)|=0<\varepsilon$ for all $x<0$ anyway!
+````
+
+Note that since these limits disagree, there is no well-defined limit for this function at $x=0$. 
+`````
+
 
 We also meet functions that diverge in different ways when approached from the left and from the right of a given point.
 
-````{prf:example}
+
+````{prf:definition} Marginal divergence to infinity
+Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say $f$ *diverges to infinity from the left at $a$*, and write
+
+$$
+\lim_{x\rightarrow^-a}f(x)=\infty
+$$
+
+if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X and $0<x-a<\delta$.
+
+Similarly, $f$ *diverges to infinity from the right at $a$*, and write
+
+$$
+\lim_{x\rightarrow^+a}f(x)=\infty
+$$
+
+if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X and $-\delta<x-a<0$.
+````
+
+Left- and right-divergence to $-\infty$ is defined very similarly (exercise).
+
+
+`````{prf:example}
 Consider $f: \mathbb{R} \setminus \{0\}\to \mathbb{R}$ given by $f(x) = \frac{1}{x}$. 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/1,x.png
 ---
-height: 300px
+height: 400px
 name: 1/x
 ---
 Graph of $f(x) = \frac{1}{x}$.
 ```
-It is easily verified that $\lim_{x \rightarrow 0^-}f(x) = - \infty$, and $\lim_{x \rightarrow 0^+}f(x) =  \infty$.
+Prove rigorously that $\lim_{x \rightarrow 0^-}f(x) = - \infty$, and $\lim_{x \rightarrow 0^+}f(x) =  \infty$.
+
+````{dropdown} Solution (click to expand)
+For the right limit, let $K>0$. Then for all $0<x<\frac{1}{K+1}$, we have $f(x)=K+1>K$. So $\lim_{x\rightarrow 0^+}f(x)=+\infty$.
+
+The left limit is very similar: if $K>0$, then for all $-\frac{1}{K+1}<x<0$, we have $f(x)=-(K+1)<-K$. So $\lim_{x\rightarrow 0^-}f(x)=-\infty$.
+
 ````
+`````
