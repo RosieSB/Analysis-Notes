@@ -11,7 +11,7 @@ Let $f:[a,b]\to \mathbb{R}$ be continuous. Then $f$ is Riemann integrable.
 **Proof.**
 Since $f$ is continuous, it is bounded, by {prf:ref}`thm:evt`, and so we may consider its upper and lower integrals.
 
-Let $\varepsilon>0$. We aim to show that $U(f)-L(f)<\varepsilon$. The result will then follow by {prf:ref}`prop:intcond`.
+Let $\varepsilon>0$. We aim to show that $U(f)-L(f)<\varepsilon$. The result will then follow by {prf:ref}`intcond`.
 
 Since $f$ is continuous, for each $x\in[a,b]$ there exists $\delta_x>0$ such that 
 

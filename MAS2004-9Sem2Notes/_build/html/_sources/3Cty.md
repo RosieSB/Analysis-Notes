@@ -174,7 +174,8 @@ Then $\tilde{g}$ is continuous on the whole of $\mathbb{R}$.
 
 
 
-````{prf:definition}
+````{prf:definition} Continuous extensions
+:label: cts-ext
 Given two functions $f_{1}:A\to\mathbb{R}$ and $f_{2}:B\to \mathbb{R}$, we say that $f_{2}$ is an *extension* of $f_{1}$, (and that $f_{1}$ is a *restriction} of $f_{2}$) if $A \subseteq B$ and $f_{1}(x) = f_{2}(x)$ for all $x \in A$. If $f_{1}$ is continuous on $A$ and $f_{2}$ is continuous on $B$, we say that $f_{2}$ is a *continuous extension* of $f_{1}$ (to $B$).
 ````
 
@@ -195,6 +196,7 @@ but since, as was shown in [Problem 9](https://rosiesb.github.io/Analysis-Proble
 ## Discontinuity
 
 ````{prf:definition} Discontinuity
+:label: disc
 A function $f:X \rightarrow \mathbb{R}$ is said to have a *discontinuity* at $a \in X$ if it fails to be continuous there. In this case we say that $f$ is *discontinuous* at $a$. 
 ````
 
@@ -217,7 +219,8 @@ More generally, the indicator function ${\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}
 
 We can learn more about what happens at a discontinuity by using right and left limits.
 
-````{prf:definition}
+````{prf:definition} Left and right continuity
+:label: lrcont
 We say that $f:X\to\mathbb{R}$ is *left continuous* at $a \in X$ if $\lim_{x \rightarrow a^-}f(x) = f(a)$, and *right continuous* at $a \in X$ if $\lim_{x \rightarrow a^+}f(x) = f(a)$.
 ````
 
@@ -233,6 +236,7 @@ $\lim_{n\rightarrow\infty} {\bf 1}_{[a, b]}(x_{n}) = 1 = {\bf 1}_{[a, b]}(a)$, a
 
 
 ````{prf:definition} Jump discontinuity
+:label: jdisc
 If $f$ is discontinuous at $a$ but both $\lim_{x \rightarrow a^-}f(x)$ and $\lim_{x \rightarrow a^+}f(x)$ exist (i.e. they are real numbers) and are unequal, we say that $f$ has a *jump discontinuity* at $a$. A typical example of this is a step function, or an indicator function ${\bf 1}_{[a, b]}$, where $[a,b]\subseteq\mathbb{R}$ is some interval.
 ````
 
@@ -421,13 +425,15 @@ Of course, there is no analogue of {prf:ref}`pol` when $m$ is even, e.g. $p(x) =
 
 ### The extreme value theorem
 
-````{prf:definition}
+````{prf:definition} Bounded function
+:label: bdfn
 A function $f: X \rightarrow \mathbb{R}$ is *bounded* on a non-empty set $S \subseteq X$ if there exists $K > 0$, such that $|f(x)| \leq K$ for all $x \in S$.
 ````
 
 In this situation, the set $\{f(x) : x \in S\}$ is a non--empty bounded set of real numbers and so, by completeness,  it has a supremum, which we write as $\sup_{x \in S} f(x)$, and an infimum, which we write as $\inf_{x \in S}f(x)$.
 
-````{prf:definition}
+````{prf:definition} Attains its bounds
+:label: attains
 We say that $f:X\to\mathbb{R}$ *attains its bounds* on $S\subseteq X$ if there exist $a, b \in S$ such that
 
 $$
@@ -519,7 +525,8 @@ When studying sequences in MAS107, you also encountered the notion of monotonici
 
 We now extend this idea to functions $f:X\to \mathbb{R}$ where $X\subseteq \mathbb{R}$.
 
-````{prf:definition}
+````{prf:definition} Monotone functions
+:label: monofn
 Let  $f:X\to \mathbb{R}$ where $X\subseteq \mathbb{R}$. 
 
 We say that $f$ is 

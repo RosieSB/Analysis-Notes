@@ -6,7 +6,8 @@ root: 0Intro.md
 options:
   numbered: true
 parts:
-  - numbered: True  # Only applies to chapters in Part 1.
+  - :caption: Name of Part 1
+    numbered: True  # Only applies to chapters in Part 1.
     chapters:
     - file: 1Rev
     - file: 2LoF
@@ -14,6 +15,7 @@ parts:
     - file: 4Diff
     - file: 5SSF
     - file: 6Int
-  - chapters:
+  - :caption: Name of Part 2
+    chapters:
     - file: Appendix
     - file: Fus

@@ -442,7 +442,7 @@ Equivalently, in terms of sequences,
 The proof that these definitions are equivalent is very similar to that of {prf:ref}`ed`, and is left to you to do as an exercise.
 
 `````{prf:example}
-:label:indicatorlims
+:label: indicatorlims
 Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check using {prf:ref}`marg` that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ and $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$. 
 
 Try this for yourself, then click the drop-downs to see how you did.
@@ -462,6 +462,7 @@ We also meet functions that diverge in different ways when approached from the l
 
 
 ````{prf:definition} Marginal divergence to infinity
+:label: marg+-infty
 Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say $f$ *diverges to infinity from the left at $a$*, and write
 
 $$
