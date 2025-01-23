@@ -78,7 +78,7 @@ $$
 U(f,P) := \sum_{k=1}^nM_k(x_k-x_{k-1}) = 4(2) + 13(1) + 76(3) = 249.
 $$
 
-Hence $U(f,P)-L(f,P)=207$.
+Hence $U(f,P)-L(f,P)=207$. 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/ulsums-eg.png
 ---
