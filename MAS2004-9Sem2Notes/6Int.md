@@ -205,7 +205,7 @@ $$
 $$
 ````
 
-````{prf:example} 
+````{prf:example} Constant functions
 :label: eg:const
 Suppose that $f:[a,b]\to\mathbb{R}$ is a constant function; say $f(x)=C$ for all $x\in[a,b]$. Then for any partition $P=\{x_0,\ldots,x_n\}$, where $a=x_0<x_1<\ldots<x_n=b$, 
 
@@ -357,9 +357,21 @@ Phew!
 ````
 `````
 
-````{prf:remark}
 In {prf:ref}`disc-int`, we successfully integrated a discontinuous function. An 18th century mathematician could never! 
+
+In a similar vein, we have the following.
+
+`````{prf:proposition} Integrating indicator functions
+:label: int-ind
+Let $a,b\in\mathbb{R}$ with $a<b$. Then $\mathbb{1}_{[a,b]}$, $\mathbb{1}_{[a,b]}$, $\mathbb{1}_{[a,b]}$ and $\mathbb{1}_{[a,b]}$ are all Riemann intervagrable on $[a,b]$, with 
+
+$$
+\int_a^b\mathbb{1}_{[a,b]}(x)dx = \int_a^b\mathbb{1}_{(a,b)}(x)dx = \int_a^b\mathbb{1}_{[a,b)}(x)dx = \int_a^b\mathbb{1}_{(a,b]}(x)dx = b-a.
+$$
+````{prf:proof}
+For $\mathbb{1}_{[a,b]}$, this is just a special case of {prf:ref}`eg:const`, and there is nothing to show. The rest is for you to do as [Problem 68](https://rosiesb.github.io/Analysis-Problems/Problems.html#id68).
 ````
+`````
 
 As another application of {prf:ref}`intcond`, we can prove that all monotone functions defined on a closed bounded interval are integrable.
 
@@ -437,7 +449,7 @@ Let $f:[a,b]\to \mathbb{R}$ be continuous. Then $f$ is Riemann integrable.
 
 In case we are tempted to think that all functions are integrable, here is an example of a non-integrable function.
 
-````{prf:example} 
+````{prf:example} A non-integrable function
 Define $f:[0,1]\rightarrow \mathbb{R}$ by
 
 $$
@@ -445,7 +457,7 @@ f(x) = \left\{ \begin{array}{lll} 0 & x\in \mathbb{Q}, \\ 1 & x\not\in \mathbb{Q
 $$
 
 Show that $f$ is not Riemann integrable.
-````
+
 
 **Solution.**
 We show that $U(f)\neq L(f)$, by direct calculation. Let $P=\{x_0,x_1,\ldots,x_n\}$ be a partition of $[0,1]$, and assume as usual that $0=x_0<x_1<\ldots<x_n=1$.
@@ -463,7 +475,7 @@ U(f,P) = \sum_{k=1}^n(x_k-x_{k-1}) = x_n-x_0 = 1,
 $$
 
 while $L(f,P)=0$. Taking $\sup$'s and $\inf$'s over all partitions $P$ of $[0,1]$, it follows that $U(f)=1$ and $L(f)=0$. So $U(f)\neq L(f)$, and $f$ is not Riemann integrable.
-
+````
 
 ## Properties of the integral
 
@@ -603,9 +615,9 @@ $$
 \int_a^b f(x)dx = U(f) = U(f|_{[a,c]}) + U(f|_{[c,b]}) = \int_a^cf(x)dx+\int_c^bf(x)dx.
 $$
 
-(iii) See [Problems 69](https://rosiesb.github.io/Analysis-Problems/Problems.html#id69) and [70](https://rosiesb.github.io/Analysis-Problems/Problems.html#id70).
+(iii) See [Problems 70](https://rosiesb.github.io/Analysis-Problems/Problems.html#id70) and [71](https://rosiesb.github.io/Analysis-Problems/Problems.html#id71).
 
-(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as [Problem 71](https://rosiesb.github.io/Analysis-Problems/Problems.html#id71).<span style="float:right;">$\square$</span>
+(iv) Since $-|f(x)|\leq f(x) \leq |f(x)|$ for all $x\in[a,b]$ the result will follow from part (i) if we can show that $|f|$ is integrable. This is for you to do as [Problem 72](https://rosiesb.github.io/Analysis-Problems/Problems.html#id72).<span style="float:right;">$\square$</span>
 ````
 `````
 

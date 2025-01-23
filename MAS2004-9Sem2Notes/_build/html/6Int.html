@@ -30,13 +30,13 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -558,7 +558,7 @@ L(f) \leq U(f),
 \]</div>
 </section>
 </div><div class="proof example admonition" id="eg:const">
-<p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 6.2 </span> (Constant functions)</p>
 <section class="example-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> is a constant function; say <span class="math notranslate nohighlight">\(f(x)=C\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span>. Then for any partition <span class="math notranslate nohighlight">\(P=\{x_0,\ldots,x_n\}\)</span>, where <span class="math notranslate nohighlight">\(a=x_0&lt;x_1&lt;\ldots&lt;x_n=b\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -683,10 +683,19 @@ L(f)\geq L(f,P_\varepsilon)=1-\frac{\varepsilon}{2},
 <p class="sd-card-text">Phew!</p>
 </div>
 </details></section>
-</div><div class="proof remark admonition" id="remark-10">
-<p class="admonition-title"><span class="caption-number">Remark 6.2 </span></p>
-<section class="remark-content" id="proof-content">
-<p>In <a class="reference internal" href="#disc-int">Example 6.3</a>, we successfully integrated a discontinuous function. An 18th century mathematician could never!</p>
+</div><p>In <a class="reference internal" href="#disc-int">Example 6.3</a>, we successfully integrated a discontinuous function. An 18th century mathematician could never!</p>
+<p>In a similar vein, we have the following.</p>
+<div class="proof proposition admonition" id="int-ind">
+<p class="admonition-title"><span class="caption-number">Proposition 6.2 </span> (Integrating indicator functions)</p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a,b\in\mathbb{R}\)</span> with <span class="math notranslate nohighlight">\(a&lt;b\)</span>. Then <span class="math notranslate nohighlight">\(\mathbb{1}_{[a,b]}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{1}_{[a,b]}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{1}_{[a,b]}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{1}_{[a,b]}\)</span> are all Riemann intervagrable on <span class="math notranslate nohighlight">\([a,b]\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b\mathbb{1}_{[a,b]}(x)dx = \int_a^b\mathbb{1}_{(a,b)}(x)dx = \int_a^b\mathbb{1}_{[a,b)}(x)dx = \int_a^b\mathbb{1}_{(a,b]}(x)dx = b-a.
+\]</div>
+<div class="proof admonition" id="proof">
+<p>Proof. For <span class="math notranslate nohighlight">\(\mathbb{1}_{[a,b]}\)</span>, this is just a special case of <a class="reference internal" href="#eg:const">Example 6.2</a>, and there is nothing to show. The rest is for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id68">Problem 68</a>.</p>
+</div>
 </section>
 </div><p>As another application of <a class="reference internal" href="#intcond">Proposition 6.1</a>, we can prove that all monotone functions defined on a closed bounded interval are integrable.</p>
 <div class="proof theorem admonition" id="thm:mono">
@@ -745,7 +754,7 @@ U(f,P)-L(f,P) = \frac{b-a}{n}\big(f(x_n)-f(x_0)\big) = \frac{b-a}{n}\big(f(b)-f(
 </section>
 </div><p>In case we are tempted to think that all functions are integrable, here is an example of a non-integrable function.</p>
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 6.4 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 6.4 </span> (A non-integrable function)</p>
 <section class="example-content" id="proof-content">
 <p>Define <span class="math notranslate nohighlight">\(f:[0,1]\rightarrow \mathbb{R}\)</span> by</p>
 <div class="math notranslate nohighlight">
@@ -753,8 +762,7 @@ U(f,P)-L(f,P) = \frac{b-a}{n}\big(f(x_n)-f(x_0)\big) = \frac{b-a}{n}\big(f(b)-f(
 f(x) = \left\{ \begin{array}{lll} 0 &amp; x\in \mathbb{Q}, \\ 1 &amp; x\not\in \mathbb{Q}. \\ \end{array} \right.
 \end{split}\]</div>
 <p>Show that <span class="math notranslate nohighlight">\(f\)</span> is not Riemann integrable.</p>
-</section>
-</div><p><strong>Solution.</strong>
+<p><strong>Solution.</strong>
 We show that <span class="math notranslate nohighlight">\(U(f)\neq L(f)\)</span>, by direct calculation. Let <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> be a partition of <span class="math notranslate nohighlight">\([0,1]\)</span>, and assume as usual that <span class="math notranslate nohighlight">\(0=x_0&lt;x_1&lt;\ldots&lt;x_n=1\)</span>.</p>
 <p>Note that <em>every</em> interval, however small, contains both rational and irrational numbers. This means that</p>
 <div class="math notranslate nohighlight">
@@ -768,11 +776,12 @@ U(f,P) = \sum_{k=1}^n(x_k-x_{k-1}) = x_n-x_0 = 1,
 \]</div>
 <p>while <span class="math notranslate nohighlight">\(L(f,P)=0\)</span>. Taking <span class="math notranslate nohighlight">\(\sup\)</span>’s and <span class="math notranslate nohighlight">\(\inf\)</span>’s over all partitions <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([0,1]\)</span>, it follows that <span class="math notranslate nohighlight">\(U(f)=1\)</span> and <span class="math notranslate nohighlight">\(L(f)=0\)</span>. So <span class="math notranslate nohighlight">\(U(f)\neq L(f)\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is not Riemann integrable.</p>
 </section>
+</div></section>
 <section id="properties-of-the-integral">
 <h2><span class="section-number">6.3. </span>Properties of the integral<a class="headerlink" href="#properties-of-the-integral" title="Link to this heading">#</a></h2>
 <p>We gather together some useful properties of the Riemann integral. Those that are not proven directly here will be proven in the problem booklet.</p>
 <div class="proof proposition admonition" id="propsint">
-<p class="admonition-title"><span class="caption-number">Proposition 6.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Proposition 6.3 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>Let the bounded functions <span class="math notranslate nohighlight">\(f,g:[a,b]\rightarrow \mathbb{R}\)</span> be Riemann integrable.</p>
 <p>(i)  Suppose <span class="math notranslate nohighlight">\(f(x)\leq g(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then</p>
@@ -871,11 +880,11 @@ L(f) = L(f|_{[a,c]})+L(f|_{[c,b]}).
 \[
 \int_a^b f(x)dx = U(f) = U(f|_{[a,c]}) + U(f|_{[c,b]}) = \int_a^cf(x)dx+\int_c^bf(x)dx.
 \]</div>
-<p>(iii) See <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id69">Problems 69</a> and <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id70">70</a>.</p>
-<p>(iv) Since <span class="math notranslate nohighlight">\(-|f(x)|\leq f(x) \leq |f(x)|\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> the result will follow from part (i) if we can show that <span class="math notranslate nohighlight">\(|f|\)</span> is integrable. This is for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id71">Problem 71</a>.<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>(iii) See <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id70">Problems 70</a> and <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id71">71</a>.</p>
+<p>(iv) Since <span class="math notranslate nohighlight">\(-|f(x)|\leq f(x) \leq |f(x)|\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> the result will follow from part (i) if we can show that <span class="math notranslate nohighlight">\(|f|\)</span> is integrable. This is for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id72">Problem 72</a>.<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p><a class="reference internal" href="#propsint">Proposition 6.2</a>(ii) is particularly useful as it allows us to integrate functions with a finite number of jump discontinuities, by splitting its domain into intervals on which it is continuous.</p>
+</div><p><a class="reference internal" href="#propsint">Proposition 6.3</a>(ii) is particularly useful as it allows us to integrate functions with a finite number of jump discontinuities, by splitting its domain into intervals on which it is continuous.</p>
 <div class="proof example admonition" id="eg:step">
 <p class="admonition-title"><span class="caption-number">Example 6.5 </span></p>
 <section class="example-content" id="proof-content">
@@ -904,7 +913,7 @@ s(x) = \left\{\begin{array}{cc} -1 &amp; \text{if } 0\leq x&lt;2 \\ 1 &amp; \tex
 \[
 \int_0^2s(x)dx=-2,\; \int_2^3s(x)dx=1, \; \text{ and } \; \int_3^4s(x)dx=2.
 \]</div>
-<p class="sd-card-text">Hence by <a class="reference internal" href="#propsint">Proposition 6.2</a>(ii),</p>
+<p class="sd-card-text">Hence by <a class="reference internal" href="#propsint">Proposition 6.3</a>(ii),</p>
 <div class="math notranslate nohighlight">
 \[
 \int_0^4s(x)dx = \int_0^2s(x)dx + \int_2^3s(x)dx + \int_3^4s(x)dx = -2 + 1 + 2 = 1.
@@ -927,7 +936,7 @@ s(x) = \left\{\begin{array}{cc} -1 &amp; \text{if } 0\leq x&lt;2 \\ 1 &amp; \tex
 \int_a^af(x)dx=0.
 \]</div>
 </section>
-</div><p><a class="reference internal" href="#def:intba">Definition 6.5</a> is a natural convention that mainly serves the purpose of simplifying the algebra of integrals. Importantly, it does not disturb the validity of any part of <a class="reference internal" href="#propsint">Proposition 6.2</a>.</p>
+</div><p><a class="reference internal" href="#def:intba">Definition 6.5</a> is a natural convention that mainly serves the purpose of simplifying the algebra of integrals. Importantly, it does not disturb the validity of any part of <a class="reference internal" href="#propsint">Proposition 6.3</a>.</p>
 </section>
 <section id="the-fundamental-theorem-of-calculus">
 <h2><span class="section-number">6.4. </span>The fundamental theorem of calculus<a class="headerlink" href="#the-fundamental-theorem-of-calculus" title="Link to this heading">#</a></h2>
@@ -976,7 +985,7 @@ F(x) = \int_a^x f(t)dt.
 <p>Then <span class="math notranslate nohighlight">\(F\)</span> is differentiable, and <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Note first that <span class="math notranslate nohighlight">\(F\)</span> is well defined: by <a class="reference internal" href="#thm:ctsint">Theorem 6.2</a>, <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
-<p>Let <span class="math notranslate nohighlight">\(h&gt;0\)</span> and let <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then, using <a class="reference internal" href="#propsint">Proposition 6.2</a>(ii),</p>
+<p>Let <span class="math notranslate nohighlight">\(h&gt;0\)</span> and let <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Then, using <a class="reference internal" href="#propsint">Proposition 6.3</a>(ii),</p>
 <div class="math notranslate nohighlight">
 \[
 F(x+h)-F(x) = \int_a^{x+h} f(t) dt -\int_a^{x} f(t)  dt = \int_x^{x+h} f(t) dt.
