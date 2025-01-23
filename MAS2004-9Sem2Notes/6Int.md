@@ -100,7 +100,7 @@ We introduce the notion of refinement of partitions, which will be useful for pr
 Let $P$ and $Q$ be partitions of $[a,b]$. We say that $Q$ is a *refinement* of $P$ if $P\subseteq Q$.
 ````
 
-````{prf:lemma} 
+`````{prf:lemma} 
 :label: lem:ref
 Let $f:[a,b]\to\mathbb{R}$ and let $P$ and $Q$ be partitions of $[a,b]$. If $Q$ is a refinement of $P$, then
 
@@ -114,9 +114,8 @@ $$
 U(f,Q)-L(f,Q)\leq U(f,P)-L(f,P).
 $$
 
-````
-
-**Proof.** Let $P=\{x_0,x_1,\ldots,x_n\}$ where $a=x_0<x_1<\ldots<x_n=b$. Consider first the effect of adding one point to $P$: say we add $c\in[x_{k-1},x_k]$. We will show that $L(f,P\cup\{c\})\geq L(f,P)$.
+````{prf:proof}
+Let $P=\{x_0,x_1,\ldots,x_n\}$ where $a=x_0<x_1<\ldots<x_n=b$. Consider first the effect of adding one point to $P$: say we add $c\in[x_{k-1},x_k]$. We will show that $L(f,P\cup\{c\})\geq L(f,P)$.
 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/addpt.png
@@ -147,7 +146,8 @@ U(f,P\cup\{c\})\leq U(f,P).
 $$
 
 Finally, suppose $Q$ is a refinement of $P$. Since $Q\setminus P$ is finite, we can apply the above argument recursively to prove that $L(f,Q)\geq L(f,P)$ and $U(f,Q)\leq U(f,P)$. <span style="float:right;">$\square$</span>
-
+````
+`````
 
 ````{prf:remark}
 {prf:ref}`lem:ref` is saying that **refining** a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!

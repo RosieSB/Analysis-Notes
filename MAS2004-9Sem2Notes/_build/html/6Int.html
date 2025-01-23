@@ -482,8 +482,8 @@ L(f,Q) \geq L(f,P) \text{ and } U(f,Q)\leq U(f,P).
 \[
 U(f,Q)-L(f,Q)\leq U(f,P)-L(f,P).
 \]</div>
-</section>
-</div><p><strong>Proof.</strong> Let <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> where <span class="math notranslate nohighlight">\(a=x_0&lt;x_1&lt;\ldots&lt;x_n=b\)</span>. Consider first the effect of adding one point to <span class="math notranslate nohighlight">\(P\)</span>: say we add <span class="math notranslate nohighlight">\(c\in[x_{k-1},x_k]\)</span>. We will show that <span class="math notranslate nohighlight">\(L(f,P\cup\{c\})\geq L(f,P)\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> where <span class="math notranslate nohighlight">\(a=x_0&lt;x_1&lt;\ldots&lt;x_n=b\)</span>. Consider first the effect of adding one point to <span class="math notranslate nohighlight">\(P\)</span>: say we add <span class="math notranslate nohighlight">\(c\in[x_{k-1},x_k]\)</span>. We will show that <span class="math notranslate nohighlight">\(L(f,P\cup\{c\})\geq L(f,P)\)</span>.</p>
 <figure class="align-default" id="addpt">
 <a class="reference internal image-reference" href="_images/addpt.png"><img alt="_images/addpt.png" src="_images/addpt.png" style="height: 250px;" /></a>
 <figcaption>
@@ -507,7 +507,9 @@ L(&amp;f,P\cup\{c\}) \\
 U(f,P\cup\{c\})\leq U(f,P).
 \]</div>
 <p>Finally, suppose <span class="math notranslate nohighlight">\(Q\)</span> is a refinement of <span class="math notranslate nohighlight">\(P\)</span>. Since <span class="math notranslate nohighlight">\(Q\setminus P\)</span> is finite, we can apply the above argument recursively to prove that <span class="math notranslate nohighlight">\(L(f,Q)\geq L(f,P)\)</span> and <span class="math notranslate nohighlight">\(U(f,Q)\leq U(f,P)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-<div class="proof remark admonition" id="remark-4">
+</div>
+</section>
+</div><div class="proof remark admonition" id="remark-4">
 <p class="admonition-title"><span class="caption-number">Remark 6.1 </span></p>
 <section class="remark-content" id="proof-content">
 <p><a class="reference internal" href="#lem:ref">Lemma 6.1</a> is saying that <strong>refining</strong> a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!</p>
