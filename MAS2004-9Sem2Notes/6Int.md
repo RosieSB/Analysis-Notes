@@ -149,6 +149,7 @@ Finally, suppose $Q$ is a refinement of $P$. Since $Q\setminus P$ is finite, we 
 ````
 `````
 
+
 ````{prf:remark}
 {prf:ref}`lem:ref` is saying that **refining** a partion has the effect of shrinking the difference between the upper and lower sums. This fact will be essential in proofs to come!
 ````
