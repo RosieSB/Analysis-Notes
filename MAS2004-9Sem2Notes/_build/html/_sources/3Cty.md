@@ -3,7 +3,7 @@
 
 ## Definition of continuity, basic properties and examples
 
-Intuitively we think of functions as being ``continuous'' if we can draw their graphs without ever taking our pen/pencil off the paper: the graph contains no gaps/jumps/discontinuities. So if we think of a typical point $a$ in the domain of the function $f$, then as $x$ gets closer and closer to $a$, we expect that $f(x)$ will get closer and closer to $f(a)$. But from the work of [Chapter 2](#chap:functionlimits), recall that as $x$ gets closer and closer to $a$, then $f(x)$ gets closer and closer to its limit at $a$ (if this exists). This leads to the following definition.
+Intuitively we think of functions as being "continuous" if we can draw their graphs without ever taking our pen/pencil off the paper: the graph contains no gaps/jumps/discontinuities. So if we think of a typical point $a$ in the domain of the function $f$, then as $x$ gets closer and closer to $a$, we expect that $f(x)$ will get closer and closer to $f(a)$. But from the work of [Chapter 2](#chap:functionlimits), recall that as $x$ gets closer and closer to $a$, then $f(x)$ gets closer and closer to its limit at $a$ (if this exists). This leads to the following definition.
 
 ````{prf:definition} Continuity
 :label: defcont
@@ -446,11 +446,12 @@ Examples of functions $f:\mathbb{R}\to\mathbb{R}$ that are bounded on $\mathbb{R
 
 We are interested in the case where $S$ is an interval and $f$ is continuous. The function $f(x) = \frac{1}{x}$ is continuous on the interval $(0, 1)$, but it is not bounded as it diverges to infinity at $0$. The function $f(x) = x$ is clearly bounded on $(0, 1)$, but it does not attain its bounds. When we restrict to closed intervals, we have a very nice result.
 
-````{prf:theorem} The extreme value theorem
+`````{prf:theorem} The extreme value theorem
 :label: thm:evt
 If $f:[a,b]\to\mathbb{R}$ is continuous, then it is bounded on $[a, b]$ and it attains its bounds there.
 
-**Proof.** We first show that $f$ is bounded. To do this, we'll assume that it isn't, and seek a contradiction.
+````{prf:proof}
+We first show that $f$ is bounded. To do this, we'll assume that it isn't, and seek a contradiction.
 So assume $f$ is not bounded.
 Let $(x_{n})$ be a sequence in $[a, b]$ such that
 
@@ -483,10 +484,11 @@ The set $A=\{f(x) : x \in [a, b]\}$ is nonempty, and bounded above since $f$ is 
 
 The argument for the greatest lower bound is similar, and is left for you as [Problem 27](https://rosiesb.github.io/Analysis-Problems/Problems.html#id27). <span style="float:right;">$\square$</span>
 ````
+`````
 
 It's important to be clear what {prf:ref}`thm:evt` is telling us. It says nothing about boundedness on  $\mathbb{R}$. Indeed any non-constant polynomial is unbounded on $\mathbb{R}$, but its restriction to every closed interval $[a, b]$ is bounded.
 
-````{prf:corollary}
+`````{prf:corollary} Really useful corollary
  :label: interval
 If $f: X \to \mathbb{R}$ is continuous and non--constant on $[a, b] \subseteq X$, then there exists $m < M$ so that
 
@@ -494,12 +496,16 @@ $$
 f([a, b]) = [m, M].
 $$
 
-**Proof.** By {prf:ref}`thm:evt`, there exist $\gamma, \delta \in [a, b]$ such that $f(\gamma) = \inf_{x \in [a, b]}f(x)$ and $f(\delta) = \sup_{x \in [a, b]}f(x)$. We take $m = f(\gamma)$ and $M = f(\delta)$.
+````{prf:proof}
+By {prf:ref}`thm:evt`, there exist $\gamma, \delta \in [a, b]$ such that $f(\gamma) = \inf_{x \in [a, b]}f(x)$ and $f(\delta) = \sup_{x \in [a, b]}f(x)$. We take $m = f(\gamma)$ and $M = f(\delta)$.
 Clearly, $m\leq M$ and, since $f$ is non-constant, $m<M$.
 If $x \in [a,b]$, then $f(x) \in [m, M]$ and so $f([a, b]) \subseteq [m, M]$.
 
 For the other inclusion, by {prf:ref}`ivt2`, given any $c \in (m, M)$ there exists $y \in (\gamma, \delta)$ (or in $(\delta, \gamma)$ depending on which number is smallest) so that $c = f(y)$, and it follows that $[m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])$. <span style="float:right;">$\square$</span>
 ````
+`````
+
+**Remark.** {prf:ref}`interval` says that continuous functions map closed bounded intervals to closed bounded intervals.
 
 ### Inverses
 
