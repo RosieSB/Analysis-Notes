@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -579,7 +579,7 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 <section class="definition-content" id="proof-content">
 <p>We say that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> is <em>left continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^-}f(x) = f(a)\)</span>, and <em>right continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^+}f(x) = f(a)\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-16">
+</div><div class="proof example admonition" id="eg-lrcont">
 <p class="admonition-title"><span class="caption-number">Example 3.8 </span></p>
 <section class="example-content" id="proof-content">
 <p>The function <span class="math notranslate nohighlight">\({\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}\)</span> is left continuous at <span class="math notranslate nohighlight">\(x = b\)</span>, and right continuous at <span class="math notranslate nohighlight">\(x = a\)</span>.</p>
@@ -664,8 +664,9 @@ S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
 <div class="proof theorem admonition" id="ivt">
 <p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (The intermediate value theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:[a, b]\to\mathbb{R}\)</span> be continuous  with <span class="math notranslate nohighlight">\(f(a) &gt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &lt; 0\)</span>, or <span class="math notranslate nohighlight">\(f(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &gt; 0\)</span>. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
-<p><strong>Proof.</strong> We only consider the case <span class="math notranslate nohighlight">\(f(a) &gt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &lt; 0\)</span>, as the argument in the other case is so similar. We first construct a sequence <span class="math notranslate nohighlight">\(([a_{n}, b_{n}])\)</span> of (nested) intervals satisfying the following properties:</p>
+<p>Let <span class="math notranslate nohighlight">\(f:[a, b]\to\mathbb{R}\)</span> be continuous  with either <span class="math notranslate nohighlight">\(f(a) &lt; 0 &lt; f(b)\)</span>, or <span class="math notranslate nohighlight">\(f(b) &lt; 0 &lt; f(a)\)</span>. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We only consider the case <span class="math notranslate nohighlight">\(f(a) &gt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &lt; 0\)</span>, as the argument in the other case is so similar. We first construct a sequence <span class="math notranslate nohighlight">\(([a_{n}, b_{n}])\)</span> of (nested) intervals satisfying the following properties:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\([a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(b_{n} - a_{n} = 2^{-n}(b - a)\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>,</p></li>
@@ -713,12 +714,15 @@ b_{n+1} - a_{n+1} = \frac{1}{2}(b_{n} - a_{n}) = \frac{1}{2}.2^{-n}(b -a) = 2^{-
 f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspace{2em} f(c) = \lim_{n\rightarrow\infty} f(b_{n}) \leq 0.
 \]</div>
 <p>Hence <span class="math notranslate nohighlight">\(f(c) = 0\)</span>. As both <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b) \neq 0\)</span>, <span class="math notranslate nohighlight">\(c \notin \{a, b\}\)</span>, i.e. <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
 </section>
 </div><div class="proof corollary admonition" id="ivt2">
 <p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) &lt; f(b)\)</span>. Then for each <span class="math notranslate nohighlight">\(\gamma \in (f(a), f(b))\)</span>, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = \gamma\)</span>.</p>
-<p><strong>Proof.</strong> This is left for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<div class="proof admonition" id="proof">
+<p>Proof. This is left for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
 </section>
 </div><p>Note that <a class="reference internal" href="#ivt2">Corollary 3.1</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
 <p>The next result gives a nice application of analysis to the theory of equations.</p>
@@ -726,7 +730,8 @@ f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspa
 <p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Every polynomial of odd degree <span class="math notranslate nohighlight">\(p\)</span> has at least one real root.</p>
-<p><strong>Proof.</strong> We write,</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We write,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
 p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
@@ -738,6 +743,7 @@ p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 \lim_{x \rightarrow \infty}p(x) = \infty \hspace{1em} \text{ and } \hspace{1em} \lim_{x \rightarrow -\infty}p(x) = -\infty.
 \]</div>
 <p>So from the definition of divergence, there exist <span class="math notranslate nohighlight">\(- \infty &lt; a &lt; b &lt; \infty\)</span> such that <span class="math notranslate nohighlight">\(p(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(p(b) &gt; 0\)</span>. But <span class="math notranslate nohighlight">\(p\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and so, by the intermediate value theorem, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(p(c) = 0\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
 </section>
 </div><p>Of course, there is no analogue of <a class="reference internal" href="#pol">Corollary 3.2</a> when <span class="math notranslate nohighlight">\(m\)</span> is even, e.g. <span class="math notranslate nohighlight">\(p(x) = x^{2} + 1\)</span> has no real roots.</p>
 </section>
@@ -843,7 +849,8 @@ but not <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>
 <p class="admonition-title"><span class="caption-number">Theorem 3.6 </span> (The inverse function theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f: [a,b] \rightarrow \mathbb{R}\)</span> is continuous and strictly increasing (respectively, strictly decreasing), then <span class="math notranslate nohighlight">\(f\)</span> is invertible and <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, strictly decreasing on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>)  and continuous on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>).</p>
-<p><strong>Proof.</strong> We’ll just consider the case where <span class="math notranslate nohighlight">\(f\)</span> is strictly increasing. The argument for <span class="math notranslate nohighlight">\(f\)</span> strictly decreasing is very similar.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We’ll just consider the case where <span class="math notranslate nohighlight">\(f\)</span> is strictly increasing. The argument for <span class="math notranslate nohighlight">\(f\)</span> strictly decreasing is very similar.</p>
 <p>By <a class="reference internal" href="#interval">Corollary 3.3</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
 so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.1</a>.
 So we have <span class="math notranslate nohighlight">\(f^{-1}:[f(a), f(b)]\to [a,b]\)</span>.</p>
@@ -859,6 +866,7 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
 \]</div>
 <p>and if <span class="math notranslate nohighlight">\(y \in (y_{1}, y_{2})\)</span> we have <span class="math notranslate nohighlight">\(|f^{-1}(y) - f^{-1}(y_{0})| &lt; \varepsilon\)</span>. Then let <span class="math notranslate nohighlight">\(\delta = \min\{y_{2} - y_{0}, y_{0} - y_{1}\}\)</span>, and check that the <span class="math notranslate nohighlight">\(\varepsilon-\delta\)</span> criterion is satisfied.</p>
 <p>Finally, we leave continuity of  <span class="math notranslate nohighlight">\(f^{-1}\)</span> at <span class="math notranslate nohighlight">\(f(a)\)</span> and at <span class="math notranslate nohighlight">\(f(b)\)</span> as an exercise. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
 </section>
 </div><div class="proof example admonition" id="nthroot">
 <p class="admonition-title"><span class="caption-number">Example 3.11 </span> (<span class="math notranslate nohighlight">\(n\)</span>th roots)</p>

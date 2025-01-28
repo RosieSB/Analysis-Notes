@@ -224,7 +224,8 @@ We can learn more about what happens at a discontinuity by using right and left 
 We say that $f:X\to\mathbb{R}$ is *left continuous* at $a \in X$ if $\lim_{x \rightarrow a^-}f(x) = f(a)$, and *right continuous* at $a \in X$ if $\lim_{x \rightarrow a^+}f(x) = f(a)$.
 ````
 
-````{prf:example} 
+````{prf:example}
+:label: eg-lrcont
 The function ${\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}$ is left continuous at $x = b$, and right continuous at $x = a$.
 
 **Solution.** We just prove the right continuity, as the other argument is so similar. Let $(x_{n})$ be any sequence with $x_{n} > a$ for all $n\in\mathbb{N}$ that converges to $a$. Then
@@ -327,11 +328,12 @@ The "main" theorems of this chapter all live in this section.
 
 ### The intermediate value theorem
 
-````{prf:theorem} The intermediate value theorem
+`````{prf:theorem} The intermediate value theorem
 :label: ivt
-Let $f:[a, b]\to\mathbb{R}$ be continuous  with $f(a) > 0$ and $f(b) < 0$, or $f(a) < 0$ and $f(b) > 0$. Then there exists $c \in (a, b)$ such that $f(c) = 0$.
+Let $f:[a, b]\to\mathbb{R}$ be continuous  with either $f(a) < 0 < f(b)$, or $f(b) < 0 < f(a)$. Then there exists $c \in (a, b)$ such that $f(c) = 0$.
 
-**Proof.** We only consider the case $f(a) > 0$ and $f(b) < 0$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
+````{prf:proof}
+We only consider the case $f(a) > 0$ and $f(b) < 0$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
 
 - $[a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]$, for all $n\in\mathbb{N}$,
 - $b_{n} - a_{n} = 2^{-n}(b - a)$, for all $n\in\mathbb{N}$,
@@ -386,14 +388,16 @@ $$
 
 Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c \in (a, b)$. <span style="float:right;">$\square$</span>
 ````
+`````
 
-````{prf:corollary}
+`````{prf:corollary}
  :label: ivt2
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $\gamma \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 
-**Proof.** This is left for you to do as [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24). <span style="float:right;">$\square$</span>
-
+````{prf:proof}
+This is left for you to do as [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24). <span style="float:right;">$\square$</span>
 ````
+`````
 
 Note that {prf:ref}`ivt2` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
 
@@ -401,12 +405,12 @@ Note that {prf:ref}`ivt2` tells us that the image (or range) of the interval $[a
 
 The next result gives a nice application of analysis to the theory of equations.
 
-````{prf:corollary}
+`````{prf:corollary}
  :label: pol
  Every polynomial of odd degree $p$ has at least one real root.
 
-**Proof.** We write,
-
+````{prf:proof}
+We write,
 \begin{align*} 
 p(x) &= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 &= x^{m}\left(a_{m} + \frac{a_{m-1}}{x} + \cdots + \frac{a_{1}}{x^{m-1}} + \frac{a_{0}}{x^{m}}\right),
@@ -420,6 +424,7 @@ $$
 
 So from the definition of divergence, there exist $- \infty < a < b < \infty$ such that $p(a) < 0$ and $p(b) > 0$. But $p$ is continuous on $[a, b]$ and so, by the intermediate value theorem, there exists $c \in (a, b)$ such that $p(c) = 0$. <span style="float:right;">$\square$</span>
 ````
+`````
 
 Of course, there is no analogue of {prf:ref}`pol` when $m$ is even, e.g. $p(x) = x^{2} + 1$ has no real roots.
 
@@ -554,11 +559,11 @@ but not $f(x) = \frac{1}{x}$ on all of $\mathbb{R}\setminus\{0\}$).
 
 Our key theorem considers the invertibility of monotone functions that are continuous on closed intervals.
 
-````{prf:theorem} The inverse function theorem
+`````{prf:theorem} The inverse function theorem
 :label: thm:IFT
 If $f: [a,b] \rightarrow \mathbb{R}$ is continuous and strictly increasing (respectively, strictly decreasing), then $f$ is invertible and $f^{-1}$ is strictly increasing on $[f(a), f(b)]$ (respectively, strictly decreasing on $[f(b), f(a)]$)  and continuous on $[f(a), f(b)]$ (respectively, on $[f(b), f(a)]$).
 
-**Proof.** We'll just consider the case where $f$ is strictly increasing. The argument for $f$ strictly decreasing is very similar.
+````{prf:proof} We'll just consider the case where $f$ is strictly increasing. The argument for $f$ strictly decreasing is very similar.
 
 By {prf:ref}`interval`, the range of $f$  is of the form $[m, M]$,
 so $f:[a, b] \rightarrow [m, M]$ is surjective. Note that as $f$ is increasing, $m = f(a)$ and $M = f(b)$. If $x, y \in [a, b]$ with $x < y$ then $f(x) < f(y)$, so if $x \neq y$ then $f(x) \neq f(y)$. Hence $f$ is injective[^contra2]. So $f$ is bijective, and hence invertible by {prf:ref}`prop:inv`.
@@ -582,6 +587,7 @@ and if $y \in (y_{1}, y_{2})$ we have $|f^{-1}(y) - f^{-1}(y_{0})| < \varepsilon
 
 Finally, we leave continuity of  $f^{-1}$ at $f(a)$ and at $f(b)$ as an exercise. <span style="float:right;">$\square$</span>
 ````
+`````
 
 ````{prf:example} $n$th roots
 :label: nthroot
