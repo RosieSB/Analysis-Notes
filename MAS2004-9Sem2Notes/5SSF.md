@@ -203,7 +203,7 @@ Let $f_n :X\rightarrow \mathbb{R}$ be continuous for each $n\in \mathbb{N}$. Sup
 Let $\varepsilon >0$. Then since $(f_n)$ converges uniformly to $f$, there is $N\in \mathbb{N}$ such that
 
 ```{math}
-:label: eq:eps/3
+:label: eq1
 |f_n(x)-f(x)|<\frac{\varepsilon}{3},
 ```
 
@@ -212,13 +212,13 @@ for all $x\in X$ and all $n\geq N$.
 Since $f_N$ is continuous at $x_0$, we can find $\delta >0$ such that
 
 ```{math}
-:label: eq:eps/3'
+:label: eq2
 |f_N(x) - f_N(x_0)|< \frac{\varepsilon}{3}
 ```
 
 whenever $|x-x_0|<\delta$.
 
-Let $x\in X$ be such that $|x-x_0|<\delta$. Then using the triangle inequality together with [](eq:eps/3) and [](eq:eps/3'),
+Let $x\in X$ be such that $|x-x_0|<\delta$. Then using the triangle inequality together with [](eq1) and [](eq2),
 
 \begin{align*}
 |f(x)-f(x_0)| &\leq |f(x) -f_N(x)| + |f_N(x)-f_N(x_0)| + |f_N (x_0) - f(x_0)| \\

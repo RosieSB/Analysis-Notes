@@ -559,14 +559,14 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 <div class="proof admonition" id="proof">
 <p>Proof.  Let <span class="math notranslate nohighlight">\(x_0\in X\)</span>. We want to prove that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion for continuity.</p>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span>. Then since <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>, there is <span class="math notranslate nohighlight">\(N\in \mathbb{N}\)</span> such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-eps-3">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-eps-3" title="Link to this equation">#</a></span>\[|f_n(x)-f(x)|&lt;\frac{\varepsilon}{3},\]</div>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq1" title="Link to this equation">#</a></span>\[|f_n(x)-f(x)|&lt;\frac{\varepsilon}{3},\]</div>
 <p>for all <span class="math notranslate nohighlight">\(x\in X\)</span> and all <span class="math notranslate nohighlight">\(n\geq N\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(f_N\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>, we can find <span class="math notranslate nohighlight">\(\delta &gt;0\)</span> such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-eps-3">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-eps-3" title="Link to this equation">#</a></span>\[|f_N(x) - f_N(x_0)|&lt; \frac{\varepsilon}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq2" title="Link to this equation">#</a></span>\[|f_N(x) - f_N(x_0)|&lt; \frac{\varepsilon}{3}\]</div>
 <p>whenever <span class="math notranslate nohighlight">\(|x-x_0|&lt;\delta\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(x\in X\)</span> be such that <span class="math notranslate nohighlight">\(|x-x_0|&lt;\delta\)</span>. Then using the triangle inequality together with <a class="reference internal" href="#equation-eq-eps-3">(5.4)</a> and <a class="reference internal" href="#equation-eq-eps-3">(5.4)</a>,</p>
+<p>Let <span class="math notranslate nohighlight">\(x\in X\)</span> be such that <span class="math notranslate nohighlight">\(|x-x_0|&lt;\delta\)</span>. Then using the triangle inequality together with <a class="reference internal" href="#equation-eq1">(5.3)</a> and <a class="reference internal" href="#equation-eq2">(5.4)</a>,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 |f(x)-f(x_0)| &amp;\leq |f(x) -f_N(x)| + |f_N(x)-f_N(x_0)| + |f_N (x_0) - f(x_0)| \\

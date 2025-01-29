@@ -73,6 +73,7 @@ More importantly than the mark, each piece of work will receive constructive fee
 
 Written homework submission is via [Crowdmark](https://students.sheffield.ac.uk/digital-learning/assessments/crowdmark). A link for this will be provided with the release of each homework on Blackboard. The midterm online test is on [STACK](https://aim.shef.ac.uk/moodle/my/).
 
+(help)=
 ## 0.5. Where to get help
 
 ### Office hours

@@ -397,34 +397,60 @@
   <section class="tex2jax_ignore mathjax_ignore" id="revision-of-mas107">
 <h1><span class="section-number">1. </span>Revision of MAS107<a class="headerlink" href="#revision-of-mas107" title="Link to this heading">#</a></h1>
 <p>This module will build directly on the work you have done in MAS107. In particular, it is important that you can recall definitions and results about sequences of real numbers, as we will be using them in many of the proofs and problems to come. When reviewing lecture notes before and after classes, it may help to have a copy of your MAS107 notes to hand, so that you can refresh any details that you need.</p>
+<p>Unlike the other chapters in these notes, this chapter is intended as a summary and will not be lectured explicitly. Instead, I will do my best to take adequate time to recall any necessary concepts as we go.</p>
+<div class="tip admonition">
+<p class="admonition-title">Preliminary problems</p>
+<p>This chapter is intended to be used in tandem with the <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems">Preliminary problems</a> from the problem booklet. Ideally, you should aim to complete these problems during the <strong>first week</strong> or so of teaching<a class="footnote-reference brackets" href="#pow" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<p>Sometimes, the memory of being able to do something (e.g. last May, just before your MAS107 exam) can trick you into believing you are still able to do it. Tackling the problems will help you to tell the difference.</p>
+<p><a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems"><strong>Don’t put this off:</strong> brushing up early on will make the learning to come much easier.</a></p>
+<p>And remember, if you have any issues about this work or anything else from the module, myself and your other tutors are here to help — see <a class="reference internal" href="0Intro.html#help"><span class="std std-ref">0.5. Where to get help</span></a> for your options. We’ve all been there and you won’t be judged.</p>
+</div>
 <section id="sequences-and-convergence">
 <h2><span class="section-number">1.1. </span>Sequences and convergence<a class="headerlink" href="#sequences-and-convergence" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="seqconv">
-<p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Convergence)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Convergent sequence)</p>
 <section class="definition-content" id="proof-content">
-<p>Recall that a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> is said to <em>converge</em> to limit <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span> if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a number <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span> such that</p>
+<p>A real sequence <span class="math notranslate nohighlight">\((x_n)\)</span> is said to <em>converge</em> to a limit <span class="math notranslate nohighlight">\(L\in\mathbb{R}\)</span> if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a number <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span>[^office]: For in person, you can <a class="reference external" href="https://calendar.app.google/5BZEyhicvFYD99yS9">book an appointment</a>, but don’t have to.
+such that</p>
 <div class="math notranslate nohighlight">
 \[
-|x_n-l| &lt; \varepsilon \hspace{2em} \text{ for all } n\geq N.
+|x_n-L| &lt; \varepsilon \hspace{2em} \text{ for all } n\geq N.
 \]</div>
-<p>In other words, for any given tolerance <span class="math notranslate nohighlight">\(\varepsilon\)</span>, the numbers <span class="math notranslate nohighlight">\(x_n\)</span> will eventually lie within <span class="math notranslate nohighlight">\(\varepsilon\)</span> of <span class="math notranslate nohighlight">\(l\)</span>. We write <span class="math notranslate nohighlight">\(x_n\rightarrow l\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>.</p>
 </section>
-</div><div class="proof definition admonition" id="Cauchy">
+</div><p>In other words, for any given tolerance <span class="math notranslate nohighlight">\(\varepsilon\)</span>, the numbers <span class="math notranslate nohighlight">\(x_n\)</span> will eventually all lie within <span class="math notranslate nohighlight">\(\varepsilon\)</span> of <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\((x_n)\)</span> converges to <span class="math notranslate nohighlight">\(L\)</span>, we write <span class="math notranslate nohighlight">\(\lim_{n\rightarrow}x_n=L\)</span>, or equivalently, <span class="math notranslate nohighlight">\(x_n\rightarrow L\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>.</p>
+<p>One drawback of <a class="reference internal" href="#seqconv">Definition 1.1</a> is that you need to have an idea of what the limit <span class="math notranslate nohighlight">\(L\)</span> of the sequence might be, before getting started with the proof. The idea of a Cauchy sequence sometimes gets around this, so long as you are careful what set the sequence and limit belong to.</p>
+<div class="proof definition admonition" id="Cauchy">
 <p class="admonition-title"><span class="caption-number">Definition 1.2 </span> (Cauchy sequence)</p>
 <section class="definition-content" id="proof-content">
-<p>A sequence <span class="math notranslate nohighlight">\((x_n)\)</span> is <em>Cauchy</em> if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there is an <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span> such that</p>
+<p>A real sequence <span class="math notranslate nohighlight">\((x_n)\)</span> is called <em>Cauchy</em> if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there is an <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[
 |x_n-x_m|&lt;\varepsilon \hspace{2em} \text{ for all } m,n\geq N.
 \]</div>
 </section>
-</div><p>A sequence being convergent means its terms are getting “closer and closer” to its limit <span class="math notranslate nohighlight">\(l\)</span>. Being Cauchy says that the terms are getting “closer and closer” to one another. In fact, being convergent is strictly stronger than being Cauchy: if <span class="math notranslate nohighlight">\(A\subseteq\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(A\)</span>, then</p>
+</div><p>The key difference between <a class="reference internal" href="#seqconv">Definition 1.1</a> and <a class="reference internal" href="#Cauchy">Definition 1.2</a> is what terms are being bounded by <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
+<p>In <a class="reference internal" href="#seqconv">Definition 1.1</a>, terms in the sequence are getting closer and closer to a limit <span class="math notranslate nohighlight">\(L\)</span>. In <a class="reference internal" href="#Cauchy">Definition 1.2</a>, terms of the sequence are getting closer and closer to one another, and no limit is mentioned.</p>
+<p>In fact, being convergent within a given set is <strong>strictly stronger</strong> than being Cauchy: if <span class="math notranslate nohighlight">\(A\subseteq\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\((x_n)\)</span> is a sequence in <span class="math notranslate nohighlight">\(A\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[
-(x_n) \text{ converges to a limit $l\in A$ } \hspace{1em} \mathbb{R}ightarrow \hspace{1em} (x_n) \text{ is a Cauchy sequence}.
-\]</div>
-<p>The converse statement doesn’t hold: <span class="math notranslate nohighlight">\((x_n)\)</span> being Cauchy does not imply that it converges to a limit in <span class="math notranslate nohighlight">\(A\)</span>. For example, let <span class="math notranslate nohighlight">\(A:=(0,1)\)</span> and <span class="math notranslate nohighlight">\(x_n=\frac{1}{n}\)</span>, for <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. Then, <em>viewed as a sequence in</em> <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\((x_n)\)</span> does not converge. However, if we instead view it as a sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we know that <span class="math notranslate nohighlight">\(x_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. Since <span class="math notranslate nohighlight">\((x_n)\)</span> converges as a sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, it must be a Cauchy sequence.</p>
-<p>A set <span class="math notranslate nohighlight">\(A\subseteq\mathbb{R}\)</span> is called <em>complete</em> if every Cauchy sequence in <span class="math notranslate nohighlight">\(A\)</span> converges to a limit in <span class="math notranslate nohighlight">\(A\)</span>. Therefore, for complete sets, being Cauchy is equivalent to convergence. The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of all rational numbers is not complete, but the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of all reals is.</p>
+\[\begin{split}
+(x_n) \text{ converges to a limit $L\in A$ } \hspace{1em} \substack{\Large\Rightarrow\\\Large\nLeftarrow} \hspace{1em} (x_n) \text{ is a Cauchy sequence in $A$}.
+\end{split}\]</div>
+<p>The converse statement doesn’t hold: <span class="math notranslate nohighlight">\((x_n)\)</span> being Cauchy does not imply that it converges to a limit in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="proof example admonition" id="011n">
+<p class="admonition-title"><span class="caption-number">Example 1.1 </span> (Cauchy sequence not converging in a given set <span class="math notranslate nohighlight">\(A\)</span>)</p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A:=(0,1)\)</span> and <span class="math notranslate nohighlight">\(x_n=\frac{1}{n}\)</span>, for <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>. Then, <em>viewed as a sequence in</em> <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\((x_n)\)</span> does not converge. However, if we instead view it as a sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we know that <span class="math notranslate nohighlight">\(x_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. Since <span class="math notranslate nohighlight">\((x_n)\)</span> converges as a sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, it must be a Cauchy sequence.</p>
+</section>
+</div><div class="proof definition admonition" id="complete">
+<p class="admonition-title"><span class="caption-number">Definition 1.3 </span> (Complete subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A\subseteq\mathbb{R}\)</span> is called <em>complete</em> if every Cauchy sequence in <span class="math notranslate nohighlight">\(A\)</span> converges to a limit in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+</div><p>Therefore, for complete sets, being Cauchy is equivalent to convergence. The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of all rational numbers is not complete, but the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of all reals is.</p>
+<p>In <a class="reference internal" href="#011n">Example 1.1</a>, we saw that <span class="math notranslate nohighlight">\((0,1)\)</span> is not a complete set, because it does not contain the limit of the sequence <span class="math notranslate nohighlight">\(x_n=\frac{1}{n}\)</span>.</p>
+<p><strong>Exercise:</strong> Prove that <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is not complete. That is, find a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> of rational numbers converging to an irrational limit. Then, prove this sequence is Cauchy.</p>
+<hr class="docutils" />
 <p>In MAS107, you saw how <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is constructed from <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> by including the limits of all rational Cauchy sequences.</p>
 </section>
 <section id="logic-and-quantifiers">
@@ -437,7 +463,7 @@
 </ul>
 <p>Understanding mathematical statements involving quantifiers takes continual practice. A key advantage of studying analysis is there will be plenty of opportunity for this.</p>
 <div class="proof example admonition" id="quant1">
-<p class="admonition-title"><span class="caption-number">Example 1.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
 <section class="example-content" id="proof-content">
 <p><a class="reference internal" href="#seqconv">Definition 1.1</a> can be expressed more succincly using quantifiers:
 $<span class="math notranslate nohighlight">\(
@@ -476,7 +502,7 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 </section>
 <section id="inequalities">
 <h2><span class="section-number">1.3. </span>Inequalities<a class="headerlink" href="#inequalities" title="Link to this heading">#</a></h2>
-<p>Inequalities are the primary tool of analysts. Here is a reminder of two important ones.</p>
+<p>Inequalities are the primary tool of analysts. Here is a reminder of the two most important ones for this module (and beyond).</p>
 <section id="the-triangle-inequality">
 <h3><span class="section-number">1.3.1. </span>The triangle inequality<a class="headerlink" href="#the-triangle-inequality" title="Link to this heading">#</a></h3>
 <div class="proof theorem admonition" id="tri">
@@ -487,6 +513,9 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 \[
 |a+b| \leq |a|+|b|.
 \]</div>
+<div class="proof admonition" id="proof">
+<p>Proof. The proof involves splitting into cases according to the signs <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. When <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> have the same sign, we get equality <span class="math notranslate nohighlight">\(|a+b|=|a|+|b|\)</span>. Otherwise, suppose <span class="math notranslate nohighlight">\(a&lt;0&lt;b\)</span>, so that <span class="math notranslate nohighlight">\(|a|+|b|=b-a\)</span>. For the other side, either <span class="math notranslate nohighlight">\(|a+b|=a+b=|b|-|a|\)</span>, or <span class="math notranslate nohighlight">\(|a+b|=-a-b=|a|-|b|. Both of these are clearly less than \)</span>|a|+|b|$.</p>
+</div>
 </section>
 </div><p>Note that the triangle inequality holds in higher dimensions, too. If <span class="math notranslate nohighlight">\(\textbf{a}\)</span> and <span class="math notranslate nohighlight">\(\textbf{b}\)</span> are vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, then the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a}+\mathbf{b}\)</span> form sides of a triangle.</p>
 <p>If the vertices of this triangle are <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(R\)</span>, then the triangle inequality is just saying that it is a shorter distance to walk from <span class="math notranslate nohighlight">\(P\)</span> to <span class="math notranslate nohighlight">\(R\)</span> directly than it would be to walk there via the point <span class="math notranslate nohighlight">\(Q\)</span>.</p>
@@ -519,7 +548,14 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 <p>and so we are done. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div></section>
+</div><hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="pow" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>See also <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/intro.html#PoW">Probllems of the Week</a></p>
+</aside>
+</aside>
+</section>
 </section>
 </section>
 
