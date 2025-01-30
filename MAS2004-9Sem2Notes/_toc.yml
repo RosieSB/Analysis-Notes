@@ -3,11 +3,11 @@
 
 format: jb-book
 root: 0Intro.md
-options:
-  numbered: true
+#options:
+#  numbered: 2
 parts:
   - :caption: Name of Part 1
-    numbered: True  # Only applies to chapters in Part 1.
+    numbered: 3  # Only applies to chapters in Part 1.
     chapters:
     - file: 1Rev
     - file: 2LoF

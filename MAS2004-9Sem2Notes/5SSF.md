@@ -176,7 +176,7 @@ $$
 M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 $$
 
-then $0\leq M_n \leq \frac{1}{n-1}$. And since \$ \frac{1}{n-1}\rightarrow 0\$ as $n\rightarrow \infty$, we have $M_n\rightarrow 0$ as $n\to \infty$. So $(f_n)$ converges uniformly to $f$, by {prf:ref}`prop:uconv`.	
+then $0\leq M_n \leq \frac{1}{n-1}$. And since $\frac{1}{n-1}\rightarrow 0$ as $n\rightarrow \infty$, we have $M_n\rightarrow 0$ as $n\to \infty$. So $(f_n)$ converges uniformly to $f$, by {prf:ref}`prop:uconv`.	
 ````
 
 ### General procedure for calculating uniform limits

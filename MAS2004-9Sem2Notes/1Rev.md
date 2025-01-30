@@ -1,17 +1,3 @@
----
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.11.5
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 # Revision of MAS107
 
 This module will build directly on the work you have done in MAS107. In particular, it is important that you can recall definitions and results about sequences of real numbers, as we will be using them in many of the proofs and problems to come. When reviewing lecture notes before and after classes, it may help to have a copy of your MAS107 notes to hand, so that you can refresh any details that you need.
@@ -22,13 +8,13 @@ Unlike the other chapters in these notes, this chapter is intended as a summary 
 :class: tip
 This chapter is intended to be used in tandem with the [Preliminary problems](https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems) from the problem booklet. Ideally, you should aim to complete these problems during the **first week** or so of teaching[^PoW]. 
 
-[^PoW]: See also [Probllems of the Week](https://rosiesb.github.io/Analysis-Problems/intro.html#PoW)
+[^PoW]: See also [Problems of the Week](https://rosiesb.github.io/Analysis-Problems/intro.html#PoW).
 
 Sometimes, the memory of being able to do something (e.g. last May, just before your MAS107 exam) can trick you into believing you are still able to do it. Tackling the problems will help you to tell the difference.
 
-[**Don't put this off:** brushing up early on will make the learning to come much easier.](https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems)
+**Don't put this off:** brushing up early on will make the learning to come much easier.
 
-And remember, if you have any issues about this work or anything else from the module, myself and your other tutors are here to help --- see [](#help) for your options. We've all been there and you won't be judged. 
+And remember, if you have any issues about this work or anything else from the module, myself and your other tutors are here to help --- see [](#help) for options. We've all been there and you won't be judged. 
 ```
 
 ## Sequences and convergence
@@ -108,6 +94,7 @@ Understanding mathematical statements involving quantifiers takes continual prac
 ````{prf:example}
 :label: quant1
 {prf:ref}`seqconv` can be expressed more succincly using quantifiers:
+
 $$
 x_n\rightarrow l \; \text{ iff } \;\forall\varepsilon>0\; \exists N\in\mathbb{N} \;\text{ s.t. }\forall n\geq N\; |x_n-l|<\varepsilon.
 $$
@@ -166,7 +153,9 @@ $$
 $$
 
 ```{prf:proof}
-The proof involves splitting into cases according to the signs $a$ and $b$. When $a$ and $b$ have the same sign, we get equality $|a+b|=|a|+|b|$. Otherwise, suppose $a<0<b$, so that $|a|+|b|=b-a$. For the other side, either $|a+b|=a+b=|b|-|a|$, or $|a+b|=-a-b=|a|-|b|. Both of these are clearly less than $|a|+|b|$.
+The proof involves splitting into cases according to the signs $a$ and $b$. When $a$ and $b$ have the same sign, we get equality $|a+b|=|a|+|b|$. 
+
+Otherwise, suppose (without loss of generality) that $a<0<b$, so that $|a|+|b|=b-a$. For the other side, either $|a+b|=a+b=|b|-|a|$, or $|a+b|=-a-b=|a|-|b|$. Both of these are clearly less than $|a|+|b|$.<span style="float:right;">$\square$</span>
 ```
 ````
 

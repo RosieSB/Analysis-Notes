@@ -402,8 +402,8 @@
 <p class="admonition-title">Preliminary problems</p>
 <p>This chapter is intended to be used in tandem with the <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems">Preliminary problems</a> from the problem booklet. Ideally, you should aim to complete these problems during the <strong>first week</strong> or so of teaching<a class="footnote-reference brackets" href="#pow" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p>Sometimes, the memory of being able to do something (e.g. last May, just before your MAS107 exam) can trick you into believing you are still able to do it. Tackling the problems will help you to tell the difference.</p>
-<p><a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#preliminary-problems"><strong>Don’t put this off:</strong> brushing up early on will make the learning to come much easier.</a></p>
-<p>And remember, if you have any issues about this work or anything else from the module, myself and your other tutors are here to help — see <a class="reference internal" href="0Intro.html#help"><span class="std std-ref">0.5. Where to get help</span></a> for your options. We’ve all been there and you won’t be judged.</p>
+<p><strong>Don’t put this off:</strong> brushing up early on will make the learning to come much easier.</p>
+<p>And remember, if you have any issues about this work or anything else from the module, myself and your other tutors are here to help — see <a class="reference internal" href="0Intro.html#help"><span class="std std-ref">0.5. Where to get help</span></a> for options. We’ve all been there and you won’t be judged.</p>
 </div>
 <section id="sequences-and-convergence">
 <h2><span class="section-number">1.1. </span>Sequences and convergence<a class="headerlink" href="#sequences-and-convergence" title="Link to this heading">#</a></h2>
@@ -465,10 +465,11 @@ such that</p>
 <div class="proof example admonition" id="quant1">
 <p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
 <section class="example-content" id="proof-content">
-<p><a class="reference internal" href="#seqconv">Definition 1.1</a> can be expressed more succincly using quantifiers:
-$<span class="math notranslate nohighlight">\(
+<p><a class="reference internal" href="#seqconv">Definition 1.1</a> can be expressed more succincly using quantifiers:</p>
+<div class="math notranslate nohighlight">
+\[
 x_n\rightarrow l \; \text{ iff } \;\forall\varepsilon&gt;0\; \exists N\in\mathbb{N} \;\text{ s.t. }\forall n\geq N\; |x_n-l|&lt;\varepsilon.
-\)</span>$</p>
+\]</div>
 <p>In words:</p>
 <p>“<span class="math notranslate nohighlight">\(x_n\)</span> converges to <span class="math notranslate nohighlight">\(l\)</span> if and only if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, there exists <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span> such that for all <span class="math notranslate nohighlight">\(n\geq N\)</span> we have <span class="math notranslate nohighlight">\(|x_n-l|&lt;\varepsilon\)</span>”.</p>
 </section>
@@ -514,7 +515,8 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 |a+b| \leq |a|+|b|.
 \]</div>
 <div class="proof admonition" id="proof">
-<p>Proof. The proof involves splitting into cases according to the signs <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. When <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> have the same sign, we get equality <span class="math notranslate nohighlight">\(|a+b|=|a|+|b|\)</span>. Otherwise, suppose <span class="math notranslate nohighlight">\(a&lt;0&lt;b\)</span>, so that <span class="math notranslate nohighlight">\(|a|+|b|=b-a\)</span>. For the other side, either <span class="math notranslate nohighlight">\(|a+b|=a+b=|b|-|a|\)</span>, or <span class="math notranslate nohighlight">\(|a+b|=-a-b=|a|-|b|. Both of these are clearly less than \)</span>|a|+|b|$.</p>
+<p>Proof. The proof involves splitting into cases according to the signs <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. When <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> have the same sign, we get equality <span class="math notranslate nohighlight">\(|a+b|=|a|+|b|\)</span>.</p>
+<p>Otherwise, suppose (without loss of generality) that <span class="math notranslate nohighlight">\(a&lt;0&lt;b\)</span>, so that <span class="math notranslate nohighlight">\(|a|+|b|=b-a\)</span>. For the other side, either <span class="math notranslate nohighlight">\(|a+b|=a+b=|b|-|a|\)</span>, or <span class="math notranslate nohighlight">\(|a+b|=-a-b=|a|-|b|\)</span>. Both of these are clearly less than <span class="math notranslate nohighlight">\(|a|+|b|\)</span>.<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
 </div><p>Note that the triangle inequality holds in higher dimensions, too. If <span class="math notranslate nohighlight">\(\textbf{a}\)</span> and <span class="math notranslate nohighlight">\(\textbf{b}\)</span> are vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, then the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a}+\mathbf{b}\)</span> form sides of a triangle.</p>
@@ -552,7 +554,7 @@ x_n\not\rightarrow l \; \text{ iff } \;\exists\varepsilon&gt;0\; \;\text{ s.t. }
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="pow" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>See also <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/intro.html#PoW">Probllems of the Week</a></p>
+<p>See also <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/intro.html#PoW">Problems of the Week</a>.</p>
 </aside>
 </aside>
 </section>

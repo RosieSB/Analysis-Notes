@@ -174,7 +174,8 @@ $$
 
 is non-empty and bounded below. So we can take its infimum.
 
-````{prf:definition} 
+````{prf:definition} Upper and lower integrals
+:label: ulints
 The *lower integral* of $f$ is
 
 $$

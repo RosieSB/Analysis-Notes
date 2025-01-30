@@ -36,12 +36,14 @@ A more general perk of analysis education is the transferable skills you will ga
 
 ## 0.3. Recommended books
 
-- **How to Think About Analysis, by Lara Alcock.** <br>
-This is a very readable and engaging book that aims to make learning analysis accessible for students are still meeting it for the first time. Rather than giving a formal treatment of the subject matter, which these notes will do, Lara's book is intended as a companion to a module such as this one, and prioritises the development of ideas and intuition over formalism.
+These course notes are complete, and you do not need to seek out additional reading. However, both of the following are extremely good and will likely benefit you (especially the first one). 
+
+1. **How to Think About Analysis, by Lara Alcock.** <br>
+This is a very readable and engaging book that aims to make learning analysis accessible for students who are still meeting it for the first time. Rather than giving a formal treatment of the subject matter, which these notes will do, Lara's book is intended as a companion to a module such as this one, and prioritises the development of ideas and intuition over formalism.
 <br>
 Links: [Library](https://find.shef.ac.uk/permalink/f/15enftp/44SFD_ALMA_DS51268789000001441); [abebooks](https://www.abebooks.co.uk/9780198723530/Think-Analysis-Alcock-Lara-0198723539/plp); [goodreads](https://www.goodreads.com/book/show/24683010-how-to-think-about-analysis).
 
-- **Understanding Analysis, by Stephen Abbott.**<br>
+2. **Understanding Analysis, by Stephen Abbott.**<br>
 This is a more traditional analysis textbook, as it is sometimes useful to see ideas presented in more than one way.
 <br>
 Links: [Library](https://find.shef.ac.uk/permalink/f/1lephdb/44SFD_ALMA_DS51360822510001441); [abebooks](https://www.abebooks.co.uk/9781493950263/Understanding-Analysis-Stephen-Abbott-1493950266/plp); [goodreads](https://www.goodreads.com/book/show/26457662-understanding-analysis).

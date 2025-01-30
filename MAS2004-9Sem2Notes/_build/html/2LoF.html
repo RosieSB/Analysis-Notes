@@ -375,8 +375,18 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.2. Functional limits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-functions">2.2. Examples of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-functions">2.2.1. Standard functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weird-functions">2.2.2. Weird functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-with-functions">2.3. Operations with functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-operations">2.3.1. Pointwise operations.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-of-functions">2.3.2. Composition of functions.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.4. Functional limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.5. Divergence</a></li>
 </ul>
             </nav>
         </div>
@@ -407,6 +417,11 @@
 X \setminus Y = X \cap Y^{c} = \{x \in X : x \notin Y\}.
 \]</div>
 <p>If we have some formula in <span class="math notranslate nohighlight">\(x\)</span> that we would like to use for the value <span class="math notranslate nohighlight">\(f(x)\)</span> of a function, it is often useful to think about the largest domain <span class="math notranslate nohighlight">\(f\)</span> could have, that is, the set of all  <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which <span class="math notranslate nohighlight">\(f(x)\)</span> makes sense as a real number. This will not include any <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> for which we might be tempted to write “<span class="math notranslate nohighlight">\(f(x) = 0/0\)</span>” or “<span class="math notranslate nohighlight">\(f(x) = \pm \infty\)</span>”.</p>
+</section>
+<section id="examples-of-functions">
+<h2><span class="section-number">2.2. </span>Examples of functions<a class="headerlink" href="#examples-of-functions" title="Link to this heading">#</a></h2>
+<section id="standard-functions">
+<h3><span class="section-number">2.2.1. </span>Standard functions<a class="headerlink" href="#standard-functions" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="poly">
 <p class="admonition-title"><span class="caption-number">Example 2.1 </span> (Polynomial functions)</p>
 <section class="example-content" id="proof-content">
@@ -438,16 +453,65 @@ f(x) = a_{0} + a_{1}x + \cdots + a_{n-1}x^{n-1} + a_{n}x^{n},
 </div><div class="proof example admonition" id="indicatorfn">
 <p class="admonition-title"><span class="caption-number">Example 2.4 </span> (Indicator functions)</p>
 <section class="example-content" id="proof-content">
-<p>The <em>indicator function</em> of the closed interval <span class="math notranslate nohighlight">\([a, b]\)</span> is the function <span class="math notranslate nohighlight">\({\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}\)</span> given by</p>
+<p>If <span class="math notranslate nohighlight">\(S\subseteq\mathbb{R}\)</span>, then <em>indicator function of <span class="math notranslate nohighlight">\(S\)</span></em> is the function <span class="math notranslate nohighlight">\({\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-{\bf 1}_{[a,b]}(x) = \left\{\begin{array}{c c} 1 &amp; ~\mbox{if}~x \in [a, b],\\ 0&amp; ~\mbox{if}~x \notin [a, b]. \end{array} \right.
+{\bf 1}_{S}(x) = \left\{\begin{array}{c c} 1 &amp; ~\mbox{if}~x \in S,\\ 0&amp; ~\mbox{if}~x \notin S. \end{array} \right.
 \end{split}\]</div>
-<p>Similarly, we can define an indicator function of  an open interval, or an arbitrary subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The indicator function of <span class="math notranslate nohighlight">\([0, \infty)\)</span> is called the <em>Heaviside function</em> by engineers.</p>
+<p>Indicator functions can look quite unremarkable if the set <span class="math notranslate nohighlight">\(S\)</span> is something simple like an interval. Step functions can be built by taking linear combinations of indicator functions over different intervals — this will be useful when we study integration later on.</p>
 </section>
 </div><p>Other important functions are the functions <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>, given by <span class="math notranslate nohighlight">\(f(x) = e^{kx}, f(x) = \sin(kx)\)</span> and <span class="math notranslate nohighlight">\(f(x) = \cos(kx)\)</span>, where <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>.  In analysis, they are best defined as convergent power series — see later.</p>
-<p><strong>Pointwise operations.</strong><br>
-Let <span class="math notranslate nohighlight">\(X,Y\subseteq\mathbb{R}\)</span>, and let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> be functions. Let <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. We define new functions, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> and <span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> pointwise, but we need to be careful with domains.</p>
+</section>
+<section id="weird-functions">
+<h3><span class="section-number">2.2.2. </span>Weird functions<a class="headerlink" href="#weird-functions" title="Link to this heading">#</a></h3>
+<p>When learning analysis this semester, we will often take a general function <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and reason about it. It is very easy and natural to imagine quite a nice function for <span class="math notranslate nohighlight">\(f\)</span> in such a situation — a nice smooth, bounded curve with (at worst) a finite number of jump discontinuities and no fractal structure. We know many functions that are like this, but statistically<a class="footnote-reference brackets" href="#bct" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, most are not. General functions can be far stranger.</p>
+<p>It’s important to remember we are developing a theory that needs to apply to all functions, not just the nice ones. Below are some examples of some of the weirder functions that we will study in weeks to come. If you know of any other weird functions, please let me know and I might include them.</p>
+<div class="proof example admonition" id="di">
+<p class="admonition-title"><span class="caption-number">Example 2.5 </span> (Dirichlet’s function)</p>
+<section class="example-content" id="proof-content">
+<p>This is the name given to the indicator function <span class="math notranslate nohighlight">\(\mathbb{1}_\mathbb{Q}\)</span>. We will return to it several times to explore the nuances of limits and continuity (see <a class="reference internal" href="3Cty.html#eg:dirichlet1">Example 3.9</a>). For now, I invite you to try drawing its graph.</p>
+</section>
+</div><div class="proof example admonition" id="example-5">
+<p class="admonition-title"><span class="caption-number">Example 2.6 </span> (Dirichlet’s other function.)</p>
+<section class="example-content" id="proof-content">
+<p>Also known as Thomae’s function. Let <span class="math notranslate nohighlight">\(g:[0,1)\to\mathbb{R}\)</span> be defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g(x) =\begin{cases}
+	1 &amp;\text{if $x = 0$},\\
+	\displaystyle\frac{1}{n}&amp; \text{if $x = m/n \in \mathbb{Q}$, and $\text{hcf}(m,n)=1$}\\
+	0&amp;\text{if $x \in \mathbb{R} \setminus \mathbb{Q}$}.
+\end{cases}
+\end{split}\]</div>
+<p>Try sketching this! Other names include: the popcorn function, the raindrop function, and the countable cloud function. I’ll let you sketch it to work out why.</p>
+</section>
+</div><div class="proof example admonition" id="P9104142">
+<p class="admonition-title"><span class="caption-number">Example 2.7 </span> (Functions from Problems <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id9">9</a>, <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id10">10</a>, <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id41">41</a> and <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id42">42</a>)</p>
+<section class="example-content" id="proof-content">
+<p>Consider the functions <span class="math notranslate nohighlight">\(\sin(1/x)\)</span>, <span class="math notranslate nohighlight">\(x\sin(1/x)\)</span> and <span class="math notranslate nohighlight">\(x^2\sin(1/x)\)</span>. What do their graphs look like? Can they be defined meaningfully on the whole real line?</p>
+</section>
+</div><p>The final weird function of this section is a famous example of a everywhere continuous, nowhere differentiable function.</p>
+<p>Its construction is less explicit than some of the other examples in this section, and in fact, since Weierstrass’ work, others have found more naturally-occuring examples of such functions (e.g. Brownian motion). However, this function is something of an icon, so we include it.</p>
+<div class="proof example admonition" id="Weierstrass">
+<p class="admonition-title"><span class="caption-number">Example 2.8 </span> (Weierstrass function)</p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(0&lt;a&lt;1\)</span>, let <span class="math notranslate nohighlight">\(b\in\mathbb{N}\)</span> be odd, and such that <span class="math notranslate nohighlight">\(ab&gt;1+\frac{3\pi}{2}\)</span>. It can be shown that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>; <span class="math notranslate nohighlight">\(f(x)=\sum_{n=0}^\infty a^n\cos\left(b^n\pi x\right)\)</span> is a well-defined, continuous, and nowhere-differentiable function (this bit uses ideas to do with uniform convergence of infinite series — see <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>).</p>
+<figure class="align-default" id="wf">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/6/60/WeierstrassFunction.svg"><img alt="https://upload.wikimedia.org/wikipedia/commons/6/60/WeierstrassFunction.svg" src="https://upload.wikimedia.org/wikipedia/commons/6/60/WeierstrassFunction.svg" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of the Weierstrass function. <a class="reference external" href="https://en.wikipedia.org/wiki/File:WeierstrassFunction.svg">Image credit.</a></span><a class="headerlink" href="#wf" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</div><p>We will return to many of these functions in our work to come.</p>
+</section>
+</section>
+<section id="operations-with-functions">
+<h2><span class="section-number">2.3. </span>Operations with functions<a class="headerlink" href="#operations-with-functions" title="Link to this heading">#</a></h2>
+<p>We give a brief reminder of the various ways functions can be combined with one another to form new functions.</p>
+<section id="pointwise-operations">
+<h3><span class="section-number">2.3.1. </span>Pointwise operations.<a class="headerlink" href="#pointwise-operations" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(X,Y\subseteq\mathbb{R}\)</span>, and let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> be functions. Let <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. We define new functions, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> and <span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> pointwise, but we need to be careful with domains.</p>
 <ul class="simple">
 <li><p><em>Pointwise sum.</em></p></li>
 </ul>
@@ -476,22 +540,28 @@ fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
 \[
 \frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
 \]</div>
-<p><em>Remarks.</em></p>
+<div class="proof remark admonition" id="remark-8">
+<p class="admonition-title"><span class="caption-number">Remark 2.1 </span></p>
+<section class="remark-content" id="proof-content">
 <ol class="arabic simple">
 <li><p>In each case, the domain is taken to be the largest subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which the pointwise operation is defined.</p></li>
-<li><p>Recall from Semester 1 the set <span class="math notranslate nohighlight">\({\cal F}(\mathbb{R})\)</span> of all functions from <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The pointwise operations of addition and scalar multiplication turn <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> into a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but it is not finite-dimensional). Pointwise multiplication gives <span class="math notranslate nohighlight">\(\mathcal{F}(\mathbb{R})\)</span> the additional structure of an <em>algebra</em> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. These structural properties are important in higher analysis (e.g. functional analysis).</p></li>
+<li><p>MAS2004 students should recall from Semester 1 the set <span class="math notranslate nohighlight">\({\cal F}(\mathbb{R})\)</span> of all functions from <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The pointwise operations of addition and scalar multiplication turn <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> into a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but it is not finite-dimensional). Pointwise multiplication gives <span class="math notranslate nohighlight">\(\mathcal{F}(\mathbb{R})\)</span> the additional structure of an <em>algebra</em> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. These structural properties are important in higher analysis (e.g. functional analysis).</p></li>
 </ol>
-<p><strong>Composition of functions.</strong> <br>
-The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\)</span> of two functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> is defined only when the codomain of <span class="math notranslate nohighlight">\(f\)</span> is the same as the domain of <span class="math notranslate nohighlight">\(g\)</span>. Note that we are using the usual convention that <span class="math notranslate nohighlight">\(g\circ f\)</span> means “<span class="math notranslate nohighlight">\(f\)</span> first”.</p>
+</section>
+</div></section>
+<section id="composition-of-functions">
+<h3><span class="section-number">2.3.2. </span>Composition of functions.<a class="headerlink" href="#composition-of-functions" title="Link to this heading">#</a></h3>
+<p>The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\)</span> of two functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> is defined only when the codomain of <span class="math notranslate nohighlight">\(f\)</span> is the same as the domain of <span class="math notranslate nohighlight">\(g\)</span>. Note that we are using the usual convention that <span class="math notranslate nohighlight">\(g\circ f\)</span> means “<span class="math notranslate nohighlight">\(f\)</span> first”.</p>
 <p>So, if <span class="math notranslate nohighlight">\(f:X\to Y\)</span> and <span class="math notranslate nohighlight">\(g:Y\to Z\)</span>, then we have the composition <span class="math notranslate nohighlight">\(g\circ f: X\to Z\)</span>, given by</p>
 <div class="math notranslate nohighlight">
 \[
 (g \circ f)(x) = g(f(x)).
 \]</div>
-<p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by $ g(x)=3x$ then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
+<p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(g(x)=3x\)</span> then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
+</section>
 </section>
 <section id="functional-limits">
-<h2><span class="section-number">2.2. </span>Functional limits<a class="headerlink" href="#functional-limits" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>Functional limits<a class="headerlink" href="#functional-limits" title="Link to this heading">#</a></h2>
 <p>We want to make rigorous the notion of <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span>, for a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, and a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(a\)</span> may not be an element of the domain <span class="math notranslate nohighlight">\(X\)</span>, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.</p>
 <p>First note that it only makes sense to consider the behaviour of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span> if there are points in the domain of <span class="math notranslate nohighlight">\(f\)</span> that get arbitrarily close to <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <div class="proof definition admonition" id="limitpt">
@@ -500,8 +570,8 @@ The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\
 <p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>. A real number <span class="math notranslate nohighlight">\(a\)</span> is called a <em>limit point</em> of <span class="math notranslate nohighlight">\(X\)</span> if there is a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span> and satisfies <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
 <p>Equivalently, <span class="math notranslate nohighlight">\(a\)</span> is a limit point of <span class="math notranslate nohighlight">\(X\)</span> if any open interval containing <span class="math notranslate nohighlight">\(a\)</span> has non-empty intersection with <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
+</div><div class="proof example admonition" id="example-10">
+<p class="admonition-title"><span class="caption-number">Example 2.9 </span></p>
 <section class="example-content" id="proof-content">
 <p>(i) Let <span class="math notranslate nohighlight">\(X=(0,2)\cup\{3\}\)</span>. Then <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\)</span> are limit points of <span class="math notranslate nohighlight">\(X\)</span>, but <span class="math notranslate nohighlight">\(3\)</span> is not.</p>
 <p>(ii) A real number <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> is a limit point of <span class="math notranslate nohighlight">\([0,1]\)</span> if and only if <span class="math notranslate nohighlight">\(a\in[0,1]\)</span>.</p>
@@ -519,7 +589,7 @@ The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\
 <p>if, for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
-0&lt;|x-a|&lt;\delta \; \text{ implies } \; $|f(x)-l|&lt;\varepsilon.
+0&lt;|x-a|&lt;\delta \; \text{ implies } \; |f(x)-l|&lt;\varepsilon.
 \]</div>
 </section>
 </div><p><strong>Notes.</strong></p>
@@ -527,8 +597,8 @@ The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\
 <li><p>We require that <span class="math notranslate nohighlight">\(a\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span> so that it to make sense to consider what happens to the values of the function as we approach <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
 <li><p>The real number <span class="math notranslate nohighlight">\(a\)</span> may or may not be in the domain <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 </ol>
-<div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
+<div class="proof example admonition" id="example-12">
+<p class="admonition-title"><span class="caption-number">Example 2.10 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:(0,1)\to\mathbb{R}\)</span> and suppose that</p>
 <div class="math notranslate nohighlight">
@@ -600,8 +670,8 @@ Here the first line uses the definition of a sum of functions and the second lin
 </div>
 </section>
 </div><p>The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.</p>
-<div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
+<div class="proof example admonition" id="example-15">
+<p class="admonition-title"><span class="caption-number">Example 2.11 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider <span class="math notranslate nohighlight">\(f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}\)</span>, given by</p>
 <div class="math notranslate nohighlight">
@@ -616,7 +686,7 @@ f(x) = \frac{x - 5}{(x^{2} - 25)(x - 3)}.
 <figure class="align-default" id="x-5-x2-25-x-3">
 <a class="reference internal image-reference" href="_images/(x-5),((x2-25)(x-3)).png"><img alt="_images/%28x-5%29%2C%28%28x2-25%29%28x-3%29%29.png" src="_images/%28x-5%29%2C%28%28x2-25%29%28x-3%29%29.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{x - 5}{(x^{2} - 25)(x - 3)}\)</span>.</span><a class="headerlink" href="#x-5-x2-25-x-3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \displaystyle\frac{x - 5}{(x^{2} - 25)(x - 3)}\)</span>.</span><a class="headerlink" href="#x-5-x2-25-x-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p class="sd-card-text">Let’s write <span class="math notranslate nohighlight">\(X=\mathbb{R}\setminus\{-5, 3, 5\}\)</span>, the domain of <span class="math notranslate nohighlight">\(f\)</span>. Note that every real number is a limit point of <span class="math notranslate nohighlight">\(X\)</span>. However, the most interesting limit points to consider are those that lie outside of <span class="math notranslate nohighlight">\(X\)</span>. This is because it is fairly easy to calculate limits at points in <span class="math notranslate nohighlight">\(X\)</span>. For example,</p>
@@ -661,7 +731,7 @@ This is left as  an exercise. Again, <span class="math notranslate nohighlight">
 that would extend <span class="math notranslate nohighlight">\(f\)</span> to a continuous function there.  We will return to all these issues of continuity in <a class="reference internal" href="3Cty.html#chap-cty"><span class="std std-ref">Chapter 3</span></a>.</p>
 </div>
 </details></section>
-</div><div class="proof theorem admonition" id="theorem-11">
+</div><div class="proof theorem admonition" id="theorem-16">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Sandwich rule for functions)</p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span>,  <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(h :Z\to \mathbb{R}\)</span> and suppose that there exists an interval <span class="math notranslate nohighlight">\((a, b) \subseteq X\cap Y\cap Z\)</span> such that for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span></p>
@@ -693,7 +763,7 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 </section>
 </div></section>
 <section id="divergence">
-<h2><span class="section-number">2.3. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.5. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
 <p>In the same setting as <a class="reference internal" href="#functionlimit">Definition 2.2</a>, we say that a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> <em>diverges</em> at <span class="math notranslate nohighlight">\(x=a\)</span> if <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x)\)</span> does not exist.</p>
 <p>There are some interesting types of behaviour involved here.</p>
 <div class="proof definition admonition" id="div+-infty">
@@ -735,13 +805,13 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 \[
 \lim_{x\rightarrow a^-}f(x) = l
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
+<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
 <p>We say <span class="math notranslate nohighlight">\(f\)</span> has a <em>right limit</em> <span class="math notranslate nohighlight">\(l\)</span> at <span class="math notranslate nohighlight">\(a\)</span>, and write,</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x\rightarrow a^+}f(x) = l
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
+<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
 </section>
 </div><p>Equivalently, in terms of sequences,</p>
 <ul class="simple">
@@ -750,7 +820,7 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 </ul>
 <p>The proof that these definitions are equivalent is very similar to that of <a class="reference internal" href="#ed">Theorem 2.1</a>, and is left to you to do as an exercise.</p>
 <div class="proof example admonition" id="indicatorlims">
-<p class="admonition-title"><span class="caption-number">Example 2.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2.12 </span></p>
 <section class="example-content" id="proof-content">
 <p>Heaviside’s indicator function, <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,\infty)}\)</span>, as defined in <a class="reference internal" href="#indicatorfn">Example 2.4</a>, has both left and right limits at the point <span class="math notranslate nohighlight">\(0\)</span>: one can check using <a class="reference internal" href="#marg">Definition 2.4</a> that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1\)</span>.</p>
 <p>Try this for yourself, then click the drop-downs to see how you did.</p>
@@ -775,23 +845,23 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 \[
 \lim_{x\rightarrow^-a}f(x)=\infty
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X and \)</span>0&lt;x-a&lt;\delta$.</p>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
 <p>Similarly, <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to infinity from the right at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x\rightarrow^+a}f(x)=\infty
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X and \)</span>-\delta&lt;x-a&lt;0$.</p>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
 </section>
 </div><p>Left- and right-divergence to <span class="math notranslate nohighlight">\(-\infty\)</span> is defined very similarly (exercise).</p>
-<div class="proof example admonition" id="example-16">
-<p class="admonition-title"><span class="caption-number">Example 2.9 </span></p>
+<div class="proof example admonition" id="example-21">
+<p class="admonition-title"><span class="caption-number">Example 2.13 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus \{0\}\to \mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</p>
 <figure class="align-default" id="x">
 <a class="reference internal image-reference" href="_images/1,x.png"><img alt="_images/1%2Cx.png" src="_images/1%2Cx.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</span><a class="headerlink" href="#x" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</span><a class="headerlink" href="#x" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Prove rigorously that <span class="math notranslate nohighlight">\(\lim_{x \rightarrow 0^-}f(x) = - \infty\)</span>, and <span class="math notranslate nohighlight">\(\lim_{x \rightarrow 0^+}f(x) =  \infty\)</span>.</p>
@@ -802,7 +872,14 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <p class="sd-card-text">The left limit is very similar: if <span class="math notranslate nohighlight">\(K&gt;0\)</span>, then for all <span class="math notranslate nohighlight">\(-\frac{1}{K+1}&lt;x&lt;0\)</span>, we have <span class="math notranslate nohighlight">\(f(x)=-(K+1)&lt;-K\)</span>. So <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0^-}f(x)=-\infty\)</span>.</p>
 </div>
 </details></section>
-</div></section>
+</div><hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="bct" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This statement can be made rigorous. For example, a famous corollary of the Baire caterory theorem from general topology says that (in a precise sense) “most” continuous functions are nowhere differentiable, in much the same way that “most” numbers are irrational.</p>
+</aside>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -871,8 +948,18 @@ a_n \leq b_n \leq c_n, \hspace{2em}
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-the-real-line">2.1. Functions on the real line</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.2. Functional limits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.3. Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-functions">2.2. Examples of functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-functions">2.2.1. Standard functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weird-functions">2.2.2. Weird functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-with-functions">2.3. Operations with functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-operations">2.3.1. Pointwise operations.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-of-functions">2.3.2. Composition of functions.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.4. Functional limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.5. Divergence</a></li>
 </ul>
   </nav></div>
 

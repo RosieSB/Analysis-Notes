@@ -25,6 +25,8 @@ $$
 
 If we have some formula in $x$ that we would like to use for the value $f(x)$ of a function, it is often useful to think about the largest domain $f$ could have, that is, the set of all  $x$ in $\mathbb{R}$ for which $f(x)$ makes sense as a real number. This will not include any $x \in \mathbb{R}$ for which we might be tempted to write "$f(x) = 0/0$" or "$f(x) = \pm \infty$".
 
+## Examples of functions
+### Standard functions
 
 ````{prf:example} Polynomial functions
 :label: poly
@@ -60,18 +62,72 @@ The range of this function is $\{-1, 0, 1\}$.
 
 ````{prf:example} Indicator functions
 :label: indicatorfn
-The *indicator function* of the closed interval $[a, b]$ is the function ${\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}$ given by
+If $S\subseteq\mathbb{R}$, then *indicator function of $S$* is the function ${\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}$ given by
 
 $$
-{\bf 1}_{[a,b]}(x) = \left\{\begin{array}{c c} 1 & ~\mbox{if}~x \in [a, b],\\ 0& ~\mbox{if}~x \notin [a, b]. \end{array} \right.
+{\bf 1}_{S}(x) = \left\{\begin{array}{c c} 1 & ~\mbox{if}~x \in S,\\ 0& ~\mbox{if}~x \notin S. \end{array} \right.
 $$
 
-Similarly, we can define an indicator function of  an open interval, or an arbitrary subset of $\mathbb{R}$. The indicator function of $[0, \infty)$ is called the *Heaviside function* by engineers.
+Indicator functions can look quite unremarkable if the set $S$ is something simple like an interval. Step functions can be built by taking linear combinations of indicator functions over different intervals --- this will be useful when we study integration later on.
 ````
-
 Other important functions are the functions $f:\mathbb{R}\to\mathbb{R}$, given by $f(x) = e^{kx}, f(x) = \sin(kx)$ and $f(x) = \cos(kx)$, where $k \in \mathbb{R}$.  In analysis, they are best defined as convergent power series --- see later.
 
-**Pointwise operations.**<br>
+
+
+### Weird functions
+
+When learning analysis this semester, we will often take a general function $f:X\to\mathbb{R}$ and reason about it. It is very easy and natural to imagine quite a nice function for $f$ in such a situation --- a nice smooth, bounded curve with (at worst) a finite number of jump discontinuities and no fractal structure. We know many functions that are like this, but statistically[^BCT], most are not. General functions can be far stranger. 
+
+[^BCT]: This statement can be made rigorous. For example, a famous corollary of the Baire caterory theorem from general topology says that (in a precise sense) "most" continuous functions are nowhere differentiable, in much the same way that "most" numbers are irrational. 
+
+It's important to remember we are developing a theory that needs to apply to all functions, not just the nice ones. Below are some examples of some of the weirder functions that we will study in weeks to come. If you know of any other weird functions, please let me know and I might include them.
+
+````{prf:example} Dirichlet's function
+:label: di
+This is the name given to the indicator function $\mathbb{1}_\mathbb{Q}$. We will return to it several times to explore the nuances of limits and continuity (see {prf:ref}`eg:dirichlet1`). For now, I invite you to try drawing its graph.
+````
+
+````{prf:example} Dirichlet's other function.
+Also known as Thomae's function. Let $g:[0,1)\to\mathbb{R}$ be defined by
+
+$$
+g(x) =\begin{cases}
+	1 &\text{if $x = 0$},\\
+	\displaystyle\frac{1}{n}& \text{if $x = m/n \in \mathbb{Q}$, and $\text{hcf}(m,n)=1$}\\
+	0&\text{if $x \in \mathbb{R} \setminus \mathbb{Q}$}.
+\end{cases}
+$$
+
+Try sketching this! Other names include: the popcorn function, the raindrop function, and the countable cloud function. I'll let you sketch it to work out why.
+````
+
+````{prf:example} Functions from Problems [9](https://rosiesb.github.io/Analysis-Problems/Problems.html#id9), [10](https://rosiesb.github.io/Analysis-Problems/Problems.html#id10), [41](https://rosiesb.github.io/Analysis-Problems/Problems.html#id41) and [42](https://rosiesb.github.io/Analysis-Problems/Problems.html#id42)
+:label: P9104142
+Consider the functions $\sin(1/x)$, $x\sin(1/x)$ and $x^2\sin(1/x)$. What do their graphs look like? Can they be defined meaningfully on the whole real line?
+````
+The final weird function of this section is a famous example of a everywhere continuous, nowhere differentiable function. 
+
+Its construction is less explicit than some of the other examples in this section, and in fact, since Weierstrass' work, others have found more naturally-occuring examples of such functions (e.g. Brownian motion). However, this function is something of an icon, so we include it.
+
+````{prf:example} Weierstrass function
+:label: Weierstrass
+Let $0<a<1$, let $b\in\mathbb{N}$ be odd, and such that $ab>1+\frac{3\pi}{2}$. It can be shown that $f:\mathbb{R}\to\mathbb{R}$; $f(x)=\sum_{n=0}^\infty a^n\cos\left(b^n\pi x\right)$ is a well-defined, continuous, and nowhere-differentiable function (this bit uses ideas to do with uniform convergence of infinite series --- see [Chapter 5](chap:seq&seriesoffns)).
+
+```{figure} https://upload.wikimedia.org/wikipedia/commons/6/60/WeierstrassFunction.svg
+---
+height: 300px
+name: WF
+---
+Graph of the Weierstrass function. [Image credit.](https://en.wikipedia.org/wiki/File:WeierstrassFunction.svg) 
+```
+````
+
+We will return to many of these functions in our work to come.
+
+## Operations with functions
+We give a brief reminder of the various ways functions can be combined with one another to form new functions. 
+
+### Pointwise operations.
 Let $X,Y\subseteq\mathbb{R}$, and let $f:X\to\mathbb{R}$ and $g:Y\to\mathbb{R}$ be functions. Let $\alpha\in\mathbb{R}$. We define new functions, $f+g$, $\alpha f$, $fg$ and $\frac{f}{g}$ pointwise, but we need to be careful with domains. 
 
 - *Pointwise sum.* 
@@ -99,13 +155,14 @@ $$
 $$
 
 
-*Remarks.*
+````{prf:remark} 
 
 1. In each case, the domain is taken to be the largest subset of $\mathbb{R}$ for which the pointwise operation is defined.
 
-2. Recall from Semester 1 the set ${\cal F}(\mathbb{R})$ of all functions from $\mathbb{R}$ to $\mathbb{R}$. The pointwise operations of addition and scalar multiplication turn $\mathcal{F}$ into a vector space over $\mathbb{R}$ (but it is not finite-dimensional). Pointwise multiplication gives $\mathcal{F}(\mathbb{R})$ the additional structure of an *algebra* over $\mathbb{R}$. These structural properties are important in higher analysis (e.g. functional analysis).
+2. MAS2004 students should recall from Semester 1 the set ${\cal F}(\mathbb{R})$ of all functions from $\mathbb{R}$ to $\mathbb{R}$. The pointwise operations of addition and scalar multiplication turn $\mathcal{F}$ into a vector space over $\mathbb{R}$ (but it is not finite-dimensional). Pointwise multiplication gives $\mathcal{F}(\mathbb{R})$ the additional structure of an *algebra* over $\mathbb{R}$. These structural properties are important in higher analysis (e.g. functional analysis).
+````
 
-**Composition of functions.** <br>
+### Composition of functions.
 The *composition* $g \circ f$ of two functions $f$ and $g$ is defined only when the codomain of $f$ is the same as the domain of $g$. Note that we are using the usual convention that $g\circ f$ means "$f$ first".
 
 So, if $f:X\to Y$ and $g:Y\to Z$, then we have the composition $g\circ f: X\to Z$, given by
@@ -114,7 +171,7 @@ $$
 (g \circ f)(x) = g(f(x)).
 $$
 
-Of course, the order of composition matters: we typically do not have $f \circ g = g \circ f$, even at points where both are defined. For example, if $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x)=x+2$ and $g:\mathbb{R}\to\mathbb{R}$ is given by \$ g(x)=3x\$ then $g\circ f:\mathbb{R}\to\mathbb{R}$ given by $(g\circ f)(x)=3x+6$, whereas  $f\circ g:\mathbb{R}\to\mathbb{R}$ given by $(f\circ g)(x)=3x+2$.
+Of course, the order of composition matters: we typically do not have $f \circ g = g \circ f$, even at points where both are defined. For example, if $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x)=x+2$ and $g:\mathbb{R}\to\mathbb{R}$ is given by $g(x)=3x$ then $g\circ f:\mathbb{R}\to\mathbb{R}$ given by $(g\circ f)(x)=3x+6$, whereas  $f\circ g:\mathbb{R}\to\mathbb{R}$ given by $(f\circ g)(x)=3x+2$.
 
 
 ## Functional limits
@@ -151,7 +208,7 @@ $$
 if, for all $\varepsilon>0$ there exists $\delta>0$ such that for all $x\in X$, 
 
 $$
-0<|x-a|<\delta \; \text{ implies } \; $|f(x)-l|<\varepsilon.
+0<|x-a|<\delta \; \text{ implies } \; |f(x)-l|<\varepsilon.
 $$
 ````
 
@@ -422,7 +479,7 @@ $$
 \lim_{x\rightarrow a^-}f(x) = l
 $$
 
-if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $0<x-a<\delta$.
+if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $x\in X$ and $0<x-a<\delta$.
 
 We say $f$ has a *right limit* $l$ at $a$, and write,
 
@@ -430,7 +487,7 @@ $$
 \lim_{x\rightarrow a^+}f(x) = l
 $$
 
-if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $-\delta<x-a<0$.
+if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $x\in X$ and $-\delta<x-a<0$.
 ````
 
 Equivalently, in terms of sequences,
@@ -469,7 +526,7 @@ $$
 \lim_{x\rightarrow^-a}f(x)=\infty
 $$
 
-if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X and $0<x-a<\delta$.
+if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X$ and $0<x-a<\delta$.
 
 Similarly, $f$ *diverges to infinity from the right at $a$*, and write
 
@@ -477,7 +534,7 @@ $$
 \lim_{x\rightarrow^+a}f(x)=\infty
 $$
 
-if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X and $-\delta<x-a<0$.
+if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X$ and $-\delta<x-a<0$.
 ````
 
 Left- and right-divergence to $-\infty$ is defined very similarly (exercise).

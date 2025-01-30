@@ -520,6 +520,7 @@ Let $X$ and $Y$ be arbitrary sets and $f:X \to Y$ be a function. Recall from MAS
 - *injective*  if whenever $f(x_{1}) = f(x_{2})$  for some $x_{1}, x_{2} \in X$, then $x_{1} = x_{2}$.
 - *bijective* if it is both surjective and injective.
 - *invertible* if there exists a function $f^{-1}: B \rightarrow X$,  called the *inverse* of $f$, for which
+
 $$
 f^{-1}(f(x)) = x,~\mbox{for all}~x \in X~\mbox{and}~f(f^{-1}(y)) = y,~\mbox{for all}~y \in Y .
 $$
