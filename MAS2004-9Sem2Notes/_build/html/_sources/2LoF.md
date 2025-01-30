@@ -178,6 +178,8 @@ Of course, the order of composition matters: we typically do not have $f \circ g
 
 We want to make rigorous the notion of $\lim_{x \rightarrow a}f(x)$, for a function $f:X \rightarrow \mathbb{R}$, and a point $a\in\mathbb{R}$. Note that $a$ may not be an element of the domain $X$, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.
 
+
+### The $(\epsilon-\delta)$ definition
 First note that it only makes sense to consider the behaviour of $f(x)$ as $x\rightarrow a$ if there are points in the domain of $f$ that get arbitrarily close to $a$.
 
 ````{prf:definition} Limit point
@@ -195,7 +197,7 @@ Equivalently, $a$ is a limit point of $X$ if any open interval containing $a$ ha
 (iii) More generally, given $a<b$, then $[a,b]$ is the set of all limit points for any of the intervals $(a,b)$, $(a,b]$, $[a,b)$ and $[a,b]$.
 ````
 
-````{prf:definition} Functional limit --- $(\varepsilon-\delta)$ criterion
+````{prf:definition} Functional limit 
 :label: functionlimit
 Let $f:X\to\mathbb{R}$ be a function, let $a\in\mathbb{R}$ be a limit point of $X$, and let $l\in\mathbb{R}$.
 
@@ -220,6 +222,7 @@ $$
 
 
 ````{prf:example}
+:label: ed-eg
 Let $f:(0,1)\to\mathbb{R}$ and suppose that 
 
 $$
@@ -245,6 +248,7 @@ This proves that  {prf:ref}`functionlimit` holds, and so $\lim_{x\rightarrow 1}f
 
 {prf:ref}`functionlimit` is usually referred to as the "$(\varepsilon-\delta)$ definition" of the functional limit, and does well to capture the idea of a limit is that as $x$ gets closer and closer to $a$, so $f(x)$ should get closer and closer to $l$. 
 
+###  Sequential criterion
 There is a second, equivalent definition for the limit of a function, in terms of limits of sequences of points in its domain. This sequential definition of limits is sometimes more useful in proofs, since we can use theorems already proven for convergence of sequences (see for example {prf:ref}`AOL2`, coming up).
 
 `````{prf:theorem} Sequential criterion for functional limits
@@ -274,11 +278,33 @@ x_{2} \in X\text{ satisfies } 0<|x_{2} - a| < \frac{1}{2}\text{ and }|f(x_{2}) -
 x_{n} \in X\text{ satisfies }0<|x_{n} - a| < \frac{1}{n}\text{ and }|f(x_{n}) - l| \geq \varepsilon.
 $$
 
-Then $(x_n)$ is a sequence in $X\setminus\{a\}$ and by the sandwich rule, we have $\lim_{n\rightarrow\infty} x_{n} = a$. Also, by the above construction the sequence $(f(x_{n}))$ does not converge to $l$.
+Then $(x_n)$ is a sequence in $X\setminus\{a\}$ and by the squeeze theorem, we have $\lim_{n\rightarrow\infty} x_{n} = a$. Also, by the above construction the sequence $(f(x_{n}))$ does not converge to $l$.
 
 So we have shown that if the $(\varepsilon-\delta)$ criterion fails, then so does the sequential criterion for functional limits. This completes the proof of {prf:ref}`ed`. <span style="float:right;">$\square$</span>
 ````
 `````
+
+````{prf:example}
+Consider the function from {prf:ref}`ed-eg`
+
+$$
+f:(0,1)\to\mathbb{R}; \; f(x) = 5x+2.
+$$
+
+For any sequence $(x_n)$ in $(0,1)$ with $x_n\rightarrow 1$, we have 
+
+$$
+f(x_n) = 5x_n+2 \rightarrow 7,
+$$
+
+by algebra of limits for sequences. Therefore $\lim_{x\rightarrow 1}f(x)=7$.
+````
+
+Consider how much quicker this proof was, compaired with that of {prf:ref}`ed-eg`. The sequential criterion is often easier to apply in proofs about limits of functions.
+
+### Algebra of limits and the Squeeze[^SW] Theorem
+
+[^SW]: Also known as the sandwich rule.
 
 In MAS107, you proved many theorems concerning convergence of real sequences. {prf:ref}`ed` gives us a way to capitalise on this hard work and quickly arrive at results about limits of functions.
 
@@ -312,7 +338,7 @@ Here the first line uses the definition of a sum of functions and the second lin
 
 The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
 
-`````{prf:example}
+````{prf:example}
 Consider $f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}$, given by
 
 $$
@@ -321,45 +347,38 @@ $$
 
 Investigate $\lim_{x \rightarrow a}f(x)$ for each $a\in\mathbb{R}$. (You will need to think about points in the domain and each of the three special points $-5, 3, 5$ separately.)
 
-````{dropdown} Solution (click to drop down)
-It's helpful (but not necessary as part of the formal solution) to draw the graph of the function.
-
-```{figure} ../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png
----
-height: 300px
-name: (x-5),((x2-25)(x-3)
----
-Graph of $f(x) = \displaystyle\frac{x - 5}{(x^{2} - 25)(x - 3)}$.
+**Solution:** 
+Note that for $x\in\mathbb{R} \setminus \{-5, 3, 5\}$,
+```{math}
+:label: simplify
+f(x) = \frac{x - 5}{(x-5)(x+5)(x - 3)}= \frac{1}{(x+5)(x - 3)}.
 ```
+Note that [](simplify) **does not** hold at $x=-5,3$ or $5$, as $f(x)$ is not defined there. We must use the definition of $f$ and its domain that we have been given, not what we might hope it could be.
 
-Let's write $X=\mathbb{R}\setminus\{-5, 3, 5\}$, the domain of $f$. Note that every real number is a limit point of $X$. However, the most interesting limit points to consider are those that lie outside of $X$. This is because it is fairly easy to calculate limits at points in $X$. For example,
+Equation [](simplify) is still useful for determining any limiting behaviour of $f$ at these points, however.
 
-$$
-\lim_{x \rightarrow 1}f(x) = -\frac{1}{12}=f(1).
-$$
+Let's write $X=\mathbb{R}\setminus\{-5, 3, 5\}$, the domain of $f$. Note that every real number is a limit point of $X$. However, the most interesting limit points to consider are those that lie outside of $X$. This is because it is fairly easy to calculate limits at points in $X$. 
 
-(Check this carefully, using the definition).
-
-More generally, in this example, if you take the limit at a point $a \in X$, you always find that
+For example, to calculate the limit at $x=1$: using [](simplify) and algebra of limits ([Theorem](AOL2)), we have $\lim_{x\rightarrow 1}(x+5) = 6$, $\lim_{x\rightarrow 1}(x-2)=-1$, and so
 
 $$
-\lim_{x\rightarrow a} f(x) = f(a).
+\lim_{x \rightarrow 1}f(x) = \lim_{x\rightarrow 1}\frac{1}{(x+5)(x-3)} = \frac{1}{6(-2)}= -\frac{1}{12}=f(1).
+$$
+
+More generally, in this example, if you take the limit at a point $a$ lying **inside** the domain $X$ of $f$, algebra of limits ([Theorem](AOL2)) implies that 
+
+$$
+\lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a}\frac{1}{(x+5)(x-3)} =  \frac{1}{(a+5)(a-3)} =  f(a).
 $$
 
 This tells us that the function $f$ is *continuous* at these points. We will discuss the concept of continuity in more detail in [Chapter 3](#chap:cty).
 
-The more interesting problem is to find out what happens at points that are *not* in $X$. Observe that
-
-$$
-f(x) = \frac{1}{(x+5)(x-3)}, \qquad \text{for all $x \in X$.}
-$$
+The more interesting problem is to find out what happens at limits points that are *not* in $X$. Observe that
 
 **To investigate the point $x = 5$:**<br>
-Choose an arbitrary sequence $(x_{n})$ with $x_{n} \in X$ satisfying $\lim_{n \rightarrow \infty}x_{n} = 5$. Note that such sequences certainly exist, for example
+$5$ is a limit point of $X$, but does not lie inside $X$. However, since the formula $\frac{1}{(x+5)(x-3)$ is well-defined at $x=5$, the algebra of limits argument still works. We just have to be careful not to write "$f(5)$" anywhere, as $5\notin X$.
 
-$$
-(x_{n} = 5 + \frac{1}{n}), (x_n=5 + 7/n^{2}), (x_n=5 - 108/n^{4})...).
-$$
+Alternative method using sequences:  Choose an arbitrary sequence $(x_{n})$ with $x_{n} \in X$ satisfying $\lim_{n \rightarrow \infty}x_{n} = 5$. 
 
 Then $f(x_{n}) = \displaystyle\frac{1}{(x_{n}+5)(x_{n}-3)}$ and $\displaystyle\lim_{n \rightarrow \infty}f(x_{n}) = \displaystyle\frac{1}{10.2} = \displaystyle\frac{1}{20}$, by the algebra of limits. So we conclude that
 
@@ -381,14 +400,25 @@ and so $(f(y_{n}))$ diverges to $-\infty$. So we've found a sequence $(y_{n})$ s
 **To investigate the point $x = 3$:** <br>
 This is left as  an exercise. Again, $f$ has no limit at $x = 3$.
 
-We note here that the function $f$ is not continuous at the points $a = -5, 3$ or $5$; indeed $f(a)$ is not defined when $a$ takes these values. We can *extend* $f$ to be a continuous function at $a=5$ by setting
+We note here that the function $f$ is **not** continuous at the points $a = -5, 3$ or $5$; indeed $f(a)$ is not defined when $a$ takes these values. We can *extend* $f$ to be a continuous function at $a=5$ by setting
 $f(5)=\frac{1}{20}$. On the other hand, at $a=-5$ and at $a=3$, there is no value we could assign for $f(a)$
 that would extend $f$ to a continuous function there.  We will return to all these issues of continuity in [Chapter 3](chap:cty).
-`````
+
+For interest, the graph of $f$ is below. Note we have not refered it in any of the above arguments.
+
+```{figure} ../MAS2004-9Sem2Notes/figs/(x-5),((x2-25)(x-3)).png
+---
+height: 300px
+name: (x-5),((x2-25)(x-3)
+---
+Graph of $f$ .
+```
+````
 
 
-`````{prf:theorem} Sandwich rule for functions
+`````{prf:theorem} Squeeze theorem for functions
 Suppose that $f:X\to\mathbb{R}$,  $g:Y\to\mathbb{R}$ and $h :Z\to \mathbb{R}$ and suppose that there exists an interval $(a, b) \subseteq X\cap Y\cap Z$ such that for all $x \in (a, b)$
+
 
 ```{math}
 :label: sw1
@@ -418,7 +448,7 @@ $$
 a_n \leq b_n \leq c_n, \hspace{2em}
 $$
 
-and by  [](sw2), $\displaystyle\lim_{n\rightarrow\infty}a_n = \lim_{n\rightarrow\infty}c_n = l$. Hence by the sandwich rule for sequences,
+and by  [](sw2), $\displaystyle\lim_{n\rightarrow\infty}a_n = \lim_{n\rightarrow\infty}c_n = l$. Hence by the squeeze theorem for sequences,
 
 $$
 \lim_{n\rightarrow \infty}c_n = \lim_{n\rightarrow \infty} g(x_n)= l,
@@ -432,7 +462,11 @@ and we have established that $\displaystyle\lim_{x \rightarrow c}g(x)$ exists an
 
 In the same setting as {prf:ref}`functionlimit`, we say that a function $f:X \rightarrow \mathbb{R}$ *diverges* at $x=a$ if $\lim_{x\rightarrow a} f(x)$ does not exist. 
 
-There are some interesting types of behaviour involved here. 
+With general divergence of functions, there is no particular reason to expect divergence to look a particular away. However, there are a few cases of "well-behaved" divergence that occur often enough to need names.
+
+### Divergence to infinity
+
+The first "nice" mode of divergence is divergence to infinity. While infinite values may not seem nice, we do at least have an accurate impression of what the function is doing in the limit. The only reason this is not considered convergence is because $\infty$ is not a number.
 
 ````{prf:definition} Divergence to $\pm\infty$
 :label: div+-infty
@@ -469,6 +503,7 @@ $$
 
 - The notion of *divergence to minus infinity* is expressed similarly in terms of sequences. The details are left to you.
 
+### Marginal limits
 If convergence fails for a function $f:X\to\mathbb{R}$ at a point $a\in\mathbb{R}$, it may be that a weaker notion of convergence still applies, in which the direction of approach is restricted to one side at a time.
 
 ````{prf:definition} Marginal limits
@@ -500,7 +535,7 @@ The proof that these definitions are equivalent is very similar to that of {prf:
 
 `````{prf:example}
 :label: indicatorlims
-Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check using {prf:ref}`marg` that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ and $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$. 
+Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check using {prf:ref}`marg` that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ and $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1.$
 
 Try this for yourself, then click the drop-downs to see how you did.
 

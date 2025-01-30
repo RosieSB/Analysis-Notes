@@ -262,7 +262,7 @@ $$
 a < a_{n} < a+\frac{1}{n}.
 $$
 
-By the sandwich rule, $\lim_{n\rightarrow\infty} a_{n} = a$, but $\lim_{n\rightarrow\infty} f(a_{n}) = 0 \neq 1 = f(a)$. Hence $f$ is discontinuous at $a$, for all $a\in\mathbb{Q}$.
+By the squeeze theorem, $\lim_{n\rightarrow\infty} a_{n} = a$, but $\lim_{n\rightarrow\infty} f(a_{n}) = 0 \neq 1 = f(a)$. Hence $f$ is discontinuous at $a$, for all $a\in\mathbb{Q}$.
 
 Now suppose that $a$ is irrational. Since the rationals are dense in $\mathbb{R}$, for each $n$ there exists $b_{n}\in\mathbb{Q}$ such that
 
@@ -270,7 +270,7 @@ $$
 a < b_{n} < a + \frac{1}{n}.
 $$
 
-By the sandwich rule, $\lim_{n\rightarrow\infty} b_{n} = a$, but $\lim_{n\rightarrow\infty} f(b_{n}) = 1 \neq 0 = f(a)$. So
+By the squeeze theorem, $\lim_{n\rightarrow\infty} b_{n} = a$, but $\lim_{n\rightarrow\infty} f(b_{n}) = 1 \neq 0 = f(a)$. So
 $f$ is also discontinuous at every point $a \notin \mathbb{Q}$.
 ````
 

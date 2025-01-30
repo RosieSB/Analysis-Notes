@@ -789,7 +789,7 @@ $$
 \lim_{h\rightarrow 0} f(c_h) = \lim_{h\rightarrow 0} f(k_h) = f(x).
 $$
 
-Applying the sandwich rule to [](eq:fch),
+Applying the squeeze theorem to [](eq:fch),
 
 $$
 \lim_{h\rightarrow 0} \frac{F(x+h)-F(x)}{h} =  f(x).
