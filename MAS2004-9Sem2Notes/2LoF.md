@@ -143,6 +143,7 @@ Equivalently, $a$ is a limit point of $X$ if any open interval containing $a$ ha
 ````
 
 ````{prf:example}
+:label: lpt-egs
 (i) Let $X=(0,2)\cup\{3\}$. Then $0$ and $2$ are limit points of $X$, but $3$ is not.
 
 (ii) A real number $a\in\mathbb{R}$ is a limit point of $[0,1]$ if and only if $a\in[0,1]$.
@@ -238,6 +239,7 @@ So we have shown that if the $(\varepsilon-\delta)$ criterion fails, then so doe
 `````
 
 ````{prf:example}
+:label: ed-eg-again
 Consider the function from {prf:ref}`ed-eg`
 
 $$
@@ -300,7 +302,7 @@ $$
 :label: AOL2
 Suppose that $f:X \rightarrow \mathbb{R}$, $g :Y \rightarrow \mathbb{R}$, and $a \in \mathbb{R}$ is such that $\lim_{x\rightarrow a} f(x)$ and $\lim_{x\rightarrow a} g(x)$ both exist. Then
 
-(i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x)$ = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,
+(i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x) = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,
 
 (ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} f(x)\right)$,
 
@@ -326,6 +328,7 @@ Here the first line uses the definition of a sum of functions and the second lin
 The sequential condition for limits of functions is also usually easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
 
 ````{prf:example}
+:label: seq-lim-eg
 Consider $f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}$, given by
 
 $$
@@ -346,13 +349,13 @@ Equation [](simplify) is still useful for determining any limiting behaviour of 
 
 Let's write $X=\mathbb{R}\setminus\{-5, 3, 5\}$, the domain of $f$. Note that every real number is a limit point of $X$. However, the most interesting limit points to consider are those that lie outside of $X$. This is because it is fairly easy to calculate limits at points in $X$. 
 
-For example, to calculate the limit at $x=1$: using [](simplify) and algebra of limits ([Theorem](AOL2)), we have $\lim_{x\rightarrow 1}(x+5) = 6$, $\lim_{x\rightarrow 1}(x-2)=-1$, and so
+For example, to calculate the limit at $x=1$: using [](simplify) and algebra of limits ({prf:ref}`AOL2`), we have $\lim_{x\rightarrow 1}(x+5) = 6$, $\lim_{x\rightarrow 1}(x-2)=-1$, and so
 
 $$
 \lim_{x \rightarrow 1}f(x) = \lim_{x\rightarrow 1}\frac{1}{(x+5)(x-3)} = \frac{1}{6(-2)}= -\frac{1}{12}=f(1).
 $$
 
-More generally, in this example, if you take the limit at a point $a$ lying **inside** the domain $X$ of $f$, algebra of limits ([Theorem](AOL2)) implies that 
+More generally, in this example, if you take the limit at a point $a$ lying **inside** the domain $X$ of $f$, algebra of limits ({prf:ref}`AOL2`) implies that 
 
 $$
 \lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a}\frac{1}{(x+5)(x-3)} =  \frac{1}{(a+5)(a-3)} =  f(a).
@@ -563,6 +566,7 @@ Left- and right-divergence to $-\infty$ is defined very similarly (exercise).
 
 
 `````{prf:example}
+:label: 1x-eg
 Consider $f: \mathbb{R} \setminus \{0\}\to \mathbb{R}$ given by $f(x) = \frac{1}{x}$. 
 
 ```{figure} ../MAS2004-9Sem2Notes/figs/1,x.png

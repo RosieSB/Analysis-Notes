@@ -525,7 +525,7 @@ g(x) =\begin{cases}
 <p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>. A real number <span class="math notranslate nohighlight">\(a\)</span> is called a <em>limit point</em> of <span class="math notranslate nohighlight">\(X\)</span> if there is a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span> and satisfies <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
 <p>Equivalently, <span class="math notranslate nohighlight">\(a\)</span> is a limit point of <span class="math notranslate nohighlight">\(X\)</span> if any open interval containing <span class="math notranslate nohighlight">\(a\)</span> has non-empty intersection with <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-9">
+</div><div class="proof example admonition" id="lpt-egs">
 <p class="admonition-title"><span class="caption-number">Example 2.9 </span></p>
 <section class="example-content" id="proof-content">
 <p>(i) Let <span class="math notranslate nohighlight">\(X=(0,2)\cup\{3\}\)</span>. Then <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\)</span> are limit points of <span class="math notranslate nohighlight">\(X\)</span>, but <span class="math notranslate nohighlight">\(3\)</span> is not.</p>
@@ -604,7 +604,7 @@ x_{n} \in X\text{ satisfies }0&lt;|x_{n} - a| &lt; \frac{1}{n}\text{ and }|f(x_{
 <p>So we have shown that if the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails, then so does the sequential criterion for functional limits. This completes the proof of <a class="reference internal" href="#ed">Theorem 2.1</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><div class="proof example admonition" id="example-13">
+</div><div class="proof example admonition" id="ed-eg-again">
 <p class="admonition-title"><span class="caption-number">Example 2.11 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the function from <a class="reference internal" href="#ed-eg">Example 2.10</a></p>
@@ -667,7 +667,7 @@ fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Algebra of limits)</p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :Y \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x)\)</span> both exist. Then</p>
-<p>(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x)\)</span> = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,</p>
+<p>(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x) = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)\)</span>,</p>
 <p>(ii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} f(x)\right)\)</span>,</p>
 <p>(iii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha \lim_{x\rightarrow a} f(x)\)</span>, for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>,</p>
 <p>(iv) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{\lim_{x\rightarrow a} f(x)}{\lim_{x\rightarrow a} g(x)}\)</span>, provided <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) \neq 0\)</span>.</p>
@@ -685,7 +685,7 @@ fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
 </div>
 </section>
 </div><p>The sequential condition for limits of functions is also usually easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.</p>
-<div class="proof example admonition" id="example-16">
+<div class="proof example admonition" id="seq-lim-eg">
 <p class="admonition-title"><span class="caption-number">Example 2.12 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider <span class="math notranslate nohighlight">\(f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}\)</span>, given by</p>
@@ -701,12 +701,12 @@ Note that for <span class="math notranslate nohighlight">\(x\in\mathbb{R} \setmi
 <p>Note that <a class="reference internal" href="#equation-simplify">(2.1)</a> <strong>does not</strong> hold at <span class="math notranslate nohighlight">\(x=-5,3\)</span> or <span class="math notranslate nohighlight">\(5\)</span>, as <span class="math notranslate nohighlight">\(f(x)\)</span> is not defined there. We must use the definition of <span class="math notranslate nohighlight">\(f\)</span> and its domain that we have been given, not what we might hope it could be.</p>
 <p>Equation <a class="reference internal" href="#equation-simplify">(2.1)</a> is still useful for determining any limiting behaviour of <span class="math notranslate nohighlight">\(f\)</span> at these points, however.</p>
 <p>Let’s write <span class="math notranslate nohighlight">\(X=\mathbb{R}\setminus\{-5, 3, 5\}\)</span>, the domain of <span class="math notranslate nohighlight">\(f\)</span>. Note that every real number is a limit point of <span class="math notranslate nohighlight">\(X\)</span>. However, the most interesting limit points to consider are those that lie outside of <span class="math notranslate nohighlight">\(X\)</span>. This is because it is fairly easy to calculate limits at points in <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>For example, to calculate the limit at <span class="math notranslate nohighlight">\(x=1\)</span>: using <a class="reference internal" href="#equation-simplify">(2.1)</a> and algebra of limits (<a class="reference internal" href="#AOL2"><span class="xref myst">Theorem</span></a>), we have <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}(x+5) = 6\)</span>, <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}(x-2)=-1\)</span>, and so</p>
+<p>For example, to calculate the limit at <span class="math notranslate nohighlight">\(x=1\)</span>: using <a class="reference internal" href="#equation-simplify">(2.1)</a> and algebra of limits (<a class="reference internal" href="#AOL2">Theorem 2.2</a>), we have <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}(x+5) = 6\)</span>, <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 1}(x-2)=-1\)</span>, and so</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x \rightarrow 1}f(x) = \lim_{x\rightarrow 1}\frac{1}{(x+5)(x-3)} = \frac{1}{6(-2)}= -\frac{1}{12}=f(1).
 \]</div>
-<p>More generally, in this example, if you take the limit at a point <span class="math notranslate nohighlight">\(a\)</span> lying <strong>inside</strong> the domain <span class="math notranslate nohighlight">\(X\)</span> of <span class="math notranslate nohighlight">\(f\)</span>, algebra of limits (<a class="reference internal" href="#AOL2"><span class="xref myst">Theorem</span></a>) implies that</p>
+<p>More generally, in this example, if you take the limit at a point <span class="math notranslate nohighlight">\(a\)</span> lying <strong>inside</strong> the domain <span class="math notranslate nohighlight">\(X\)</span> of <span class="math notranslate nohighlight">\(f\)</span>, algebra of limits (<a class="reference internal" href="#AOL2">Theorem 2.2</a>) implies that</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a}\frac{1}{(x+5)(x-3)} =  \frac{1}{(a+5)(a-3)} =  f(a).
@@ -872,7 +872,7 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
 </section>
 </div><p>Left- and right-divergence to <span class="math notranslate nohighlight">\(-\infty\)</span> is defined very similarly (exercise).</p>
-<div class="proof example admonition" id="example-22">
+<div class="proof example admonition" id="1x-eg">
 <p class="admonition-title"><span class="caption-number">Example 2.14 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus \{0\}\to \mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</p>
