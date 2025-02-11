@@ -141,7 +141,18 @@ Using {prf:ref}`poly-cts` and {prf:ref}`AOL3`(iv), we can also conclude that rat
 
 The continuity on $\mathbb{R}$ of functions such as $f(x) = e^{k x}, g(x) = \sin(kx), h(x) = \cos(kx)$, for $k \in \mathbb{R}$, can be established using power series arguments. We will explore this further in [Chapter 5](#chap:seq&seriesoffns).
 
-We also have a result for composition.
+We also have a result for composition of functions.
+
+````{prf:definition} Composition of functions
+Recall that the *composition* $g \circ f$ of two functions $f:X\to Y$ and $g:Y\to Z$ is defined to be the function $g\circ f: X\to Z$, given by
+
+$$
+(g \circ f)(x) = g(f(x)).
+$$
+````
+
+Of course, the order of composition matters: we typically do not have $f \circ g = g \circ f$, even at points where both are defined. For example, if $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x)=x+2$ and $g:\mathbb{R}\to\mathbb{R}$ is given by $g(x)=3x$ then $g\circ f:\mathbb{R}\to\mathbb{R}$ given by $(g\circ f)(x)=3x+6$, whereas  $f\circ g:\mathbb{R}\to\mathbb{R}$ given by $(f\circ g)(x)=3x+2$.
+
 
 `````{prf:theorem} Composition of continuous functions
 :label: fof

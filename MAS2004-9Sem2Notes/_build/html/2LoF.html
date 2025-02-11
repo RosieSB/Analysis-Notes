@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -380,20 +380,18 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weird-functions">2.2.2. Weird functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-with-functions">2.3. Operations with functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-operations">2.3.1. Pointwise operations.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-of-functions">2.3.2. Composition of functions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.3. Functional limits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-epsilon-delta-definition">2.3.1. The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-criterion">2.3.2. Sequential criterion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-of-limits-and-the-squeeze-theorem">2.3.3. Algebra of limits and the Squeeze Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-pointwise-operations-with-functions">Reminder: Pointwise operations with functions.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.4. Functional limits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-epsilon-delta-definition">2.4.1. The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-criterion">2.4.2. Sequential criterion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-of-limits-and-the-squeeze-theorem">2.4.3. Algebra of limits and the Squeeze Theorem</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.5. Divergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-to-infinity">2.5.1. Divergence to infinity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-limits">2.5.2. Marginal limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.4. Divergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-to-infinity">2.4.1. Divergence to infinity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-limits">2.4.2. Marginal limits</a></li>
 </ul>
 </li>
 </ul>
@@ -515,65 +513,11 @@ g(x) =\begin{cases}
 </div><p>We will return to many of these functions in our work to come.</p>
 </section>
 </section>
-<section id="operations-with-functions">
-<h2><span class="section-number">2.3. </span>Operations with functions<a class="headerlink" href="#operations-with-functions" title="Link to this heading">#</a></h2>
-<p>We give a brief reminder of the various ways functions can be combined with one another to form new functions.</p>
-<section id="pointwise-operations">
-<h3><span class="section-number">2.3.1. </span>Pointwise operations.<a class="headerlink" href="#pointwise-operations" title="Link to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(X,Y\subseteq\mathbb{R}\)</span>, and let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> be functions. Let <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. We define new functions, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> and <span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> pointwise, but we need to be careful with domains.</p>
-<ul class="simple">
-<li><p><em>Pointwise sum.</em></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-f+g:X\cap Y\to \mathbb{R}; \; (f+g)(x) := f(x) + g(x),
-\]</div>
-<ul class="simple">
-<li><p><em>Pointwise scalar multiplication.</em></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\alpha f:X\to \mathbb{R}; \; (\alpha f)(x):=\alpha f(x),
-\]</div>
-<ul class="simple">
-<li><p><em>Pointwise multiplication.</em></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
-\]</div>
-<ul class="simple">
-<li><p><em>Pointwise division.</em> Here, more care must be taken with domains:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
-\]</div>
-<div class="proof remark admonition" id="remark-8">
-<p class="admonition-title"><span class="caption-number">Remark 2.1 </span></p>
-<section class="remark-content" id="proof-content">
-<ol class="arabic simple">
-<li><p>In each case, the domain is taken to be the largest subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which the pointwise operation is defined.</p></li>
-<li><p>MAS2004 students should recall from Semester 1 the set <span class="math notranslate nohighlight">\({\cal F}(\mathbb{R})\)</span> of all functions from <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The pointwise operations of addition and scalar multiplication turn <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> into a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but it is not finite-dimensional). Pointwise multiplication gives <span class="math notranslate nohighlight">\(\mathcal{F}(\mathbb{R})\)</span> the additional structure of an <em>algebra</em> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. These structural properties are important in higher analysis (e.g. functional analysis).</p></li>
-</ol>
-</section>
-</div></section>
-<section id="composition-of-functions">
-<h3><span class="section-number">2.3.2. </span>Composition of functions.<a class="headerlink" href="#composition-of-functions" title="Link to this heading">#</a></h3>
-<p>The <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\)</span> of two functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> is defined only when the codomain of <span class="math notranslate nohighlight">\(f\)</span> is the same as the domain of <span class="math notranslate nohighlight">\(g\)</span>. Note that we are using the usual convention that <span class="math notranslate nohighlight">\(g\circ f\)</span> means “<span class="math notranslate nohighlight">\(f\)</span> first”.</p>
-<p>So, if <span class="math notranslate nohighlight">\(f:X\to Y\)</span> and <span class="math notranslate nohighlight">\(g:Y\to Z\)</span>, then we have the composition <span class="math notranslate nohighlight">\(g\circ f: X\to Z\)</span>, given by</p>
-<div class="math notranslate nohighlight">
-\[
-(g \circ f)(x) = g(f(x)).
-\]</div>
-<p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(g(x)=3x\)</span> then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
-</section>
-</section>
 <section id="functional-limits">
-<h2><span class="section-number">2.4. </span>Functional limits<a class="headerlink" href="#functional-limits" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Functional limits<a class="headerlink" href="#functional-limits" title="Link to this heading">#</a></h2>
 <p>We want to make rigorous the notion of <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a}f(x)\)</span>, for a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, and a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>. Note that <span class="math notranslate nohighlight">\(a\)</span> may not be an element of the domain <span class="math notranslate nohighlight">\(X\)</span>, here (though it can be). You have already studied this in MAS106 and you should have good intuition for this situation. Here we will make the idea precise, using sequences.</p>
 <section id="the-epsilon-delta-definition">
-<h3><span class="section-number">2.4.1. </span>The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition<a class="headerlink" href="#the-epsilon-delta-definition" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.3.1. </span>The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition<a class="headerlink" href="#the-epsilon-delta-definition" title="Link to this heading">#</a></h3>
 <p>First note that it only makes sense to consider the behaviour of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow a\)</span> if there are points in the domain of <span class="math notranslate nohighlight">\(f\)</span> that get arbitrarily close to <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <div class="proof definition admonition" id="limitpt">
 <p class="admonition-title"><span class="caption-number">Definition 2.1 </span> (Limit point)</p>
@@ -581,7 +525,7 @@ fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
 <p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>. A real number <span class="math notranslate nohighlight">\(a\)</span> is called a <em>limit point</em> of <span class="math notranslate nohighlight">\(X\)</span> if there is a sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span> and satisfies <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
 <p>Equivalently, <span class="math notranslate nohighlight">\(a\)</span> is a limit point of <span class="math notranslate nohighlight">\(X\)</span> if any open interval containing <span class="math notranslate nohighlight">\(a\)</span> has non-empty intersection with <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-10">
+</div><div class="proof example admonition" id="example-9">
 <p class="admonition-title"><span class="caption-number">Example 2.9 </span></p>
 <section class="example-content" id="proof-content">
 <p>(i) Let <span class="math notranslate nohighlight">\(X=(0,2)\cup\{3\}\)</span>. Then <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\)</span> are limit points of <span class="math notranslate nohighlight">\(X\)</span>, but <span class="math notranslate nohighlight">\(3\)</span> is not.</p>
@@ -632,7 +576,7 @@ f(x) = 5x+2.
 </div><p><a class="reference internal" href="#functionlimit">Definition 2.2</a> is usually referred to as the “<span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> definition” of the functional limit, and does well to capture the idea of a limit is that as <span class="math notranslate nohighlight">\(x\)</span> gets closer and closer to <span class="math notranslate nohighlight">\(a\)</span>, so <span class="math notranslate nohighlight">\(f(x)\)</span> should get closer and closer to <span class="math notranslate nohighlight">\(l\)</span>.</p>
 </section>
 <section id="sequential-criterion">
-<h3><span class="section-number">2.4.2. </span>Sequential criterion<a class="headerlink" href="#sequential-criterion" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.3.2. </span>Sequential criterion<a class="headerlink" href="#sequential-criterion" title="Link to this heading">#</a></h3>
 <p>There is a second, equivalent definition for the limit of a function, in terms of limits of sequences of points in its domain. This sequential definition of limits is sometimes more useful in proofs, since we can use theorems already proven for convergence of sequences (see for example <a class="reference internal" href="#AOL2">Theorem 2.2</a>, coming up).</p>
 <div class="proof theorem admonition" id="ed">
 <p class="admonition-title"><span class="caption-number">Theorem 2.1 </span> (Sequential criterion for functional limits)</p>
@@ -660,7 +604,7 @@ x_{n} \in X\text{ satisfies }0&lt;|x_{n} - a| &lt; \frac{1}{n}\text{ and }|f(x_{
 <p>So we have shown that if the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span> criterion fails, then so does the sequential criterion for functional limits. This completes the proof of <a class="reference internal" href="#ed">Theorem 2.1</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><div class="proof example admonition" id="example-14">
+</div><div class="proof example admonition" id="example-13">
 <p class="admonition-title"><span class="caption-number">Example 2.11 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the function from <a class="reference internal" href="#ed-eg">Example 2.10</a></p>
@@ -678,31 +622,69 @@ f(x_n) = 5x_n+2 \rightarrow 7,
 </div><p>Consider how much quicker this proof was, compaired with that of <a class="reference internal" href="#ed-eg">Example 2.10</a>. The sequential criterion is often easier to apply in proofs about limits of functions.</p>
 </section>
 <section id="algebra-of-limits-and-the-squeeze-theorem">
-<h3><span class="section-number">2.4.3. </span>Algebra of limits and the Squeeze<a class="footnote-reference brackets" href="#sw" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Theorem<a class="headerlink" href="#algebra-of-limits-and-the-squeeze-theorem" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.3.3. </span>Algebra of limits and the Squeeze<a class="footnote-reference brackets" href="#sw" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Theorem<a class="headerlink" href="#algebra-of-limits-and-the-squeeze-theorem" title="Link to this heading">#</a></h3>
 <p>In MAS107, you proved many theorems concerning convergence of real sequences. <a class="reference internal" href="#ed">Theorem 2.1</a> gives us a way to capitalise on this hard work and quickly arrive at results about limits of functions.</p>
-<div class="proof theorem admonition" id="AOL2">
+<section id="reminder-pointwise-operations-with-functions">
+<h4>Reminder: Pointwise operations with functions.<a class="headerlink" href="#reminder-pointwise-operations-with-functions" title="Link to this heading">#</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(X,Y\subseteq\mathbb{R}\)</span>, and let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(g:Y\to\mathbb{R}\)</span> be functions. Let <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. We define new functions, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> and <span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> pointwise, but we need to be careful with domains.</p>
+<ul class="simple">
+<li><p><em>Pointwise sum.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+f+g:X\cap Y\to \mathbb{R}; \; (f+g)(x) := f(x) + g(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise scalar multiplication.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\alpha f:X\to \mathbb{R}; \; (\alpha f)(x):=\alpha f(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise multiplication.</em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
+\]</div>
+<ul class="simple">
+<li><p><em>Pointwise division.</em> Here, more care must be taken with domains:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
+\]</div>
+<div class="proof remark admonition" id="remark-14">
+<p class="admonition-title"><span class="caption-number">Remark 2.1 </span></p>
+<section class="remark-content" id="proof-content">
+<ol class="arabic simple">
+<li><p>In each case, the domain is taken to be the largest subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> for which the pointwise operation is defined.</p></li>
+<li><p>MAS2004 students should recall from Semester 1 the set <span class="math notranslate nohighlight">\({\cal F}(\mathbb{R})\)</span> of all functions from <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. The pointwise operations of addition and scalar multiplication turn <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> into a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but it is not finite-dimensional). Pointwise multiplication gives <span class="math notranslate nohighlight">\(\mathcal{F}(\mathbb{R})\)</span> the additional structure of an <em>algebra</em> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. These structural properties are important in higher analysis (e.g. functional analysis).</p></li>
+</ol>
+</section>
+</div><div class="proof theorem admonition" id="AOL2">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Algebra of limits)</p>
 <section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(f:A \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :B \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x) = l\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) = m\)</span>, then</p>
-<p>(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m\)</span>,</p>
-<p>(ii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (fg)(x) = lm\)</span>,</p>
-<p>(iii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha l\)</span>, for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>,</p>
-<p>(iv) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{l}{m}\)</span>, if <span class="math notranslate nohighlight">\(m \neq 0\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(g :Y \rightarrow \mathbb{R}\)</span>, and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> is such that <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x)\)</span> both exist. Then</p>
+<p>(i) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (f + g)(x)\)</span> = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,</p>
+<p>(ii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} f(x)\right)\)</span>,</p>
+<p>(iii) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha \lim_{x\rightarrow a} f(x)\)</span>, for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>,</p>
+<p>(iv) <span class="math notranslate nohighlight">\(\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{\lim_{x\rightarrow a} f(x)}{\lim_{x\rightarrow a} g(x)}\)</span>, provided <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} g(x) \neq 0\)</span>.</p>
+<p>In particular, the limits in (i)–(iv) all exist.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. By  <a class="reference internal" href="#ed">Theorem 2.1</a>, these all follow from the algebra of limits for sequences. For example, for (i), if <span class="math notranslate nohighlight">\((x_{n})\)</span> is an arbitrary sequence in <span class="math notranslate nohighlight">\(A\cap B\)</span> with <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\((x_n)\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*} 
+<p>Proof. By  <a class="reference internal" href="#ed">Theorem 2.1</a>, these all follow from the algebra of limits for sequences. For example, for (i), if <span class="math notranslate nohighlight">\((x_{n})\)</span> is an arbitrary sequence in <span class="math notranslate nohighlight">\(X\cap Y\)</span> with <span class="math notranslate nohighlight">\(x_n\neq a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\((x_n)\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
 \lim_{n\rightarrow\infty} (f + g)(x_{n}) &amp;= \lim_{n\rightarrow\infty} (f(x_{n}) + g(x_{n})) \\
 &amp;= \lim_{n\rightarrow\infty} f(x_{n}) + \lim_{n\rightarrow\infty} g(x_{n})\\
-&amp;= l + m, 
-\end{align*}
-\end{split}\]</div>
-<p>as required.
-Here the first line uses the definition of a sum of functions and the second line uses algebra of limits (for real sequences). <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+&amp;= \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x), 
+\end{align*}\]</div>
+<p>as required.</p>
+<p>Here the first line uses the definition of a sum of functions and the second line uses algebra of limits (for real sequences). <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p>The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.</p>
+</div><p>The sequential condition for limits of functions is also usually easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.</p>
 <div class="proof example admonition" id="example-16">
 <p class="admonition-title"><span class="caption-number">Example 2.12 </span></p>
 <section class="example-content" id="proof-content">
@@ -791,12 +773,13 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 </section>
 </div></section>
 </section>
+</section>
 <section id="divergence">
-<h2><span class="section-number">2.5. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
 <p>In the same setting as <a class="reference internal" href="#functionlimit">Definition 2.2</a>, we say that a function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> <em>diverges</em> at <span class="math notranslate nohighlight">\(x=a\)</span> if <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a} f(x)\)</span> does not exist.</p>
 <p>With general divergence of functions, there is no particular reason to expect divergence to look a particular away. However, there are a few cases of “well-behaved” divergence that occur often enough to need names.</p>
 <section id="divergence-to-infinity">
-<h3><span class="section-number">2.5.1. </span>Divergence to infinity<a class="headerlink" href="#divergence-to-infinity" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.4.1. </span>Divergence to infinity<a class="headerlink" href="#divergence-to-infinity" title="Link to this heading">#</a></h3>
 <p>The first “nice” mode of divergence is divergence to infinity. While infinite values may not seem nice, we do at least have an accurate impression of what the function is doing in the limit. The only reason this is not considered convergence is because <span class="math notranslate nohighlight">\(\infty\)</span> is not a number.</p>
 <div class="proof definition admonition" id="div+-infty">
 <p class="admonition-title"><span class="caption-number">Definition 2.3 </span> (Divergence to <span class="math notranslate nohighlight">\(\pm\infty\)</span>)</p>
@@ -830,7 +813,7 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 </ul>
 </section>
 <section id="marginal-limits">
-<h3><span class="section-number">2.5.2. </span>Marginal limits<a class="headerlink" href="#marginal-limits" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.4.2. </span>Marginal limits<a class="headerlink" href="#marginal-limits" title="Link to this heading">#</a></h3>
 <p>If convergence fails for a function <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> at a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>, it may be that a weaker notion of convergence still applies, in which the direction of approach is restricted to one side at a time.</p>
 <div class="proof definition admonition" id="marg">
 <p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Marginal limits)</p>
@@ -993,20 +976,18 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weird-functions">2.2.2. Weird functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-with-functions">2.3. Operations with functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-operations">2.3.1. Pointwise operations.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-of-functions">2.3.2. Composition of functions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.3. Functional limits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-epsilon-delta-definition">2.3.1. The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-criterion">2.3.2. Sequential criterion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-of-limits-and-the-squeeze-theorem">2.3.3. Algebra of limits and the Squeeze Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-pointwise-operations-with-functions">Reminder: Pointwise operations with functions.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-limits">2.4. Functional limits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-epsilon-delta-definition">2.4.1. The <span class="math notranslate nohighlight">\((\epsilon-\delta)\)</span> definition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential-criterion">2.4.2. Sequential criterion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-of-limits-and-the-squeeze-theorem">2.4.3. Algebra of limits and the Squeeze Theorem</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.5. Divergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-to-infinity">2.5.1. Divergence to infinity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-limits">2.5.2. Marginal limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">2.4. Divergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-to-infinity">2.4.1. Divergence to infinity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-limits">2.4.2. Marginal limits</a></li>
 </ul>
 </li>
 </ul>

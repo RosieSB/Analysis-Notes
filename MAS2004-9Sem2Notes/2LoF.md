@@ -124,54 +124,7 @@ Graph of the Weierstrass function. [Image credit.](https://en.wikipedia.org/wiki
 
 We will return to many of these functions in our work to come.
 
-## Operations with functions
-We give a brief reminder of the various ways functions can be combined with one another to form new functions. 
 
-### Pointwise operations.
-Let $X,Y\subseteq\mathbb{R}$, and let $f:X\to\mathbb{R}$ and $g:Y\to\mathbb{R}$ be functions. Let $\alpha\in\mathbb{R}$. We define new functions, $f+g$, $\alpha f$, $fg$ and $\frac{f}{g}$ pointwise, but we need to be careful with domains. 
-
-- *Pointwise sum.* 
-
-$$
-f+g:X\cap Y\to \mathbb{R}; \; (f+g)(x) := f(x) + g(x),
-$$
-
-- *Pointwise scalar multiplication.* 
-
-$$
-\alpha f:X\to \mathbb{R}; \; (\alpha f)(x):=\alpha f(x),
-$$
-
-- *Pointwise multiplication.* 
-
-$$
-fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
-$$
-
-- *Pointwise division.* Here, more care must be taken with domains: 
-
-$$
-\frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
-$$
-
-
-````{prf:remark} 
-
-1. In each case, the domain is taken to be the largest subset of $\mathbb{R}$ for which the pointwise operation is defined.
-
-2. MAS2004 students should recall from Semester 1 the set ${\cal F}(\mathbb{R})$ of all functions from $\mathbb{R}$ to $\mathbb{R}$. The pointwise operations of addition and scalar multiplication turn $\mathcal{F}$ into a vector space over $\mathbb{R}$ (but it is not finite-dimensional). Pointwise multiplication gives $\mathcal{F}(\mathbb{R})$ the additional structure of an *algebra* over $\mathbb{R}$. These structural properties are important in higher analysis (e.g. functional analysis).
-````
-
-### Composition of functions.
-The *composition* $g \circ f$ of two functions $f$ and $g$ is defined only when the codomain of $f$ is the same as the domain of $g$. Note that we are using the usual convention that $g\circ f$ means "$f$ first".
-
-So, if $f:X\to Y$ and $g:Y\to Z$, then we have the composition $g\circ f: X\to Z$, given by
-
-$$
-(g \circ f)(x) = g(f(x)).
-$$
-
-Of course, the order of composition matters: we typically do not have $f \circ g = g \circ f$, even at points where both are defined. For example, if $f:\mathbb{R}\to\mathbb{R}$ is given by $f(x)=x+2$ and $g:\mathbb{R}\to\mathbb{R}$ is given by $g(x)=3x$ then $g\circ f:\mathbb{R}\to\mathbb{R}$ given by $(g\circ f)(x)=3x+6$, whereas  $f\circ g:\mathbb{R}\to\mathbb{R}$ given by $(f\circ g)(x)=3x+2$.
 
 
 ## Functional limits
@@ -308,35 +261,69 @@ Consider how much quicker this proof was, compaired with that of {prf:ref}`ed-eg
 
 In MAS107, you proved many theorems concerning convergence of real sequences. {prf:ref}`ed` gives us a way to capitalise on this hard work and quickly arrive at results about limits of functions.
 
+#### Reminder: Pointwise operations with functions.
+Let $X,Y\subseteq\mathbb{R}$, and let $f:X\to\mathbb{R}$ and $g:Y\to\mathbb{R}$ be functions. Let $\alpha\in\mathbb{R}$. We define new functions, $f+g$, $\alpha f$, $fg$ and $\frac{f}{g}$ pointwise, but we need to be careful with domains. 
+
+- *Pointwise sum.* 
+
+$$
+f+g:X\cap Y\to \mathbb{R}; \; (f+g)(x) := f(x) + g(x),
+$$
+
+- *Pointwise scalar multiplication.* 
+
+$$
+\alpha f:X\to \mathbb{R}; \; (\alpha f)(x):=\alpha f(x),
+$$
+
+- *Pointwise multiplication.* 
+
+$$
+fg: X\cap Y\to\mathbb{R}; \; (fg)(x):=f(x)g(x),
+$$
+
+- *Pointwise division.* Here, more care must be taken with domains: 
+
+$$
+\frac{f}{g}:\left\{x\in X\cap Y:g(x)\neq 0\right\} \to\mathbb{R}; \; \left(\frac{f}{g}\right)(x) := \frac{f(x)}{g(x)}.
+$$
+
+
+````{prf:remark} 
+
+1. In each case, the domain is taken to be the largest subset of $\mathbb{R}$ for which the pointwise operation is defined.
+
+2. MAS2004 students should recall from Semester 1 the set ${\cal F}(\mathbb{R})$ of all functions from $\mathbb{R}$ to $\mathbb{R}$. The pointwise operations of addition and scalar multiplication turn $\mathcal{F}$ into a vector space over $\mathbb{R}$ (but it is not finite-dimensional). Pointwise multiplication gives $\mathcal{F}(\mathbb{R})$ the additional structure of an *algebra* over $\mathbb{R}$. These structural properties are important in higher analysis (e.g. functional analysis).
+````
 
 `````{prf:theorem} Algebra of limits
 :label: AOL2
-Suppose that $f:A \rightarrow \mathbb{R}$, $g :B \rightarrow \mathbb{R}$, and $a \in \mathbb{R}$ is such that $\lim_{x\rightarrow a} f(x) = l$ and $\lim_{x\rightarrow a} g(x) = m$, then
+Suppose that $f:X \rightarrow \mathbb{R}$, $g :Y \rightarrow \mathbb{R}$, and $a \in \mathbb{R}$ is such that $\lim_{x\rightarrow a} f(x)$ and $\lim_{x\rightarrow a} g(x)$ both exist. Then
 
-(i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x) = l + m$,
+(i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x)$ = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,
 
-(ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = lm$,
+(ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} f(x)\right)$,
 
-(iii) $\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha l$, for all $\alpha \in \mathbb{R}$,
+(iii) $\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha \lim_{x\rightarrow a} f(x)$, for all $\alpha \in \mathbb{R}$,
 
-(iv) $\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{l}{m}$, if $m \neq 0$.
+(iv) $\displaystyle\lim_{x\rightarrow a} \left(\displaystyle\frac{f}{g}\right)(x) = \displaystyle\frac{\lim_{x\rightarrow a} f(x)}{\lim_{x\rightarrow a} g(x)}$, provided $\lim_{x\rightarrow a} g(x) \neq 0$.
 
+
+In particular, the limits in (i)--(iv) all exist.
 ````{prf:proof} 
-By  {prf:ref}`ed`, these all follow from the algebra of limits for sequences. For example, for (i), if $(x_{n})$ is an arbitrary sequence in $A\cap B$ with $x_n\neq a$ for all $n\in\mathbb{N}$ such that $(x_n)$ that converges to $a$, then
-
-$$
+By  {prf:ref}`ed`, these all follow from the algebra of limits for sequences. For example, for (i), if $(x_{n})$ is an arbitrary sequence in $X\cap Y$ with $x_n\neq a$ for all $n\in\mathbb{N}$ such that $(x_n)$ that converges to $a$, then
 \begin{align*} 
 \lim_{n\rightarrow\infty} (f + g)(x_{n}) &= \lim_{n\rightarrow\infty} (f(x_{n}) + g(x_{n})) \\
 &= \lim_{n\rightarrow\infty} f(x_{n}) + \lim_{n\rightarrow\infty} g(x_{n})\\
-&= l + m, 
+&= \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x), 
 \end{align*}
-$$
 as required.
+
 Here the first line uses the definition of a sum of functions and the second line uses algebra of limits (for real sequences). <span style="float:right;">$\square$</span>
 ````
 `````
 
-The sequential condition for limits of functions is sometimes easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
+The sequential condition for limits of functions is also usually easier to use when proving that a function does not converge to a finite limit. This is because we need only find one sequence in which the sequential condition fails.
 
 ````{prf:example}
 Consider $f:\mathbb{R} \setminus \{-5, 3, 5\}\to \mathbb{R}$, given by

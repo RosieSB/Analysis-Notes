@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -510,7 +510,17 @@ p(x) = a_{0} + a_{1}x + \cdots + a_{n}x^{n}
 <p>Using <a class="reference internal" href="#poly-cts">Example 3.4</a> and <a class="reference internal" href="#AOL3">Theorem 3.2</a>(iv), we can also conclude that rational functions <span class="math notranslate nohighlight">\(r(x) = \frac{p(x)}{q(x)}\)</span> are continuous at every point where <span class="math notranslate nohighlight">\(q(x)\neq 0\)</span>.</p>
 </section>
 </div><p>The continuity on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of functions such as <span class="math notranslate nohighlight">\(f(x) = e^{k x}, g(x) = \sin(kx), h(x) = \cos(kx)\)</span>, for <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>, can be established using power series arguments. We will explore this further in <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>.</p>
-<p>We also have a result for composition.</p>
+<p>We also have a result for composition of functions.</p>
+<div class="proof definition admonition" id="definition-10">
+<p class="admonition-title"><span class="caption-number">Definition 3.2 </span> (Composition of functions)</p>
+<section class="definition-content" id="proof-content">
+<p>Recall that the <em>composition</em> <span class="math notranslate nohighlight">\(g \circ f\)</span> of two functions <span class="math notranslate nohighlight">\(f:X\to Y\)</span> and <span class="math notranslate nohighlight">\(g:Y\to Z\)</span> is defined to be the function <span class="math notranslate nohighlight">\(g\circ f: X\to Z\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+(g \circ f)(x) = g(f(x)).
+\]</div>
+</section>
+</div><p>Of course, the order of composition matters: we typically do not have <span class="math notranslate nohighlight">\(f \circ g = g \circ f\)</span>, even at points where both are defined. For example, if <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(f(x)=x+2\)</span> and <span class="math notranslate nohighlight">\(g:\mathbb{R}\to\mathbb{R}\)</span> is given by <span class="math notranslate nohighlight">\(g(x)=3x\)</span> then <span class="math notranslate nohighlight">\(g\circ f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((g\circ f)(x)=3x+6\)</span>, whereas  <span class="math notranslate nohighlight">\(f\circ g:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\((f\circ g)(x)=3x+2\)</span>.</p>
 <div class="proof theorem admonition" id="fof">
 <p class="admonition-title"><span class="caption-number">Theorem 3.3 </span> (Composition of continuous functions)</p>
 <section class="theorem-content" id="proof-content">
@@ -537,7 +547,7 @@ g(x) = x\sin\left(\frac{1}{x}\right).
 <p>Then <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is continuous on the whole of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </section>
 </div><div class="proof definition admonition" id="cts-ext">
-<p class="admonition-title"><span class="caption-number">Definition 3.2 </span> (Continuous extensions)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.3 </span> (Continuous extensions)</p>
 <section class="definition-content" id="proof-content">
 <p>Given two functions <span class="math notranslate nohighlight">\(f_{1}:A\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(f_{2}:B\to \mathbb{R}\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is an <em>extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span>, (and that <span class="math notranslate nohighlight">\(f_{1}\)</span> is a *restriction} of <span class="math notranslate nohighlight">\(f_{2}\)</span>) if <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(f_{1}(x) = f_{2}(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in A\)</span>. If <span class="math notranslate nohighlight">\(f_{1}\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(f_{2}\)</span> is continuous on <span class="math notranslate nohighlight">\(B\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is a <em>continuous extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span> (to <span class="math notranslate nohighlight">\(B\)</span>).</p>
 </section>
@@ -556,11 +566,11 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 <section id="discontinuity">
 <h2><span class="section-number">3.2. </span>Discontinuity<a class="headerlink" href="#discontinuity" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="disc">
-<p class="admonition-title"><span class="caption-number">Definition 3.3 </span> (Discontinuity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Discontinuity)</p>
 <section class="definition-content" id="proof-content">
 <p>A function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> is said to have a <em>discontinuity</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if it fails to be continuous there. In this case we say that <span class="math notranslate nohighlight">\(f\)</span> is <em>discontinuous</em> at <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-14">
+</div><div class="proof example admonition" id="example-15">
 <p class="admonition-title"><span class="caption-number">Example 3.7 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the Heaviside function, <span class="math notranslate nohighlight">\({\bf 1}_{[0,1]}\)</span> (known as the Heaviside function). Common sense tells us that <span class="math notranslate nohighlight">\({\bf 1}_{[0,1]}\)</span> has discontinuities at <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, and is continuous everywhere else in its domain.</p>
@@ -575,7 +585,7 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 </div><p>More generally, the indicator function <span class="math notranslate nohighlight">\({\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}\)</span> is discontinuous at <span class="math notranslate nohighlight">\(a\)</span>, and at <span class="math notranslate nohighlight">\(b\)</span>, but is continuous on <span class="math notranslate nohighlight">\(\mathbb{R} \setminus \{a, b\}\)</span>. To show that a function is discontinuous at <span class="math notranslate nohighlight">\(a\)</span>, it is sufficient to find a single sequence <span class="math notranslate nohighlight">\((x_{n})\)</span> in <span class="math notranslate nohighlight">\(X \setminus \{a\}\)</span>, such that <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}x_{n} = a\)</span>, but <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty}f(x_{n}) \neq f(a)\)</span>.</p>
 <p>We can learn more about what happens at a discontinuity by using right and left limits.</p>
 <div class="proof definition admonition" id="lrcont">
-<p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Left and right continuity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.5 </span> (Left and right continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>We say that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> is <em>left continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^-}f(x) = f(a)\)</span>, and <em>right continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^+}f(x) = f(a)\)</span>.</p>
 </section>
@@ -589,7 +599,7 @@ for sufficiently large <span class="math notranslate nohighlight">\(n\)</span>, 
 </section>
 </div><p><strong>Exercise.</strong> Prove that a function <span class="math notranslate nohighlight">\(f: X \rightarrow \mathbb{R}\)</span> is continuous at <span class="math notranslate nohighlight">\(a \in X\)</span> if and only if it is both right and left continuous there.</p>
 <div class="proof definition admonition" id="jdisc">
-<p class="admonition-title"><span class="caption-number">Definition 3.5 </span> (Jump discontinuity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.6 </span> (Jump discontinuity)</p>
 <section class="definition-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is discontinuous at <span class="math notranslate nohighlight">\(a\)</span> but both <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^-}f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^+}f(x)\)</span> exist (i.e. they are real numbers) and are unequal, we say that <span class="math notranslate nohighlight">\(f\)</span> has a <em>jump discontinuity</em> at <span class="math notranslate nohighlight">\(a\)</span>. A typical example of this is a step function, or an indicator function <span class="math notranslate nohighlight">\({\bf 1}_{[a, b]}\)</span>, where <span class="math notranslate nohighlight">\([a,b]\subseteq\mathbb{R}\)</span> is some interval.</p>
 </section>
@@ -648,7 +658,7 @@ S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
 </figcaption>
 </figure>
 </section>
-</div><div class="proof remark admonition" id="remark-20">
+</div><div class="proof remark admonition" id="remark-21">
 <p class="admonition-title"><span class="caption-number">Remark 3.3 </span></p>
 <section class="remark-content" id="proof-content">
 <p>The function from <a class="reference internal" href="#dirichlet2"><span class="std std-numref">Fig. 3.1</span></a> is also sometimes called Thomae’s function.</p>
@@ -750,13 +760,13 @@ p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 <section id="the-extreme-value-theorem">
 <h3><span class="section-number">3.3.2. </span>The extreme value theorem<a class="headerlink" href="#the-extreme-value-theorem" title="Link to this heading">#</a></h3>
 <div class="proof definition admonition" id="bdfn">
-<p class="admonition-title"><span class="caption-number">Definition 3.6 </span> (Bounded function)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.7 </span> (Bounded function)</p>
 <section class="definition-content" id="proof-content">
 <p>A function <span class="math notranslate nohighlight">\(f: X \rightarrow \mathbb{R}\)</span> is <em>bounded</em> on a non-empty set <span class="math notranslate nohighlight">\(S \subseteq X\)</span> if there exists <span class="math notranslate nohighlight">\(K &gt; 0\)</span>, such that <span class="math notranslate nohighlight">\(|f(x)| \leq K\)</span> for all <span class="math notranslate nohighlight">\(x \in S\)</span>.</p>
 </section>
 </div><p>In this situation, the set <span class="math notranslate nohighlight">\(\{f(x) : x \in S\}\)</span> is a non–empty bounded set of real numbers and so, by completeness,  it has a supremum, which we write as <span class="math notranslate nohighlight">\(\sup_{x \in S} f(x)\)</span>, and an infimum, which we write as <span class="math notranslate nohighlight">\(\inf_{x \in S}f(x)\)</span>.</p>
 <div class="proof definition admonition" id="attains">
-<p class="admonition-title"><span class="caption-number">Definition 3.7 </span> (Attains its bounds)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.8 </span> (Attains its bounds)</p>
 <section class="definition-content" id="proof-content">
 <p>We say that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> <em>attains its bounds</em> on <span class="math notranslate nohighlight">\(S\subseteq X\)</span> if there exist <span class="math notranslate nohighlight">\(a, b \in S\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -831,7 +841,7 @@ f^{-1}(f(x)) = x,~\mbox{for all}~x \in X~\mbox{and}~f(f^{-1}(y)) = y,~\mbox{for 
 </div><p>When studying sequences in MAS107, you also encountered the notion of monotonicity: a sequence <span class="math notranslate nohighlight">\((a_n)\)</span> of real numbers is monotonic increasing if <span class="math notranslate nohighlight">\(a_n\leq a_m\)</span> whenever <span class="math notranslate nohighlight">\(n&lt;m\)</span>. It is monotic decreasing if <span class="math notranslate nohighlight">\(a_n\geq a_m\)</span> whenever <span class="math notranslate nohighlight">\(n&lt;m\)</span>, and a similar definition exists for monotonic descreasing sequences.</p>
 <p>We now extend this idea to functions <span class="math notranslate nohighlight">\(f:X\to \mathbb{R}\)</span> where <span class="math notranslate nohighlight">\(X\subseteq \mathbb{R}\)</span>.</p>
 <div class="proof definition admonition" id="monofn">
-<p class="admonition-title"><span class="caption-number">Definition 3.8 </span> (Monotone functions)</p>
+<p class="admonition-title"><span class="caption-number">Definition 3.9 </span> (Monotone functions)</p>
 <section class="definition-content" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f:X\to \mathbb{R}\)</span> where <span class="math notranslate nohighlight">\(X\subseteq \mathbb{R}\)</span>.</p>
 <p>We say that <span class="math notranslate nohighlight">\(f\)</span> is</p>
@@ -876,7 +886,7 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
 <p>Consider the restriction <span class="math notranslate nohighlight">\(f:[a,b]\to [a^n, b^n]\)</span>. By <a class="reference internal" href="#thm:IFT">Theorem 3.6</a>, to see that we have an inverse <span class="math notranslate nohighlight">\(f^{-1}: [a^n, b^n]\to [a,b]\)</span> which is continuous and strictly monotonic increasing. Since we can do this for all intervals <span class="math notranslate nohighlight">\([a,b]\)</span>, this allows us to obtain the function <span class="math notranslate nohighlight">\([0, \infty)\to [0,\infty)\)</span> that we write as <span class="math notranslate nohighlight">\(f(x)= x^{\frac{1}{n}}\)</span>.</p>
 <p>So in particular, <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> has given us a unified method for proving the existence of positive <span class="math notranslate nohighlight">\(n\)</span>th roots of any positive real number.</p>
 </section>
-</div><div class="proof example admonition" id="example-32">
+</div><div class="proof example admonition" id="example-33">
 <p class="admonition-title"><span class="caption-number">Example 3.12 </span></p>
 <section class="example-content" id="proof-content">
 <p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we’ll prove that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to (0, \infty)\)</span> given by <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is monotonic increasing, as well as showing it is continuous. By a similar argument to that of <a class="reference internal" href="#nthroot">Example 3.11</a>, we can deduce that it has a continuous, monotonic increasing inverse <span class="math notranslate nohighlight">\(f^{-1}:(0, \infty)\to\mathbb{R}\)</span>. Of course, in this case <span class="math notranslate nohighlight">\(f^{-1}(x) =\ln(x) \)</span> (or <span class="math notranslate nohighlight">\(\log_{e}(x)\)</span>, if you prefer) and so we are using <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> to deduce that every positive real number has a natural logarithm.</p>
