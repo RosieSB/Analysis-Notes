@@ -139,7 +139,7 @@ First note that it only makes sense to consider the behaviour of $f(x)$ as $x\ri
 :label: limitpt
 Let $X\subseteq\mathbb{R}$. A real number $a$ is called a *limit point* of $X$ if there is a sequence $(x_n)$ in $X$ that converges to $a$ and satisfies $x_n\neq a$ for all $n\in\mathbb{N}$.
 
-Equivalently, $a$ is a limit point of $X$ if any open interval containing $a$ has non-empty intersection with $X$.
+Equivalently, $a$ is a limit point of $X$ if any open interval containing $a$ has non-empty intersection with $X\setminus\{a\}$.
 ````
 
 ````{prf:example}
