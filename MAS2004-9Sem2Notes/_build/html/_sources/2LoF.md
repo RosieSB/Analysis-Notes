@@ -343,7 +343,7 @@ Note that for $x\in\mathbb{R} \setminus \{-5, 3, 5\}$,
 :label: simplify
 f(x) = \frac{x - 5}{(x-5)(x+5)(x - 3)}= \frac{1}{(x+5)(x - 3)}.
 ```
-Note that [](simplify) **does not** hold at $x=-5,3$ or $5$, as $f(x)$ is not defined there. We must use the definition of $f$ and its domain that we have been given, not what we might hope it could be.
+Note that [](simplify) **does not** hold at $x=-5,3$ or $5$, as $f(x)$ has not been defined there. We must use the definition of $f$ and its domain that we have been given, not what we might hope it could be.
 
 Equation [](simplify) is still useful for determining any limiting behaviour of $f$ at these points, however.
 
