@@ -212,21 +212,21 @@ A function $f:X \rightarrow \mathbb{R}$ is said to have a *discontinuity* at $a 
 ````
 
 ````{prf:example}
-Consider the Heaviside function, ${\bf 1}_{[0,1]}$ (known as the Heaviside function). Common sense tells us that ${\bf 1}_{[0,1]}$ has discontinuities at $0$ and $1$, and is continuous everywhere else in its domain. 
+Consider the Heaviside function, $\mathbb{1}_{[0,1]}$ (known as the Heaviside function). Common sense tells us that $\mathbb{1}_{[0,1]}$ has discontinuities at $0$ and $1$, and is continuous everywhere else in its domain. 
 
-Let's prove discontinuity at $0$ rigorously. If ${\bf 1}_{[0,1]}$ were continuous at $0$, then {prf:ref}`cont1` would imply that for any sequence $(x_n)$ converging to $0$, the sequence ${\bf 1}_{[0,1]}(x_n)$ should converge to ${\bf 1}_{[0,1]}(0) = 1$. 
+Let's prove discontinuity at $0$ rigorously. If $\mathbb{1}_{[0,1]}$ were continuous at $0$, then {prf:ref}`cont1` would imply that for any sequence $(x_n)$ converging to $0$, the sequence $\mathbb{1}_{[0,1]}(x_n)$ should converge to $\mathbb{1}_{[0,1]}(0) = 1$. 
 
-Consider the sequence $(x_n)$ given by $x_n=-\frac{1}{n}$, for each $n\in\mathbb{N}$. Certainly $\lim_{n\rightarrow\infty}x_n=0$. Also, since $x_n<0$ for all $n\in\mathbb{N}$, we have ${\bf 1}_{[0,1]}(x_n) = 0$ for all $n\in\mathbb{N}$. Therefore,
+Consider the sequence $(x_n)$ given by $x_n=-\frac{1}{n}$, for each $n\in\mathbb{N}$. Certainly $\lim_{n\rightarrow\infty}x_n=0$. Also, since $x_n<0$ for all $n\in\mathbb{N}$, we have $\mathbb{1}_{[0,1]}(x_n) = 0$ for all $n\in\mathbb{N}$. Therefore,
 
 $$
-\lim_{n\rightarrow\infty}{\bf 1}_{[0,1]}(x_n) = \lim_{n\rightarrow\infty} 0 = 0 \neq {\bf 1}_{[0,1]}(0).
+\lim_{n\rightarrow\infty}\mathbb{1}_{[0,1]}(x_n) = \lim_{n\rightarrow\infty} 0 = 0 \neq \mathbb{1}_{[0,1]}(0).
 $$
 
-We have arrived at a contradiction, and so ${\bf 1}_{[0,1]}$ has a discontinuity at $0$.
+We have arrived at a contradiction, and so $\mathbb{1}_{[0,1]}$ has a discontinuity at $0$.
 
 ````
 
-More generally, the indicator function ${\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}$ is discontinuous at $a$, and at $b$, but is continuous on $\mathbb{R} \setminus \{a, b\}$. To show that a function is discontinuous at $a$, it is sufficient to find a single sequence $(x_{n})$ in $X \setminus \{a\}$, such that $\lim_{n \rightarrow \infty}x_{n} = a$, but $\lim_{n \rightarrow \infty}f(x_{n}) \neq f(a)$.
+More generally, the indicator function $\mathbb{1}_{[a, b]}:\mathbb{R}\to\mathbb{R}$ is discontinuous at $a$, and at $b$, but is continuous on $\mathbb{R} \setminus \{a, b\}$. To show that a function is discontinuous at $a$, it is sufficient to find a single sequence $(x_{n})$ in $X \setminus \{a\}$, such that $\lim_{n \rightarrow \infty}x_{n} = a$, but $\lim_{n \rightarrow \infty}f(x_{n}) \neq f(a)$.
 
 We can learn more about what happens at a discontinuity by using right and left limits.
 
@@ -237,11 +237,11 @@ We say that $f:X\to\mathbb{R}$ is *left continuous* at $a \in X$ if $\lim_{x \ri
 
 ````{prf:example}
 :label: eg-lrcont
-The function ${\bf 1}_{[a, b]}:\mathbb{R}\to\mathbb{R}$ is left continuous at $x = b$, and right continuous at $x = a$.
+The function $\mathbb{1}_{[a, b]}:\mathbb{R}\to\mathbb{R}$ is left continuous at $x = b$, and right continuous at $x = a$.
 
 **Solution.** We just prove the right continuity, as the other argument is so similar. Let $(x_{n})$ be any sequence with $x_{n} > a$ for all $n\in\mathbb{N}$ that converges to $a$. Then
-for sufficiently large $n$, $x_n\in(a,b]$ and  ${\bf 1}_{[a, b]}(x_{n}) = 1$, so
-$\lim_{n\rightarrow\infty} {\bf 1}_{[a, b]}(x_{n}) = 1 = {\bf 1}_{[a, b]}(a)$, and the result follows.
+for sufficiently large $n$, $x_n\in(a,b]$ and  $\mathbb{1}_{[a, b]}(x_{n}) = 1$, so
+$\lim_{n\rightarrow\infty} \mathbb{1}_{[a, b]}(x_{n}) = 1 = \mathbb{1}_{[a, b]}(a)$, and the result follows.
 ````
 
 **Exercise.** Prove that a function $f: X \rightarrow \mathbb{R}$ is continuous at $a \in X$ if and only if it is both right and left continuous there.
@@ -249,7 +249,7 @@ $\lim_{n\rightarrow\infty} {\bf 1}_{[a, b]}(x_{n}) = 1 = {\bf 1}_{[a, b]}(a)$, a
 
 ````{prf:definition} Jump discontinuity
 :label: jdisc
-If $f$ is discontinuous at $a$ but both $\lim_{x \rightarrow a^-}f(x)$ and $\lim_{x \rightarrow a^+}f(x)$ exist (i.e. they are real numbers) and are unequal, we say that $f$ has a *jump discontinuity* at $a$. A typical example of this is a step function, or an indicator function ${\bf 1}_{[a, b]}$, where $[a,b]\subseteq\mathbb{R}$ is some interval.
+If $f$ is discontinuous at $a$ but both $\lim_{x \rightarrow a^-}f(x)$ and $\lim_{x \rightarrow a^+}f(x)$ exist (i.e. they are real numbers) and are unequal, we say that $f$ has a *jump discontinuity* at $a$. A typical example of this is a step function, or an indicator function $\mathbb{1}_{[a, b]}$, where $[a,b]\subseteq\mathbb{R}$ is some interval.
 ````
 
 Not all discontinuities are as straightforward as jump discontinuities! Take for example the function at the top left of this screen[^q]. Next we consider two fascinating examples of discontinuity, which are a little more complicated. Both of these are due to Pierre Lejeune Dirichlet (1805-59).
@@ -258,10 +258,10 @@ Not all discontinuities are as straightforward as jump discontinuities! Take for
 
 ````{prf:example} Dirichlet's function
 :label: eg:dirichlet1
-Show that the function ${\bf 1}_{\mathbb{Q}}:\mathbb{R}\to\mathbb{R}$ is discontinuous at every point in $\mathbb{R}$.
+Show that the function $\mathbb{1}_{\mathbb{Q}}:\mathbb{R}\to\mathbb{R}$ is discontinuous at every point in $\mathbb{R}$.
 
 **Solution.** 
-For convenience, write $f = {\bf 1}_{\mathbb{Q}}$. Then $f(x) = 1$ if $x$ is rational, and $0$ if it is irrational.
+For convenience, write $f = \mathbb{1}_{\mathbb{Q}}$. Then $f(x) = 1$ if $x$ is rational, and $0$ if it is irrational.
 
 First we will show that $f$ is discontinuous at any given point $a \in \mathbb{Q}$. For this, we need only find one sequence $(a_n)$ converging to $a$ for which $\lim_{n\rightarrow\infty}f(a_n)\neq f(a)$.
 

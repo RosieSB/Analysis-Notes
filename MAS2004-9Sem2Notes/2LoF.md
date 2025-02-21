@@ -62,10 +62,10 @@ The range of this function is $\{-1, 0, 1\}$.
 
 ````{prf:example} Indicator functions
 :label: indicatorfn
-If $S\subseteq\mathbb{R}$, then *indicator function of $S$* is the function ${\bf 1}_{[a,b]}:\mathbb{R}\to\mathbb{R}$ given by
+If $S\subseteq\mathbb{R}$, then *indicator function of $S$* is the function $\mathbb{1}_{[a,b]}:\mathbb{R}\to\mathbb{R}$ given by
 
 $$
-{\bf 1}_{S}(x) = \left\{\begin{array}{c c} 1 & ~\mbox{if}~x \in S,\\ 0& ~\mbox{if}~x \notin S. \end{array} \right.
+\mathbb{1}_{S}(x) = \left\{\begin{array}{c c} 1 & ~\mbox{if}~x \in S,\\ 0& ~\mbox{if}~x \notin S. \end{array} \right.
 $$
 
 Indicator functions can look quite unremarkable if the set $S$ is something simple like an interval. Step functions can be built by taking linear combinations of indicator functions over different intervals --- this will be useful when we study integration later on.
