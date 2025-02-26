@@ -523,6 +523,7 @@ Equivalently, in terms of sequences,
 
 The proof that these definitions are equivalent is very similar to that of {prf:ref}`ed`, and is left to you to do as an exercise.
 
+
 `````{prf:example}
 :label: indicatorlims
 Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:ref}`indicatorfn`, has both left and right limits at the point $0$: one can check using {prf:ref}`marg` that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ and $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1.$
@@ -539,6 +540,47 @@ Let $\varepsilon>0$. We now seek $\delta>0$ such that $|\mathbb{1}_{[0,\infty)}(
 Note that since these limits disagree, there is no well-defined limit for this function at $x=0$. 
 `````
 
+The next proposition is frequently useful when considering piecewise-defined functions.
+
+````{prf:proposition}
+:label: LRLims-equivalence
+Let $f:X\to\mathbb{R}$, let $a\in\mathbb{R}$ be a limit point of $X$, and let $L\in\mathbb{R}$.
+
+The following are equivalent:
+
+(i) $\lim_{x\rightarrow a}f(x)=L$.
+
+(ii) $f$ has a finite left- and right- limits at $a$, and $\lim_{x\rightarrow a^-}f(x)=\lim_{x\rightarrow a^+}f(x)=L$.
+
+```{prf:proof}
+The key point is that "$0<|x-a|<\delta$" is equivalent to "$0<x-a<\delta$ or $-\delta<x-a<0$".
+
+(i)$\Rightarrow$(ii): Suppose $\lim_{x\rightarrow a}f(x)=L$. Let $\varepsilon>0$. Then there exists $\delta>0$ such that for all $x\in X$, $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$. 
+
+If $x\in X$ and $0<x-a<\delta$, we have $0<|x-a|<\delta$ and hence $|f(x)-L|<\varepsilon$. So $\lim_{x\rightarrow a^+}f(x)=L$.
+
+If $x\in X$ and $-\delta<x-a<0$, we still have $0<|x-a|<\delta$ and hence $|f(x)-L|<\varepsilon$. So $\lim_{x\rightarrow a^-}f(x)=L$.
+
+So $\lim_{x\rightarrow a^+}f(x)=\lim_{x\rightarrow a^-}f(x)=L$.
+
+
+(ii)$\Rightarrow$(i): Suppose $\lim_{x\rightarrow a^+}f(x)=\lim_{x\rightarrow a^-}f(x)=L$. Let $\varepsilon>0$. 
+
+Since $\lim_{x\rightarrow a^+}f(x)=L$, there exists $\delta_1>0$ such that for all $x\in X$ with $0<x-a<\delta_1$, we have $|f(x)-L|<\varepsilon$.
+
+Since $\lim_{x\rightarrow a^-}f(x)=L$, there exists $\delta_2>0$ such that for all $x\in X$ with $-\delta_2<x-a<0$, we have $|f(x)-L|<\varepsilon$.
+
+**Useful analysis trick:** Let $\delta=\min\{\delta_1,\delta_2\}$. Then $0<|x-a|<\delta$ guaruntees that both $0<|x-a|<\delta_1$ and $0<|x-a|<\delta_2$ hold simultaneously.
+
+Let $x\in X$ and suppose $0<|x-a|<\delta$. Then either $x>a$ or $x<a$. 
+
+- If $x>a$, then we have $0<x-a<\delta<\delta_1$, so $|f(x)-L|<\varepsilon$.
+
+- If $x<a$, then $-\delta_2<-\delta<x-a<0$, so $|f(x)-L|<\varepsilon$.
+
+In either case, we have $|f(x)-L|<\varepsilon$, and thus $\lim_{x\rightarrow a}f(x)=L$. <span style="float:right;">$\square$</span>
+```
+````
 
 We also meet functions that diverge in different ways when approached from the left and from the right of a given point.
 

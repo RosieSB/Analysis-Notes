@@ -854,6 +854,32 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 </div>
 </details><p>Note that since these limits disagree, there is no well-defined limit for this function at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </section>
+</div><p>The next proposition is frequently useful when considering piecewise-defined functions.</p>
+<div class="proof proposition admonition" id="LRLims-equivalence">
+<p class="admonition-title"><span class="caption-number">Proposition 2.1 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span>, let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>, and let <span class="math notranslate nohighlight">\(L\in\mathbb{R}\)</span>.</p>
+<p>The following are equivalent:</p>
+<p>(i) <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a}f(x)=L\)</span>.</p>
+<p>(ii) <span class="math notranslate nohighlight">\(f\)</span> has a finite left- and right- limits at <span class="math notranslate nohighlight">\(a\)</span>, and <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x)=\lim_{x\rightarrow a^+}f(x)=L\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. The key point is that “<span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span>” is equivalent to “<span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span> or <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>”.</p>
+<p>(i)<span class="math notranslate nohighlight">\(\Rightarrow\)</span>(ii): Suppose <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a}f(x)=L\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. Then there exists <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>, <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span> implies <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>, we have <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span> and hence <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>. So <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x)=L\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>, we still have <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span> and hence <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>. So <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x)=L\)</span>.</p>
+<p>So <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x)=\lim_{x\rightarrow a^-}f(x)=L\)</span>.</p>
+<p>(ii)<span class="math notranslate nohighlight">\(\Rightarrow\)</span>(i): Suppose <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x)=\lim_{x\rightarrow a^-}f(x)=L\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x)=L\)</span>, there exists <span class="math notranslate nohighlight">\(\delta_1&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span> with <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta_1\)</span>, we have <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x)=L\)</span>, there exists <span class="math notranslate nohighlight">\(\delta_2&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span> with <span class="math notranslate nohighlight">\(-\delta_2&lt;x-a&lt;0\)</span>, we have <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>.</p>
+<p><strong>Useful analysis trick:</strong> Let <span class="math notranslate nohighlight">\(\delta=\min\{\delta_1,\delta_2\}\)</span>. Then <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span> guaruntees that both <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta_1\)</span> and <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta_2\)</span> hold simultaneously.</p>
+<p>Let <span class="math notranslate nohighlight">\(x\in X\)</span> and suppose <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\delta\)</span>. Then either <span class="math notranslate nohighlight">\(x&gt;a\)</span> or <span class="math notranslate nohighlight">\(x&lt;a\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(x&gt;a\)</span>, then we have <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta&lt;\delta_1\)</span>, so <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(x&lt;a\)</span>, then <span class="math notranslate nohighlight">\(-\delta_2&lt;-\delta&lt;x-a&lt;0\)</span>, so <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>.</p></li>
+</ul>
+<p>In either case, we have <span class="math notranslate nohighlight">\(|f(x)-L|&lt;\varepsilon\)</span>, and thus <span class="math notranslate nohighlight">\(\lim_{x\rightarrow a}f(x)=L\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+</div>
+</section>
 </div><p>We also meet functions that diverge in different ways when approached from the left and from the right of a given point.</p>
 <div class="proof definition admonition" id="marg+-infty">
 <p class="admonition-title"><span class="caption-number">Definition 2.5 </span> (Marginal divergence to infinity)</p>
