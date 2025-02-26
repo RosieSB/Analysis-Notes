@@ -304,7 +304,7 @@ Suppose that $f:X \rightarrow \mathbb{R}$, $g :Y \rightarrow \mathbb{R}$, and $a
 
 (i) $\displaystyle\lim_{x\rightarrow a} (f + g)(x) = \lim_{x\rightarrow a} f(x) + \lim_{x\rightarrow a} g(x)$,
 
-(ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} f(x)\right)$,
+(ii) $\displaystyle\lim_{x\rightarrow a} (fg)(x) = \left(\lim_{x\rightarrow a} f(x)\right)\left(\lim_{x\rightarrow a} g(x)\right)$,
 
 (iii) $\displaystyle\lim_{x\rightarrow a} (\alpha f)(x) = \alpha \lim_{x\rightarrow a} f(x)$, for all $\alpha \in \mathbb{R}$,
 
