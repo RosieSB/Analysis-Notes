@@ -407,6 +407,7 @@ Graph of $f$ .
 
 
 `````{prf:theorem} Squeeze theorem for functions
+:label: squeeze
 Suppose that $f:X\to\mathbb{R}$,  $g:Y\to\mathbb{R}$ and $h :Z\to \mathbb{R}$ and suppose that there exists an interval $(a, b) \subseteq X\cap Y\cap Z$ such that for all $x \in (a, b)$
 
 
