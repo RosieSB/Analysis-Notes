@@ -452,7 +452,7 @@ and we have established that $\displaystyle\lim_{x \rightarrow c}g(x)$ exists an
 
 In the same setting as {prf:ref}`functionlimit`, we say that a function $f:X \rightarrow \mathbb{R}$ *diverges* at $x=a$ if $\lim_{x\rightarrow a} f(x)$ does not exist. 
 
-With general divergence of functions, there is no particular reason to expect divergence to look a particular away. However, there are a few cases of "well-behaved" divergence that occur often enough to need names.
+With general divergence of functions, there is no particular reason to expect divergence to look a particular way. However, there are a few cases of "well-behaved" divergence that occur often enough to need names.
 
 ### Divergence to infinity
 
