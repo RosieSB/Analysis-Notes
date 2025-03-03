@@ -818,23 +818,23 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <div class="proof definition admonition" id="marg">
 <p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Marginal limits)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>. We say that <span class="math notranslate nohighlight">\(f\)</span> has <em>left limit</em> <span class="math notranslate nohighlight">\(l\)</span> at a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>, and write</p>
-<div class="math notranslate nohighlight">
-\[
-\lim_{x\rightarrow a^-}f(x) = l
-\]</div>
-<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
-<p>We say <span class="math notranslate nohighlight">\(f\)</span> has a <em>right limit</em> <span class="math notranslate nohighlight">\(l\)</span> at <span class="math notranslate nohighlight">\(a\)</span>, and write,</p>
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>. We say that <span class="math notranslate nohighlight">\(f\)</span> has <em>right limit</em> <span class="math notranslate nohighlight">\(l\)</span> at a point <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>, and write</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x\rightarrow a^+}f(x) = l
+\]</div>
+<p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
+<p>We say <span class="math notranslate nohighlight">\(f\)</span> has a <em>left limit</em> <span class="math notranslate nohighlight">\(l\)</span> at <span class="math notranslate nohighlight">\(a\)</span>, and write,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a^-}f(x) = l
 \]</div>
 <p>if for all <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span> there exists a <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-l|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
 </section>
 </div><p>Equivalently, in terms of sequences,</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&lt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^+}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&gt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow a^-}f(x) = l\)</span> if for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> for which <span class="math notranslate nohighlight">\(x_n&lt;a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}=a\)</span>, we have <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}f(x_n)=l\)</span>, for some <span class="math notranslate nohighlight">\(l\in\mathbb{R}\)</span>.</p></li>
 </ul>
 <p>The proof that these definitions are equivalent is very similar to that of <a class="reference internal" href="#ed">Theorem 2.1</a>, and is left to you to do as an exercise.</p>
 <div class="proof example admonition" id="indicatorlims">

@@ -499,18 +499,18 @@ If convergence fails for a function $f:X\to\mathbb{R}$ at a point $a\in\mathbb{R
 
 ````{prf:definition} Marginal limits
 :label: marg
-Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say that $f$ has *left limit* $l$ at a point $a\in\mathbb{R}$, and write
+Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say that $f$ has *right limit* $l$ at a point $a\in\mathbb{R}$, and write
 
 $$
-\lim_{x\rightarrow a^-}f(x) = l
+\lim_{x\rightarrow a^+}f(x) = l
 $$
 
 if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $x\in X$ and $0<x-a<\delta$.
 
-We say $f$ has a *right limit* $l$ at $a$, and write,
+We say $f$ has a *left limit* $l$ at $a$, and write,
 
 $$
-\lim_{x\rightarrow a^+}f(x) = l
+\lim_{x\rightarrow a^-}f(x) = l
 $$
 
 if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\varepsilon$ whenever $x\in X$ and $-\delta<x-a<0$.
@@ -518,9 +518,9 @@ if for all $\varepsilon>0$ there exists a $\delta>0$ such that $|f(x)-l|<\vareps
 
 Equivalently, in terms of sequences,
 
-- $\lim_{x\rightarrow a^-}f(x) = l$ if for any sequence $(x_n)$ in $X$ for which $x_n<a$ for all $n\in\mathbb{N}$ and $\lim_{n\rightarrow\infty}=a$, we have $\lim_{n\rightarrow\infty}f(x_n)=l$, for some $l\in\mathbb{R}$.
-
 - $\lim_{x\rightarrow a^+}f(x) = l$ if for any sequence $(x_n)$ in $X$ for which $x_n>a$ for all $n\in\mathbb{N}$ and $\lim_{n\rightarrow\infty}=a$, we have $\lim_{n\rightarrow\infty}f(x_n)=l$, for some $l\in\mathbb{R}$.
+
+- $\lim_{x\rightarrow a^-}f(x) = l$ if for any sequence $(x_n)$ in $X$ for which $x_n<a$ for all $n\in\mathbb{N}$ and $\lim_{n\rightarrow\infty}=a$, we have $\lim_{n\rightarrow\infty}f(x_n)=l$, for some $l\in\mathbb{R}$.
 
 The proof that these definitions are equivalent is very similar to that of {prf:ref}`ed`, and is left to you to do as an exercise.
 
