@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -535,16 +535,29 @@ p(x) = a_{0} + a_{1}x + \cdots + a_{n}x^{n}
 <p>Proof. This is for you to do in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id15">Problem 15</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p>With <a class="reference internal" href="#fof">Theorem 3.3</a>, we can immediately deduce continuity on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of functions such as <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = \sin\left(\frac{2x-1}{x^{2} + 1}\right)\)</span>.</p>
-<div class="proof example admonition" id="extex">
+</div><p>With <a class="reference internal" href="#fof">Theorem 3.3</a>, we can immediately deduce continuity for an even wider range of functions.</p>
+<div class="proof example admonition" id="example-12">
 <p class="admonition-title"><span class="caption-number">Example 3.6 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>; <span class="math notranslate nohighlight">\(f(x)=\sqrt{x^2+1}\)</span>. Then <span class="math notranslate nohighlight">\(f=g\circ h\)</span>, where <span class="math notranslate nohighlight">\(g:[0,\infty)\to\mathbb{R}\)</span>; <span class="math notranslate nohighlight">\(g(x)=\sqrt{x}\)</span>, and <span class="math notranslate nohighlight">\(h:\mathbb{R}\to\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(h(x)=x^2+1\)</span>. A quick check shows this is well-defined: if <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>, then <span class="math notranslate nohighlight">\(h(x)\in[0,\infty)\)</span>, so <span class="math notranslate nohighlight">\(g\circ h(x)=g(h(x))\)</span> makes sense.</p>
+<p>Both <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are continuous on their domains: for <span class="math notranslate nohighlight">\(g\)</span>, this follows from <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#p4">Problem P4(iii)</a>, and for <span class="math notranslate nohighlight">\(h\)</span>, it is immediate from our observations about polynomials (c.f. <a class="reference internal" href="#poly-cts">Example 3.4</a>).</p>
+<p>Therefore, by theorem <a class="reference internal" href="#fof">Theorem 3.3</a>, <span class="math notranslate nohighlight">\(f\)</span> is continuous on all of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-13">
+<p class="admonition-title"><span class="caption-number">Remark 3.3 </span> (Trig and expential functions)</p>
+<section class="remark-content" id="proof-content">
+<p>Our work in <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a> will enable us to formally define trigonometric and exponential functions via their power series, and prove they are continuous. For now, we assume these functions are continuous without proof, as it allows us to consider some interesting examples.</p>
+</section>
+</div><div class="proof example admonition" id="extex">
+<p class="admonition-title"><span class="caption-number">Example 3.7 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the function <span class="math notranslate nohighlight">\(g: \mathbb{R} \setminus \{0\}\to\mathbb{R}\)</span> given by</p>
 <div class="math notranslate nohighlight">
 \[
 g(x) = x\sin\left(\frac{1}{x}\right).
 \]</div>
-<p>Using <a class="reference internal" href="#AOL3">Theorem 3.2</a> and <a class="reference internal" href="#fof">Theorem 3.3</a>, it is not hard to see that <span class="math notranslate nohighlight">\(g\)</span> is continuous at every point of its domain. In <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id10">Problem 10</a>, you showed that <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \rightarrow 0}g(x)\)</span> exists and is <span class="math notranslate nohighlight">\(0\)</span>. Now define a new function <span class="math notranslate nohighlight">\(\tilde{g}:\mathbb{R}\to\mathbb{R}\)</span> by</p>
+<p>Subject to the assumption that <span class="math notranslate nohighlight">\(\sin\)</span> is continuous on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we can deduce ussing <a class="reference internal" href="#AOL3">Theorem 3.2</a> and <a class="reference internal" href="#fof">Theorem 3.3</a> that <span class="math notranslate nohighlight">\(g\)</span> is continuous at every point of its domain. In <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id10">Problem 10</a>, you showed that <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \rightarrow 0}g(x)\)</span> exists and is <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Now, we may define a new function <span class="math notranslate nohighlight">\(\tilde{g}:\mathbb{R}\to\mathbb{R}\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \tilde{g}(x) = \begin{cases} g(x) &amp;\text{if $x \in \mathbb{R} \setminus \{0\}$},\\
@@ -557,7 +570,7 @@ g(x) = x\sin\left(\frac{1}{x}\right).
 <section class="definition-content" id="proof-content">
 <p>Given two functions <span class="math notranslate nohighlight">\(f_{1}:A\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(f_{2}:B\to \mathbb{R}\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is an <em>extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span>, (and that <span class="math notranslate nohighlight">\(f_{1}\)</span> is a *restriction} of <span class="math notranslate nohighlight">\(f_{2}\)</span>) if <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(f_{1}(x) = f_{2}(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in A\)</span>. If <span class="math notranslate nohighlight">\(f_{1}\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(f_{2}\)</span> is continuous on <span class="math notranslate nohighlight">\(B\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is a <em>continuous extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span> (to <span class="math notranslate nohighlight">\(B\)</span>).</p>
 </section>
-</div><p>So in <a class="reference internal" href="#extex">Example 3.6</a>, <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is a continuous extension of <span class="math notranslate nohighlight">\(g\)</span>. On the other hand, consider the function</p>
+</div><p>So in <a class="reference internal" href="#extex">Example 3.7</a>, <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is a continuous extension of <span class="math notranslate nohighlight">\(g\)</span>. On the other hand, consider the function</p>
 <div class="math notranslate nohighlight">
 \[
 h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{1}{x}\right).
@@ -576,8 +589,8 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 <section class="definition-content" id="proof-content">
 <p>A function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> is said to have a <em>discontinuity</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if it fails to be continuous there. In this case we say that <span class="math notranslate nohighlight">\(f\)</span> is <em>discontinuous</em> at <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-15">
-<p class="admonition-title"><span class="caption-number">Example 3.7 </span></p>
+</div><div class="proof example admonition" id="example-17">
+<p class="admonition-title"><span class="caption-number">Example 3.8 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the Heaviside function, <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}\)</span> (known as the Heaviside function). Common sense tells us that <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}\)</span> has discontinuities at <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, and is continuous everywhere else in its domain.</p>
 <p>Let’s prove discontinuity at <span class="math notranslate nohighlight">\(0\)</span> rigorously. If <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}\)</span> were continuous at <span class="math notranslate nohighlight">\(0\)</span>, then <a class="reference internal" href="#cont1">Theorem 3.1</a> would imply that for any sequence <span class="math notranslate nohighlight">\((x_n)\)</span> converging to <span class="math notranslate nohighlight">\(0\)</span>, the sequence <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}(x_n)\)</span> should converge to <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}(0) = 1\)</span>.</p>
@@ -596,7 +609,7 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 <p>We say that <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> is <em>left continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^-}f(x) = f(a)\)</span>, and <em>right continuous</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^+}f(x) = f(a)\)</span>.</p>
 </section>
 </div><div class="proof example admonition" id="eg-lrcont">
-<p class="admonition-title"><span class="caption-number">Example 3.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3.9 </span></p>
 <section class="example-content" id="proof-content">
 <p>The function <span class="math notranslate nohighlight">\(\mathbb{1}_{[a, b]}:\mathbb{R}\to\mathbb{R}\)</span> is left continuous at <span class="math notranslate nohighlight">\(x = b\)</span>, and right continuous at <span class="math notranslate nohighlight">\(x = a\)</span>.</p>
 <p><strong>Solution.</strong> We just prove the right continuity, as the other argument is so similar. Let <span class="math notranslate nohighlight">\((x_{n})\)</span> be any sequence with <span class="math notranslate nohighlight">\(x_{n} &gt; a\)</span> for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> that converges to <span class="math notranslate nohighlight">\(a\)</span>. Then
@@ -611,7 +624,7 @@ for sufficiently large <span class="math notranslate nohighlight">\(n\)</span>, 
 </section>
 </div><p>Not all discontinuities are as straightforward as jump discontinuities! Take for example the function at the top left of this screen<a class="footnote-reference brackets" href="#q" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Next we consider two fascinating examples of discontinuity, which are a little more complicated. Both of these are due to Pierre Lejeune Dirichlet (1805-59).</p>
 <div class="proof example admonition" id="eg:dirichlet1">
-<p class="admonition-title"><span class="caption-number">Example 3.9 </span> (Dirichlet’s function)</p>
+<p class="admonition-title"><span class="caption-number">Example 3.10 </span> (Dirichlet’s function)</p>
 <section class="example-content" id="proof-content">
 <p>Show that the function <span class="math notranslate nohighlight">\(\mathbb{1}_{\mathbb{Q}}:\mathbb{R}\to\mathbb{R}\)</span> is discontinuous at every point in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <p><strong>Solution.</strong>
@@ -633,7 +646,7 @@ a &lt; b_{n} &lt; a + \frac{1}{n}.
 <span class="math notranslate nohighlight">\(f\)</span> is also discontinuous at every point <span class="math notranslate nohighlight">\(a \notin \mathbb{Q}\)</span>.</p>
 </section>
 </div><div class="proof example admonition" id="eg:dirichlet2">
-<p class="admonition-title"><span class="caption-number">Example 3.10 </span> (Dirichlet’s other function)</p>
+<p class="admonition-title"><span class="caption-number">Example 3.11 </span> (Dirichlet’s other function)</p>
 <section class="example-content" id="proof-content">
 <p>Consider the function <span class="math notranslate nohighlight">\(g:[0, 1)\rightarrow \mathbb{R}\)</span> defined by</p>
 <div class="math notranslate nohighlight">
@@ -664,8 +677,8 @@ S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
 </figcaption>
 </figure>
 </section>
-</div><div class="proof remark admonition" id="remark-21">
-<p class="admonition-title"><span class="caption-number">Remark 3.3 </span></p>
+</div><div class="proof remark admonition" id="remark-23">
+<p class="admonition-title"><span class="caption-number">Remark 3.4 </span></p>
 <section class="remark-content" id="proof-content">
 <p>The function from <a class="reference internal" href="#dirichlet2"><span class="std std-numref">Fig. 3.1</span></a> is also sometimes called Thomae’s function.</p>
 </section>
@@ -886,16 +899,16 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
 </div>
 </section>
 </div><div class="proof example admonition" id="nthroot">
-<p class="admonition-title"><span class="caption-number">Example 3.11 </span> (<span class="math notranslate nohighlight">\(n\)</span>th roots)</p>
+<p class="admonition-title"><span class="caption-number">Example 3.12 </span> (<span class="math notranslate nohighlight">\(n\)</span>th roots)</p>
 <section class="example-content" id="proof-content">
 <p>Fix <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and let <span class="math notranslate nohighlight">\(f:[0,\infty)\to[0,\infty)\)</span> be given by <span class="math notranslate nohighlight">\(f(x) = x^n\)</span>. Then you can prove in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id31">Problem 31</a> that <span class="math notranslate nohighlight">\(f\)</span> is strictly monotonic increasing on every <span class="math notranslate nohighlight">\([a, b] \subseteq [0, \infty)\)</span>. We already know that <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p>
 <p>Consider the restriction <span class="math notranslate nohighlight">\(f:[a,b]\to [a^n, b^n]\)</span>. By <a class="reference internal" href="#thm:IFT">Theorem 3.6</a>, to see that we have an inverse <span class="math notranslate nohighlight">\(f^{-1}: [a^n, b^n]\to [a,b]\)</span> which is continuous and strictly monotonic increasing. Since we can do this for all intervals <span class="math notranslate nohighlight">\([a,b]\)</span>, this allows us to obtain the function <span class="math notranslate nohighlight">\([0, \infty)\to [0,\infty)\)</span> that we write as <span class="math notranslate nohighlight">\(f(x)= x^{\frac{1}{n}}\)</span>.</p>
 <p>So in particular, <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> has given us a unified method for proving the existence of positive <span class="math notranslate nohighlight">\(n\)</span>th roots of any positive real number.</p>
 </section>
-</div><div class="proof example admonition" id="example-33">
-<p class="admonition-title"><span class="caption-number">Example 3.12 </span></p>
+</div><div class="proof example admonition" id="example-35">
+<p class="admonition-title"><span class="caption-number">Example 3.13 </span></p>
 <section class="example-content" id="proof-content">
-<p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we’ll prove that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to (0, \infty)\)</span> given by <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is monotonic increasing, as well as showing it is continuous. By a similar argument to that of <a class="reference internal" href="#nthroot">Example 3.11</a>, we can deduce that it has a continuous, monotonic increasing inverse <span class="math notranslate nohighlight">\(f^{-1}:(0, \infty)\to\mathbb{R}\)</span>. Of course, in this case <span class="math notranslate nohighlight">\(f^{-1}(x) =\ln(x) \)</span> (or <span class="math notranslate nohighlight">\(\log_{e}(x)\)</span>, if you prefer) and so we are using <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> to deduce that every positive real number has a natural logarithm.</p>
+<p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we’ll prove that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to (0, \infty)\)</span> given by <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is monotonic increasing, as well as showing it is continuous. By a similar argument to that of <a class="reference internal" href="#nthroot">Example 3.12</a>, we can deduce that it has a continuous, monotonic increasing inverse <span class="math notranslate nohighlight">\(f^{-1}:(0, \infty)\to\mathbb{R}\)</span>. Of course, in this case <span class="math notranslate nohighlight">\(f^{-1}(x) =\ln(x) \)</span> (or <span class="math notranslate nohighlight">\(\log_{e}(x)\)</span>, if you prefer) and so we are using <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> to deduce that every positive real number has a natural logarithm.</p>
 </section>
 </div><hr class="footnotes docutils" />
 <aside class="footnote-list brackets">

@@ -171,7 +171,19 @@ This is for you to do in [Problem 15](https://rosiesb.github.io/Analysis-Problem
 ````
 `````
 
-With {prf:ref}`fof`, we can immediately deduce continuity on $\mathbb{R}$ of functions such as $f:\mathbb{R}\to\mathbb{R}$ given by $f(x) = \sin\left(\frac{2x-1}{x^{2} + 1}\right)$.
+With {prf:ref}`fof`, we can immediately deduce continuity for an even wider range of functions.
+
+````{prf:example}
+Let $f:\mathbb{R}\to\mathbb{R}$; $f(x)=\sqrt{x^2+1}$. Then $f=g\circ h$, where $g:[0,\infty)\to\mathbb{R}$; $g(x)=\sqrt{x}$, and $h:\mathbb{R}\to\mathbb{R}$, $h(x)=x^2+1$. A quick check shows this is well-defined: if $x\in\mathbb{R}$, then $h(x)\in[0,\infty)$, so $g\circ h(x)=g(h(x))$ makes sense. 
+
+Both $g$ and $h$ are continuous on their domains: for $g$, this follows from [Problem P4(iii)](https://rosiesb.github.io/Analysis-Problems/Problems.html#p4), and for $h$, it is immediate from our observations about polynomials (c.f. {prf:ref}`poly-cts`).
+
+Therefore, by theorem {prf:ref}`fof`, $f$ is continuous on all of $\mathbb{R}$.
+````
+
+````{prf:remark} Trig and expential functions
+Our work in [Chapter 5](#chap:seq&seriesoffns) will enable us to formally define trigonometric and exponential functions via their power series, and prove they are continuous. For now, we assume these functions are continuous without proof, as it allows us to consider some interesting examples.
+````
 
 ````{prf:example}
 :label: extex
@@ -181,7 +193,9 @@ $$
 g(x) = x\sin\left(\frac{1}{x}\right).
 $$
 
-Using {prf:ref}`AOL3` and {prf:ref}`fof`, it is not hard to see that $g$ is continuous at every point of its domain. In [Problem 10](https://rosiesb.github.io/Analysis-Problems/Problems.html#id10), you showed that $\displaystyle\lim_{x \rightarrow 0}g(x)$ exists and is $0$. Now define a new function $\tilde{g}:\mathbb{R}\to\mathbb{R}$ by
+Subject to the assumption that $\sin$ is continuous on $\mathbb{R}$, we can deduce ussing {prf:ref}`AOL3` and {prf:ref}`fof` that $g$ is continuous at every point of its domain. In [Problem 10](https://rosiesb.github.io/Analysis-Problems/Problems.html#id10), you showed that $\displaystyle\lim_{x \rightarrow 0}g(x)$ exists and is $0$. 
+
+Now, we may define a new function $\tilde{g}:\mathbb{R}\to\mathbb{R}$ by
 
 $$
 \tilde{g}(x) = \begin{cases} g(x) &\text{if $x \in \mathbb{R} \setminus \{0\}$},\\
