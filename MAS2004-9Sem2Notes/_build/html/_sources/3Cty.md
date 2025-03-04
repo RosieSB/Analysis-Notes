@@ -15,24 +15,32 @@ We say that $f$ is *continuous on a set* $S \subseteq X$ if it is continuous at 
 ````
 
 ````{prf:example}
-Let $f:[-1,3]\to\mathbb{R}$, $f(x)=3+4x-x^2$. Let's show this function is continuous at $x=2$. This means proving that $f(x)\rightarrow f(2)$ as $x\rightarrow 2$.
+Let $f:\mathbb{R}\to\mathbb{R}$, $f(x)=3+x-x^2$. Let's show this function is continuous at $x=2$. This means proving that $f(x)\rightarrow f(2)$ as $x\rightarrow 2$.
 
-Let $\varepsilon>0$. We seek $\delta>0$ such that $|f(x)-f(2)|<\varepsilon$ whenever $0<|x-2|<\delta$. Now, for all $x\in[-1,3]$,
+Let $\varepsilon>0$. We seek $\delta>0$ such that $|f(x)-f(2)|<\varepsilon$ whenever $0<|x-2|<\delta$. Now, for all $x\in\mathbb{R}$,
 
 \begin{align*}
-|f(x)-f(2)| &= |3+4x-x^2 - (3+4\cdot 2-2^2)| \\
-&= |4x-x^2-4| \\
-&= |x^2-4x+4| \\
-&= (x-2)^2.
+|f(x)-f(2)| &= |3+4x-x^2 - (3+2-2^2)| \\
+&= |4x-x^2+2| \\
+&= |x^2-4x-2| \\
+&= |x+1||x-2|.
 \end{align*}
 
-Therefore, if $x\in[-1,3]$ and $0<|x-2|<\sqrt{\varepsilon}$, we have
+Let's bound $|x+1|$ first. Note that if $|x-2|<1$, then $1<x<3$, so $2<x+1<4$. Therefore, $|x-2|<1$ implies
 
 $$
-|f(x)-f(2)| = (x-2)^2 < \varepsilon.
+|f(x)-f(2)| = |x+1||x-2|< 4|x-2|.
 $$
 
-Thus $\lim_{x\rightarrow 2}f(x)=f(2)$, completing the proof that $f$ is continuous at $2$.
+We can make this less than $\varepsilon$ by taking $\delta:=\min\left\{1,\frac{\varepsilon}{4}\right\}$.
+
+Indeed, for this $\delta$, $0<|x-2|<\delta$ implies that both inequalities $0<|x-2|<1$ and $0<|x-2|<\frac{\varepsilon}{4}$ hold simultaneously. Thus,
+
+$$
+|f(x)-f(2)| = |x+1||x-2| < 4|x-2| < 4\cdot\frac{\varepsilon}{4}  =\varepsilon.
+$$
+
+Hence $\lim_{x\rightarrow 2}f(x)=f(2)$, and $f$ is continuous at $2$.<span style="float:right;">$\square$</span>
 ````
 
 Just as we had a sequential criterion for limits of functions, there is an equivalent, sequential definition for continuity of functions. We summarise the various equivalent definitions below.

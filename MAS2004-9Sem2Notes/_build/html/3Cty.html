@@ -408,21 +408,27 @@
 </div><div class="proof example admonition" id="example-1">
 <p class="admonition-title"><span class="caption-number">Example 3.1 </span></p>
 <section class="example-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:[-1,3]\to\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f(x)=3+4x-x^2\)</span>. Let’s show this function is continuous at <span class="math notranslate nohighlight">\(x=2\)</span>. This means proving that <span class="math notranslate nohighlight">\(f(x)\rightarrow f(2)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow 2\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. We seek <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-f(2)|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;\delta\)</span>. Now, for all <span class="math notranslate nohighlight">\(x\in[-1,3]\)</span>,</p>
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f(x)=3+x-x^2\)</span>. Let’s show this function is continuous at <span class="math notranslate nohighlight">\(x=2\)</span>. This means proving that <span class="math notranslate nohighlight">\(f(x)\rightarrow f(2)\)</span> as <span class="math notranslate nohighlight">\(x\rightarrow 2\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. We seek <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(|f(x)-f(2)|&lt;\varepsilon\)</span> whenever <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;\delta\)</span>. Now, for all <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-|f(x)-f(2)| &amp;= |3+4x-x^2 - (3+4\cdot 2-2^2)| \\
-&amp;= |4x-x^2-4| \\
-&amp;= |x^2-4x+4| \\
-&amp;= (x-2)^2.
+|f(x)-f(2)| &amp;= |3+4x-x^2 - (3+2-2^2)| \\
+&amp;= |4x-x^2+2| \\
+&amp;= |x^2-4x-2| \\
+&amp;= |x+1||x-2|.
 \end{align*}\]</div>
-<p>Therefore, if <span class="math notranslate nohighlight">\(x\in[-1,3]\)</span> and <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;\sqrt{\varepsilon}\)</span>, we have</p>
+<p>Let’s bound <span class="math notranslate nohighlight">\(|x+1|\)</span> first. Note that if <span class="math notranslate nohighlight">\(|x-2|&lt;1\)</span>, then <span class="math notranslate nohighlight">\(1&lt;x&lt;3\)</span>, so <span class="math notranslate nohighlight">\(2&lt;x+1&lt;4\)</span>. Therefore, <span class="math notranslate nohighlight">\(|x-2|&lt;1\)</span> implies</p>
 <div class="math notranslate nohighlight">
 \[
-|f(x)-f(2)| = (x-2)^2 &lt; \varepsilon.
+|f(x)-f(2)| = |x+1||x-2|&lt; 4|x-2|.
 \]</div>
-<p>Thus <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 2}f(x)=f(2)\)</span>, completing the proof that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<p>We can make this less than <span class="math notranslate nohighlight">\(\varepsilon\)</span> by taking <span class="math notranslate nohighlight">\(\delta:=\min\left\{1,\frac{\varepsilon}{4}\right\}\)</span>.</p>
+<p>Indeed, for this <span class="math notranslate nohighlight">\(\delta\)</span>, <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;\delta\)</span> implies that both inequalities <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;1\)</span> and <span class="math notranslate nohighlight">\(0&lt;|x-2|&lt;\frac{\varepsilon}{4}\)</span> hold simultaneously. Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+|f(x)-f(2)| = |x+1||x-2| &lt; 4|x-2| &lt; 4\cdot\frac{\varepsilon}{4}  =\varepsilon.
+\]</div>
+<p>Hence <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 2}f(x)=f(2)\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(2\)</span>.<span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </section>
 </div><p>Just as we had a sequential criterion for limits of functions, there is an equivalent, sequential definition for continuity of functions. We summarise the various equivalent definitions below.</p>
 <div class="proof theorem admonition" id="cont1">
