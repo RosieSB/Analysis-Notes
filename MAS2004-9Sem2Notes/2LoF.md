@@ -638,9 +638,9 @@ Graph of $f(x) = \frac{1}{x}$.
 Prove rigorously that $\lim_{x \rightarrow 0^-}f(x) = - \infty$, and $\lim_{x \rightarrow 0^+}f(x) =  \infty$.
 
 ````{dropdown} Solution (click to expand)
-For the right limit, let $K>0$. Then for all $0<x<\frac{1}{K+1}$, we have $f(x)=K+1>K$. So $\lim_{x\rightarrow 0^+}f(x)=+\infty$.
+For the right limit, let $K>0$. Then for all $0<x<\frac{1}{K}$, we have $f(x)=\frac{1}{x}>K$. So $\lim_{x\rightarrow 0^+}f(x)=+\infty$.
 
-The left limit is very similar: if $K>0$, then for all $-\frac{1}{K+1}<x<0$, we have $f(x)=-(K+1)<-K$. So $\lim_{x\rightarrow 0^-}f(x)=-\infty$.
+The left limit is very similar: if $K>0$, then for all $-\frac{1}{K}<x<0$, we have $f(x)=\frac{1}{x}<-K$. So $\lim_{x\rightarrow 0^-}f(x)=-\infty$.
 
 ````
 `````
