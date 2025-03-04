@@ -884,21 +884,33 @@ a_n \leq b_n \leq c_n, \hspace{2em}
 <div class="proof definition admonition" id="marg+-infty">
 <p class="admonition-title"><span class="caption-number">Definition 2.5 </span> (Marginal divergence to infinity)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>. We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to infinity from the left at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
+<p>Let <span class="math notranslate nohighlight">\(f:X\to\mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> be a limit point of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>(i) We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to <span class="math notranslate nohighlight">\(\infty\)</span> from the right at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
 <div class="math notranslate nohighlight">
 \[
-\lim_{x\rightarrow^-a}f(x)=\infty
+\lim_{x\rightarrow a^+}f(x)=\infty
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span>.</p>
-<p>Similarly, <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to infinity from the right at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>, <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span> implies <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span>.</p>
+<p>(ii) We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to <span class="math notranslate nohighlight">\(\infty\)</span> from the left at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
 <div class="math notranslate nohighlight">
 \[
-\lim_{x\rightarrow^+a}f(x)=\infty
+\lim_{x\rightarrow a^-}f(x)=\infty
 \]</div>
-<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span> whenever <span class="math notranslate nohighlight">\(x\in X\)</span> and <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span>.</p>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>, <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span> implies <span class="math notranslate nohighlight">\(f(x)&gt;K\)</span>.</p>
+<p>(iii) We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to <span class="math notranslate nohighlight">\(-\infty\)</span> from the right at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow a^+}f(x)=-\infty
+\]</div>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>, <span class="math notranslate nohighlight">\(0&lt;x-a&lt;\delta\)</span> implies <span class="math notranslate nohighlight">\(f(x)&lt;-K\)</span>.</p>
+<p>(iv) We say <span class="math notranslate nohighlight">\(f\)</span> <em>diverges to <span class="math notranslate nohighlight">\(-\infty\)</span> from the right at <span class="math notranslate nohighlight">\(a\)</span></em>, and write</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\rightarrow^+a}f(x)=-\infty
+\]</div>
+<p>if for all <span class="math notranslate nohighlight">\(K&gt;0\)</span>, there is <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> such that for all <span class="math notranslate nohighlight">\(x\in X\)</span>, <span class="math notranslate nohighlight">\(-\delta&lt;x-a&lt;0\)</span> implies <span class="math notranslate nohighlight">\(f(x)&lt;-K\)</span>.</p>
 </section>
-</div><p>Left- and right-divergence to <span class="math notranslate nohighlight">\(-\infty\)</span> is defined very similarly (exercise).</p>
-<div class="proof example admonition" id="1x-eg">
+</div><div class="proof example admonition" id="1x-eg">
 <p class="admonition-title"><span class="caption-number">Example 2.14 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider <span class="math notranslate nohighlight">\(f: \mathbb{R} \setminus \{0\}\to \mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>.</p>

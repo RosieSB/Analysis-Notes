@@ -588,24 +588,40 @@ We also meet functions that diverge in different ways when approached from the l
 
 ````{prf:definition} Marginal divergence to infinity
 :label: marg+-infty
-Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. We say $f$ *diverges to infinity from the left at $a$*, and write
+Let $f:X\to\mathbb{R}$ and let $a\in\mathbb{R}$ be a limit point of $X$. 
+
+(i) We say $f$ *diverges to $\infty$ from the right at $a$*, and write
 
 $$
-\lim_{x\rightarrow^-a}f(x)=\infty
+\lim_{x\rightarrow a^+}f(x)=\infty
 $$
 
-if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X$ and $0<x-a<\delta$.
+if for all $K>0$, there is $\delta>0$ such that for all $x\in X$, $0<x-a<\delta$ implies $f(x)>K$.
 
-Similarly, $f$ *diverges to infinity from the right at $a$*, and write
+(ii) We say $f$ *diverges to $\infty$ from the left at $a$*, and write
 
 $$
-\lim_{x\rightarrow^+a}f(x)=\infty
+\lim_{x\rightarrow a^-}f(x)=\infty
 $$
 
-if for all $K>0$, there is $\delta>0$ such that $f(x)>K$ whenever $x\in X$ and $-\delta<x-a<0$.
+if for all $K>0$, there is $\delta>0$ such that for all $x\in X$, $-\delta<x-a<0$ implies $f(x)>K$.
+
+(iii) We say $f$ *diverges to $-\infty$ from the right at $a$*, and write
+
+$$
+\lim_{x\rightarrow a^+}f(x)=-\infty
+$$
+
+if for all $K>0$, there is $\delta>0$ such that for all $x\in X$, $0<x-a<\delta$ implies $f(x)<-K$.
+
+(iv) We say $f$ *diverges to $-\infty$ from the right at $a$*, and write
+
+$$
+\lim_{x\rightarrow^+a}f(x)=-\infty
+$$
+
+if for all $K>0$, there is $\delta>0$ such that for all $x\in X$, $-\delta<x-a<0$ implies $f(x)<-K$.
 ````
-
-Left- and right-divergence to $-\infty$ is defined very similarly (exercise).
 
 
 `````{prf:example}
