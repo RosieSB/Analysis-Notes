@@ -653,21 +653,25 @@ a &lt; b_{n} &lt; a + \frac{1}{n}.
 \[\begin{split}
 g(x) =\begin{cases}
 	1 &amp;\text{if $x = 0$},\\
-	\displaystyle\frac{1}{n}&amp; \text{if $x = m/n \in \mathbb{Q}$,}\\
-	&amp;\text{where the fraction is written in its lowest terms},\\
-	0&amp;\text{if $x \in \mathbb{R} \setminus \mathbb{Q}$}.
+	\displaystyle\frac{1}{n}&amp; \text{if $x = m/n \in \mathbb{Q}\cap[0,1)$, and $\text{gcd}(m,n)=1$.}\\
+	0&amp;\text{if $x \in [0,1)\setminus \mathbb{Q}$}.
 \end{cases}
 \end{split}\]</div>
-<p>Show that <span class="math notranslate nohighlight">\(g\)</span> is continuous at every irrational number. (It is also discontinuous at every rational number —  this is left to you to do in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id22">Problem 22</a>.)</p>
-<p><strong>Solution.</strong> Let <span class="math notranslate nohighlight">\(a\in\mathbb{R}\setminus\mathbb{Q}\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span>-criterion to show that <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(a\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>. For each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>, let</p>
+<p>Show that <span class="math notranslate nohighlight">\(g\)</span> is continuous at every irrational element of <span class="math notranslate nohighlight">\([0,1)\)</span>.. (It is also discontinuous at every rational element of <span class="math notranslate nohighlight">\([0,1)\)</span> —  this is left to you to do in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id22">Problem 22</a>.)</p>
+<p><strong>Solution.</strong> Let <span class="math notranslate nohighlight">\(a\in[0,1)\setminus\mathbb{Q}\)</span>. We’ll use the <span class="math notranslate nohighlight">\((\varepsilon-\delta)\)</span>-criterion to show that <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(a\)</span>. First observe that for all <span class="math notranslate nohighlight">\(x\in[0,1)\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
+|g(x) - g(a)| = |g(x)| = g(x).
 \]</div>
-<p>The set <span class="math notranslate nohighlight">\(S_n\)</span> consists of all rational numbers in <span class="math notranslate nohighlight">\([0,1)\)</span> having a denominator smaller than or equal to <span class="math notranslate nohighlight">\(n\)</span>, and there are only finitely many of these. Therefore, there exists <span class="math notranslate nohighlight">\(N\in\mathbb{N}\)</span> with <span class="math notranslate nohighlight">\(N &gt; \frac{1}{\varepsilon}\)</span>. Now take <span class="math notranslate nohighlight">\(\delta\)</span> to be sufficiently small so that <span class="math notranslate nohighlight">\((a - \delta, a + \delta) \cap S_N = \emptyset\)</span>. Then for all <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(|x - a| &lt; \delta\)</span>, we have</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon&gt;0\)</span>, and consider the set</p>
 <div class="math notranslate nohighlight">
 \[
-|g(x) - g(a)| = |g(x)| &lt; \frac{1}{N} &lt; \varepsilon,
+S_\varepsilon = \left\{x \in [0, 1) : g(x) \geq \varepsilon\right\}.
+\]</div>
+<p>The set <span class="math notranslate nohighlight">\(S_\varepsilon\)</span> consists of all rational numbers in <span class="math notranslate nohighlight">\([0,1)\)</span> having a denominator smaller than or equal to <span class="math notranslate nohighlight">\(\frac{1}{\varepsilon}\)</span>, and there are only finitely many of these. Therefore, there exists <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> sufficiently small so that <span class="math notranslate nohighlight">\((a - \delta, a + \delta) \cap S_\varepsilon = \emptyset\)</span>. By construction, if <span class="math notranslate nohighlight">\(x\in[0,1)\)</span> and <span class="math notranslate nohighlight">\(|x - a| &lt; \delta\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+|g(x) - g(a)| = g(x) &lt;  \varepsilon,
 \]</div>
 <p>and continuity at <span class="math notranslate nohighlight">\(a\)</span> is established.</p>
 <figure class="align-default" id="dirichlet2">

@@ -314,25 +314,30 @@ Consider the function $g:[0, 1)\rightarrow \mathbb{R}$ defined by
 $$
 g(x) =\begin{cases}
 	1 &\text{if $x = 0$},\\
-	\displaystyle\frac{1}{n}& \text{if $x = m/n \in \mathbb{Q}$,}\\
-	&\text{where the fraction is written in its lowest terms},\\
-	0&\text{if $x \in \mathbb{R} \setminus \mathbb{Q}$}.
+	\displaystyle\frac{1}{n}& \text{if $x = m/n \in \mathbb{Q}\cap[0,1)$, and $\text{gcd}(m,n)=1$.}\\
+	0&\text{if $x \in [0,1)\setminus \mathbb{Q}$}.
 \end{cases}
 $$
 
-Show that $g$ is continuous at every irrational number. (It is also discontinuous at every rational number ---  this is left to you to do in [Problem 22](https://rosiesb.github.io/Analysis-Problems/Problems.html#id22).)
+Show that $g$ is continuous at every irrational element of $[0,1)$.. (It is also discontinuous at every rational element of $[0,1)$ ---  this is left to you to do in [Problem 22](https://rosiesb.github.io/Analysis-Problems/Problems.html#id22).)
 
 
-**Solution.** Let $a\in\mathbb{R}\setminus\mathbb{Q}$. We'll use the $(\varepsilon-\delta)$-criterion to show that $g$ is continuous at $a$. Let $\varepsilon>0$. For each $n\in\mathbb{N}$, let 
-
-$$
-S_n = \left\{x \in [0, 1) : g(x) \geq \frac{1}{n}\right\}.
-$$
-
-The set $S_n$ consists of all rational numbers in $[0,1)$ having a denominator smaller than or equal to $n$, and there are only finitely many of these. Therefore, there exists $N\in\mathbb{N}$ with $N > \frac{1}{\varepsilon}$. Now take $\delta$ to be sufficiently small so that $(a - \delta, a + \delta) \cap S_N = \emptyset$. Then for all $x$ such that $|x - a| < \delta$, we have 
+**Solution.** Let $a\in[0,1)\setminus\mathbb{Q}$. We'll use the $(\varepsilon-\delta)$-criterion to show that $g$ is continuous at $a$. First observe that for all $x\in[0,1)$
 
 $$
-|g(x) - g(a)| = |g(x)| < \frac{1}{N} < \varepsilon,
+|g(x) - g(a)| = |g(x)| = g(x).
+$$
+
+Let $\varepsilon>0$, and consider the set 
+
+$$
+S_\varepsilon = \left\{x \in [0, 1) : g(x) \geq \varepsilon\right\}.
+$$
+
+The set $S_\varepsilon$ consists of all rational numbers in $[0,1)$ having a denominator smaller than or equal to $\frac{1}{\varepsilon}$, and there are only finitely many of these. Therefore, there exists $\delta>0$ sufficiently small so that $(a - \delta, a + \delta) \cap S_\varepsilon = \emptyset$. By construction, if $x\in[0,1)$ and $|x - a| < \delta$, we have 
+
+$$
+|g(x) - g(a)| = g(x) <  \varepsilon,
 $$
 
 and continuity at $a$ is established.
