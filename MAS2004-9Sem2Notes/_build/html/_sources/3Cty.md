@@ -185,6 +185,13 @@ Therefore, by theorem {prf:ref}`fof`, $f$ is continuous on all of $\mathbb{R}$.
 Our work in [Chapter 5](#chap:seq&seriesoffns) will enable us to formally define trigonometric and exponential functions via their power series, and prove they are continuous. For now, we assume these functions are continuous without proof, as it allows us to consider some interesting examples.
 ````
 
+<span style="font-size: 24px;">**Continuous extensions**</span>
+
+````{prf:definition} Continuous extensions
+:label: cts-ext
+Given two functions $f_{1}:A\to\mathbb{R}$ and $f_{2}:B\to \mathbb{R}$, we say that $f_{2}$ is an *extension* of $f_{1}$, (and that $f_{1}$ is a *restriction} of $f_{2}$) if $A \subseteq B$ and $f_{1}(x) = f_{2}(x)$ for all $x \in A$. If $f_{1}$ is continuous on $A$ and $f_{2}$ is continuous on $B$, we say that $f_{2}$ is a *continuous extension* of $f_{1}$ (to $B$).
+````
+
 ````{prf:example}
 :label: extex
 Consider the function $g: \mathbb{R} \setminus \{0\}\to\mathbb{R}$ given by 
@@ -202,17 +209,10 @@ $$
 0&\text{if $x= 0$}. \end{cases}
 $$
 
-Then $\tilde{g}$ is continuous on the whole of $\mathbb{R}$.
-````
+Then $\tilde{g}$ is a continuous extension of $g$ to the whole of $\mathbb{R}$.
 
 
-
-````{prf:definition} Continuous extensions
-:label: cts-ext
-Given two functions $f_{1}:A\to\mathbb{R}$ and $f_{2}:B\to \mathbb{R}$, we say that $f_{2}$ is an *extension* of $f_{1}$, (and that $f_{1}$ is a *restriction} of $f_{2}$) if $A \subseteq B$ and $f_{1}(x) = f_{2}(x)$ for all $x \in A$. If $f_{1}$ is continuous on $A$ and $f_{2}$ is continuous on $B$, we say that $f_{2}$ is a *continuous extension* of $f_{1}$ (to $B$).
-````
-
-So in {prf:ref}`extex`, $\tilde{g}$ is a continuous extension of $g$. On the other hand, consider the function
+On the other hand, consider the function
 
 $$
 h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{1}{x}\right).
@@ -225,6 +225,8 @@ $$
 $$
 
 but since, as was shown in [Problem 9](https://rosiesb.github.io/Analysis-Problems/Problems.html#id9), $\displaystyle\lim_{x \rightarrow 0}h(x)$ does not exist,  there are no continuous extensions of $h$ to $\mathbb{R}$.
+````
+
 
 ## Discontinuity
 
@@ -232,6 +234,9 @@ but since, as was shown in [Problem 9](https://rosiesb.github.io/Analysis-Proble
 :label: disc
 A function $f:X \rightarrow \mathbb{R}$ is said to have a *discontinuity* at $a \in X$ if it fails to be continuous there. In this case we say that $f$ is *discontinuous* at $a$. 
 ````
+
+### Left- and right-continuity; jump discontinuities
+Discontinuities can be very strange. However, like with divergence, there are some caregories of "nice" discontinuity, and we discuss this next. 
 
 ````{prf:example}
 Consider the Heaviside function, $\mathbb{1}_{[0,1]}$ (known as the Heaviside function). Common sense tells us that $\mathbb{1}_{[0,1]}$ has discontinuities at $0$ and $1$, and is continuous everywhere else in its domain. 
@@ -274,9 +279,12 @@ $\lim_{n\rightarrow\infty} \mathbb{1}_{[a, b]}(x_{n}) = 1 = \mathbb{1}_{[a, b]}(
 If $f$ is discontinuous at $a$ but both $\lim_{x \rightarrow a^-}f(x)$ and $\lim_{x \rightarrow a^+}f(x)$ exist (i.e. they are real numbers) and are unequal, we say that $f$ has a *jump discontinuity* at $a$. A typical example of this is a step function, or an indicator function $\mathbb{1}_{[a, b]}$, where $[a,b]\subseteq\mathbb{R}$ is some interval.
 ````
 
-Not all discontinuities are as straightforward as jump discontinuities! Take for example the function at the top left of this screen[^q]. Next we consider two fascinating examples of discontinuity, which are a little more complicated. Both of these are due to Pierre Lejeune Dirichlet (1805-59).
+### Stranger discontinuities
+
+More generally, there is no reason to expect points discontinuity to behave in as straightforward or quantifiable a way as with jump discontinuities. We discuss two famous examples next that illustrate this. What is hopefully satisfying to note is that we would have no way of analysing these functions had we not put the time in to develop a rigorous notion of limits and continuity. (Mathematicians of the 18th century wouldn't stand a chance.)
 
 [^q]: Exercise: What function is this?
+
 
 ````{prf:example} Dirichlet's function
 :label: eg:dirichlet1

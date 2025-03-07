@@ -375,7 +375,11 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-continuity-basic-properties-and-examples">3.1. Definition of continuity, basic properties and examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discontinuity">3.2. Discontinuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discontinuity">3.2. Discontinuity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-and-right-continuity-jump-discontinuities">3.2.1. Left- and right-continuity; jump discontinuities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stranger-discontinuities">3.2.2. Stranger discontinuities</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-on-closed-bounded-intervals">3.3. Continuity on closed bounded intervals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-intermediate-value-theorem">3.3.1. The intermediate value theorem</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-extreme-value-theorem">3.3.2. The extreme value theorem</a></li>
@@ -548,6 +552,12 @@ p(x) = a_{0} + a_{1}x + \cdots + a_{n}x^{n}
 <section class="remark-content" id="proof-content">
 <p>Our work in <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a> will enable us to formally define trigonometric and exponential functions via their power series, and prove they are continuous. For now, we assume these functions are continuous without proof, as it allows us to consider some interesting examples.</p>
 </section>
+</div><p><span style="font-size: 24px;"><strong>Continuous extensions</strong></span></p>
+<div class="proof definition admonition" id="cts-ext">
+<p class="admonition-title"><span class="caption-number">Definition 3.3 </span> (Continuous extensions)</p>
+<section class="definition-content" id="proof-content">
+<p>Given two functions <span class="math notranslate nohighlight">\(f_{1}:A\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(f_{2}:B\to \mathbb{R}\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is an <em>extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span>, (and that <span class="math notranslate nohighlight">\(f_{1}\)</span> is a *restriction} of <span class="math notranslate nohighlight">\(f_{2}\)</span>) if <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(f_{1}(x) = f_{2}(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in A\)</span>. If <span class="math notranslate nohighlight">\(f_{1}\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(f_{2}\)</span> is continuous on <span class="math notranslate nohighlight">\(B\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is a <em>continuous extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span> (to <span class="math notranslate nohighlight">\(B\)</span>).</p>
+</section>
 </div><div class="proof example admonition" id="extex">
 <p class="admonition-title"><span class="caption-number">Example 3.7 </span></p>
 <section class="example-content" id="proof-content">
@@ -563,14 +573,8 @@ g(x) = x\sin\left(\frac{1}{x}\right).
 \tilde{g}(x) = \begin{cases} g(x) &amp;\text{if $x \in \mathbb{R} \setminus \{0\}$},\\
 0&amp;\text{if $x= 0$}. \end{cases}
 \end{split}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is continuous on the whole of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
-</section>
-</div><div class="proof definition admonition" id="cts-ext">
-<p class="admonition-title"><span class="caption-number">Definition 3.3 </span> (Continuous extensions)</p>
-<section class="definition-content" id="proof-content">
-<p>Given two functions <span class="math notranslate nohighlight">\(f_{1}:A\to\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(f_{2}:B\to \mathbb{R}\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is an <em>extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span>, (and that <span class="math notranslate nohighlight">\(f_{1}\)</span> is a *restriction} of <span class="math notranslate nohighlight">\(f_{2}\)</span>) if <span class="math notranslate nohighlight">\(A \subseteq B\)</span> and <span class="math notranslate nohighlight">\(f_{1}(x) = f_{2}(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in A\)</span>. If <span class="math notranslate nohighlight">\(f_{1}\)</span> is continuous on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(f_{2}\)</span> is continuous on <span class="math notranslate nohighlight">\(B\)</span>, we say that <span class="math notranslate nohighlight">\(f_{2}\)</span> is a <em>continuous extension</em> of <span class="math notranslate nohighlight">\(f_{1}\)</span> (to <span class="math notranslate nohighlight">\(B\)</span>).</p>
-</section>
-</div><p>So in <a class="reference internal" href="#extex">Example 3.7</a>, <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is a continuous extension of <span class="math notranslate nohighlight">\(g\)</span>. On the other hand, consider the function</p>
+<p>Then <span class="math notranslate nohighlight">\(\tilde{g}\)</span> is a continuous extension of <span class="math notranslate nohighlight">\(g\)</span> to the whole of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p>On the other hand, consider the function</p>
 <div class="math notranslate nohighlight">
 \[
 h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{1}{x}\right).
@@ -582,6 +586,7 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 \end{split}\]</div>
 <p>but since, as was shown in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id9">Problem 9</a>, <span class="math notranslate nohighlight">\(\displaystyle\lim_{x \rightarrow 0}h(x)\)</span> does not exist,  there are no continuous extensions of <span class="math notranslate nohighlight">\(h\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </section>
+</div></section>
 <section id="discontinuity">
 <h2><span class="section-number">3.2. </span>Discontinuity<a class="headerlink" href="#discontinuity" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="disc">
@@ -589,7 +594,10 @@ h: \mathbb{R} \setminus \{0\}\to\mathbb{R}; \hspace{1em} h(x) = \sin\left(\frac{
 <section class="definition-content" id="proof-content">
 <p>A function <span class="math notranslate nohighlight">\(f:X \rightarrow \mathbb{R}\)</span> is said to have a <em>discontinuity</em> at <span class="math notranslate nohighlight">\(a \in X\)</span> if it fails to be continuous there. In this case we say that <span class="math notranslate nohighlight">\(f\)</span> is <em>discontinuous</em> at <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="example-17">
+</div><section id="left-and-right-continuity-jump-discontinuities">
+<h3><span class="section-number">3.2.1. </span>Left- and right-continuity; jump discontinuities<a class="headerlink" href="#left-and-right-continuity-jump-discontinuities" title="Link to this heading">#</a></h3>
+<p>Discontinuities can be very strange. However, like with divergence, there are some caregories of “nice” discontinuity, and we discuss this next.</p>
+<div class="proof example admonition" id="example-17">
 <p class="admonition-title"><span class="caption-number">Example 3.8 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consider the Heaviside function, <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}\)</span> (known as the Heaviside function). Common sense tells us that <span class="math notranslate nohighlight">\(\mathbb{1}_{[0,1]}\)</span> has discontinuities at <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>, and is continuous everywhere else in its domain.</p>
@@ -622,7 +630,10 @@ for sufficiently large <span class="math notranslate nohighlight">\(n\)</span>, 
 <section class="definition-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is discontinuous at <span class="math notranslate nohighlight">\(a\)</span> but both <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^-}f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \rightarrow a^+}f(x)\)</span> exist (i.e. they are real numbers) and are unequal, we say that <span class="math notranslate nohighlight">\(f\)</span> has a <em>jump discontinuity</em> at <span class="math notranslate nohighlight">\(a\)</span>. A typical example of this is a step function, or an indicator function <span class="math notranslate nohighlight">\(\mathbb{1}_{[a, b]}\)</span>, where <span class="math notranslate nohighlight">\([a,b]\subseteq\mathbb{R}\)</span> is some interval.</p>
 </section>
-</div><p>Not all discontinuities are as straightforward as jump discontinuities! Take for example the function at the top left of this screen<a class="footnote-reference brackets" href="#q" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Next we consider two fascinating examples of discontinuity, which are a little more complicated. Both of these are due to Pierre Lejeune Dirichlet (1805-59).</p>
+</div></section>
+<section id="stranger-discontinuities">
+<h3><span class="section-number">3.2.2. </span>Stranger discontinuities<a class="headerlink" href="#stranger-discontinuities" title="Link to this heading">#</a></h3>
+<p>More generally, there is no reason to expect points discontinuity to behave in as straightforward or quantifiable a way as with jump discontinuities. We discuss two famous examples next that illustrate this. What is hopefully satisfying to note is that we would have no way of analysing these functions had we not put the time in to develop a rigorous notion of limits and continuity. (Mathematicians of the 18th century wouldn’t stand a chance.)</p>
 <div class="proof example admonition" id="eg:dirichlet1">
 <p class="admonition-title"><span class="caption-number">Example 3.10 </span> (Dirichlet’s function)</p>
 <section class="example-content" id="proof-content">
@@ -687,6 +698,7 @@ S_\varepsilon = \left\{x \in [0, 1) : g(x) \geq \varepsilon\right\}.
 <p>The function from <a class="reference internal" href="#dirichlet2"><span class="std std-numref">Fig. 3.1</span></a> is also sometimes called Thomae’s function.</p>
 </section>
 </div></section>
+</section>
 <section id="continuity-on-closed-bounded-intervals">
 <h2><span class="section-number">3.3. </span>Continuity on closed bounded intervals<a class="headerlink" href="#continuity-on-closed-bounded-intervals" title="Link to this heading">#</a></h2>
 <p>We shall see in this section that functions that are continuous on closed bounded intervals are particularly well-behaved.</p>
@@ -811,7 +823,7 @@ Let <span class="math notranslate nohighlight">\((x_{n})\)</span> be a sequence 
 <span class="eqno">(3.1)<a class="headerlink" href="#equation-f-xn-geqn" title="Link to this equation">#</a></span>\[|f(x_{n})|\geq n \hspace{1em}\text{ for each }n\in\mathbb{N}.\]</div>
 <p>Such a sequence certainly exists. For example,
 to construct such a sequence, we can consider <span class="math notranslate nohighlight">\(X_n=\{x \in [a, b] : |f(x)| \geq n\}\)</span>. This is non-empty since <span class="math notranslate nohighlight">\(f\)</span> is unbounded and it is bounded below by <span class="math notranslate nohighlight">\(a\)</span>, so it has an infimum, say <span class="math notranslate nohighlight">\(x_{n} = \inf(X_n)\)</span>. And then <span class="math notranslate nohighlight">\(|f(x_{n})|\geq n\)</span>.</p>
-<p>Now since <span class="math notranslate nohighlight">\((x_{n})\)</span> is a bounded sequence (as <span class="math notranslate nohighlight">\(a \leq x_{n} \leq b\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>),  it has a convergent subsequence <span class="math notranslate nohighlight">\((x_{n_{k}})\)</span> by the Bolzano–Weierstrass theorem<a class="footnote-reference brackets" href="#fn" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. Let <span class="math notranslate nohighlight">\(x = \lim_{k \rightarrow \infty}x_{n_{k}}\)</span>. By continuity, <span class="math notranslate nohighlight">\(f(x) = \lim_{k \rightarrow \infty}f(x_{n_{k}})\)</span>. The sequence <span class="math notranslate nohighlight">\((f(x_{n_{k}})))\)</span> converges, and so in particular it must be bounded. But this contradicts our assumption <a class="reference internal" href="#equation-f-xn-geqn">(3.1)</a>.</p>
+<p>Now since <span class="math notranslate nohighlight">\((x_{n})\)</span> is a bounded sequence (as <span class="math notranslate nohighlight">\(a \leq x_{n} \leq b\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>),  it has a convergent subsequence <span class="math notranslate nohighlight">\((x_{n_{k}})\)</span> by the Bolzano–Weierstrass theorem<a class="footnote-reference brackets" href="#fn" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Let <span class="math notranslate nohighlight">\(x = \lim_{k \rightarrow \infty}x_{n_{k}}\)</span>. By continuity, <span class="math notranslate nohighlight">\(f(x) = \lim_{k \rightarrow \infty}f(x_{n_{k}})\)</span>. The sequence <span class="math notranslate nohighlight">\((f(x_{n_{k}})))\)</span> converges, and so in particular it must be bounded. But this contradicts our assumption <a class="reference internal" href="#equation-f-xn-geqn">(3.1)</a>.</p>
 <p>Having proved that <span class="math notranslate nohighlight">\(f\)</span> is bounded on <span class="math notranslate nohighlight">\([a, b]\)</span>, we’ll prove that it attains its least upper bound. We again argue by seeking a contradiction.  Let <span class="math notranslate nohighlight">\(\beta = \sup_{x \in [a, b]}f(x)\)</span> and suppose that <span class="math notranslate nohighlight">\(\beta &gt; f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>. Then we can define <span class="math notranslate nohighlight">\(g: [a,b]\to\mathbb{R}\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -886,7 +898,7 @@ but not <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>
 <div class="proof admonition" id="proof">
 <p>Proof. We’ll just consider the case where <span class="math notranslate nohighlight">\(f\)</span> is strictly increasing. The argument for <span class="math notranslate nohighlight">\(f\)</span> strictly decreasing is very similar.</p>
 <p>By <a class="reference internal" href="#interval">Corollary 3.3</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
-so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.1</a>.
+so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.1</a>.
 So we have <span class="math notranslate nohighlight">\(f^{-1}:[f(a), f(b)]\to [a,b]\)</span>.</p>
 <p>To show that <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing, let <span class="math notranslate nohighlight">\(f(a) \leq \alpha &lt; \beta \leq f(b)\)</span>. Then since <span class="math notranslate nohighlight">\(f\)</span> is surjective and increasing, there exist <span class="math notranslate nohighlight">\(a \leq x &lt; y \leq b\)</span> with <span class="math notranslate nohighlight">\(\alpha = f(x)\)</span> and <span class="math notranslate nohighlight">\(\beta = f(y)\)</span>. Hence</p>
 <div class="math notranslate nohighlight">
@@ -920,16 +932,12 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>More on this in MAS331 Metric Spaces and beyond.</p>
 </aside>
-<aside class="footnote brackets" id="q" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>Exercise: What function is this?</p>
-</aside>
 <aside class="footnote brackets" id="fn" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>This was Theorem 3.14 on page 83 of your MAS107 notes.</p>
 </aside>
 <aside class="footnote brackets" id="contra2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>We have used the <em>contrapositive</em> here: <span class="math notranslate nohighlight">\(A\Rightarrow B\)</span> if and only if <span class="math notranslate nohighlight">\(\neg B\Rightarrow\neg A\)</span>.</p>
 </aside>
 </aside>
@@ -1003,7 +1011,11 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-continuity-basic-properties-and-examples">3.1. Definition of continuity, basic properties and examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discontinuity">3.2. Discontinuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discontinuity">3.2. Discontinuity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#left-and-right-continuity-jump-discontinuities">3.2.1. Left- and right-continuity; jump discontinuities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stranger-discontinuities">3.2.2. Stranger discontinuities</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-on-closed-bounded-intervals">3.3. Continuity on closed bounded intervals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-intermediate-value-theorem">3.3.1. The intermediate value theorem</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-extreme-value-theorem">3.3.2. The extreme value theorem</a></li>
