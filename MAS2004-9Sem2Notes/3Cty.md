@@ -181,7 +181,7 @@ Both $g$ and $h$ are continuous on their domains: for $g$, this follows from [Pr
 Therefore, by theorem {prf:ref}`fof`, $f$ is continuous on all of $\mathbb{R}$.
 ````
 
-````{prf:remark} Trig and expential functions
+````{prf:remark} Trig and exponential functions
 Our work in [Chapter 5](#chap:seq&seriesoffns) will enable us to formally define trigonometric and exponential functions via their power series, and prove they are continuous. For now, we assume these functions are continuous without proof, as it allows us to consider some interesting examples.
 ````
 
