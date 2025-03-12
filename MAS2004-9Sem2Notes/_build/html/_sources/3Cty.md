@@ -381,9 +381,12 @@ Let $f:[a, b]\to\mathbb{R}$ be continuous  with either $f(a) < 0 < f(b)$, or $f(
 ````{prf:proof}
 We only consider the case $f(a) > 0$ and $f(b) < 0$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
 
-- $[a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]$, for all $n\in\mathbb{N}$,
-- $b_{n} - a_{n} = 2^{-n}(b - a)$, for all $n\in\mathbb{N}$,
-- $f(a_{n}) > 0, f(b_{n}) < 0$, for all $n\in\mathbb{N}$.
+	(i) $[a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]$, for all $n\in\mathbb{N}$,
+
+	(ii) $b_{n} - a_{n} = 2^{-n}(b - a)$, for all $n\in\mathbb{N}$,
+
+	(iii) $f(a_{n}) > 0, f(b_{n}) < 0$, for all $n\in\mathbb{N}$.
+	
 To do this we proceed as follows. Take $[a_{0}, b_{0}] = [a, b]$. 
 
 Now construct the interval $[a_{1}, b_{1}]$ as follows. Let $m_{1} = \frac{(a+ b)}{2}$.
