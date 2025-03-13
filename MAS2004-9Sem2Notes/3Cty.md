@@ -441,8 +441,8 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 
 `````{prf:corollary} Intermediate value theorem
  :label: ivt2
-Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $\gamma \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
-
+Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $y \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = y$.
+Full i
 ````{prf:proof}
 This is left for you to do as [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24). <span style="float:right;">$\square$</span>
 ````
