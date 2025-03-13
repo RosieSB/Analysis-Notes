@@ -374,12 +374,19 @@ The "main" theorems of this chapter all live in this section.
 
 ### The intermediate value theorem
 
-`````{prf:theorem} (A special case of) the intermediate value theorem
-:label: ivt
-Let $f:[a, b]\to\mathbb{R}$ be continuous  with either $f(a) < 0 < f(b)$, or $f(b) < 0 < f(a)$. Then there exists $c \in (a, b)$ such that $f(c) = 0$.
-
+`````{prf:theorem} The intermediate value theorem
+:label: ivt2
+Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$. Then for each $\gamma$ lying between $f(a)$ and $f(b)$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````{prf:proof}
-We only consider the case $f(a) > 0$ and $f(b) < 0$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
+We prove the special case where $\gamma=0$ below --- see {prf:ref}`ivt`. [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24) leads you through the proof of the full result. 
+````
+`````
+
+`````{prf:proposition} The intermediate value theorem
+:label: ivt1
+Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$, and assume $f(a)$ and $f(b)$ have different signs. Then there exists $c \in (a, b)$ with $f(c) = 0$.
+````{prf:proof}
+We only consider the case $f(b)<0<f(b)$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
 
 &emsp;(i) $[a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]$, for all $n\in\mathbb{N}$,
 
@@ -439,17 +446,7 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 ````
 `````
 
-`````{prf:corollary} Intermediate value theorem
- :label: ivt2
-Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $y \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = y$.
-Full i
-````{prf:proof}
-This is left for you to do as [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24). <span style="float:right;">$\square$</span>
-````
-`````
-
 Note that {prf:ref}`ivt2` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
-
 
 
 The next result gives a nice application of analysis to the theory of equations.
@@ -465,7 +462,7 @@ p(x) &= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 &= x^{m}\left(a_{m} + \frac{a_{m-1}}{x} + \cdots + \frac{a_{1}}{x^{m-1}} + \frac{a_{0}}{x^{m}}\right),
 \end{align*}
 
-where $a_m\neq 0$ and $m$ is odd. We'll do the case where $a_{m} > 0$; the case $a_{m} < 0$ is similar. Then, as was shown in [Problem 12]https://rosiesb.github.io/Analysis-Problems/Problems.html#id12,
+where $a_m\neq 0$ and $m$ is odd. We'll do the case where $a_{m} > 0$; the case $a_{m} < 0$ is similar. Then, as was shown in [Problem 12](https://rosiesb.github.io/Analysis-Problems/Problems.html#id12),
 
 $$
 \lim_{x \rightarrow \infty}p(x) = \infty \hspace{1em} \text{ and } \hspace{1em} \lim_{x \rightarrow -\infty}p(x) = -\infty.

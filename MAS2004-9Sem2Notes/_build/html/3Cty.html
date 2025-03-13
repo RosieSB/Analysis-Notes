@@ -706,12 +706,20 @@ S_\varepsilon = \left\{x \in [0, 1) : g(x) \geq \varepsilon\right\}.
 <p>The “main” theorems of this chapter all live in this section.</p>
 <section id="the-intermediate-value-theorem">
 <h3><span class="section-number">3.3.1. </span>The intermediate value theorem<a class="headerlink" href="#the-intermediate-value-theorem" title="Link to this heading">#</a></h3>
-<div class="proof theorem admonition" id="ivt">
-<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> ((A special case of) the intermediate value theorem)</p>
+<div class="proof theorem admonition" id="ivt2">
+<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (The intermediate value theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:[a, b]\to\mathbb{R}\)</span> be continuous  with either <span class="math notranslate nohighlight">\(f(a) &lt; 0 &lt; f(b)\)</span>, or <span class="math notranslate nohighlight">\(f(b) &lt; 0 &lt; f(a)\)</span>. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) \neq f(b)\)</span>. Then for each <span class="math notranslate nohighlight">\(\gamma\)</span> lying between <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b)\)</span>, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = \gamma\)</span>.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. We only consider the case <span class="math notranslate nohighlight">\(f(a) &gt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &lt; 0\)</span>, as the argument in the other case is so similar. We first construct a sequence <span class="math notranslate nohighlight">\(([a_{n}, b_{n}])\)</span> of (nested) intervals satisfying the following properties:</p>
+<p>Proof. We prove the special case where <span class="math notranslate nohighlight">\(\gamma=0\)</span> below — see <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">ivt</span></code>. <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a> leads you through the proof of the full result.</p>
+</div>
+</section>
+</div><div class="proof proposition admonition" id="ivt1">
+<p class="admonition-title"><span class="caption-number">Proposition 3.1 </span> (The intermediate value theorem)</p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) \neq f(b)\)</span>, and assume <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b)\)</span> have different signs. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. We only consider the case <span class="math notranslate nohighlight">\(f(b)&lt;0&lt;f(b)\)</span>, as the argument in the other case is so similar. We first construct a sequence <span class="math notranslate nohighlight">\(([a_{n}, b_{n}])\)</span> of (nested) intervals satisfying the following properties:</p>
 <p> (i) <span class="math notranslate nohighlight">\([a_{n}, b_{n}] \subseteq [a_{n-1}, b_{n-1}]\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>,</p>
 <p> (ii) <span class="math notranslate nohighlight">\(b_{n} - a_{n} = 2^{-n}(b - a)\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>,</p>
 <p> (iii) <span class="math notranslate nohighlight">\(f(a_{n}) &gt; 0, f(b_{n}) &lt; 0\)</span>, for all <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
@@ -759,19 +767,10 @@ f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspa
 <p>Hence <span class="math notranslate nohighlight">\(f(c) = 0\)</span>. As both <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b) \neq 0\)</span>, <span class="math notranslate nohighlight">\(c \notin \{a, b\}\)</span>, i.e. <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><div class="proof corollary admonition" id="ivt2">
-<p class="admonition-title"><span class="caption-number">Corollary 3.1 </span> (Intermediate value theorem)</p>
-<section class="corollary-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) &lt; f(b)\)</span>. Then for each <span class="math notranslate nohighlight">\(y \in (f(a), f(b))\)</span>, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = y\)</span>.
-Full i</p>
-<div class="proof admonition" id="proof">
-<p>Proof. This is left for you to do as <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
-</div>
-</section>
-</div><p>Note that <a class="reference internal" href="#ivt2">Corollary 3.1</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
+</div><p>Note that <a class="reference internal" href="#ivt2">Theorem 3.4</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
 <p>The next result gives a nice application of analysis to the theory of equations.</p>
 <div class="proof corollary admonition" id="pol">
-<p class="admonition-title"><span class="caption-number">Corollary 3.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Every polynomial of odd degree <span class="math notranslate nohighlight">\(p\)</span> has at least one real root.</p>
 <div class="proof admonition" id="proof">
@@ -781,7 +780,7 @@ Full i</p>
 p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 &amp;= x^{m}\left(a_{m} + \frac{a_{m-1}}{x} + \cdots + \frac{a_{1}}{x^{m-1}} + \frac{a_{0}}{x^{m}}\right),
 \end{align*}\]</div>
-<p>where <span class="math notranslate nohighlight">\(a_m\neq 0\)</span> and <span class="math notranslate nohighlight">\(m\)</span> is odd. We’ll do the case where <span class="math notranslate nohighlight">\(a_{m} &gt; 0\)</span>; the case <span class="math notranslate nohighlight">\(a_{m} &lt; 0\)</span> is similar. Then, as was shown in [Problem 12]https://rosiesb.github.io/Analysis-Problems/Problems.html#id12,</p>
+<p>where <span class="math notranslate nohighlight">\(a_m\neq 0\)</span> and <span class="math notranslate nohighlight">\(m\)</span> is odd. We’ll do the case where <span class="math notranslate nohighlight">\(a_{m} &gt; 0\)</span>; the case <span class="math notranslate nohighlight">\(a_{m} &lt; 0\)</span> is similar. Then, as was shown in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id12">Problem 12</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x \rightarrow \infty}p(x) = \infty \hspace{1em} \text{ and } \hspace{1em} \lim_{x \rightarrow -\infty}p(x) = -\infty.
@@ -789,7 +788,7 @@ p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 <p>So from the definition of divergence, there exist <span class="math notranslate nohighlight">\(- \infty &lt; a &lt; b &lt; \infty\)</span> such that <span class="math notranslate nohighlight">\(p(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(p(b) &gt; 0\)</span>. But <span class="math notranslate nohighlight">\(p\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and so, by the intermediate value theorem, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(p(c) = 0\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p>Of course, there is no analogue of <a class="reference internal" href="#pol">Corollary 3.2</a> when <span class="math notranslate nohighlight">\(m\)</span> is even, e.g. <span class="math notranslate nohighlight">\(p(x) = x^{2} + 1\)</span> has no real roots.</p>
+</div><p>Of course, there is no analogue of <a class="reference internal" href="#pol">Corollary 3.1</a> when <span class="math notranslate nohighlight">\(m\)</span> is even, e.g. <span class="math notranslate nohighlight">\(p(x) = x^{2} + 1\)</span> has no real roots.</p>
 </section>
 <section id="the-extreme-value-theorem">
 <h3><span class="section-number">3.3.2. </span>The extreme value theorem<a class="headerlink" href="#the-extreme-value-theorem" title="Link to this heading">#</a></h3>
@@ -837,7 +836,7 @@ g(x) = \displaystyle\frac{1}{\beta - f(x)},
 </section>
 </div><p>It’s important to be clear what <a class="reference internal" href="#thm:evt">Theorem 3.5</a> is telling us. It says nothing about boundedness on  <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Indeed any non-constant polynomial is unbounded on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, but its restriction to every closed interval <span class="math notranslate nohighlight">\([a, b]\)</span> is bounded.</p>
 <div class="proof corollary admonition" id="interval">
-<p class="admonition-title"><span class="caption-number">Corollary 3.3 </span> (Really useful corollary)</p>
+<p class="admonition-title"><span class="caption-number">Corollary 3.2 </span> (Really useful corollary)</p>
 <section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f: X \to \mathbb{R}\)</span> is continuous and non–constant on <span class="math notranslate nohighlight">\([a, b] \subseteq X\)</span>, then there exists <span class="math notranslate nohighlight">\(m &lt; M\)</span> so that</p>
 <div class="math notranslate nohighlight">
@@ -848,10 +847,10 @@ f([a, b]) = [m, M].
 <p>Proof. By <a class="reference internal" href="#thm:evt">Theorem 3.5</a>, there exist <span class="math notranslate nohighlight">\(\gamma, \delta \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\gamma) = \inf_{x \in [a, b]}f(x)\)</span> and <span class="math notranslate nohighlight">\(f(\delta) = \sup_{x \in [a, b]}f(x)\)</span>. We take <span class="math notranslate nohighlight">\(m = f(\gamma)\)</span> and <span class="math notranslate nohighlight">\(M = f(\delta)\)</span>.
 Clearly, <span class="math notranslate nohighlight">\(m\leq M\)</span> and, since <span class="math notranslate nohighlight">\(f\)</span> is non-constant, <span class="math notranslate nohighlight">\(m&lt;M\)</span>.
 If <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>, then <span class="math notranslate nohighlight">\(f(x) \in [m, M]\)</span> and so <span class="math notranslate nohighlight">\(f([a, b]) \subseteq [m, M]\)</span>.</p>
-<p>For the other inclusion, by <a class="reference internal" href="#ivt2">Corollary 3.1</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>For the other inclusion, by <a class="reference internal" href="#ivt2">Theorem 3.4</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p><strong>Remark.</strong> <a class="reference internal" href="#interval">Corollary 3.3</a> says that continuous functions map closed bounded intervals to closed bounded intervals.</p>
+</div><p><strong>Remark.</strong> <a class="reference internal" href="#interval">Corollary 3.2</a> says that continuous functions map closed bounded intervals to closed bounded intervals.</p>
 </section>
 <section id="inverses">
 <h3><span class="section-number">3.3.3. </span>Inverses<a class="headerlink" href="#inverses" title="Link to this heading">#</a></h3>
@@ -868,7 +867,7 @@ f^{-1}(f(x)) = x,~\mbox{for all}~x \in X~\mbox{and}~f(f^{-1}(y)) = y,~\mbox{for 
 \]</div>
 <p>In the first year, you also saw the following.</p>
 <div class="proof proposition admonition" id="prop:inv">
-<p class="admonition-title"><span class="caption-number">Proposition 3.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Proposition 3.2 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>The function <span class="math notranslate nohighlight">\(f:X\rightarrow Y\)</span> is invertible if and only if it is bijective.</p>
 </section>
@@ -896,8 +895,8 @@ but not <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>
 <p>If <span class="math notranslate nohighlight">\(f: [a,b] \rightarrow \mathbb{R}\)</span> is continuous and strictly increasing (respectively, strictly decreasing), then <span class="math notranslate nohighlight">\(f\)</span> is invertible and <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, strictly decreasing on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>)  and continuous on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>).</p>
 <div class="proof admonition" id="proof">
 <p>Proof. We’ll just consider the case where <span class="math notranslate nohighlight">\(f\)</span> is strictly increasing. The argument for <span class="math notranslate nohighlight">\(f\)</span> strictly decreasing is very similar.</p>
-<p>By <a class="reference internal" href="#interval">Corollary 3.3</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
-so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.1</a>.
+<p>By <a class="reference internal" href="#interval">Corollary 3.2</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
+so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.2</a>.
 So we have <span class="math notranslate nohighlight">\(f^{-1}:[f(a), f(b)]\to [a,b]\)</span>.</p>
 <p>To show that <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing, let <span class="math notranslate nohighlight">\(f(a) \leq \alpha &lt; \beta \leq f(b)\)</span>. Then since <span class="math notranslate nohighlight">\(f\)</span> is surjective and increasing, there exist <span class="math notranslate nohighlight">\(a \leq x &lt; y \leq b\)</span> with <span class="math notranslate nohighlight">\(\alpha = f(x)\)</span> and <span class="math notranslate nohighlight">\(\beta = f(y)\)</span>. Hence</p>
 <div class="math notranslate nohighlight">
