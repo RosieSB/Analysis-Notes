@@ -378,7 +378,7 @@ The "main" theorems of this chapter all live in this section.
 :label: ivt2
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$. Then for each $\gamma$ lying between $f(a)$ and $f(b)$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````{prf:proof}
-We prove the special case where $\gamma=0$ below --- see {prf:ref}`ivt`. [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24) leads you through the proof of the full result.  <span style="float:right;">$\square$</span>
+We prove {prf:ref}`ivt` below, which is the special case where $\gamma=0$ below/ [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24) leads you through the proof of the full result.  <span style="float:right;">$\square$</span>
 ````
 `````
 
