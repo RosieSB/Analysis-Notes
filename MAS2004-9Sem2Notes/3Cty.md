@@ -374,7 +374,7 @@ The "main" theorems of this chapter all live in this section.
 
 ### The intermediate value theorem
 
-`````{prf:theorem} The intermediate value theorem
+`````{prf:theorem} (A special case of) the intermediate value theorem
 :label: ivt
 Let $f:[a, b]\to\mathbb{R}$ be continuous  with either $f(a) < 0 < f(b)$, or $f(b) < 0 < f(a)$. Then there exists $c \in (a, b)$ such that $f(c) = 0$.
 
@@ -439,7 +439,7 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 ````
 `````
 
-`````{prf:corollary}
+`````{prf:corollary} Intermediate value theorem
  :label: ivt2
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) < f(b)$. Then for each $\gamma \in (f(a), f(b))$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 
