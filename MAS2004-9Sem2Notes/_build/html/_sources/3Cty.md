@@ -378,11 +378,11 @@ The "main" theorems of this chapter all live in this section.
 :label: ivt2
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$. Then for each $\gamma$ lying between $f(a)$ and $f(b)$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````{prf:proof}
-We prove {prf:ref}`ivt` below, which is the special case where $\gamma=0$ below/ [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24) leads you through the proof of the full result.  <span style="float:right;">$\square$</span>
+We prove {prf:ref}`ivt` below, which is the special case where $\gamma=0$ below. For the full result, apply {prf:ref}`ivt` to the function $g(x):=f(x)-\gamma$ --- see [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24).  <span style="float:right;">$\square$</span>
 ````
 `````
 
-`````{prf:proposition} The intermediate value theorem
+`````{prf:proposition} Special case of the intermediate value theorem
 :label: ivt
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$, and assume $f(a)$ and $f(b)$ have different signs. Then there exists $c \in (a, b)$ with $f(c) = 0$.
 ````{prf:proof}
