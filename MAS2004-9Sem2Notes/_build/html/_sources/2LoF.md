@@ -531,10 +531,10 @@ Heaviside's indicator function, $\mathbb{1}_{[0,\infty)}$, as defined in {prf:re
 
 Try this for yourself, then click the drop-downs to see how you did.
 
-````{dropdown} Proof that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ (click)
+````{dropdown} Proof that $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$ (click)
 Let $\varepsilon>0$. We seek $\delta>0$ such that $|\mathbb{1}_{[0,\infty)}(x)-1|<\varepsilon$ whenever $0<x<\delta$. But in fact, $|\mathbb{1}_{[0,\infty)}(x)-1|=0<\varepsilon$ for all $x>0$. So any choice of $\delta$ will work, and there is nothing more to show.  
 ````
-````{dropdown} Proof that $\lim_{x\rightarrow 0^+}\mathbb{1}_{[0,\infty)}(x)=1$ (click)
+````{dropdown} Proof that $\lim_{x\rightarrow 0^-}\mathbb{1}_{[0,\infty)}(x)=0$ (click)
 Let $\varepsilon>0$. We now seek $\delta>0$ such that $|\mathbb{1}_{[0,\infty)}(x)|<\varepsilon$ whenever $-\delta<x<0$. But again, there is nothing to show, since $|\mathbb{1}_{[0,\infty)}(x)|=0<\varepsilon$ for all $x<0$ anyway!
 ````
 
