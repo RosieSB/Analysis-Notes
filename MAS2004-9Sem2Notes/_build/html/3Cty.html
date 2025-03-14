@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -706,15 +706,15 @@ S_\varepsilon = \left\{x \in [0, 1) : g(x) \geq \varepsilon\right\}.
 <p>The “main” theorems of this chapter all live in this section.</p>
 <section id="the-intermediate-value-theorem">
 <h3><span class="section-number">3.3.1. </span>The intermediate value theorem<a class="headerlink" href="#the-intermediate-value-theorem" title="Link to this heading">#</a></h3>
-<div class="proof theorem admonition" id="ivt2">
+<div class="proof theorem admonition" id="ivt">
 <p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (The intermediate value theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) \neq f(b)\)</span>. Then for each <span class="math notranslate nohighlight">\(\gamma\)</span> lying between <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b)\)</span>, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = \gamma\)</span>.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. We prove <a class="reference internal" href="#ivt">Proposition 3.1</a> below, which is the special case where <span class="math notranslate nohighlight">\(\gamma=0\)</span> below. For the full result, apply <a class="reference internal" href="#ivt">Proposition 3.1</a> to the function <span class="math notranslate nohighlight">\(g(x):=f(x)-\gamma\)</span> — see <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a>.  <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>Proof. We prove <a class="reference internal" href="#ivt-sc">Proposition 3.1</a> below, which is the special case where <span class="math notranslate nohighlight">\(\gamma=0\)</span> below. For the full result, apply <a class="reference internal" href="#ivt-sc">Proposition 3.1</a> to the function <span class="math notranslate nohighlight">\(g(x):=f(x)-\gamma\)</span> — see <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id24">Problem 24</a>.  <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><div class="proof proposition admonition" id="ivt">
+</div><div class="proof proposition admonition" id="ivt-sc">
 <p class="admonition-title"><span class="caption-number">Proposition 3.1 </span> (Special case of the intermediate value theorem)</p>
 <section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be continuous with <span class="math notranslate nohighlight">\(f(a) \neq f(b)\)</span>, and assume <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b)\)</span> have different signs. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(f(c) = 0\)</span>.</p>
@@ -767,7 +767,7 @@ f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspa
 <p>Hence <span class="math notranslate nohighlight">\(f(c) = 0\)</span>. As both <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b) \neq 0\)</span>, <span class="math notranslate nohighlight">\(c \notin \{a, b\}\)</span>, i.e. <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p>Note that <a class="reference internal" href="#ivt2">Theorem 3.4</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
+</div><p>Note that <a class="reference internal" href="#ivt">Theorem 3.4</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
 <p>The next result gives a nice application of analysis to the theory of equations.</p>
 <div class="proof corollary admonition" id="pol">
 <p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
@@ -847,7 +847,7 @@ f([a, b]) = [m, M].
 <p>Proof. By <a class="reference internal" href="#thm:evt">Theorem 3.5</a>, there exist <span class="math notranslate nohighlight">\(\gamma, \delta \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\gamma) = \inf_{x \in [a, b]}f(x)\)</span> and <span class="math notranslate nohighlight">\(f(\delta) = \sup_{x \in [a, b]}f(x)\)</span>. We take <span class="math notranslate nohighlight">\(m = f(\gamma)\)</span> and <span class="math notranslate nohighlight">\(M = f(\delta)\)</span>.
 Clearly, <span class="math notranslate nohighlight">\(m\leq M\)</span> and, since <span class="math notranslate nohighlight">\(f\)</span> is non-constant, <span class="math notranslate nohighlight">\(m&lt;M\)</span>.
 If <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>, then <span class="math notranslate nohighlight">\(f(x) \in [m, M]\)</span> and so <span class="math notranslate nohighlight">\(f([a, b]) \subseteq [m, M]\)</span>.</p>
-<p>For the other inclusion, by <a class="reference internal" href="#ivt2">Theorem 3.4</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p>For the other inclusion, by <a class="reference internal" href="#ivt">Theorem 3.4</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
 </div><p><strong>Remark.</strong> <a class="reference internal" href="#interval">Corollary 3.2</a> says that continuous functions map closed bounded intervals to closed bounded intervals.</p>

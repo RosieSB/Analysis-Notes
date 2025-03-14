@@ -375,15 +375,15 @@ The "main" theorems of this chapter all live in this section.
 ### The intermediate value theorem
 
 `````{prf:theorem} The intermediate value theorem
-:label: ivt2
+:label: ivt
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$. Then for each $\gamma$ lying between $f(a)$ and $f(b)$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````{prf:proof}
-We prove {prf:ref}`ivt` below, which is the special case where $\gamma=0$ below. For the full result, apply {prf:ref}`ivt` to the function $g(x):=f(x)-\gamma$ --- see [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24).  <span style="float:right;">$\square$</span>
+We prove {prf:ref}`ivt-sc` below, which is the special case where $\gamma=0$ below. For the full result, apply {prf:ref}`ivt-sc` to the function $g(x):=f(x)-\gamma$ --- see [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24).  <span style="float:right;">$\square$</span>
 ````
 `````
 
 `````{prf:proposition} Special case of the intermediate value theorem
-:label: ivt
+:label: ivt-sc
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$, and assume $f(a)$ and $f(b)$ have different signs. Then there exists $c \in (a, b)$ with $f(c) = 0$.
 ````{prf:proof}
 We only consider the case $f(b)<0<f(b)$, as the argument in the other case is so similar. We first construct a sequence $([a_{n}, b_{n}])$ of (nested) intervals satisfying the following properties:
@@ -446,7 +446,7 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 ````
 `````
 
-Note that {prf:ref}`ivt2` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
+Note that {prf:ref}`ivt` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
 
 
 The next result gives a nice application of analysis to the theory of equations.
@@ -552,7 +552,7 @@ By {prf:ref}`thm:evt`, there exist $\gamma, \delta \in [a, b]$ such that $f(\gam
 Clearly, $m\leq M$ and, since $f$ is non-constant, $m<M$.
 If $x \in [a,b]$, then $f(x) \in [m, M]$ and so $f([a, b]) \subseteq [m, M]$.
 
-For the other inclusion, by {prf:ref}`ivt2`, given any $c \in (m, M)$ there exists $y \in (\gamma, \delta)$ (or in $(\delta, \gamma)$ depending on which number is smallest) so that $c = f(y)$, and it follows that $[m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])$. <span style="float:right;">$\square$</span>
+For the other inclusion, by {prf:ref}`ivt`, given any $c \in (m, M)$ there exists $y \in (\gamma, \delta)$ (or in $(\delta, \gamma)$ depending on which number is smallest) so that $c = f(y)$, and it follows that $[m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])$. <span style="float:right;">$\square$</span>
 ````
 `````
 
