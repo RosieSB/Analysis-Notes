@@ -378,7 +378,9 @@ The "main" theorems of this chapter all live in this section.
 :label: ivt
 Let $f:[a,b]\to\mathbb{R}$ be continuous with $f(a) \neq f(b)$. Then for each $\gamma$ lying between $f(a)$ and $f(b)$, there exists $c \in (a, b)$ with $f(c) = \gamma$.
 ````{prf:proof}
-We prove {prf:ref}`ivt-sc` below, which is the special case where $\gamma=0$ below. For the full result, apply {prf:ref}`ivt-sc` to the function $g(x):=f(x)-\gamma$ --- see [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24).  <span style="float:right;">$\square$</span>
+We prove {prf:ref}`ivt-sc` below, which is the special case where $\gamma=0$. 
+
+For the full result, apply {prf:ref}`ivt-sc` to the function $g(x):=f(x)-\gamma$ --- see [Problem 24](https://rosiesb.github.io/Analysis-Problems/Problems.html#id24).  <span style="float:right;">$\square$</span>
 ````
 `````
 
