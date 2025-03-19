@@ -769,27 +769,34 @@ f(c) = \lim_{n\rightarrow\infty} f(a_{n}) \geq 0 \hspace{2em} \text{ and } \hspa
 </div>
 </section>
 </div><p>Note that <a class="reference internal" href="#ivt">Theorem 3.4</a> tells us that the image (or range) of the interval <span class="math notranslate nohighlight">\([a, b]\)</span> under the continuous function <span class="math notranslate nohighlight">\(f\)</span> contains the interval <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span>, i.e. <span class="math notranslate nohighlight">\([f(a), f(b)] \subseteq f([a, b])\)</span>.</p>
-<p>The next result gives a nice application of analysis to the theory of equations.</p>
-<div class="proof corollary admonition" id="pol">
-<p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
-<section class="corollary-content" id="proof-content">
-<p>Every polynomial of odd degree <span class="math notranslate nohighlight">\(p\)</span> has at least one real root.</p>
-<div class="proof admonition" id="proof">
-<p>Proof. We write,</p>
+<p>The next example gives a nice application of analysis to the theory of equations.</p>
+<div class="proof example admonition" id="pol">
+<p class="admonition-title"><span class="caption-number">Example 3.12 </span></p>
+<section class="example-content" id="proof-content">
+<p>Prove that every polynomial of odd degree has at least one real root.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution (click)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p:\mathbb{R}\to\mathbb{R}\)</span> be a polynomial of odd degree <span class="math notranslate nohighlight">\(m\in\mathbb{N}\)</span>. Let <span class="math notranslate nohighlight">\(a_0,a_1,\ldots,a_m\in\mathbb{R}\)</span> such that for all <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+p(x) = a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0}. 
+\]</div>
+<p class="sd-card-text">We write</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
 p(x) &amp;= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 &amp;= x^{m}\left(a_{m} + \frac{a_{m-1}}{x} + \cdots + \frac{a_{1}}{x^{m-1}} + \frac{a_{0}}{x^{m}}\right),
 \end{align*}\]</div>
-<p>where <span class="math notranslate nohighlight">\(a_m\neq 0\)</span> and <span class="math notranslate nohighlight">\(m\)</span> is odd. We’ll do the case where <span class="math notranslate nohighlight">\(a_{m} &gt; 0\)</span>; the case <span class="math notranslate nohighlight">\(a_{m} &lt; 0\)</span> is similar. Then, as was shown in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id12">Problem 12</a>,</p>
+<p class="sd-card-text">Assuming <span class="math notranslate nohighlight">\(m=\deg(p)\)</span>, we know <span class="math notranslate nohighlight">\(a_m\neq 0\)</span>. We’ll do the case where <span class="math notranslate nohighlight">\(a_{m} &gt; 0\)</span>; the case <span class="math notranslate nohighlight">\(a_{m} &lt; 0\)</span> is similar. Then, as was shown in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id12">Problem 12</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{x \rightarrow \infty}p(x) = \infty \hspace{1em} \text{ and } \hspace{1em} \lim_{x \rightarrow -\infty}p(x) = -\infty.
 \]</div>
-<p>So from the definition of divergence, there exist <span class="math notranslate nohighlight">\(- \infty &lt; a &lt; b &lt; \infty\)</span> such that <span class="math notranslate nohighlight">\(p(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(p(b) &gt; 0\)</span>. But <span class="math notranslate nohighlight">\(p\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and so, by the intermediate value theorem, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(p(c) = 0\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
+<p class="sd-card-text">So from the definition of divergence, there exist <span class="math notranslate nohighlight">\(- \infty &lt; a &lt; b &lt; \infty\)</span> such that <span class="math notranslate nohighlight">\(p(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(p(b) &gt; 0\)</span>. But <span class="math notranslate nohighlight">\(p\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and so, by the intermediate value theorem, there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that <span class="math notranslate nohighlight">\(p(c) = 0\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
-</section>
-</div><p>Of course, there is no analogue of <a class="reference internal" href="#pol">Corollary 3.1</a> when <span class="math notranslate nohighlight">\(m\)</span> is even, e.g. <span class="math notranslate nohighlight">\(p(x) = x^{2} + 1\)</span> has no real roots.</p>
+</details></section>
+</div><p>Of course, there is no analogue of <a class="reference internal" href="#pol">Example 3.12</a> when <span class="math notranslate nohighlight">\(m\)</span> is even, e.g. <span class="math notranslate nohighlight">\(p(x) = x^{2} + 1\)</span> has no real roots.</p>
 </section>
 <section id="the-extreme-value-theorem">
 <h3><span class="section-number">3.3.2. </span>The extreme value theorem<a class="headerlink" href="#the-extreme-value-theorem" title="Link to this heading">#</a></h3>
@@ -837,7 +844,7 @@ g(x) = \displaystyle\frac{1}{\beta - f(x)},
 </section>
 </div><p>It’s important to be clear what <a class="reference internal" href="#thm:evt">Theorem 3.5</a> is telling us. It says nothing about boundedness on  <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Indeed any non-constant polynomial is unbounded on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, but its restriction to every closed interval <span class="math notranslate nohighlight">\([a, b]\)</span> is bounded.</p>
 <div class="proof corollary admonition" id="interval">
-<p class="admonition-title"><span class="caption-number">Corollary 3.2 </span> (Really useful corollary)</p>
+<p class="admonition-title"><span class="caption-number">Corollary 3.1 </span> (Really useful corollary)</p>
 <section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f: X \to \mathbb{R}\)</span> is continuous and non–constant on <span class="math notranslate nohighlight">\([a, b] \subseteq X\)</span>, then there exists <span class="math notranslate nohighlight">\(m &lt; M\)</span> so that</p>
 <div class="math notranslate nohighlight">
@@ -851,7 +858,13 @@ If <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>, then <span
 <p>For the other inclusion, by <a class="reference internal" href="#ivt">Theorem 3.4</a>, given any <span class="math notranslate nohighlight">\(c \in (m, M)\)</span> there exists <span class="math notranslate nohighlight">\(y \in (\gamma, \delta)\)</span> (or in <span class="math notranslate nohighlight">\((\delta, \gamma)\)</span> depending on which number is smallest) so that <span class="math notranslate nohighlight">\(c = f(y)\)</span>, and it follows that <span class="math notranslate nohighlight">\([m, M] \subseteq f([\gamma, \delta]) \subseteq f([a, b])\)</span>. <span style="float:right;"><span class="math notranslate nohighlight">\(\square\)</span></span></p>
 </div>
 </section>
-</div><p><strong>Remark.</strong> <a class="reference internal" href="#interval">Corollary 3.2</a> says that continuous functions map closed bounded intervals to closed bounded intervals.</p>
+</div><p><strong>Remark.</strong> <a class="reference internal" href="#interval">Corollary 3.1</a> says that continuous functions map closed bounded intervals to closed bounded intervals. The converse of this is false! For a counterexample, consider the function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f:\mathbb{R}\to\mathbb{R}; \hspace{1em} f(x) =  \begin{cases} \sin\left(\frac{1}{x}\right) &amp;\text{if }x \in \mathbb{R} \setminus \{0\},\\
+0&amp;\text{if }x= 0. \end{cases}
+\end{split}\]</div>
+<p>This function has the intermediate value property: the restriction of <span class="math notranslate nohighlight">\(f\)</span> to any closed bounded interval <span class="math notranslate nohighlight">\([a,b]\subseteq\mathbb{R}\)</span> has image a closed bounded interval. However, <span class="math notranslate nohighlight">\(f\)</span> is <strong>not</strong> continuous at <span class="math notranslate nohighlight">\(0\)</span> (see <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id9">Problem 9</a>).</p>
 </section>
 <section id="inverses">
 <h3><span class="section-number">3.3.3. </span>Inverses<a class="headerlink" href="#inverses" title="Link to this heading">#</a></h3>
@@ -896,7 +909,7 @@ but not <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x}\)</span>
 <p>If <span class="math notranslate nohighlight">\(f: [a,b] \rightarrow \mathbb{R}\)</span> is continuous and strictly increasing (respectively, strictly decreasing), then <span class="math notranslate nohighlight">\(f\)</span> is invertible and <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, strictly decreasing on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>)  and continuous on <span class="math notranslate nohighlight">\([f(a), f(b)]\)</span> (respectively, on <span class="math notranslate nohighlight">\([f(b), f(a)]\)</span>).</p>
 <div class="proof admonition" id="proof">
 <p>Proof. We’ll just consider the case where <span class="math notranslate nohighlight">\(f\)</span> is strictly increasing. The argument for <span class="math notranslate nohighlight">\(f\)</span> strictly decreasing is very similar.</p>
-<p>By <a class="reference internal" href="#interval">Corollary 3.2</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
+<p>By <a class="reference internal" href="#interval">Corollary 3.1</a>, the range of <span class="math notranslate nohighlight">\(f\)</span>  is of the form <span class="math notranslate nohighlight">\([m, M]\)</span>,
 so <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow [m, M]\)</span> is surjective. Note that as <span class="math notranslate nohighlight">\(f\)</span> is increasing, <span class="math notranslate nohighlight">\(m = f(a)\)</span> and <span class="math notranslate nohighlight">\(M = f(b)\)</span>. If <span class="math notranslate nohighlight">\(x, y \in [a, b]\)</span> with <span class="math notranslate nohighlight">\(x &lt; y\)</span> then <span class="math notranslate nohighlight">\(f(x) &lt; f(y)\)</span>, so if <span class="math notranslate nohighlight">\(x \neq y\)</span> then <span class="math notranslate nohighlight">\(f(x) \neq f(y)\)</span>. Hence <span class="math notranslate nohighlight">\(f\)</span> is injective<a class="footnote-reference brackets" href="#contra2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. So <span class="math notranslate nohighlight">\(f\)</span> is bijective, and hence invertible by <a class="reference internal" href="#prop:inv">Proposition 3.2</a>.
 So we have <span class="math notranslate nohighlight">\(f^{-1}:[f(a), f(b)]\to [a,b]\)</span>.</p>
 <p>To show that <span class="math notranslate nohighlight">\(f^{-1}\)</span> is strictly increasing, let <span class="math notranslate nohighlight">\(f(a) \leq \alpha &lt; \beta \leq f(b)\)</span>. Then since <span class="math notranslate nohighlight">\(f\)</span> is surjective and increasing, there exist <span class="math notranslate nohighlight">\(a \leq x &lt; y \leq b\)</span> with <span class="math notranslate nohighlight">\(\alpha = f(x)\)</span> and <span class="math notranslate nohighlight">\(\beta = f(y)\)</span>. Hence</p>
@@ -914,16 +927,16 @@ f(a) &lt; y_{1} &lt; y_{0} &lt; y_{2} &lt; f(b),
 </div>
 </section>
 </div><div class="proof example admonition" id="nthroot">
-<p class="admonition-title"><span class="caption-number">Example 3.12 </span> (<span class="math notranslate nohighlight">\(n\)</span>th roots)</p>
+<p class="admonition-title"><span class="caption-number">Example 3.13 </span> (<span class="math notranslate nohighlight">\(n\)</span>th roots)</p>
 <section class="example-content" id="proof-content">
 <p>Fix <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> and let <span class="math notranslate nohighlight">\(f:[0,\infty)\to[0,\infty)\)</span> be given by <span class="math notranslate nohighlight">\(f(x) = x^n\)</span>. Then you can prove in <a class="reference external" href="https://rosiesb.github.io/Analysis-Problems/Problems.html#id31">Problem 31</a> that <span class="math notranslate nohighlight">\(f\)</span> is strictly monotonic increasing on every <span class="math notranslate nohighlight">\([a, b] \subseteq [0, \infty)\)</span>. We already know that <span class="math notranslate nohighlight">\(f\)</span> is continuous.</p>
 <p>Consider the restriction <span class="math notranslate nohighlight">\(f:[a,b]\to [a^n, b^n]\)</span>. By <a class="reference internal" href="#thm:IFT">Theorem 3.6</a>, to see that we have an inverse <span class="math notranslate nohighlight">\(f^{-1}: [a^n, b^n]\to [a,b]\)</span> which is continuous and strictly monotonic increasing. Since we can do this for all intervals <span class="math notranslate nohighlight">\([a,b]\)</span>, this allows us to obtain the function <span class="math notranslate nohighlight">\([0, \infty)\to [0,\infty)\)</span> that we write as <span class="math notranslate nohighlight">\(f(x)= x^{\frac{1}{n}}\)</span>.</p>
 <p>So in particular, <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> has given us a unified method for proving the existence of positive <span class="math notranslate nohighlight">\(n\)</span>th roots of any positive real number.</p>
 </section>
 </div><div class="proof example admonition" id="example-35">
-<p class="admonition-title"><span class="caption-number">Example 3.13 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3.14 </span></p>
 <section class="example-content" id="proof-content">
-<p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we’ll prove that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to (0, \infty)\)</span> given by <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is monotonic increasing, as well as showing it is continuous. By a similar argument to that of <a class="reference internal" href="#nthroot">Example 3.12</a>, we can deduce that it has a continuous, monotonic increasing inverse <span class="math notranslate nohighlight">\(f^{-1}:(0, \infty)\to\mathbb{R}\)</span>. Of course, in this case <span class="math notranslate nohighlight">\(f^{-1}(x) =\ln(x) \)</span> (or <span class="math notranslate nohighlight">\(\log_{e}(x)\)</span>, if you prefer) and so we are using <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> to deduce that every positive real number has a natural logarithm.</p>
+<p>In <a class="reference internal" href="5SSF.html#chap-seq-seriesoffns"><span class="std std-ref">Chapter 5</span></a>, we’ll prove that <span class="math notranslate nohighlight">\(f:\mathbb{R}\to (0, \infty)\)</span> given by <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is monotonic increasing, as well as showing it is continuous. By a similar argument to that of <a class="reference internal" href="#nthroot">Example 3.13</a>, we can deduce that it has a continuous, monotonic increasing inverse <span class="math notranslate nohighlight">\(f^{-1}:(0, \infty)\to\mathbb{R}\)</span>. Of course, in this case <span class="math notranslate nohighlight">\(f^{-1}(x) =\ln(x) \)</span> (or <span class="math notranslate nohighlight">\(\log_{e}(x)\)</span>, if you prefer) and so we are using <a class="reference internal" href="#thm:IFT">Theorem 3.6</a> to deduce that every positive real number has a natural logarithm.</p>
 </section>
 </div><hr class="footnotes docutils" />
 <aside class="footnote-list brackets">

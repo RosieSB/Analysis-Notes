@@ -451,27 +451,34 @@ Hence $f(c) = 0$. As both $f(a)$ and $f(b) \neq 0$, $c \notin \{a, b\}$, i.e. $c
 Note that {prf:ref}`ivt` tells us that the image (or range) of the interval $[a, b]$ under the continuous function $f$ contains the interval $[f(a), f(b)]$, i.e. $[f(a), f(b)] \subseteq f([a, b])$.
 
 
-The next result gives a nice application of analysis to the theory of equations.
+The next example gives a nice application of analysis to the theory of equations.
 
-`````{prf:corollary}
+````{prf:example}
  :label: pol
- Every polynomial of odd degree $p$ has at least one real root.
+ Prove that every polynomial of odd degree has at least one real root.
 
-````{prf:proof}
-We write,
+```{dropdown} Solution (click)
+Let $p:\mathbb{R}\to\mathbb{R}$ be a polynomial of odd degree $m\in\mathbb{N}$. Let $a_0,a_1,\ldots,a_m\in\mathbb{R}$ such that for all $x\in\mathbb{R}$
+
+$$
+p(x) = a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0}. 
+$$
+
+We write
+
 \begin{align*} 
 p(x) &= a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{1}x + a_{0} \\
 &= x^{m}\left(a_{m} + \frac{a_{m-1}}{x} + \cdots + \frac{a_{1}}{x^{m-1}} + \frac{a_{0}}{x^{m}}\right),
 \end{align*}
 
-where $a_m\neq 0$ and $m$ is odd. We'll do the case where $a_{m} > 0$; the case $a_{m} < 0$ is similar. Then, as was shown in [Problem 12](https://rosiesb.github.io/Analysis-Problems/Problems.html#id12),
+Assuming $m=\deg(p)$, we know $a_m\neq 0$. We'll do the case where $a_{m} > 0$; the case $a_{m} < 0$ is similar. Then, as was shown in [Problem 12](https://rosiesb.github.io/Analysis-Problems/Problems.html#id12),
 
 $$
 \lim_{x \rightarrow \infty}p(x) = \infty \hspace{1em} \text{ and } \hspace{1em} \lim_{x \rightarrow -\infty}p(x) = -\infty.
 $$
 
 So from the definition of divergence, there exist $- \infty < a < b < \infty$ such that $p(a) < 0$ and $p(b) > 0$. But $p$ is continuous on $[a, b]$ and so, by the intermediate value theorem, there exists $c \in (a, b)$ such that $p(c) = 0$. <span style="float:right;">$\square$</span>
-````
+```
 `````
 
 Of course, there is no analogue of {prf:ref}`pol` when $m$ is even, e.g. $p(x) = x^{2} + 1$ has no real roots.
@@ -558,7 +565,15 @@ For the other inclusion, by {prf:ref}`ivt`, given any $c \in (m, M)$ there exist
 ````
 `````
 
-**Remark.** {prf:ref}`interval` says that continuous functions map closed bounded intervals to closed bounded intervals.
+**Remark.** {prf:ref}`interval` says that continuous functions map closed bounded intervals to closed bounded intervals. The converse of this is false! For a counterexample, consider the function 
+
+$$
+f:\mathbb{R}\to\mathbb{R}; \hspace{1em} f(x) =  \begin{cases} \sin\left(\frac{1}{x}\right) &\text{if }x \in \mathbb{R} \setminus \{0\},\\
+0&\text{if }x= 0. \end{cases}
+$$
+
+This function has the intermediate value property: the restriction of $f$ to any closed bounded interval $[a,b]\subseteq\mathbb{R}$ has image a closed bounded interval. However, $f$ is **not** continuous at $0$ (see [Problem 9](https://rosiesb.github.io/Analysis-Problems/Problems.html#id9)). 
+
 
 ### Inverses
 
