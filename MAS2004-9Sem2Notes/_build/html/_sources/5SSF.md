@@ -8,6 +8,7 @@ In this chapter we will study sequences and series of functions. We start by con
 Let $X\subseteq\mathbb{R}$, and consider a sequence of functions, $(f_n)$, where $f_n:X\rightarrow \mathbb{R}$ for each $n\in\mathbb{N}$.
 
 ````{prf:definition} 
+:label: def:ptwise
 We say the sequence $(f_n)$ *converges pointwise* to a function $f:X\rightarrow \mathbb{R}$ if for each $x\in X$, we have
 
 $$
