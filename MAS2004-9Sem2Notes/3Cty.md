@@ -20,9 +20,9 @@ Let $f:\mathbb{R}\to\mathbb{R}$, $f(x)=3+x-x^2$. Let's show this function is con
 Let $\varepsilon>0$. We seek $\delta>0$ such that $|f(x)-f(2)|<\varepsilon$ whenever $0<|x-2|<\delta$. Now, for all $x\in\mathbb{R}$,
 
 \begin{align*}
-|f(x)-f(2)| &= |3+4x-x^2 - (3+2-2^2)| \\
-&= |4x-x^2+2| \\
-&= |x^2-4x-2| \\
+|f(x)-f(2)| &= |3+x-x^2 - (3+2-2^2)| \\
+&= |x-x^2+2| \\
+&= |x^2-x-2| \\
 &= |x+1||x-2|.
 \end{align*}
 

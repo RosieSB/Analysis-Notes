@@ -1,5 +1,5 @@
 (chap:int)=
-# Riemann integration
+# Riemann integration --- Non-examinable 2024--25
 
 In this chapter we will go over the rigorous definition of the integral, defined in terms of area beneath curves. You have seen the idea before in MAS106, but now we can make it precise using limits.
 
