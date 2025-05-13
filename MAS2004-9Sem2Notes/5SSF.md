@@ -1,5 +1,5 @@
 (chap:seq&seriesoffns)=
-# Sequences and series of functions
+# Sequences and series of functions --- Non-examinable 2024--25
 
 In this chapter we will study sequences and series of functions. We start by considering two different notions of convergence for a sequence of functions. Later we will consider the interaction between continuity and these notions of convergence, as well as looking at differentiation. The results we obtain for sequences of functions will later be applied to series of functions, by considering sequences of partial sums.
 
