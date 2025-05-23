@@ -46,7 +46,7 @@ and we call $f'(a) \in \mathbb{R}$, the *derivative of $f$ at $a$*.
 
 We say that $f$ is *differentiable* on $S \subseteq A$ if it is differentiable at every point $a \in S$. 
 
-The mapping $a \mapsto f'(a)$ defines a real-valued function which is called the der*ivative} of $f$, and denoted by $f'$. This has domain
+The mapping $a \mapsto f'(a)$ defines a real-valued function which is called the *derivative* of $f$, and denoted by $f'$. This has domain
 
 $$
 \text{Dom}\left(f'\right) = \{x \in A : f\ \text{is differentiable at $x$}\}.
