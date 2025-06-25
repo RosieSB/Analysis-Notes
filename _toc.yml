@@ -1,0 +1,10 @@
+format: jb-book
+root: welcome
+chapters: # List all your chapters here.
+  # The file (here "lecture1") must match the filename of the jupyter 
+  # notebook containing your first "chapter", but without the .ipynb extension.
+  # The title is the name you want to appear in the clickable Table of Contents. 
+  - file: lecture1  
+    title: Lecture 1
+  - file: lecture2
+    title: Lecture 2
