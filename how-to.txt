@@ -1,0 +1,27 @@
+1. Open ~/MAS2004,9/Jupyter/Analysis-Problems in VS code and sync with github 
+
+2. Open terminal & navigate to correct directory
+
+cd ~/MAS2004,9/Jupyter/
+
+3. Create virtual environment (skip if done before on this machine)
+
+python3 -m venv .venv
+
+4. Activate virtual environment
+
+source .venv/bin/activate
+
+5. Make changes to local files (in "analysis_problems" directory) using VS code
+
+6. Build the jupyter book
+
+jupyter-book build Analysis-Problems/analysis_problems/
+
+7. Sync with github using VS code - action should run and create hosted github page at
+
+https://rosiesb.github.io/Analysis-Problems
+
+
+
+
