@@ -86,14 +86,14 @@ The difference between this definition and pointwise convergence is that the $N$
 - $f_n\rightarrow f$ uniformly if and only if
 ```{math}
 :label: eq:unif
-\forall\epsilon>0 \; \exists N\in\mathbb{N} \text{ s.t. } \forall n\geq N\; \forall x\in X \; |f_n(x)-f(x)|<\epsilon.
+\forall\varepsilon>0 \; \exists N\in\mathbb{N} \text{ s.t. } \forall n\geq N\; \forall x\in X \; |f_n(x)-f(x)|<\varepsilon.
 ```
 
 - $f_n\rightarrow f$ pointwise if and only if
 
 ```{math}
 :label: eq:ptwise
-\forall x\in X \; \forall\epsilon>0 \; \exists N\in\mathbb{N} \text{ s.t. } \forall n\geq N \; |f_n(x)-f(x)|<\epsilon.
+\forall x\in X \; \forall\varepsilon>0 \; \exists N\in\mathbb{N} \text{ s.t. } \forall n\geq N \; |f_n(x)-f(x)|<\varepsilon.
 ```
 
 In [](eq:ptwise), $x$ dependence is introduced at the very start, and may affect our choice of $N$. Meanwhile, in [](eq:unif), $x$ does not appear until the very end, and our choice of $N$ will work for all values of $x$. The definitions are identical in all other regards.
@@ -138,7 +138,7 @@ and so $|f_n(x) -f(x)|<\varepsilon$ whenever $n\geq N$, for all $x\in [a,b]$. Th
 ````
 `````
 
-The condition on the $M_n$s in {prf:ref}`prop:uconv` is usually the easiest way to actually prove uniform convergence in an example.
+The condition on the $M_n$'s in {prf:ref}`prop:uconv` is usually the easiest way to actually prove uniform convergence in an example.
 
 ````{prf:example} 
 :label: eg:uconv

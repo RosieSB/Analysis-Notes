@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="_static/proof.css?v=4c010e0d" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -70,7 +67,6 @@
     <link rel="prev" title="5. Sequences and series of functions — Non-examinable 2024–25" href="5SSF.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -86,8 +82,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -95,6 +102,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -102,8 +110,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -119,8 +127,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -150,17 +157,21 @@
     
     
     <img src="_static/LOGO.png" class="logo__image only-light" alt="Analysis lecture notes - Home"/>
-    <img src="_static/LOGO.png" class="logo__image only-dark pst-js-only" alt="Analysis lecture notes - Home"/>
+    <script>document.write(`<img src="_static/LOGO.png" class="logo__image only-dark" alt="Analysis lecture notes - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -190,14 +201,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,16 +347,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -401,13 +415,15 @@ a=x_0&lt;x_1&lt;x_2&lt;\ldots&lt;x_n=b.
 \]</div>
 <p>Let <span class="math notranslate nohighlight">\(f:[a,b]\to\mathbb{R}\)</span> be a <strong>bounded</strong> function. For each partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a,b]\)</span>, we associate two ways of approximating the area under the graph of <span class="math notranslate nohighlight">\(f\)</span> by rectangles. One of these ways will always be an overestimate, the other an underestimate.</p>
 <figure class="align-default" id="rlower">
-<a class="reference internal image-reference" href="_images/Rlower.png"><img alt="_images/Rlower.png" src="_images/Rlower.png" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/Rlower.png"><img alt="_images/Rlower.png" src="_images/Rlower.png" style="height: 200px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Riemann lower sum</span><a class="headerlink" href="#rlower" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="rupper">
-<a class="reference internal image-reference" href="_images/Rupper.png"><img alt="_images/Rupper.png" src="_images/Rupper.png" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/Rupper.png"><img alt="_images/Rupper.png" src="_images/Rupper.png" style="height: 200px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Riemann upper sum</span><a class="headerlink" href="#rupper" title="Link to this image">#</a></p>
 </figcaption>
@@ -454,7 +470,8 @@ U(f,P) := \sum_{k=1}^nM_k(x_k-x_{k-1}) = 4(2) + 13(1) + 76(3) = 249.
 \]</div>
 <p class="sd-card-text">Hence <span class="math notranslate nohighlight">\(U(f,P)-L(f,P)=207\)</span>.</p>
 <figure class="align-default" id="ulsums-eg">
-<a class="reference internal image-reference" href="_images/ulsums-eg.png"><img alt="_images/ulsums-eg.png" src="_images/ulsums-eg.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/ulsums-eg.png"><img alt="_images/ulsums-eg.png" src="_images/ulsums-eg.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Riemann upper and lower sums for <a class="reference internal" href="#ulsums-eg">Example 6.1</a>.</span><a class="headerlink" href="#ulsums-eg" title="Link to this image">#</a></p>
 </figcaption>
@@ -485,7 +502,8 @@ U(f,Q)-L(f,Q)\leq U(f,P)-L(f,P).
 <div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> where <span class="math notranslate nohighlight">\(a=x_0&lt;x_1&lt;\ldots&lt;x_n=b\)</span>. Consider first the effect of adding one point to <span class="math notranslate nohighlight">\(P\)</span>: say we add <span class="math notranslate nohighlight">\(c\in[x_{k-1},x_k]\)</span>. We will show that <span class="math notranslate nohighlight">\(L(f,P\cup\{c\})\geq L(f,P)\)</span>.</p>
 <figure class="align-default" id="addpt">
-<a class="reference internal image-reference" href="_images/addpt.png"><img alt="_images/addpt.png" src="_images/addpt.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="_images/addpt.png"><img alt="_images/addpt.png" src="_images/addpt.png" style="height: 250px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The effect of adding a point to a partition</span><a class="headerlink" href="#addpt" title="Link to this image">#</a></p>
 </figcaption>
@@ -632,7 +650,8 @@ U(f,P\cup Q) - L(f,P\cup Q) &amp;\leq U(f,Q) - L(f,P) \\
 <span class="sd-summary-text">Solution (click for drop down)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Let’s first draw the graph of <span class="math notranslate nohighlight">\(f\)</span> and employ some intuition.</p>
 <figure class="align-default" id="disc-int1">
-<a class="reference internal image-reference" href="_images/disc-int1.png"><img alt="_images/disc-int1.png" src="_images/disc-int1.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/disc-int1.png"><img alt="_images/disc-int1.png" src="_images/disc-int1.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f\)</span>.</span><a class="headerlink" href="#disc-int1" title="Link to this image">#</a></p>
 </figcaption>
@@ -645,7 +664,8 @@ U(f,P_\varepsilon)-L(f,P_\varepsilon)&lt;\varepsilon
 \]</div>
 <p class="sd-card-text">Let’s try and find a partition of the form <span class="math notranslate nohighlight">\(P_\varepsilon=\{0,1-\delta,1+\delta,2\}\)</span>, where <span class="math notranslate nohighlight">\(\delta\)</span> is to be found and depends on <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
 <figure class="align-default" id="disc-int2">
-<a class="reference internal image-reference" href="_images/disc-int2.png"><img alt="_images/disc-int2.png" src="_images/disc-int2.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/disc-int2.png"><img alt="_images/disc-int2.png" src="_images/disc-int2.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Partition of the form <span class="math notranslate nohighlight">\(P_\varepsilon=\{0,1-\delta,1+\delta,2\}\)</span>.</span><a class="headerlink" href="#disc-int2" title="Link to this image">#</a></p>
 </figcaption>
@@ -905,7 +925,8 @@ s:[0,4] \rightarrow \mathbb{R}; \; s(x) = \mathbf{1}_{[2,3]}(x)-\mathbf{1}_{[0,2
 s(x) = \left\{\begin{array}{cc} -1 &amp; \text{if } 0\leq x&lt;2 \\ 1 &amp; \text{if } 2\leq x\leq 3 \\ 2 &amp; \text{if } 3&lt; x\leq 4 \end{array}\right.
 \end{split}\]</div>
 <figure class="align-default" id="rs">
-<a class="reference internal image-reference" href="_images/rs.png"><img alt="_images/rs.png" src="_images/rs.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="_images/rs.png"><img alt="_images/rs.png" src="_images/rs.png" style="height: 250px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.7 </span><span class="caption-text">Graph of the step function <span class="math notranslate nohighlight">\(s\)</span>.</span><a class="headerlink" href="#rs" title="Link to this image">#</a></p>
 </figcaption>
@@ -994,7 +1015,8 @@ F(x+h)-F(x) = \int_a^{x+h} f(t) dt -\int_a^{x} f(t)  dt = \int_x^{x+h} f(t) dt.
 \]</div>
 <p>In other words, <span class="math notranslate nohighlight">\(F(x+h)-F(x)\)</span> is the area under the curve between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x+h\)</span>.</p>
 <figure class="align-default" id="ftc">
-<a class="reference internal image-reference" href="_images/FTC.png"><img alt="_images/FTC.png" src="_images/FTC.png" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/FTC.png"><img alt="_images/FTC.png" src="_images/FTC.png" style="height: 200px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Visualisation of <span class="math notranslate nohighlight">\(F(x+h)-F(x)\)</span>.</span><a class="headerlink" href="#ftc" title="Link to this image">#</a></p>
 </figcaption>
@@ -1114,8 +1136,7 @@ G'(x) =f(x) =F'(x).
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1176,8 +1197,8 @@ By Rosie Shewell Brockway
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
