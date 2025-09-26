@@ -389,8 +389,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. Uniform convergence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. General procedure for calculating uniform limits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-convergence">5.1.1. Pointwise convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.2. Uniform convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.3. General procedure for calculating uniform limits</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. Continuity and differentiability under uniform limits</a></li>
@@ -411,6 +412,8 @@ document.write(`
 <p>In this chapter we will study sequences and series of functions. We start by considering two different notions of convergence for a sequence of functions. Later we will consider the interaction between continuity and these notions of convergence, as well as looking at differentiation. The results we obtain for sequences of functions will later be applied to series of functions, by considering sequences of partial sums.</p>
 <section id="pointwise-and-uniform-convergence">
 <h2><span class="section-number">5.1. </span>Pointwise and uniform convergence<a class="headerlink" href="#pointwise-and-uniform-convergence" title="Link to this heading">#</a></h2>
+<section id="pointwise-convergence">
+<h3><span class="section-number">5.1.1. </span>Pointwise convergence<a class="headerlink" href="#pointwise-convergence" title="Link to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(X\subseteq\mathbb{R}\)</span>, and consider a sequence of functions, <span class="math notranslate nohighlight">\((f_n)\)</span>, where <span class="math notranslate nohighlight">\(f_n:X\rightarrow \mathbb{R}\)</span> for each <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>.</p>
 <div class="proof definition admonition" id="def:ptwise">
 <p class="admonition-title"><span class="caption-number">Definition 5.1 </span></p>
@@ -466,8 +469,9 @@ f_n(x) = x^n\rightarrow 0
 f:[0,1]\to\mathbb{R}; \; f(x) = \left\{ \begin{array}{ll} 0 &amp; x&lt;1, \\ 1 &amp; x=1. \\ \end{array} \right.
 \end{split}\]</div>
 </section>
-</div><section id="uniform-convergence">
-<h3><span class="section-number">5.1.1. </span>Uniform convergence<a class="headerlink" href="#uniform-convergence" title="Link to this heading">#</a></h3>
+</div></section>
+<section id="uniform-convergence">
+<h3><span class="section-number">5.1.2. </span>Uniform convergence<a class="headerlink" href="#uniform-convergence" title="Link to this heading">#</a></h3>
 <p>It is natural to wonder what conditions are necessary for “nice’’ properties such as continuity to be preserved in the limit as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. <a class="reference internal" href="#xne">Example 5.3</a> shows that pointwise convergence alone is not enough: we had a sequence of continuous functions converging pointwise to a limit that was not continuous.</p>
 <p>Recall when we defined pointwise convergence of a sequence <span class="math notranslate nohighlight">\((f_n)\)</span> to a funciton <span class="math notranslate nohighlight">\(f\)</span>, we noted that <span class="math notranslate nohighlight">\((f_n(x))\)</span> may converge faster for some values of <span class="math notranslate nohighlight">\(x\)</span> than others. This is the issue that led to the development of uniform convergence: a notion of convergence that requires the sequence of functions to converge at the same rate at every point. We shall see that uniform convergence is a much stronger condition than pointwise convergence, and preserves such things as continuity and to an extent differentiation.</p>
 <div class="proof definition admonition" id="def:uconv">
@@ -554,7 +558,7 @@ M_n = \sup \{ |f_n (x) -f(x)| : x\in [0,2\pi ] \}
 </section>
 </div></section>
 <section id="general-procedure-for-calculating-uniform-limits">
-<h3><span class="section-number">5.1.2. </span>General procedure for calculating uniform limits<a class="headerlink" href="#general-procedure-for-calculating-uniform-limits" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">5.1.3. </span>General procedure for calculating uniform limits<a class="headerlink" href="#general-procedure-for-calculating-uniform-limits" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#eg:uconv">Example 5.4</a> demonstrates an approach that is typically the best way to prove or check for uniform convergence.</p>
 <p>To prove a sequence of functions <span class="math notranslate nohighlight">\((f_n)\)</span> converges uniformly:</p>
 <ol class="arabic simple">
@@ -857,8 +861,9 @@ f_n(x) = \frac{\left|10^nx - \text{round}(10^nx)\right|}{10^n}.
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-and-uniform-convergence">5.1. Pointwise and uniform convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.1. Uniform convergence</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.2. General procedure for calculating uniform limits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointwise-convergence">5.1.1. Pointwise convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-convergence">5.1.2. Uniform convergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-procedure-for-calculating-uniform-limits">5.1.3. General procedure for calculating uniform limits</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-and-differentiability-under-uniform-limits">5.2. Continuity and differentiability under uniform limits</a></li>
