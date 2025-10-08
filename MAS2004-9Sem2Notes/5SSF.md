@@ -256,7 +256,9 @@ The power of uniform limits extends beyond just continuity. We state a version o
 Consider differentiable functions $f_n:[a,b]\rightarrow \mathbb{R}$. Suppose that
 
 (i) $(f_n)$ converges pointwise to a function $f$,
+
 (ii) Each derivative $f_n'$ is continuous, and
+
 (iii) The sequence of derivatives $(f'_n)$ converges uniformly to a function $g$.
 
 Then $f$ is differentiable, and $f'=g$.
